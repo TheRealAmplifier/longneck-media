@@ -1,0 +1,11 @@
+.element {
+	padding: 10rem 0;
+
+	&:not(:last-child) {
+		margin-bottom: 10rem;
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 20rem 0;
+	}
+}

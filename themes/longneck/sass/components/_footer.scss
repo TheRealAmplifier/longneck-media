@@ -1,0 +1,29 @@
+.footer {
+	margin-top: 20rem;
+	padding-top: 15rem;
+	background-color: $color-gray-light-1;
+}
+.footer__wrapper {
+	@include flex($direction: column);
+	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultpadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+}
+.footer__top {
+	@include flex($justify: space-between);
+	padding-bottom: 10rem;
+}
+.footer__bottom {
+	@include flex($align: center);
+	height: 7rem;
+}
+.footer__navigation {
+	@include flex;
+	flex: 0 0 40%;
+}
+.footer__menu {
+	flex: 0 0 50%;
+}
+
+.footer__copyright {
+	@include font('worksans');
+	font-size: 1.4rem;
+}

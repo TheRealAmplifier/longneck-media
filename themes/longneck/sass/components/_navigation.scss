@@ -1,0 +1,23 @@
+.navigation {
+	@include font('montserrat');
+	font-size: 1.8rem;
+}
+.navigation__link {
+	@extend %navigation__link--dark;
+	line-height: 2;
+
+	&:not(:last-child) {
+		margin-right: 5rem;
+	}
+}
+
+
+.navigation__title {
+	@extend %heading--uppercase-small;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.navigation--column {
+	@include flex($direction: column);
+}

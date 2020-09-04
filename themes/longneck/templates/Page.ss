@@ -16,7 +16,7 @@
 </head>
 <body class="{$ClassName.ShortName}">
 	<% include Header %>
-	<main class="content">
+	<main class="content content--main">
 		{$Layout}
 	</main>
 	<% include Footer %>

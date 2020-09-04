@@ -1,0 +1,103 @@
+%heading--uppercase-small {
+	@include font('montserrat', $weight: 800);
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	color: $color-black;
+}
+%navigation__link--dark {
+	@include font('worksans');
+	font-size: 1.6rem;
+	color: $color-black;
+
+
+	&:hover,
+	&:focus {
+		color: $color-yellow;
+	}
+	&.current,
+	&.section {
+		font-weight: 800;
+	}
+}
+
+body {
+	color: $color-black;
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+	@include font('montserrat', $weight: 800);
+	margin-top: 0;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.heading-1 {
+	font-size: 3.6rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 5.2rem;
+	}
+}
+.heading-2 {
+	font-size: 2.8rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 4.2rem;
+	}
+}
+.heading-3 {
+	font-size: 2.4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 3.2rem;
+	}
+}
+
+.heading-4 {
+	font-size: 2.2rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 2.8rem;
+	}
+}
+
+p {
+	font-size: 1.5rem;
+	margin-top: 0;
+	line-height: 1.6;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	@include breakpoint('min-tablet-landscape') { 
+		font-size: 2rem;
+	}
+}
+
+.heading--margin-small {
+	margin-bottom: 2rem;
+}
+.heading--margin-none {
+	margin: 0 0;
+}
+
+
+.text--yellow,
+.heading--yellow {
+	color: $color-yellow;
+}
+.text--green,
+.heading--green {
+	color: $color-green;
+}
+
+
+.text--accentuated {
+	font-weight: 700;
+}

@@ -1,0 +1,45 @@
+.links__wrapper {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include sectionwrapper(133rem, $setDefaultpadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+
+	@include breakpoint('min-tablet-landscape') {
+		justify-content: space-between;
+	}
+}
+.links__title {
+	border: 5px solid $color-green;
+	padding: 3rem 3rem;
+	flex: 0 0 35rem;
+	max-width: 35rem;
+	min-height: 32.5rem;
+}
+.links__content {
+	flex: 1;
+	margin-top: 5rem;
+	// padding-left: 4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		margin-left: 7.5rem;
+		margin-top: 0;
+	}
+	@include breakpoint('min-desktop-large') {
+		margin-left: 20rem;
+	}
+}
+.sevices__text {
+	@include flex($direction: column);
+}
+
+.links__buttons {
+	@include flex;
+	margin-top: 5rem;
+
+	.button {
+		&:not(:last-of-type) {
+			margin-right: 2rem;
+		}
+	}
+	@include breakpoint('min-tablet-landscape') {
+		margin-top: 7.5rem;
+	}
+}

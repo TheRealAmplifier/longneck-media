@@ -1,0 +1,7 @@
+Page:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension  
+  allowed_elements:
+    - Links
+    - FeaturedServices
+    - CallToAction

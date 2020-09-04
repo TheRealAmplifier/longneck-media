@@ -1,0 +1,27 @@
+.cta {
+
+}
+.cta__wrapper {
+	@include flex;
+	@include sectionwrapper(163rem, $setDefaultpadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+}
+
+.cta__image {
+	flex: 0 0 40%;
+}
+.cta__content {
+	@include flex($direction: column);
+	flex: 0 0 100%;
+	padding: 5rem 3rem;
+	background-color: $color-gray-light-1;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem 12.5rem;
+	}
+}
+
+.cta--image {
+	.cta__content {
+		flex: 0 0 60%;
+	}
+}
