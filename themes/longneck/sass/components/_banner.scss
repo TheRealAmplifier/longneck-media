@@ -4,7 +4,9 @@
 }
 .banner__wrapper {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	@include sectionwrapper(133rem, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultpadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem);
+
+	// @include sectionwrapper(133rem, $setBreakpointMaxWidth: 'min-desktop-xxlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 6rem,  $setBreakpointPadding: 'min-desktop-xlarge', $setBreakpointPaddingSize:  0 3rem, $unsetPadding: true);
 
 	@include breakpoint('min-tablet-landscape') {
 		justify-content: space-between;
@@ -25,23 +27,24 @@
 .banner__image {
 	position: relative;
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: -3rem;
-		left: -3rem;
-		border: 5px solid $color-green;
-		width: 100%;
-		height: 100%;
-	}
-
 	@include breakpoint('max-tablet-landscape') {
 		width: 100%;
 	}
 	@include breakpoint('min-tablet-landscape'){
 		flex: 0 0 50%;
 	}
-	@include breakpoint('min-desktop-xlarge') {
+	@include breakpoint('min-tablet-landscape') {
+		&::before {
+			content: '';
+			position: absolute;
+			top: -3rem;
+			left: -3rem;
+			border: 5px solid $color-green;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	@include breakpoint('min-desktop-xxlarge') {
 		flex: 0 0 80rem;
 	}
 }

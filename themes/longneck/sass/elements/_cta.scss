@@ -1,13 +1,18 @@
-.cta {
 
-}
 .cta__wrapper {
-	@include flex;
-	@include sectionwrapper(163rem, $setDefaultpadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
+
+	// @include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 
 .cta__image {
-	flex: 0 0 40%;
+	height: 32.5rem;
+
+	@include breakpoint('min-tablet-portrait') {
+		height: unset;
+		flex: 1;
+	}
 }
 .cta__content {
 	@include flex($direction: column);
@@ -22,6 +27,14 @@
 
 .cta--image {
 	.cta__content {
-		flex: 0 0 60%;
+		flex: 0 0 65%;
+	}
+}
+.cta--content {
+	background-color: $color-gray-light-1;
+
+	.cta__content { 
+		background-color: none;
+		padding: 5rem 0;
 	}
 }

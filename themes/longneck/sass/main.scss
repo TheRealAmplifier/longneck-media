@@ -12,6 +12,8 @@
 @import 'partials/images';
 @import 'partials/buttons';
 
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+
 @import 'components/header';
 @import 'components/navigation';
 @import 'components/banner';
@@ -22,3 +24,4 @@
 @import 'elements/links';
 @import 'elements/services';
 @import 'elements/cta';
+@import 'elements/projects';

@@ -60,6 +60,15 @@
 .button--solid-yellow {
 	background: $color-yellow;
 	color: $color-white;
+	outline: 0px solid $color-yellow;
+	outline-offset: 0px;
+	transition: all .1s ease-in;
+
+	&:hover,
+	&:focus {
+		outline: 3px solid $color-yellow;
+    outline-offset: 3px;
+	}
 }
 
 .button__text,

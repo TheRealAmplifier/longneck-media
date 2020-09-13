@@ -3,14 +3,13 @@
 }
 .header__wrapper {
 	@include flex($align: center, $justify: space-between);
-	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultpadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem);
+
+	// @include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
 	height: 100%;
 }
 
-.header__brand {
-
-}
 .brand__image {
-	height: 8rem;
+	height: 12rem;
 	width: auto;
 }

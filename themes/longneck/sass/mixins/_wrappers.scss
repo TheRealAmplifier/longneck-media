@@ -1,4 +1,4 @@
-@mixin sectionwrapper($maxWidth: null, $setBreakpointMaxWidth: null, $setBreakpointMaxWidthSize: null, $setDefaultpadding: null, $setBreakpointPadding: null, $setBreakpointPaddingSize: null, $unsetPadding: null) { 
+@mixin sectionwrapper($maxWidth: null, $setBreakpointMaxWidth: null, $setBreakpointMaxWidthSize: null, $setDefaultPadding: null, $setBreakpointPadding: null, $setBreakpointPaddingSize: null, $unsetPadding: null) { 
   margin: 0 auto;
   width: 100%;
 
@@ -8,24 +8,24 @@
     max-width: 133rem;
   }
 
-  @if $setDefaultpadding != null {
-    padding: $setDefaultpadding;
+  @if $setDefaultPadding != null {
+    padding: $setDefaultPadding;
   } @else {
     padding: 0 2rem;
   }
 
   @if ($setBreakpointMaxWidth != null and $setBreakpointMaxWidthSize != null) {
     @include breakpoint($setBreakpointMaxWidth) {
-      max-width: $setBreakpointMaxWidthSize !important;
+      max-width: $setBreakpointMaxWidthSize;
     }
   }
   @if ($setBreakpointPadding != null and $setBreakpointPaddingSize != null) {
     @include breakpoint($setBreakpointPadding) {
-      padding: $setBreakpointPaddingSize !important;
+      padding: $setBreakpointPaddingSize;
     }
   }
 
-  @if ($unsetPadding != null) {
+  @if ($unsetPadding != null and $unsetPadding == true) {
     @if ($setBreakpointMaxWidth != null) {
       @include breakpoint($setBreakpointMaxWidth) {
         padding: 0 0;

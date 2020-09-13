@@ -1,0 +1,77 @@
+.projects--latest {
+	@include flex;
+	width: 100%;
+	// background-color: $color-gray-light-1;
+	padding: 5rem 0;
+
+	// background-image: url('../images/pattern/pattern-1.png');
+
+	@include breakpoint('min-tablet-portrait') {
+		padding: 7.5rem 0;
+	}
+	@include breakpoint('min-desktop') {
+		padding: 10rem 0;
+	}
+}
+.projects__wrapper {
+	@include flex($wrap: wrap);
+	@include sectionwrapper(163rem);
+}
+.projects__list {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 3rem;
+
+	@include breakpoint('min-tablet-portrait') {
+		grid-template-columns: repeat(2, 1fr);	
+		grid-gap: 5rem;
+		margin-top: 5rem;
+	}
+}
+
+.project {
+	position: relative;
+	flex: 0 0 45%;
+	background-color: $color-white;
+	transition: all .2s ease-in;
+	box-shadow: 0 .2rem 1.5rem rgba($color-black, .16);
+
+	&:first-child {
+		&:before {
+			content: '';
+			position: absolute;
+			top: -3rem;
+			left: -3rem;
+			border: 5px solid $color-green;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}	
+	}
+
+	&:hover,
+	&:focus {
+		.project__image .image--animated {
+			transform: scale(1.05);
+		}
+	}
+}
+.project__image {
+	height: 27.5rem;
+	display: block;
+	overflow: hidden;
+}
+.project__content {
+	padding: 3rem;
+}
+
+.project__link {
+	position: relative;
+	z-index: 0;
+	display: block;
+}
+
+
+.image--animated {
+	transition: transform .2s ease-in;
+}

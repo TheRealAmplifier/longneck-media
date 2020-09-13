@@ -1,17 +1,8 @@
 .services__wrapper {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(133rem, $setDefaultpadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
 }
-.services__title {
-	flex: 0 0 100%;
-}
-.services__content {
-	flex: 0 0 90%;
 
-	@include breakpoint('min-tablet-landscape') {
-		flex: 0 0 60%;
-	}
-}
 .services__blocks {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
 	position: relative;

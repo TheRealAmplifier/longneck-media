@@ -8,5 +8,9 @@ namespace {
 		protected function init() {
 			parent::init();
 		}
+
+		public function getProjects() {
+			return ProjectPage::get();
+		}
 	}
 }

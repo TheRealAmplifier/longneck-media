@@ -2,7 +2,7 @@
 	<div class="header__wrapper">
 		<div class="header__brand">
 			<div class="brand__image">
-				<img src="" alt="">
+				{$SVG('longneck-logo').customBasePath('themes/longneck/images/logo/').extraClass('image--cover')}
 			</div>
 		</div>
 		<div class="header__navigation">
