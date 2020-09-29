@@ -1,5 +1,7 @@
 <?php
+
 namespace {
+
 	use SilverStripe\CMS\Controllers\ContentController;
 
 	class PageController extends ContentController {
@@ -7,10 +9,6 @@ namespace {
 
 		protected function init() {
 			parent::init();
-		}
-
-		public function getProjects() {
-			return ProjectPage::get();
 		}
 	}
 }

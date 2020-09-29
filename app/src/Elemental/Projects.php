@@ -1,42 +1,40 @@
-<?php 
-namespace {
-	use DNADesign\Elemental\Models\BaseElement;
+<?php
 
-	use SilverStripe\Assets\Image;
-	use SilverStripe\AssetAdmin\Forms\UploadField;
+namespace Elements;
 
-	use SilverStripe\CMS\Model\SiteTree;
+use Pages\ProjectPage;
 
-	use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-	use SilverStripe\Forms\TextField;
-	use SilverStripe\Forms\TreeDropdownField;
+use DNADesign\Elemental\Models\BaseElement;
 
-	class Projects extends BaseElement {
-		private static $singular_name = 'Projecten';
-		private static $plural_name = 'Projecte ';
-		private static $description = 'Blok met projecten in een slider';
-		private static $inline_editable = false;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-		private static $db = [
-			'TextMain'			=> 'HTMLText',
-		];
+class Projects extends BaseElement {
+	private static $table_name = 'Projects';
+	private static $singular_name = 'Projecten';
+	private static $plural_name = 'Projecte ';
+	private static $description = 'Blok met projecten in een slider';
+	private static $icon = 'font-icon-block-globe';
+	private static $inline_editable = false;
 
-		public function getCMSFields() {
-			$fields = parent::getCMSFields();
+	private static $db = [
+		'TextMain'			=> 'HTMLText',
+	];
 
-			$fields->addFieldsToTab('Root.Main', [
-				HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
-			]);
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
 
-			return $fields;
-		}
+		$fields->addFieldsToTab('Root.Main', [
+			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
+		]);
 
-		public function getFeatureProjects() {
-			return ProjectPage::get()->Limit(2);
-		}
+		return $fields;
+	}
 
-		public function getType() {
-			return 'Projecten';
-		}
+	public function getFeatureProjects() {
+		return ProjectPage::get()->Limit(2);
+	}
+
+	public function getType() {
+		return 'Projecten';
 	}
 }

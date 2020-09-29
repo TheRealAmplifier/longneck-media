@@ -1,8 +1,17 @@
-Page:
+Pages\HomePage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension  
   allowed_elements:
-    - Links
-    - FeaturedServices
-    - CallToAction
-    - Projects
+    - Elements\Links
+    - Elements\FeaturedServices
+    - Elements\CallToAction
+    - Elements\Projects
+    - Elements\Content
+
+Pages\ProjectPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension 
+  allowed_elements:
+    - Elements\ProjectIntro
+    - Elements\ProjectStats
+    - Elements\ProjectResults

@@ -2,28 +2,22 @@
 
 namespace Elements;
 
-use Page;
-
 use DNADesign\Elemental\Models\BaseElement;
 
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\ListboxField;
 
-class Links extends BaseElement {
-	private static $table_name = 'Links';
-	private static $singular_name = 'Links';
-	private static $plural_name = 'Links';
-	private static $description = 'Blok met links naar verschillende pagina\'s';
-	private static $icon = 'font-icon-block-external-link';
+class Content extends BaseElement {
+	private static $table_name = 'Content';
+	private static $singular_name = 'Content';
+	private static $plural_name = 'Content';
+	private static $description = 'Blok met content';
+	private static $icon = 'font-icon-block-content';
 	private static $inline_editable = false;
 
 	private static $db = [
 		'TextIntro'			=> 'HTMLText',
 		'TextMain'			=> 'HTMLText'
-	];
-
-	private static $many_many = [
-		'LinkedPages'		=> Page::class
 	];
 
 	public function getCMSFields() {
@@ -33,14 +27,13 @@ class Links extends BaseElement {
 
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
-			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
-			ListboxField::create('LinkedPages', 'Gelinkte Pagina\'s', Page::get())
+			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7)
 		]);
 
 		return $fields;
 	}
 
 	public function getType() {
-		return 'Links';
+		return 'Content';
 	}
 }

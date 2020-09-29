@@ -1,6 +1,5 @@
 .navigation {
 	@include font('montserrat');
-	font-size: 1.8rem;
 }
 .navigation__link {
 	@extend %navigation__link--dark;

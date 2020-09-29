@@ -17,6 +17,8 @@
 @import 'components/header';
 @import 'components/navigation';
 @import 'components/banner';
+@import 'components/breadcrumbs';
+@import 'components/title';
 @import 'components/content';
 @import 'components/footer';
 
@@ -25,3 +27,5 @@
 @import 'elements/services';
 @import 'elements/cta';
 @import 'elements/projects';
+
+@import 'pages/project';

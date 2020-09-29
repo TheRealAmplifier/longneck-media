@@ -1,55 +1,58 @@
-<?php 
-namespace {
-	use DNADesign\Elemental\Models\BaseElement;
+<?php
 
-	use SilverStripe\Assets\Image;
-	use SilverStripe\AssetAdmin\Forms\UploadField;
+namespace Elements;
 
-	use SilverStripe\CMS\Model\SiteTree;
+use DNADesign\Elemental\Models\BaseElement;
 
-	use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-	use SilverStripe\Forms\TextField;
-	use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 
-	class CallToAction extends BaseElement {
-		private static $singular_name = 'Call To Action';
-		private static $plural_name = 'Call To Action';
-		private static $description = 'Blok met call to action naar een specifieke pagina';
-		private static $inline_editable = false;
+use SilverStripe\CMS\Model\SiteTree;
 
-		private static $db = [
-			'TextIntro'			=> 'HTMLText',
-			'TextMain'			=> 'HTMLText',
-			'ButtonText'		=> 'Varchar',
-		];
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TreeDropdownField;
 
-		private static $has_one = [
-			'Image'					=> Image::class,
-			'LinkedPage'		=> SiteTree::class
-		];
+class CallToAction extends BaseElement {
+	private static $table_name = 'CallToAction';
+	private static $singular_name = 'Call To Action';
+	private static $plural_name = 'Call To Action';
+	private static $description = 'Blok met call to action naar een specifieke pagina';
+	private static $icon = 'font-icon-block-award';
+	private static $inline_editable = false;
 
-		private static $owns = [
-			'Image'
-		];
+	private static $db = [
+		'TextIntro'			=> 'HTMLText',
+		'TextMain'			=> 'HTMLText',
+		'ButtonText'		=> 'Varchar',
+	];
 
-		public function getCMSFields() {
-			$fields = parent::getCMSFields();
+	private static $has_one = [
+		'Image'					=> Image::class,
+		'LinkedPage'		=> SiteTree::class
+	];
 
-			$fields->addFieldsToTab('Root.Main', [
-				HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
-				HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
-				UploadField::create('Image', 'Afbeelding')->setFolderName('CTA')
-			]);
-			$fields->addFieldsToTab('Root.Button', [
-				TextField::create('ButtonText', 'Button tekst'),
-				TreeDropdownField::create('LinkedPageID', 'Gelinkte Pagina', SiteTree::class)
-			]);
+	private static $owns = [
+		'Image'
+	];
 
-			return $fields;
-		}
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
 
-		public function getType() {
-			return 'Call To Action';
-		}
+		$fields->addFieldsToTab('Root.Main', [
+			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
+			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
+			UploadField::create('Image', 'Afbeelding')->setFolderName('CTA')
+		]);
+		$fields->addFieldsToTab('Root.Button', [
+			TextField::create('ButtonText', 'Button tekst'),
+			TreeDropdownField::create('LinkedPageID', 'Gelinkte Pagina', SiteTree::class)
+		]);
+
+		return $fields;
+	}
+
+	public function getType() {
+		return 'Call To Action';
 	}
 }

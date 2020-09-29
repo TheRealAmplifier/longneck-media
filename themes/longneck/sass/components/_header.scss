@@ -3,13 +3,11 @@
 }
 .header__wrapper {
 	@include flex($align: center, $justify: space-between);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem);
-
-	// @include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-tablet-portrait', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
 	height: 100%;
 }
 
 .brand__image {
-	height: 12rem;
-	width: auto;
+	height: auto;
+	width: 22.5rem;
 }

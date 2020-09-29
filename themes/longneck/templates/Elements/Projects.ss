@@ -24,6 +24,13 @@
 						<div class="project__content">
 							<h4 class="heading-4">{$MenuTitle}</h4>
 							{$Summary}
+
+							<span class="block__link button button--wide button--icon button--solid-yellow">
+								<span class="button__icon">
+									{$SVG('arrow-right-white').customBasePath('themes/longneck/images/svg/').extraClass('image--cover icon--arrow')}
+								</span>
+								<span class="button__text">Lees meer</span>
+							</span>
 						</div>
 					</a>
 				</div>
