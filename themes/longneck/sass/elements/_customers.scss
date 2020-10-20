@@ -9,7 +9,7 @@
 	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem);
 }
 .customers__list {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include flex($justify: center);
 }
 
 .customer {
@@ -17,6 +17,6 @@
 	height: auto;
 
 	&:not(:last-child) {
-		margin-right: 5rem;
+		margin-right: 7.5rem;
 	}
 }
