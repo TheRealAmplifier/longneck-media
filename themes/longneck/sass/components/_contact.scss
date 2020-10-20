@@ -1,0 +1,37 @@
+.contact {
+	
+}
+.contact__wrapper {
+	@include flex;
+	@include sectionwrapper;
+}
+.form__socials {
+	@include flex($direction: column);
+	flex: 0 0 12.5em;
+}
+
+.form__box {
+	@include flex($direction: column);
+	flex: 1;
+	position: relative;
+	padding: 10rem;
+	background-color: $color-white;
+	box-shadow: 0 0 5rem rgba($color-black, .16);
+}
+
+.form__intro {
+	margin-bottom: 5rem;
+}
+
+.form__message {
+	margin-bottom: 7.5rem;
+	font-weight: 600;
+	font-size: 2.2rem;
+	font-style: italic;
+}
+.form__message--success {
+	color: $color-blue-dark-2;
+}
+.form__message--bad {
+	color: $color-error;
+}

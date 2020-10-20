@@ -10,7 +10,7 @@
 		<div class="header__navigation">
 			<nav class="navigation navigation--row">
 				<% loop $MenuSet('Primary').MenuItems %>
-					<a class="navigation__link {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
+					<a class="navigation__link {$LinkingMode} <% if ButtonStyle %>navigation__link--button<% end_if %>" href="{$Link}">{$MenuTitle}</a>
 				<% end_loop %>
 			</nav>
 		</div>

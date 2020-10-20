@@ -12,27 +12,23 @@
 			</div>
 		</div>
 
-		<div class="projects__list">
+		<div class="projects__list--column">
 			<% loop $FeatureProjects %>
-				<div class="project">
-					<a class="project__link" href="{$Link}">
-						<div class="project__image">
-							<% with ThumbnailImage %>
-								<img class="image--cover image--animated" src="{$Link}" alt="Thumbnail voor project - {$MenuTitle}">
-							<% end_with %>
-						</div>
-						<div class="project__content">
-							<h4 class="heading-4">{$MenuTitle}</h4>
-							{$Summary}
+				<div class="card card--column">
+					<a class="card__link" href="{$Link}"></a>
+					<div class="card__image">
+						<% with ThumbnailImage %>
+							<img class="image--cover image--animated" src="{$Link}" alt="Thumbnail voor project - {$MenuTitle}">
+						<% end_with %>
+					</div>
+					<div class="card__content">
+						<h4 class="heading-4">{$MenuTitle}</h4>
+						{$Summary}
 
-							<span class="block__link button button--wide button--icon button--solid-yellow">
-								<span class="button__icon">
-									{$SVG('arrow-right-white').customBasePath('themes/longneck/images/svg/').extraClass('image--cover icon--arrow')}
-								</span>
-								<span class="button__text">Lees meer</span>
-							</span>
-						</div>
-					</a>
+						<span class="button__arrow">
+							{$SVG('forward').customBasePath('themes/longneck/images/svg/')}
+						</span>
+					</div>
 				</div>
 			<% end_loop %>
 		</div>

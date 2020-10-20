@@ -1,7 +1,6 @@
 <div class="cta <% if Image %>cta--image<% else %>cta--content<% end_if %>">
 	<div class="cta__wrapper">
 
-
 		<% if Image %>
 			<div class="cta__image">
 				<% with Image %>
@@ -13,7 +12,7 @@
 		<div class="cta__content">
 			<% if ShowTitle %>
 				<div class="cta__title">
-					<h2 class="heading-2 heading--yellow">{$Title}</h2>
+					<h2 class="heading-2">{$Title}</h2>
 				</div>
 			<% end_if %>
 			<div class="cta__text">

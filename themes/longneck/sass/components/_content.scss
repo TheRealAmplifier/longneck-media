@@ -14,3 +14,11 @@
 .content--wide {
 	flex: 0 0 100%;
 }
+
+.text__main {
+	p {
+		a {
+			@extend %defaultTextLink;
+		}
+	}
+}

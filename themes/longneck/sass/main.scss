@@ -11,6 +11,7 @@
 
 @import 'partials/images';
 @import 'partials/buttons';
+@import 'partials/links';
 
 @import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
 
@@ -19,13 +20,24 @@
 @import 'components/banner';
 @import 'components/breadcrumbs';
 @import 'components/title';
+@import 'components/form';
 @import 'components/content';
+@import 'components/services';
+@import 'components/background';
+@import 'components/pagination';
+@import 'components/team';
+@import 'components/contact';
 @import 'components/footer';
 
 @import 'elements/elements';
 @import 'elements/links';
 @import 'elements/services';
+@import 'elements/content';
 @import 'elements/cta';
+@import 'elements/socials';
 @import 'elements/projects';
+@import 'elements/customers';
 
 @import 'pages/project';
+@import 'pages/about';
+@import 'pages/articles';

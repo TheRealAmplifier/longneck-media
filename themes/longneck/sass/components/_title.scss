@@ -1,6 +1,21 @@
 .title {
-	padding: 20rem 0;
+	padding: 7.5rem 0;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 10rem 0 20rem;
+	}
 }
 .title__wrapper {
 	@include sectionwrapper;
+}
+.title__inner {
+	max-width: 45%;
+}
+.title--centered {
+	text-align: center;
+
+	.title__inner {
+		max-width: 60%;
+		margin: 0 auto;
+	}
 }

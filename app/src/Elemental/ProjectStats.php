@@ -5,12 +5,8 @@ namespace Elements;
 use DataObject\ProjectTag;
 use DNADesign\Elemental\Models\BaseElement;
 
-use SilverStripe\Assets\Image;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\ListboxField;
 use SilverStripe\Forms\TextField;
-use SilverStripe\View\SSViewer;
 
 class ProjectStats extends BaseElement {
 	private static $table_name = 'ProjectStats';

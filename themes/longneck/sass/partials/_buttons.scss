@@ -42,13 +42,13 @@
 }
 
 .button--open-yellow {
-	border: 2px solid $color-yellow;
+	border: 2px solid $color-blue-dark-2;
 	line-height: 3.8rem;
-	color: $color-yellow;
+	color: $color-blue-dark-2;
 
 	&:hover,
 	&:focus {
-		background-color: $color-yellow;
+		background-color: $color-blue-dark-2;
 		color: $color-white;
 	}
 
@@ -58,15 +58,15 @@
 }
 
 .button--solid-yellow {
-	background: $color-yellow;
+	background: $color-blue-dark-2;
 	color: $color-white;
-	outline: 0px solid $color-yellow;
+	outline: 0px solid $color-blue-dark-2;
 	outline-offset: 0px;
 	transition: all .1s ease-in;
 
 	&:hover,
 	&:focus {
-		outline: 3px solid $color-yellow;
+		outline: 3px solid $color-blue-dark-2;
     outline-offset: 3px;
 	}
 }
@@ -90,4 +90,11 @@
 
 .button--left {
 	margin-right: auto;
+}
+
+.button__arrow  {
+	display: block;
+	width: 6rem;
+	height: 3rem;
+	margin-top: auto;
 }

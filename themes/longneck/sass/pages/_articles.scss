@@ -1,0 +1,19 @@
+.articles__wrapper {
+	@include sectionwrapper(163rem);
+}
+.articles__list--column {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 3rem;
+	width: 100%;
+
+	@include breakpoint('max-tablet-landscape') {
+		grid-template-columns: repeat(2, 1fr);	
+		margin-top: 5rem;
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(3, 1fr);	
+		grid-gap: 5rem;
+	}
+}

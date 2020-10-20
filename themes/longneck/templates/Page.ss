@@ -15,8 +15,12 @@
 	<% require themedCSS('main') %>
 </head>
 <body class="{$ClassName.ShortName}">
+	<!-- <div class="background">
+		<img class="image--cover" src="{$ThemeDir}/images/shapes/background-hexagon.svg" alt="">
+	</div> -->
+	
 	<% include Header %>
-	<main class="content content--main">
+	<main class="content--main">
 		{$Layout}
 	</main>
 	<% include Footer %>

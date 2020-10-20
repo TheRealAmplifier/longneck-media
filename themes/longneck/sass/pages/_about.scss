@@ -1,0 +1,29 @@
+.about {
+	@extend %defaultSectionPadding;
+}
+.about__wrapper	{
+	@include flex;
+	@include sectionwrapper(183rem);
+
+	@include breakpoint('min-tablet-landscape') {
+		justify-content: flex-end;
+	}
+}
+
+.about__box {
+	background-color: $color-blue-light-1;
+	max-width: 70%;
+}
+.about__image {
+	height: 30rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		height: 45rem;
+	}
+	@include breakpoint('min-desktop-large') {
+		height: 60rem;
+	}
+}
+.about__content {
+	padding: 15rem;
+}

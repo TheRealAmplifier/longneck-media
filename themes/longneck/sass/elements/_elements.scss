@@ -1,10 +1,12 @@
 .element {
-	padding: 0 0 5rem;
+	&:not(:last-child) {
+		padding: 0 0 5rem;
 
-	@include breakpoint('min-tablet-portrait') {
-		padding: 0 0 10rem;
-	}
-	@include breakpoint('min-tablet-landscape') {
-		padding: 0 0 12.5rem;
+		@include breakpoint('min-tablet-portrait') {
+			padding: 0 0 10rem;
+		}
+		@include breakpoint('min-tablet-landscape') {
+			padding: 0 0 12.5rem;
+		}
 	}
 }

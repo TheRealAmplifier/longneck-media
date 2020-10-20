@@ -9,7 +9,25 @@
 		margin-right: 5rem;
 	}
 }
+.navigation__link--button {
+	@include flex($align: center);
+	height: 5rem;
+	line-height: 5rem;
+	border-radius: 5rem;
+	padding: 0 3rem;
+	background-color: $color-white;
+	border: 2px solid $color-blue-dark-2;
+	color: $color-blue-dark-2;
 
+	&.current {
+		background-color: $color-blue-dark-2;
+		color: $color-white;
+	}
+}
+
+.link__text {
+	margin-right: 2rem;
+}
 
 .navigation__title {
 	@extend %heading--uppercase-small;
@@ -19,4 +37,7 @@
 
 .navigation--column {
 	@include flex($direction: column);
+}
+.navigation--row {
+	@include flex($align: center);
 }

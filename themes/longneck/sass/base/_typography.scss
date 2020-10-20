@@ -12,13 +12,35 @@
 
 	&:hover,
 	&:focus {
-		color: $color-yellow;
+		color: $color-blue-dark-2;
 	}
 	&.current,
 	&.section {
 		font-weight: 800;
 	}
 }
+%defaultTextLink {
+  position: relative;
+
+  &:after {
+		content: "";
+    position: absolute;
+    bottom: .2rem;
+    left: 0;
+    right: 0;
+    height: .6rem;
+    z-index: -1;
+		background-color:  $color-blue-light-3;
+  }
+
+  &:hover,
+  &:focus {
+    &:after {
+      background-color: $color-blue-dark-1;
+    }
+  }
+}
+
 
 body {
 	color: $color-black;
@@ -59,10 +81,10 @@ body {
 }
 
 .heading-4 {
-	font-size: 2.2rem;
+	font-size: 1.8rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 2.8rem;
+		font-size: 2.2rem;
 	}
 }
 
@@ -76,7 +98,7 @@ p {
 	}
 
 	@include breakpoint('min-tablet-landscape') { 
-		font-size: 2rem;
+		font-size: 2.2rem;
 	}
 }
 
@@ -90,7 +112,7 @@ p {
 
 .text--yellow,
 .heading--yellow {
-	color: $color-yellow;
+	color: $color-blue-dark-2;
 }
 .text--green,
 .heading--green {

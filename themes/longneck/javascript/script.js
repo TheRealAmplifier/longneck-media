@@ -1,10 +1,11 @@
-import Glide from '@glidejs/glide';
+import $ from 'jquery';
 
-var glide = new Glide('.projects--slider', {
-	type: 'slider',
-	focusAt: 'center',
-	perView: 3,
-	gap: 40
-})
-
-glide.mount()
+$('form.custom--validation').parsley({
+	errorsWrapper: '<div></div>',
+	errorTemplate: '<small class="error"></small>',
+	errorClass: 'error',
+	errorsContainer: function ( elem, isRadioOrCheckbox ) {
+			return $(elem).parents('.form__group:first');
+	},
+	excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden], :hidden, .ignore-validation'
+});

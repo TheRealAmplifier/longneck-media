@@ -27,3 +27,16 @@ li {
   padding: 0 0;
   list-style: none;
 }
+
+%defaultSectionPadding {
+  padding: 5rem 0;
+
+  @include breakpoint('min-desktop') {
+		padding: 10rem 0;
+	}
+}
+
+.section__title {
+  margin-bottom: 7.5rem;
+  max-width: 75%;
+}

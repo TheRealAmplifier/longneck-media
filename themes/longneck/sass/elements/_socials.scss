@@ -1,0 +1,19 @@
+.navigation__socials {
+	@include flex($direction: column, $align: flex-end);
+	padding-right: 4rem;
+}
+.social__link {
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	transition: all .15s linear;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&:hover,
+	&:focus {
+		transform: scale(1.12);
+	}
+}

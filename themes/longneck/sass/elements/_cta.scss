@@ -1,40 +1,52 @@
-
-.cta__wrapper {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
-
-	// @include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
-}
-
-.cta__image {
-	height: 32.5rem;
-
-	@include breakpoint('min-tablet-portrait') {
-		height: unset;
-		flex: 1;
+.cta--image { 
+	.cta__wrapper {
+		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
 	}
-}
-.cta__content {
-	@include flex($direction: column);
-	flex: 0 0 100%;
-	padding: 5rem 3rem;
-	background-color: $color-gray-light-1;
-
-	@include breakpoint('min-tablet-landscape') {
-		padding: 7.5rem 12.5rem;
-	}
-}
-
-.cta--image {
 	.cta__content {
-		flex: 0 0 65%;
+		@include flex($direction: column, $justify: center);
+		color: $color-blue-dark-3;
+		flex: 0 0 60%;
+		padding: 5rem 3rem;
+	
+		@include breakpoint('min-tablet-landscape') {
+			padding: 7.5rem 12.5rem;
+		}
+	}
+
+	.cta__image {
+		height: 32.5rem;
+	
+		@include breakpoint('min-tablet-portrait') {
+			height: unset;
+			flex: 1;
+		}
+		@include breakpoint('min-desktop') {
+			max-height: 60rem;
+		}
 	}
 }
 .cta--content {
-	background-color: $color-gray-light-1;
+	background-color: $color-blue-light-1;
 
+	.cta__wrapper {
+		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
+		@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	}
 	.cta__content { 
 		background-color: none;
-		padding: 5rem 0;
+		padding: 10rem 0;
+	}
+}
+
+.cta--contact {
+	padding: 5rem 0;
+	
+	.cta__wrapper {
+		@include flex($direction: column);
+		@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 15rem 0;
 	}
 }

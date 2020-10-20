@@ -4,7 +4,6 @@ Name: myproject
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
 
-
 ---
 Name: my-project-assetsflysystem
 After: '#assetsflysystem'
@@ -29,3 +28,14 @@ SilverStripe\Core\Injector\Injector:
       ResolutionFileIDHelpers:
         - '%$SilverStripe\Assets\FilenameParsing\HashFileIDHelper'
       VersionedStage: Stage
+
+StevieMayhew\SilverStripeSVG\SVGTemplate:
+  base_path: './public/assets/'
+  default_extra_classes:
+    - 'image--cover'
+
+Heyday\MenuManager\MenuItem:
+  extensions:
+    - Extensions\CustomMenuItem
+
+  

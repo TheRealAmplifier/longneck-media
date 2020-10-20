@@ -2,7 +2,7 @@
 	<div class="footer__wrapper">
 		<div class="footer__top">
 			<div class="footer__title">
-				<h2 class="heading-2 heading--margin-small text--yellow">{$SiteConfig.Title}</h2>
+				<h2 class="heading-2 heading--margin-small">Longneck <br /> Media</h2>
 			</div>
 			<div class="footer__navigation">
 				<% if $MenuSet('Footer1').MenuItems %>

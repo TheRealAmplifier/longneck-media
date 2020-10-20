@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="132px" height="149px" viewBox="0 0 132 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M132,119.334274 C121.400263,133.49724 103.896043,146.86746 87.1809501,148.769326 C69.1499077,150.756613 51.8978487,139.680364 35.7281202,129.583089 C19.5583917,119.485815 4.34783403,110.414791 1.19631611,97.7873847 C-1.83204214,85.1127014 7.00370556,68.7419331 16.8801787,55.0823473 C26.7566519,41.4227615 37.5148038,30.4281458 50.2165762,22.6562422 C62.9183485,14.8843386 77.6510141,10.1943815 93.9586487,6.294293 C105.744189,3.47569592 118.480982,1.02025961 132,0.571923692 L132,119.334274 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#F3F3F7" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

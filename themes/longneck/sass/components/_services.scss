@@ -1,0 +1,90 @@
+.services__blocks {
+	position: relative;
+	display: grid;	
+	grid-template-columns: 1fr;
+	width: 100%;
+	margin-top: 5rem;
+	grid-gap: 5rem;
+
+	.block {
+		&:not(:last-of-type) {
+			margin-bottom: 3rem;
+	
+			@include breakpoint('min-tablet-landscape') {
+				margin-bottom: 5rem;
+			}
+			@include breakpoint('min-desktop-xlarge') {
+				margin-bottom: 7.5rem;
+			}
+		}
+	}
+
+	@include breakpoint('min-mobile') {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 7.5rem;
+	}
+}
+
+.services__blocks--narrow {
+	position: relative;
+	display: grid;	
+	grid-template-columns: 1fr;
+	width: 100%;
+	margin-top: 5rem;
+	grid-gap: 3rem;
+
+	@include breakpoint('min-tablet-portrait') {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.block {
+		padding: 3rem 3rem;
+	}
+}
+
+.block__column {
+	&:nth-of-type(2) {
+		margin-top: 15rem;
+	}
+}
+
+.block {
+	position: relative;
+	background-color: $color-white;
+	padding: 5rem 5rem;
+	transition: all .2s ease-in;
+	background-color: $color-gray-light-1;
+	
+	&:hover,
+	&:focus {
+		box-shadow: 8px 8px $color-gray-light-3;
+		transform: translate(-8px, -8px);
+	}
+}
+
+.block--centered {
+	text-align: center;
+
+	.block__icon {
+		width: 5.5rem;
+		height: 5.5rem;
+		margin: 0 auto 3rem;
+	}
+}
+
+.block__link {
+	position: absolute;
+	top: 0;
+	left:0;
+	bottom: 0rem;
+	right: 0rem;
+}
+
+.block__icon {
+	width: 7.5rem;
+	height: 7.5rem;
+	margin: 0 0 5rem;
+}

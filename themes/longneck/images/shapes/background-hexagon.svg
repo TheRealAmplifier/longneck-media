@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="828px" height="450px" viewBox="0 0 828 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Polygon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Polygon" transform="translate(-1092.000000, 0.000000)" fill="#EAF0F3">
+            <path d="M1642.81744,-687.236398 L2175.25157,-300.400363 L1961.10316,358.680673 L1318.96232,358.680673 C1288.63648,358.680673 1261.75956,339.153449 1252.38837,310.311863 L1069.67191,-252.031553 C1060.30071,-280.873139 1070.56678,-312.468852 1095.1009,-330.293932 L1586.39006,-687.236398 C1603.21345,-699.45931 1625.99405,-699.45931 1642.81744,-687.236398 Z" transform="translate(1614.603751, -118.234845) rotate(-44.000000) translate(-1614.603751, 118.234845) "></path>
+        </g>
+    </g>
+</svg>

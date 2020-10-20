@@ -1,31 +1,24 @@
 .links__wrapper {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem);
-	// @include sectionwrapper(133rem, $setBreakpointMaxWidth: 'min-desktop-xxlarge', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 6rem,  $setBreakpointPadding: 'min-desktop-xlarge', $setBreakpointPaddingSize:  0 3rem, $unsetPadding: true);
-
 
 	@include breakpoint('min-tablet-landscape') {
 		justify-content: space-between;
 	}
 }
 .links__title {
-	border: 5px solid $color-green;
+	border: 5px solid $color-blue-dark-2;
+	color: $color-blue-dark-1;
 	padding: 3rem 3rem;
 	flex: 0 0 35rem;
-	max-width: 35rem;
 	min-height: 32.5rem;
 }
 .links__content {
 	flex: 1;
 	margin-top: 5rem;
-	// padding-left: 4rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		margin-left: 7.5rem;
 		margin-top: 0;
-	}
-	@include breakpoint('min-desktop-large') {
-		margin-left: 20rem;
 	}
 }
 .sevices__text {

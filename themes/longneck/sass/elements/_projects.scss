@@ -1,10 +1,11 @@
+.projects--all {
+	padding: 0 0 20rem;
+}
+
 .projects--latest {
 	@include flex;
+	@extend %defaultSectionPadding;
 	width: 100%;
-	// background-color: $color-gray-light-1;
-	padding: 5rem 0;
-
-	// background-image: url('../images/pattern/pattern-1.png');
 
 	@include breakpoint('min-tablet-portrait') {
 		padding: 7.5rem 0;
@@ -15,12 +16,13 @@
 }
 .projects__wrapper {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 6rem);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
 }
-.projects__list {
+.projects__list--column {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 4rem;
+	width: 100%;
 
 	@include breakpoint('max-tablet-landscape') {
 		margin-top: 7.5rem;
@@ -32,57 +34,68 @@
 		margin-top: 5rem;
 	}
 }
+.projects__list--row {
+	@include flex($wrap: wrap);
+	width: 100%;
+}
 
-.project {
+.card {
 	position: relative;
-	flex: 0 0 45%;
-	background-color: $color-white;
 	transition: all .2s ease-in;
-	box-shadow: 0 .2rem 1.5rem rgba($color-black, .16);
-
-	&:first-child {
-		&:before {
-			content: '';
-			position: absolute;
-			top: -3rem;
-			left: -3rem;
-			border: 5px solid $color-green;
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-		}	
-	}
-
+	background-color: $color-gray-light-1;
+	
 	&:hover,
 	&:focus {
-		.project__image .image--animated {
-			transform: scale(1.05);
+		box-shadow: 8px 8px $color-gray-light-3;
+		transform: translate(-8px, -8px);
+
+	}
+}
+.card__link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.card--row {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	position: relative;
+	flex: 0  0 100%;
+
+	&:not(:last-child){
+		margin-bottom: 10rem;
+	}
+
+	.card__image {
+		height: 55rem;
+		flex: 0 0 40%;
+	}
+	.card__content {
+		@include flex($direction: column);
+		flex: 1;
+		padding: 10rem 5rem;
+	}
+}
+
+.card--column {
+	.card__image {
+		height: 35rem;
+	}
+	.card__content {
+		@include flex($direction: column);
+		padding: 5rem 5rem;
+
+		@include breakpoint('min-tablet-landscape') {
+			height: 40rem;
 		}
 	}
 }
-.project__image {
-	height: 27.5rem;
-	display: block;
-	overflow: hidden;
-}
-.project__content {
-	padding: 3rem;
-}
-
-.project__link {
-	position: relative;
-	z-index: 0;
-	display: block;
-	height: 100%;
-}
-
 
 .image--animated {
 	transition: transform .2s ease-in;
 }
 
-
-// detail page
 .details__wrapper {
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }

@@ -7,6 +7,7 @@ Pages\HomePage:
     - Elements\CallToAction
     - Elements\Projects
     - Elements\Content
+    - Elements\SelectedCustomers
 
 Pages\ProjectPage:
   extensions:
@@ -15,3 +16,4 @@ Pages\ProjectPage:
     - Elements\ProjectIntro
     - Elements\ProjectStats
     - Elements\ProjectResults
+    - Elements\SelectedCustomers

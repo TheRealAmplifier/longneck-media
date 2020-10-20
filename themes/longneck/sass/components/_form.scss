@@ -1,0 +1,65 @@
+.form__fields {
+	@include flex($wrap: wrap);
+}
+
+.form__row {
+	@include flex;
+	flex: 0 0 100%;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
+
+.form__group {
+	flex: 1;
+}
+.form__group--half {
+	flex: 0 0 calc(50% - 1.5rem)
+}
+.form__group--spacer {
+	margin-right: 3rem;
+}
+
+.form__label {
+	@include flex;
+	margin-bottom: 1rem;
+}
+
+.form__actions {
+	@include flex($justify: center);
+	margin-top: 5rem;
+
+	.action {
+		@extend .button;
+		@extend .button--solid-yellow;
+
+		appearance: none;
+		border: 0;
+	}
+}
+
+input[type="text"],
+input[type="email"] {
+	width: 100%;
+	border: 2px solid $color-gray-light-2;
+	height: 6rem;
+	padding: 0 2rem;
+}
+textarea {
+	width: 100%;
+	border: 2px solid $color-gray-light-2;
+	padding: 2rem;
+	min-height: 30rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	@include font('montserrat', $weight: 400);
+	font-size: 1.4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 1.6rem;
+	}
+}

@@ -48,7 +48,7 @@
 .breadcrumb__link {
 	@include flex($align: center);
 	height: 5rem;
-	background: $color-gray-light-1;
+	background: $color-gray-light-2;
 	text-align: center;
 	position: relative;
 	margin: 0 .5rem 0 0;
@@ -60,7 +60,7 @@
 		content: "";  
 		border-top: 2.5rem solid transparent;
 		border-bottom: 2.5rem solid transparent;
-		border-left: 1rem solid $color-gray-light-1;
+		border-left: 1rem solid $color-gray-light-2;
 		position: absolute;
 		right: -1rem; 
 		top: 0;
@@ -78,15 +78,15 @@
 	}
 }
 .breadcrumb__current {
-	background: $color-yellow;
+	background: $color-blue-dark-2;
 	color: $color-white;
 
 	&:hover,
 	&:focus {
-		background: darken($color-yellow, 10);
+		background: darken($color-blue-dark-2, 10);
 
 		&:after {
-			border-left-color: darken($color-yellow, 10);
+			border-left-color: darken($color-blue-dark-2, 10);
 		}
 	}
 }

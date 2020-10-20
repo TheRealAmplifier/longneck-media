@@ -1,0 +1,6 @@
+.content {
+	@extend %defaultSectionPadding;
+}
+.content__wrapper {
+	@include sectionwrapper(100rem);
+}

@@ -2,14 +2,10 @@
 
 namespace DataObject;
 
-use Elements\ProjectResults;
-use Elements\ProjectStats;
 use Pages\ProjectHolderPage;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\DropdownField;
+
 use SilverStripe\ORM\DataObject;
 
-use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextField;
 
 class ProjectTag extends DataObject {
@@ -26,11 +22,11 @@ class ProjectTag extends DataObject {
 	];
 
 	private static $belongs_many_many = [
-		'ProjectStats'     		=> ProjectStats::class,
+		'ProjectStats'     		=> ProjectStat::class,
 	];
 
 	private static $summary_fields = [
-		'Title'								=> 'Naame',
+		'Title'								=> 'Naam',
 	];
 
 	public function getCMSfields() {
@@ -43,9 +39,5 @@ class ProjectTag extends DataObject {
 		]);
 
 		return $fields;
-	}
-
-	public function ThumbnailImage() {
-		return $this->Image()->ScaleHeight(125);
 	}
 }

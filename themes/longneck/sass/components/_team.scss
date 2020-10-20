@@ -1,0 +1,32 @@
+.team {
+	@extend %defaultSectionPadding;
+}
+.team__wrapper {
+	@include sectionwrapper($unsetPadding: true);
+}
+.team__list {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 5rem 0;
+
+	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0 10rem;
+	}
+}
+
+.member {
+	background-color: $color-white;
+	box-shadow: 0 0 5rem rgba($color-black, .16);
+}
+.member__image {
+	height: 35rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		height: 50rem;
+
+	}
+}
+.member__content {
+	padding: 5rem;
+}
