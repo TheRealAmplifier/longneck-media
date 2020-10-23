@@ -1,7 +1,7 @@
 .footer {
 	padding-top: 15rem;
 	margin-top: 20rem;
-	background-color: $color-gray-light-1;
+	// background-color: $color-gray-light-1;
 }
 .footer__wrapper {
 	@include flex($direction: column);

@@ -2,5 +2,25 @@
 	@extend %defaultSectionPadding;
 }
 .content__wrapper {
-	@include sectionwrapper(100rem);
+	@include sectionwrapper(133rem, $unsetPadding: true);
+}
+.content__box {
+	background-color: $color-blue-light-1;
+}
+.box__image {
+	height: 30rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		height: 45rem;
+	}
+	@include breakpoint('min-desktop-large') {
+		height: 60rem;
+	}
+}
+.box__content {
+	padding: 3rem 5rem;
+
+	@include breakpoint('min-tablet-landscape') { 
+		padding: 7.5rem  10rem;
+	}
 }

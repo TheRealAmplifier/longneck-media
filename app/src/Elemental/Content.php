@@ -3,9 +3,10 @@
 namespace Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
-
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Forms\ListboxField;
+use SilverStripe\Assets\Image;
 
 class Content extends BaseElement {
 	private static $table_name = 'Content';
@@ -16,8 +17,17 @@ class Content extends BaseElement {
 	private static $inline_editable = false;
 
 	private static $db = [
-		'TextIntro'			=> 'HTMLText',
-		'TextMain'			=> 'HTMLText'
+		'TextIntro'						=> 'HTMLText',
+		'TextMain'						=> 'HTMLText',
+		'HasBackgroundColor'	=> 'Boolean'
+	];
+
+	private static $has_one = [
+		'Image' 		=> Image::class 
+	];
+
+	private static $owns = [
+		'Image'
 	];
 
 	public function getCMSFields() {
@@ -27,8 +37,13 @@ class Content extends BaseElement {
 
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
-			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7)
+			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
+			CheckboxField::create('HasBackgroundColor', 'Achtergrondkleur toepassen')->setDescription('Deze optie voegt een achtergrond kleur toe aan het blok.')
 		]);
+
+		if($this->HasBackgroundColor) {
+			$fields->addFieldToTab('Root.Main', UploadField::create('Image', 'Afbeedling')->setFolderName('Content Afbeeldingen'));
+		}
 
 		return $fields;
 	}

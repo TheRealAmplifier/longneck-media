@@ -1,4 +1,4 @@
-<section class="title">
+<div class="title">
 	<div class="title__wrapper">
 		<div class="title__inner">
 			<h1 class="heading-1">{$MenuTitle}</h1>
@@ -7,9 +7,9 @@
 			<% end_if %>
 		</div>
 	</div>
-</section>
+</div>
 
-<section class="contact">
+<div class="contact">
 	<div class="contact__wrapper">
 		<div class="form__socials">
 			<% if $SiteConfig.SocialAccounts %>
@@ -34,4 +34,4 @@
 			{$ContactForm}
 		</div>
 	</div>
-</section>
+</div>

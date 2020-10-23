@@ -1,4 +1,4 @@
-<section class="title title--centered">
+<div class="title title--centered">
 	<div class="title__wrapper">
 		<div class="title__inner">
 			<h1 class="heading-1">{$MenuTitle}</h1>
@@ -7,10 +7,10 @@
 			<% end_if %>
 		</div>
 	</div>
-</section>
+</div>
 
 <!-- https://docs.silverstripe.org/en/4/developer_guides/templates/how_tos/pagination/ -->
-<section class="articles">
+<div class="articles">
 	<div class="articles__wrapper">
 		<% if AllBlogs %>
 			<div class="articles__list--column">
@@ -38,4 +38,4 @@
 			<p>Er zijn geen berichten geplaatst.</p>
 		<% end_if %>
 	</div>
-</section>
+</div>

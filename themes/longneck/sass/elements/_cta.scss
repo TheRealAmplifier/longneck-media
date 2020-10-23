@@ -4,6 +4,7 @@
 	}
 	.cta__content {
 		@include flex($direction: column, $justify: center);
+		background-color: $color-gray-light-1;
 		color: $color-blue-dark-3;
 		flex: 0 0 60%;
 		padding: 5rem 3rem;

@@ -1,0 +1,57 @@
+.method__wrapper {
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
+}
+.method__boxed {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $wrap: wrap);
+	background-color: $color-white;
+	box-shadow: 0 0 3rem rgba($color-black, .16);
+	padding: 3rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		box-shadow: 0 0 5rem rgba($color-black, .16);
+		padding: 7.5rem;
+	}
+}
+
+.method__title {
+	flex: 0 0 100%;
+}
+.method__left {
+	flex: 1;
+}
+.method__right {
+	flex: 0 0 35%;
+	margin-left: 10rem;
+
+	@include breakpoint('max-tablet-landscape') {
+		margin-top: 5rem;
+	}
+}
+
+.method__list {
+	@include flex($direction: column);
+}
+
+.method__step {
+	@include flex($align: center);
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.method__number {
+	@include flex($align: center, $justify: center);
+	border-radius: 50%;
+	background-color: $color-white;
+	border: 2px solid $color-blue-dark-2;
+	width: 4rem;
+	height: 4rem;
+	margin-right: 3rem;
+}
+.method__link {
+	&:hover,
+	&:focus {
+		color: $color-blue-dark-2;
+	}
+}

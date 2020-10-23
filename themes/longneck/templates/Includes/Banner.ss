@@ -1,4 +1,4 @@
-<section class="banner">
+<div class="banner">
 	<div class="banner__wrapper">
 		<div class="banner__content">
 			<div class="content--boxed">
@@ -12,4 +12,4 @@
 			<% end_with %>
 		</div>
 	</div>
-</section>
+</div>

@@ -3,16 +3,11 @@
 }
 .about__wrapper	{
 	@include flex;
-	@include sectionwrapper(183rem);
-
-	@include breakpoint('min-tablet-landscape') {
-		justify-content: flex-end;
-	}
+	@include sectionwrapper(100rem);
 }
 
 .about__box {
 	background-color: $color-blue-light-1;
-	max-width: 70%;
 }
 .about__image {
 	height: 30rem;
@@ -25,5 +20,9 @@
 	}
 }
 .about__content {
-	padding: 15rem;
+	padding: 3rem 5rem;
+
+	@include breakpoint('min-tablet-landscape') { 
+		padding: 7.5rem  10rem;
+	}
 }

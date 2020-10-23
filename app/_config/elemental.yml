@@ -17,3 +17,13 @@ Pages\ProjectPage:
     - Elements\ProjectStats
     - Elements\ProjectResults
     - Elements\SelectedCustomers
+
+
+Pages\AboutPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension 
+  allowed_elements:
+    - Elements\Content
+    - Elements\SelectedCustomers
+    - Elements\Method
+    - Elements\Team

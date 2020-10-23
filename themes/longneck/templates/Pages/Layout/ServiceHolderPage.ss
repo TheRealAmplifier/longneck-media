@@ -1,4 +1,4 @@
-<section class="title title--centered">
+<div class="title title--centered">
 	<div class="title__wrapper">
 		<div class="title__inner">
 			<h1 class="heading-1">{$MenuTitle}</h1>
@@ -7,9 +7,9 @@
 			<% end_if %>
 		</div>
 	</div>
-</section>
+</div>
 
-<section class="services">
+<div class="services">
 	<div class="services__wrapper">
 		<div class="services__blocks">
 			<div class="block__column">
@@ -34,4 +34,4 @@
 				<% end_loop %>
 		</div>
 	</div>
-</section>
+</div>

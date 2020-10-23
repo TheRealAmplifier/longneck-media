@@ -1,4 +1,4 @@
-<section class="services">
+<div class="services">
 	<div class="services__wrapper">
 		<% if ShowTitle %>
 			<div class="services__title content--wide">
@@ -30,4 +30,4 @@
 		</div>
 	<% end_if %>
 	</div>
-</section>
+</div>

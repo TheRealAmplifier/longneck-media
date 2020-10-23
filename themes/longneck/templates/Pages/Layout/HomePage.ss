@@ -1,5 +1,5 @@
 <% include Banner %>
 
-<section class="elements">
+<div class="elements">
 	{$ElementalArea}
-</section>
+</div>

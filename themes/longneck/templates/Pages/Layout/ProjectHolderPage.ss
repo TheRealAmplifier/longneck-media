@@ -1,10 +1,10 @@
-<section class="title">
+<div class="title">
 	<div class="title__wrapper">
 		<div class="title__inner">
 			<h1 class="heading-1">{$MenuTitle}</h1>
 		</div>
 	</div>
-</section>
+</div>
 
 <div class="projects projects--all">
 	<div class="projects__wrapper">

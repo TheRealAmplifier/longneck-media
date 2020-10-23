@@ -1,10 +1,10 @@
-<section class="title">
+<div class="title">
 	<div class="title__wrapper">
 		<h1 class="heading-1">{$MenuTitle}</h1>
 	</div>
-</section>
+</div>
 
-<section class="details">
+<div class="details">
 	<div class="details__wrapper">
 		<% include BreadCrumbs %>
 		
@@ -14,4 +14,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
