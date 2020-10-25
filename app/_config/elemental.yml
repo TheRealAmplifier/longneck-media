@@ -18,7 +18,6 @@ Pages\ProjectPage:
     - Elements\ProjectResults
     - Elements\SelectedCustomers
 
-
 Pages\AboutPage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension 
@@ -27,3 +26,4 @@ Pages\AboutPage:
     - Elements\SelectedCustomers
     - Elements\Method
     - Elements\Team
+    - Elements\Projects

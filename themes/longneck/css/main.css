@@ -1415,6 +1415,34 @@ textarea {
   }
 }
 
+.projects__wrapper--medium {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 153rem;
+  padding: 0 6rem;
+}
+@media (min-width: 90em) {
+  .projects__wrapper--medium {
+    padding: 0 0;
+  }
+}
+
+.projects__wrapper--narrow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 133rem;
+  padding: 0 6rem;
+}
+@media (min-width: 90em) {
+  .projects__wrapper--narrow {
+    padding: 0 0;
+  }
+}
+
 .projects__list--column {
   display: grid;
   grid-template-columns: 1fr;
@@ -1691,7 +1719,6 @@ textarea {
 .year__label,
 .tags__label {
   font-weight: 600;
-  color: #e6e9eb;
   margin-bottom: 2rem;
 }
 
@@ -1699,7 +1726,6 @@ textarea {
   display: flex;
   align-items: center;
   font-size: 3.6rem;
-  color: #e6e9eb;
   font-weight: 600;
   flex: 1;
 }

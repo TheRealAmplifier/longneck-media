@@ -18,6 +18,15 @@
 	@include flex($wrap: wrap);
 	@include sectionwrapper(163rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
 }
+.projects__wrapper--medium {
+	@include flex($wrap: wrap);
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
+}
+.projects__wrapper--narrow {
+	@include flex($wrap: wrap);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
+}
+
 .projects__list--column {
 	display: grid;
 	grid-template-columns: 1fr;
