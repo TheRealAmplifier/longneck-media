@@ -40,7 +40,8 @@
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+select {
 	width: 100%;
 	border: 2px solid $color-gray-light-2;
 	height: 6rem;
@@ -52,14 +53,25 @@ textarea {
 	padding: 2rem;
 	min-height: 30rem;
 }
-
+select {
+	appearance: none;
+	background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+	background-size: 1.2rem;
+	background-position: 96% center; 
+	background-repeat: no-repeat;
+}
 input[type="text"],
 input[type="email"],
+select,
 textarea {
-	@include font('montserrat', $weight: 400);
+	@include font('Work Sans', $weight: 400);
 	font-size: 1.4rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		font-size: 1.6rem;
 	}
+}
+
+.form--spacer {
+	margin-top: 10rem;
 }

@@ -5,6 +5,7 @@ namespace Elements;
 use DataObject\MethodStep;
 
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
@@ -20,7 +21,8 @@ class Method extends BaseElement {
 
 	private static $db = [
 		'TextIntro'			=> 'HTMLText',
-		'TextMain'			=> 'HTMLText'
+		'TextMain'			=> 'HTMLText',
+		'HasShadow'			=> 'Boolean'
 	];
 
 	private static $has_many = [
@@ -35,6 +37,7 @@ class Method extends BaseElement {
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
 			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
+			CheckboxField::create('HasShadow', 'Schaduw achter blok toevoegen')
 		]);
 
 		$config =  GridFieldConfig_RecordEditor::create();

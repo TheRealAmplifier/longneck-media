@@ -2,7 +2,6 @@
 
 namespace Pages;
 
-use DataObject\ProjectTag;
 use Page;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
@@ -28,26 +27,12 @@ class ProjectHolderPage extends Page {
 		'ContactLinkTarget'		=> SiteTree::class
 	];
 
-	private static $has_many = [
-		'ProjectTags'					=> ProjectTag::class
-	];
-
 	private static $allowed_children = [
 		ProjectPage::class
 	];
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-
-		$config =  GridFieldConfig_RecordEditor::create();
-		$config->addComponent(new GridFieldSortableRows('SortID'));
-		$fields->addFieldToTab('Root.Tags', GridField::create(
-			'ProjectTags',
-			'Tags',
-			$this->ProjectTags(),
-			$config
-		));
-
 
 		$fields->addFieldsToTab('Root.Contact', [
 			CheckboxField::create('ShowContact', 'Contact sectie tonen op project pagina\'s'),
@@ -56,7 +41,6 @@ class ProjectHolderPage extends Page {
 			TextField::create('ContactLinkText', 'Contact link tekst'),
 			TreeDropdownField::create('ContactLinkTargetID', 'Contact link doeladres', SiteTree::class),
 		]);
-
 
 		return $fields;
 	}

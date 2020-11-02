@@ -6,3 +6,6 @@
 	@include flex($wrap: wrap);
 	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $setBreakpointMaxWidth: 'min-desktop-large', $unsetPadding: true);
 }
+.services--related {
+	margin: 10rem 0;
+}

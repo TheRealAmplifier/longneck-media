@@ -754,7 +754,8 @@ p:not(:last-child) {
 }
 
 input[type=text],
-input[type=email] {
+input[type=email],
+select {
   width: 100%;
   border: 2px solid #e6e9eb;
   height: 6rem;
@@ -768,19 +769,34 @@ textarea {
   min-height: 30rem;
 }
 
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+  background-size: 1.2rem;
+  background-position: 96% center;
+  background-repeat: no-repeat;
+}
+
 input[type=text],
 input[type=email],
+select,
 textarea {
-  font-family: "Montserrat";
   font-weight: 400;
   font-size: 1.4rem;
 }
 @media (min-width: 64em) {
   input[type=text],
 input[type=email],
+select,
 textarea {
     font-size: 1.6rem;
   }
+}
+
+.form--spacer {
+  margin-top: 10rem;
 }
 
 .content--main {
@@ -1237,6 +1253,10 @@ textarea {
   }
 }
 
+.services--related {
+  margin: 10rem 0;
+}
+
 .content__wrapper {
   margin: 0 auto;
   width: 100%;
@@ -1570,6 +1590,15 @@ textarea {
   margin-right: 7.5rem;
 }
 
+.method--shadow {
+  box-shadow: 0 0 3rem rgba(41, 40, 40, 0.16);
+}
+@media (min-width: 64em) {
+  .method--shadow {
+    box-shadow: 0 0 5rem rgba(41, 40, 40, 0.16);
+  }
+}
+
 .method__wrapper {
   margin: 0 auto;
   width: 100%;
@@ -1582,7 +1611,6 @@ textarea {
   flex-wrap: wrap;
   flex-direction: column;
   background-color: #FFFFFF;
-  box-shadow: 0 0 3rem rgba(41, 40, 40, 0.16);
   padding: 3rem;
 }
 @media (min-width: 64em) {
@@ -1592,7 +1620,6 @@ textarea {
 }
 @media (min-width: 64em) {
   .method__boxed {
-    box-shadow: 0 0 5rem rgba(41, 40, 40, 0.16);
     padding: 7.5rem;
   }
 }
@@ -1638,10 +1665,15 @@ textarea {
   width: 4rem;
   height: 4rem;
   margin-right: 3rem;
+  flex: 0 0 4rem;
 }
 
 .method__link:hover, .method__link:focus {
   color: #0086B9;
+}
+
+.details {
+  margin-bottom: 15rem;
 }
 
 .details__box {

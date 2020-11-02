@@ -12,6 +12,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\ListboxField;
 use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 class ProjectPage extends Page {
@@ -39,7 +40,7 @@ class ProjectPage extends Page {
 
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
-			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Project Thumbnails')		
+			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Project Thumbnails'),
 		], 'Content');
 
 		return $fields;

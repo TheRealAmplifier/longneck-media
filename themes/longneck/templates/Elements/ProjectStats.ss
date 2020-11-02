@@ -6,12 +6,12 @@
 		</div>
 	<% end_if %>
 
-	<% if ProjectTags %>
+	<% if Services %>
 		<div class="stats__tags">
 			<span class="tags__label">Diensten:</span>
 			<div class="tags__box">
-				<% loop ProjectTags %>
-					<span class="tag__item">{$Title}</span>
+				<% loop Services %>
+					<a class="tag__item" href="{$Link}">{$Title}</a>
 				<% end_loop %>
 			</div>
 		</div>

@@ -2,11 +2,12 @@
 
 namespace Elements;
 
-use DataObject\ProjectTag;
 use DNADesign\Elemental\Models\BaseElement;
-
+use Pages\ServicePage;
+use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\ListboxField;
 use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TreeDropdownField;
 
 class ProjectStats extends BaseElement {
 	private static $table_name = 'ProjectStats';
@@ -16,11 +17,11 @@ class ProjectStats extends BaseElement {
 	private static $inline_editable = false;
 
 	private static $db = [
-		'Year'							=> 'Varchar'
+		'Year'							=> 'Varchar',
 	];
 
 	private static $many_many = [
-		'ProjectTags'				=> ProjectTag::class
+		'Services'				=> ServicePage::class
 	];
 
 	public function getCMSFields() {
@@ -28,7 +29,7 @@ class ProjectStats extends BaseElement {
 
 		$fields->addFieldsToTab('Root.Main', [
 			TextField::create('Year', 'Jaartal'),
-			ListboxField::create('ProjectTags', 'Project Tags', ProjectTag::get())
+			ListboxField::create('Services', 'Services', ServicePage::get())		
 		]);
 
 		return $fields;

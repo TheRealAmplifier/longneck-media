@@ -1,4 +1,4 @@
-<div class="method">
+<div class="method <% if HasShadow %>method--shadow<% end_if %>">
 	<div class="method__wrapper">
 		<div class="method__boxed">
 			<% if ShowTitle %>

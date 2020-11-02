@@ -27,3 +27,10 @@ Pages\AboutPage:
     - Elements\Method
     - Elements\Team
     - Elements\Projects
+
+Pages\ServicePage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension  
+  allowed_elements:
+    - Elements\ContentClean
+    - Elements\Method
