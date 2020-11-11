@@ -3,17 +3,20 @@
 namespace Pages;
 
 use DataObject\ContactSubmission;
+use DataObject\QuotationSubmission;
 use PageController;
 use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\FileField;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
+use Tools\FileInjector;
 
 class QuotationPageController extends PageController {
 	private static $allowed_actions = [
@@ -36,7 +39,7 @@ class QuotationPageController extends PageController {
 				'ontwerp-ontwikkeling' 	=> 'Ontwerp ontwikkeling',
 			]),
 			DropdownField::create('CMSType', '', [
-				'silverstripe'					=> 'Silverstripe',
+				'silverstripe'					=> 'SilverStripe',
 				'wordpress'							=> 'Wordpress',
 				'other' 								=> 'Geen voorkeur',
 			]),	
@@ -50,8 +53,7 @@ class QuotationPageController extends PageController {
 			TextField::create('FirstName'),
 			TextField::create('LastName'),
 			EmailField::create('Email'),
-			TextField::create('Company'),
-			TextField::create('Subject')
+			TextField::create('Company')
 		);
 
 		$actions = new FieldList(
@@ -59,10 +61,14 @@ class QuotationPageController extends PageController {
 		);
 
 		$validator = new RequiredFields([
+			'ProjectType',
+			'ServicesType',
+			'CMSType',
+			'PageAmount',
+			'Description',
 			'FirstName',
 			'LastName',
 			'Email',
-			'Subject',
 			'Message'
 		]);
 
@@ -72,31 +78,37 @@ class QuotationPageController extends PageController {
 		return $form;
 	}
 
-	// public function sendMessage($data, $form) {
-	// 	// $contactName = "{$data['FirstName']} {$data['LastName']}";
+	public function sendMessage($data, $form) {
+		$contactName = "{$data['FirstName']} {$data['LastName']}";
 
-	// 	// $newContact = new ContactSubmission();
-	// 	// $newContact->Title = $contactName;
-	// 	// $newContact->FirstName = $data['FirstName'];
-	// 	// $newContact->LastName = $data['LastName'];
-	// 	// $newContact->Email = $data['Email'];
-	// 	// $newContact->Company = $data['Company'];
-	// 	// $newContact->Subject = $data['Subject'];
-	// 	// $newContact->Message = strip_tags($data['Message']);
-	// 	// $newContact->write();
+		$newQuotation = new QuotationSubmission();
 
-	// 	// if($newContact) {
-	// 	// 	$emailSent = $this->sendEmail($contactName, $newContact);
+		$newQuotation->Title = $contactName;
+		$newQuotation->FirstName = $data['FirstName'];
+		$newQuotation->LastName = $data['LastName'];
+		$newQuotation->Email = $data['Email'];
+		$newQuotation->Company = $data['Company'];
+		$newQuotation->Description = strip_tags($data['Description']);
 
-	// 	// 	if( $emailSent == true ) {
-	// 	// 		$form->sessionMessage('Je bericht is succesvol ontvangen!', 'success');
-	// 	// 		return $this->redirectBack();
-	// 	// 	}
-	// 	// }
+		$newQuotation->ProjectType = $data['ProjectType'];
+		$newQuotation->ServicesType = $data['ServicesType'];
+		$newQuotation->CMSType = $data['CMSType'];
+		$newQuotation->PageAmount = $data['PageAmount'];
 
-	// 	// $form->sessionMessage('Er is iets mis gegaan, probeer opnieuw', 'bad');
-	// 	// return $this->redirectBack();
-	// }
+		$newQuotation->write();
+
+		if($newQuotation) {
+			$emailSent = $this->sendEmail($contactName, $newQuotation);
+
+			if( $emailSent == true ) {
+				$form->sessionMessage('De offerteaanvraag is succesvol door ons ontvangen. Je ontvangt de offerte op ' . $newQuotation->Email . ' !', 'success');
+				return $this->redirectBack();
+			}
+		}
+
+		$form->sessionMessage('Er is iets mis gegaan, probeer opnieuw', 'bad');
+		return $this->redirectBack();
+	}
 
 	public function sendEmail($contactName, $data) {
 		$emailStatus = false;
@@ -105,10 +117,10 @@ class QuotationPageController extends PageController {
 			->setData([
 				'MailData' => $data
 			])
-			->setFrom('contact@longneckmedia.nl')
-			->setTo('info@jeroenpielage.nl')
+			->setFrom('noreply@longneckmedia.nl')
+			->setTo('offerte@longneckmedia.nl')
 			->setSubject('Nieuw bericht van: ' . $contactName)
-			->setHTMLTemplate('Email\\ContactSubmission');
+			->setHTMLTemplate('Email\\QuotationSubmission');
 		$emailAdmin->send();
 
 		if( $emailAdmin ) {

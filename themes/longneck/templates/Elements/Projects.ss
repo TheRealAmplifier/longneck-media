@@ -1,5 +1,5 @@
 <div class="projects projects--latest">
-	<div class="projects__wrapper--medium">
+	<div class="projects__wrapper--narrow">
 		<div class="projects__title content--wide">
 			<% if ShowTitle %>
 				<h2 class="heading-2 heading--uppercase">{$Title}</h2>

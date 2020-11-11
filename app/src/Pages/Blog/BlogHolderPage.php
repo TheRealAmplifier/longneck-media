@@ -7,14 +7,19 @@ use DataObject\BlogTag;
 use Page;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 class BlogHolderPage extends Page {
 	private static $table_name = 'BlogHolderPage';
 	private static $singular_name = 'Blog Overzicht';
 
+	private static $db = [
+		'BannerText'					=> 'HTMLText'
+	];
+
 	private static $has_many = [
-		'BlogTags'				=> BlogTag::class
+		'BlogTags'						=> BlogTag::class
 	];
 
 	private static $allowed_children = [
@@ -23,6 +28,10 @@ class BlogHolderPage extends Page {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
+
+		$fields->addFieldsToTab('Root.Banner', [
+			HTMLEditorField::create('BannerText', 'Banner tekst')
+		]);
 
 		$config =  GridFieldConfig_RecordEditor::create();
 		$config->addComponent(new GridFieldSortableRows('SortID'));

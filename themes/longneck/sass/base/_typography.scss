@@ -4,16 +4,11 @@
 	font-size: 1.6rem;
 	color: $color-black;
 }
-%navigation__link--dark {
+%navigation__link--light {
 	@include font('worksans');
 	font-size: 2rem;
 	color: $color-black;
 
-
-	&:hover,
-	&:focus {
-		color: $color-blue-dark-2;
-	}
 	&.current,
 	&.section {
 		font-weight: 800;
@@ -30,13 +25,13 @@
     right: 0;
     height: .6rem;
     z-index: -1;
-		background-color:  $color-blue-light-3;
+		background-color:  $color-gray;
   }
 
   &:hover,
   &:focus {
     &:after {
-      background-color: $color-blue-dark-1;
+      background-color: $color-yellow;
     }
   }
 }
@@ -112,7 +107,7 @@ p {
 
 .text--yellow,
 .heading--yellow {
-	color: $color-blue-dark-2;
+	color: $color-yellow;
 }
 .text--green,
 .heading--green {

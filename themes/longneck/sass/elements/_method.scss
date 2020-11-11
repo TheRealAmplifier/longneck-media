@@ -1,9 +1,5 @@
 .method--shadow {
-	box-shadow: 0 0 3rem rgba($color-black, .16);
-
-	@include breakpoint('min-tablet-landscape') {
-		box-shadow: 0 0 5rem rgba($color-black, .16);
-	}
+	@extend %boxed--shadow;
 }
 .method__wrapper {
 	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
@@ -48,8 +44,9 @@
 .method__number {
 	@include flex($align: center, $justify: center);
 	border-radius: 50%;
-	background-color: $color-white;
-	border: 2px solid $color-blue-dark-2;
+	// background-color: $color-orange;
+	border: 2px solid $color-orange;
+	color: $color-orange;
 	width: 4rem;
 	height: 4rem;
 	margin-right: 3rem;
@@ -58,6 +55,6 @@
 .method__link {
 	&:hover,
 	&:focus {
-		color: $color-blue-dark-2;
+		color: $color-orange;
 	}
 }

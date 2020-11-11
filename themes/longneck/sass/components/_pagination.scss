@@ -27,7 +27,7 @@
 	cursor: default;
 
 	g#right-chevron {
-		fill: $color-gray-light-3;
+		fill: $color-gray;
 	}
 }
 
@@ -47,7 +47,7 @@
 	width: 4rem; 
 	text-align: center;
   height: 23.09px;
-	background-color: $color-blue-dark-1;
+	background-color: $color-green;
 	color: $color-white;
   margin: 11.55px 0;
 
@@ -62,11 +62,11 @@
 	}
 	&:before {
 		bottom: 100%;
-		border-bottom: 11.55px solid $color-blue-dark-1;
+		border-bottom: 11.55px solid $color-green;
 	}
 	&:after {
 		top: 100%;
 		width: 0;
-		border-top: 11.55px solid $color-blue-dark-1;
+		border-top: 11.55px solid $color-green;
 	}
 }

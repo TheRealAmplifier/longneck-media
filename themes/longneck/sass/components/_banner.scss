@@ -1,12 +1,6 @@
 .banner {
-	@include flex($align: center);
-	height: calc(100vh - 20rem);
-
-}
-.banner__wrapper {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 0);
-	height: 100%;
+	height: calc(100vh - 20rem);
 
 	@include breakpoint('min-tablet-landscape') {
 		justify-content: space-between;
@@ -16,39 +10,34 @@
 .banner__content {
 	position: relative;
 	@include flex($align: center);
-	flex: 0 0 40%;
+	flex: 1;	
+	height: 100%;
+	padding: 5rem;
 
 	p {
 		font-size: 2.4rem;
 	}
 
-	@include breakpoint('max-tablet-landscape') {
-		margin-top: 5rem;
+	@include breakpoint('min-tablet-landscape') {
+		padding: 15rem;
 	}
 }
 .banner__image {
 	position: relative;
-	box-shadow: 2rem 2rem $color-blue-light-3;
-
-	@include breakpoint('max-tablet-landscape') {
-		width: 100%;
-	}
-	@include breakpoint('min-tablet-landscape'){
-		flex: 0 0 55%;
-		height: 60rem;
-	}
-	@include breakpoint('min-desktop-xxlarge') {
-		flex: 0 0 80rem;
-		height: 75rem;
-	}
+	height: 100%;
+	flex: 0 0 50%;
 }
 
-// $currentMask: 'shape-1';
-// @supports( mask-image: url("") ) {
-// 	.banner__image--mask {
-// 		height: 100%;
-// 		width: 100%;
-// 		mask-size: cover;
-// 		mask-image: url('../images/shapes/#{$currentMask}.svg');
-// 	}
-// }
+.banner__indicator {
+	width: 4rem;
+	height: 6rem;
+	display: block;
+	position: absolute;
+	bottom: 3rem;
+	right: 3rem;
+	animation-name: bounce;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	transform-origin: bottom;
+}

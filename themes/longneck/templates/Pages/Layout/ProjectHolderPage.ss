@@ -2,12 +2,15 @@
 	<div class="title__wrapper">
 		<div class="title__inner">
 			<h1 class="heading-1">{$MenuTitle}</h1>
+			<% if BannerText %>
+				{$BannerText}
+			<% end_if %>
 		</div>
 	</div>
 </div>
 
 <div class="projects projects--all">
-	<div class="projects__wrapper">
+	<div class="projects__wrapper--narrow">
 		<div class="projects__list--row">
 			<% loop $Children %>
 				<div class="card card--row">
@@ -20,10 +23,6 @@
 					<div class="card__content">
 						<h4 class="heading-4">{$MenuTitle}</h4>
 						{$Summary}
-
-						<span class="button__arrow">
-							{$SVG('forward').customBasePath('themes/longneck/images/svg/')}
-						</span>
 					</div>	
 				</div>
 			<% end_loop %>

@@ -41,33 +41,15 @@
 	transition: all .25s ease-in-out;
 }
 
-.button--open-yellow {
-	border: 2px solid $color-blue-dark-2;
-	line-height: 3.8rem;
-	color: $color-blue-dark-2;
-
-	&:hover,
-	&:focus {
-		background-color: $color-blue-dark-2;
-		color: $color-white;
-	}
-
-	@include breakpoint('min-tablet-landscape') { 
-		line-height: 5.1rem;
-	}
-}
-
-.button--solid-yellow {
-	background: $color-blue-dark-2;
+.button--solid-blue {
+	background: $color-blue;
 	color: $color-white;
-	outline: 0px solid $color-blue-dark-2;
-	outline-offset: 0px;
-	transition: all .1s ease-in;
+	transition: all .15s ease-in;
 
 	&:hover,
 	&:focus {
-		outline: 3px solid $color-blue-dark-2;
-    outline-offset: 3px;
+		box-shadow: .4rem .4rem darken($color-blue, 25);
+		transform: translate(-.4rem, -.4rem);
 	}
 }
 

@@ -1,4 +1,4 @@
-<div class="card card--column">
+<div class="card card--column card--shadow-boxed">
 	<a class="card__link" href="{$Link}"></a>
 	<div class="card__image">
 		<% with ThumbnailImage %>
@@ -6,11 +6,7 @@
 		<% end_with %>
 	</div>
 	<div class="card__content">
-		<h4 class="heading-4">{$MenuTitle}</h4>
+		<h3 class="heading-3">{$MenuTitle}</h3>
 		{$Summary}
-
-		<span class="button__arrow">
-			{$SVG('forward').customBasePath('themes/longneck/images/svg/')}
-		</span>
 	</div>
 </div>

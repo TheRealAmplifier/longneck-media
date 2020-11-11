@@ -1,6 +1,7 @@
 .navigation__socials {
 	@include flex($direction: column, $align: flex-end);
 	padding-right: 4rem;
+	margin-top: 4rem;
 }
 .social__link {
 	display: block;

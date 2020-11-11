@@ -1,7 +1,7 @@
 .footer {
 	padding-top: 15rem;
-	margin-top: 20rem;
-	// background-color: $color-gray-light-1;
+	// margin-top: 20rem;
+	// background-color: $color-gray;
 }
 .footer__wrapper {
 	@include flex($direction: column);
@@ -19,11 +19,13 @@
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 
 	@include breakpoint('min-tablet-landscape') {
-		flex: 0 0 40%;
+		flex: 0 0 45%;
 	}
 }
 
 .footer__title {
+	color: $color-blue;
+	
 	@include breakpoint('max-tablet-landscape') {
 		margin-bottom: 5rem;
 	}
