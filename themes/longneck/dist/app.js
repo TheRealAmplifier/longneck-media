@@ -10982,14 +10982,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('form.custom--validation').parsley({
-  errorsWrapper: '<div></div>',
-  errorTemplate: '<small class="error"></small>',
-  errorClass: 'error',
-  errorsContainer: function errorsContainer(elem, isRadioOrCheckbox) {
-    return jquery__WEBPACK_IMPORTED_MODULE_0___default()(elem).parents('.form__group:first');
-  },
-  excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden], :hidden, .ignore-validation'
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__toggle').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').toggleClass('navigation__open');
+  });
 });
 
 /***/ }),

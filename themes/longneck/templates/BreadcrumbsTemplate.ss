@@ -11,7 +11,7 @@
 	<% loop $Pages %>
 	<li>
 		<% if $Last %>
-		<span class="breadcrumb__link breadcrumb__current">{$Title.XML}</span>
+		<span class="breadcrumb__current">{$Title.XML}</span>
 		<% else %>
 		<a class="breadcrumb__link" href="{$Link}">{$MenuTitle.XML}</a>
 		<% end_if %>

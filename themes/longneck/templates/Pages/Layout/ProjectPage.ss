@@ -1,8 +1,4 @@
-<div class="title">
-	<div class="title__wrapper">
-		<h1 class="heading-1">{$MenuTitle}</h1>
-	</div>
-</div>
+<% include TitleSection %>
 
 <div class="details">
 	<div class="details__wrapper">
@@ -24,7 +20,7 @@
 		<div class="projects__list--column">
 			<% if RelatedProjects %>
 				<% loop RelatedProjects %>
-					<% include ProjectCard %>
+					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-blue", ShowButton="true" %>
 				<% end_loop %>
 			<% end_if %>
 		</div>

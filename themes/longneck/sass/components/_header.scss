@@ -1,13 +1,104 @@
 .header {
-	height: 20rem;
+	height: 10rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		height: 15rem;
+	}
+	@include breakpoint('min-desktop-large') {
+		height: 20rem;
+	}
 }
 .header__wrapper {
-	@include flex($align: center, $justify: space-between);
-	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-desktop-large', $setBreakpointPaddingSize: 0 6rem, $unsetPadding: true);
+	@include flex($justify: space-between);
+	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-desktop-desktop-large');
+	align-items: flex-end;
 	height: 100%;
+
+	@include breakpoint('min-tablet-landscape') {
+		align-items: center,
+	}
 }
 
 .brand__image {
 	height: auto;
-	width: 22.5rem;
+	width: 16.5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		width: 22.5rem;
+	}
+}
+
+.header__navigation {
+	.navigation {
+		display: none;
+
+		@include breakpoint('min-desktop') {
+			display: flex;
+		}
+	}
+}
+.header__toggle {
+	display: flex;
+
+	@include breakpoint('min-desktop') {
+		display: none;
+	}
+}
+.toggle__menu {
+
+}
+.toggle__close {
+
+}
+
+
+.header__toggle {
+	@include flex($direction: column, $align: center, $justify: center);
+	position: relative;
+  width: $menu-icon-size;
+	height: $menu-icon-size;  
+	background: $color-blue;
+	cursor: pointer;
+	
+	&:hover,
+	&:focus,
+	.active {
+		background: $color-blue-darken;
+	}
+
+  .line {
+    display: block;
+    background: $color-white;
+    width: 3rem;
+    height: .3rem;
+		transition: all .2s ease;
+		
+		&:not(:last-child) {
+			margin-bottom: .5rem;
+		}
+  }
+  &.active {
+
+		.line {
+			&:nth-child(1) {
+				transform: translateY(.8rem) translateX($menu-icon-translateX) rotate($menu-icon-rotation);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3){
+				transform: translateY(-.8rem) translateX($menu-icon-translateX) rotate($menu-icon-rotation * -1);
+			}
+		}
+	}
+
+	&:hover, 
+	&:focus {
+		.line-1 {
+			transform: translateY($menu-icon-line / 2 * -1);
+		}
+    .line-3 {
+			transform: translateY($menu-icon-line / 2);
+    }  
+  }
 }

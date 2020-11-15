@@ -1,8 +1,5 @@
-<div class="title">
-	<div class="title__wrapper">
-		<h1 class="heading-1">{$MenuTitle}</h1>
-	</div>
-</div>
+<% include TitleSection %>
+
 
 <div class="details">
 	<div class="details__wrapper">

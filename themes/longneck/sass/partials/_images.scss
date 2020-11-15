@@ -9,3 +9,7 @@
 .image--contain {
 	object-fit: contain;
 }
+
+.image--animated {
+	transition: transform .2s ease-in;
+}

@@ -1,13 +1,4 @@
-<div class="title title--centered">
-	<div class="title__wrapper">
-		<div class="title__inner">
-			<h1 class="heading-1">{$MenuTitle}</h1>
-			<% if BannerText %>
-				{$BannerText}
-			<% end_if %>
-		</div>
-	</div>
-</div>
+<% include TitleSection ExtraClasses='title--centered' %>
 
 <div class="services">
 	<div class="services__wrapper">

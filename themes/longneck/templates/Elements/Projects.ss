@@ -15,11 +15,11 @@
 		<div class="projects__list--column">
 			<% if ShowSelectedProjects %>
 				<% loop ProjectPages %>
-					<% include ProjectCard %>
+					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-blue", ShowButton="true" %>
 				<% end_loop %>
 			<% else %>
 				<% loop FeaturedProjects %>
-					<% include ProjectCard %>
+					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-blue", ShowButton="true" %>
 				<% end_loop %>
 			<% end_if %>
 		</div>

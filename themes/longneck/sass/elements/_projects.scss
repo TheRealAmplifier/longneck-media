@@ -14,17 +14,18 @@
 		padding: 10rem 0;
 	}
 }
+
 .projects__wrapper {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .projects__wrapper--medium {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(153rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .projects__wrapper--narrow {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 
 .projects__list--column {
@@ -33,75 +34,14 @@
 	grid-gap: 4rem;
 	width: 100%;
 
-	@include breakpoint('max-tablet-landscape') {
-		margin-top: 7.5rem;
-	}
-
 	@include breakpoint('min-tablet-landscape') {
 		grid-template-columns: repeat(2, 1fr);	
-		grid-gap: 10rem;
-		margin-top: 5rem;
+		grid-gap: 7.5rem;
 	}
 }
 .projects__list--row {
 	@include flex($wrap: wrap);
 	width: 100%;
-}
-
-.card {
-	position: relative;
-	transition: all .2s ease-in;
-}
-.card--shadow {
-	&:hover,
-	&:focus {
-		box-shadow: .8rem .8rem $color-gray-boxshadow;
-		transform: translate(-.8rem, -.8rem);
-	}
-}
-.card--shadow-boxed {
-	box-shadow: 0 0 5rem rgba($color-black, .16);
-}
-
-.card__link {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-.card--row {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	position: relative;
-	flex: 0  0 100%;
-
-	&:not(:last-child){
-		margin-bottom: 10rem;
-	}
-
-	.card__image {
-		height: 55rem;
-		flex: 0 0 40%;
-	}
-	.card__content {
-		@include flex($direction: column);
-		flex: 1;
-		padding: 10rem 5rem;
-	}
-}
-
-.card--column {
-	.card__image {
-		height: 32.5rem;
-	}
-	.card__content {
-		@include flex($direction: column);
-		padding: 5rem 5rem;
-	}
-}
-
-.image--animated {
-	transition: transform .2s ease-in;
 }
 
 .details__wrapper {

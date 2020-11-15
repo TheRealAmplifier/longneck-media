@@ -12,8 +12,13 @@ $color-yellow: #FBE8a6;
 $color-orange: #F4976C;
 $color-blue: #303C6C;
 
-$color-gray: #eeeeee;
+$color-blue-darken: darken($color-blue, 15);
+$color-green-darken: darken($color-green, 15);
+
+$color-gray: #EEEEEE;
 $color-gray-boxshadow: darken($color-gray, 12);
+
+$color-gray-blue-soft: #E6ECF2;
 
 $color-gray-dark-1: #6d7175;
 $color-gray-dark-2: #474747;

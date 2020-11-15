@@ -1,12 +1,14 @@
 .title {
+	position: relative;
 	padding: 7.5rem 0;
+	overflow: hidden;
 
 	@include breakpoint('min-tablet-landscape') {
-		padding: 10rem 0 20rem;
+		padding: 20rem 0;
 	}
 }
 .title__wrapper {
-	@include sectionwrapper;
+	@include sectionwrapper($setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .title__inner {
 	max-width: 45%;
@@ -15,7 +17,34 @@
 	text-align: center;
 
 	.title__inner {
-		max-width: 60%;
+		max-width: 85%;
 		margin: 0 auto;
+
+		@include breakpoint('min-tablet-landscape') {
+			max-width: 60%;
+
+		}
+	}
+}
+
+.title--shapes {
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 35rem;
+		height: 40rem;
+		background-image: url(../images/svg/hexagon.svg);
+		background-repeat: no-repeat;
+    background-size: contain;
+		top: 5rem;
+		right: -15rem;
+		transform: rotate(132deg);
+		z-index: -1;
+
+		@include breakpoint('min-tablet-landscape') {
+			width: 55rem;
+			height: 60rem;
+		}
 	}
 }
