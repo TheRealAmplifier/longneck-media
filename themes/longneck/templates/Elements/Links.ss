@@ -1,8 +1,8 @@
 <div class="links__wrapper">
 	<% if ShowTitle %>
 		<div class="links__title">
-			<div class="title__inner">
-				<h3 class="heading-3 heading--green">{$Title}</h3>
+			<div class="title__inner--wide">
+				<h2 class="heading-2 heading--margin-none">{$Title}</h2>
 			</div>
 		</div>
 	<% end_if %>
@@ -19,7 +19,7 @@
 		<% if LinkedPages %>
 			<div class="links__buttons">
 				<% loop LinkedPages %>
-					<a class="button button--solid-yellow button--icon" href="{$Link}">
+					<a class="button button--solid-green button--icon" href="{$Link}">
 						<span class="button__icon">
 							{$SVG('arrow-right-white').customBasePath('themes/longneck/images/svg/').extraClass('image--cover icon--arrow')}
 						</span>

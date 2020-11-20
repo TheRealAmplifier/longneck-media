@@ -7,13 +7,13 @@ $color-error: #CF000F;
 $color-white: #FFFFFF;
 $color-black: #313030;
 
-$color-green: #B4DFE5;
-$color-yellow: #FBE8a6;
-$color-orange: #F4976C;
+$color-green: #7BC7D1;
+$color-yellow: #B8942C;
 $color-blue: #303C6C;
 
 $color-blue-darken: darken($color-blue, 15);
 $color-green-darken: darken($color-green, 15);
+$color-yellow-darken: darken($color-yellow, 15);
 
 $color-gray: #EEEEEE;
 $color-gray-boxshadow: darken($color-gray, 12);

@@ -8,7 +8,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 use SilverStripe\CMS\Model\SiteTree;
-
+use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TreeDropdownField;
@@ -25,6 +25,7 @@ class CallToAction extends BaseElement {
 		'TextIntro'			=> 'HTMLText',
 		'TextMain'			=> 'HTMLText',
 		'ButtonText'		=> 'Varchar',
+		'CTAType'				=> 'Varchar'
 	];
 
 	private static $has_one = [
@@ -42,8 +43,15 @@ class CallToAction extends BaseElement {
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
 			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
-			UploadField::create('Image', 'Afbeelding')->setFolderName('CTA')
+			UploadField::create('Image', 'Afbeelding')->setFolderName('CTA'),
+			DropdownField::create('CTAType', 'Type', [
+				'simple' 		=> 'Eenvoudig', 
+				'image' 		=> 'Afbeelding',
+				'colored'		=> 'Gekleurde achtergrond',
+				'bar'				=> 'Gekleurde balk (verloop)',
+			])
 		]);
+
 		$fields->addFieldsToTab('Root.Button', [
 			TextField::create('ButtonText', 'Button tekst'),
 			TreeDropdownField::create('LinkedPageID', 'Gelinkte Pagina', SiteTree::class)

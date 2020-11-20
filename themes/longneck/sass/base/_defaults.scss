@@ -16,11 +16,10 @@ body {
   width: 100%;
   height: 100%;
 }
+
 body {
-  &.navigation__open {
-    .content--main {
-      transform: scale(-.1rem);
-    }
+  &.navigation--open {
+    overflow-y: hidden;
   }
 }
 
@@ -45,5 +44,8 @@ li {
 
 .section__title {
   margin-bottom: 7.5rem;
-  max-width: 75%;
+
+  @include breakpoint('min-tablet-landscape') {
+    max-width: 75%;
+  }
 }

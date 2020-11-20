@@ -10985,7 +10985,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__toggle').click(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').toggleClass('navigation__open');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').toggleClass('navigation--open');
   });
 });
 

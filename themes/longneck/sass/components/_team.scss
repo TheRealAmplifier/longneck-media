@@ -2,7 +2,7 @@
 	@extend %defaultSectionPadding;
 }
 .team__wrapper {
-	@include sectionwrapper($unsetPadding: true);
+	@include sectionwrapper($unsetPadding: true, $setDefaultPadding: 0 4rem);
 }
 .team__list {
 	display: grid;

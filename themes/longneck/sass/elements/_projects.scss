@@ -17,15 +17,15 @@
 
 .projects__wrapper {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 }
 .projects__wrapper--medium {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(153rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 }
 .projects__wrapper--narrow {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 }
 
 .projects__list--column {
@@ -45,5 +45,5 @@
 }
 
 .details__wrapper {
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 }

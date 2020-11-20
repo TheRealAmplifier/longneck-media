@@ -4,6 +4,7 @@ namespace DataObject;
 
 use Pages\BlogHolderPage;
 use Pages\BlogPage;
+use RyanPotter\SilverStripeColorField\Forms\ColorField;
 use SilverStripe\ORM\DataObject;
 
 use SilverStripe\Forms\TextField;
@@ -35,7 +36,7 @@ class BlogTag extends DataObject {
 		$fields->removeByName(['SortID', 'BlogTags', 'BlogHolderPageID']);
 
 		$fields->addFieldsToTab('Root.Main', [
-			TextField::create('Title', 'Title'),
+			TextField::create('Title', 'Title')
 		]);
 
 		return $fields;

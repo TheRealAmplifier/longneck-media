@@ -17,12 +17,30 @@
 .card--border-green {
 	border-bottom: .8rem solid $color-green;
 
+	&:hover,
+	&:focus {
+		border-bottom: .8rem solid darken($color-green, 10);
+
+		.card__arrow {
+			background-color: darken($color-green, 10);
+		}
+	}
+
 	.card__arrow {
 		background-color: $color-green;
 	}
 }
 .card--border-blue {
 	border-bottom: .8rem solid $color-blue;
+
+	&:hover,
+	&:focus {
+		border-bottom: .8rem solid darken($color-blue, 15);
+
+		.card__arrow {
+			background-color: darken($color-blue, 15);
+		}
+	}
 
 	.card__arrow {
 		background-color: $color-blue;
@@ -68,11 +86,37 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	width: 6rem;
-	height: 6rem;
+	width: 5.5rem;
+	height: 5rem;
+	transition: all .2s ease-in;
 }
 .card__arrow--inner {
 	display: block;
 	width: 2.2rem;
 	height: 2.2rem;
+}
+
+.card__meta {
+	@include flex($align: center, $justify: space-between);
+	margin-bottom: 4rem;
+}
+.meta__tags {
+	@include flex($align: center);
+}
+.meta__tag {
+	@include flex($align: center);
+	background-color: $color-gray;
+	padding: .5rem 1rem;
+	height: 3.4rem;
+	line-height: 3.4rem;
+	font-size: 1.6rem;
+	color: $color-black;
+
+	&:not(:last-child) {
+		margin-right: .5rem;
+	}
+}
+.meta__date {
+	color: $color-gray-dark-1;
+	font-size: 1.6rem;
 }

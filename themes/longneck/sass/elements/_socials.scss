@@ -1,7 +1,12 @@
 .navigation__socials {
-	@include flex($direction: column, $align: flex-end);
+	@include flex;
 	padding-right: 4rem;
 	margin-top: 4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		flex-direction: column;
+		align-items: flex-end;
+	}
 }
 .social__link {
 	display: block;
@@ -10,11 +15,18 @@
 	transition: all .15s linear;
 
 	&:not(:last-child) {
-		margin-bottom: 2rem;
+		margin-right: 2rem;
 	}
 
 	&:hover,
 	&:focus {
 		transform: scale(1.12);
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		&:not(:last-child) {
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
 	}
 }

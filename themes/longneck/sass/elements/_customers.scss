@@ -6,7 +6,7 @@
 	}
 }
 .customers__wrapper {
-	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem);
+	@include sectionwrapper(100rem, $setDefaultPadding: 0 4rem);
 }
 .customers__list {
 	@include flex($justify: center);

@@ -1,21 +1,22 @@
 .links__wrapper {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 
 	@include breakpoint('min-tablet-landscape') {
 		justify-content: space-between;
 	}
 }
 .links__title {
-	border: 5px solid $color-yellow;
-	color: $color-yellow;
+	border: 7px solid $color-black;
+	color: $color-black;
 	padding: 3rem 3rem;
-	flex: 0 0 35rem;
-	min-height: 32.5rem;
+	flex: 0 0 3%;
+	align-self: flex-start;
 }
 .links__content {
 	flex: 1;
 	margin-top: 5rem;
+	padding: 0 7.5rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		margin-top: 0;
@@ -27,7 +28,7 @@
 
 .links__buttons {
 	@include flex;
-	margin-top: 5rem;
+	margin-top: 3rem;
 
 	.button {
 		&:not(:last-of-type) {
@@ -35,6 +36,6 @@
 		}
 	}
 	@include breakpoint('min-tablet-landscape') {
-		margin-top: 7.5rem;
+		margin-top: 5rem;
 	}
 }

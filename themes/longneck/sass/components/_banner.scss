@@ -1,10 +1,10 @@
 .banner {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	height: calc(100vh - 20rem);
 
 	@include breakpoint('min-tablet-landscape') {
 		justify-content: space-between;
 		align-items: center;
+		height: calc(100vh - 20rem);
 	}
 }
 .banner__content {
@@ -24,20 +24,10 @@
 }
 .banner__image {
 	position: relative;
-	height: 100%;
-	flex: 0 0 50%;
-}
+	height: 45rem;
 
-.banner__indicator {
-	width: 4rem;
-	height: 6rem;
-	display: block;
-	position: absolute;
-	bottom: 3rem;
-	right: 3rem;
-	animation-name: bounce;
-	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	transform-origin: bottom;
+	@include breakpoint('min-tablet-landscape') {
+		height: 100%;
+		flex: 0 0 50%;
+	}
 }

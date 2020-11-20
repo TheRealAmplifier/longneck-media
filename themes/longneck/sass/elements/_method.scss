@@ -2,7 +2,7 @@
 	@extend %boxed--shadow;
 }
 .method__wrapper {
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 4rem);
 }
 .method__boxed {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $wrap: wrap);
@@ -21,18 +21,18 @@
 	flex: 1;
 }
 .method__right {
-	flex: 0 0 35%;
-	margin-left: 10rem;
-
 	@include breakpoint('max-tablet-landscape') {
 		margin-top: 5rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 35%;
+		margin-left: 10rem;
 	}
 }
 
 .method__list {
 	@include flex($direction: column);
 }
-
 .method__step {
 	@include flex($align: center);
 
@@ -40,13 +40,12 @@
 		margin-bottom: 2rem;
 	}
 }
-
 .method__number {
 	@include flex($align: center, $justify: center);
 	border-radius: 50%;
-	// background-color: $color-orange;
-	border: 2px solid $color-orange;
-	color: $color-orange;
+	border: .3rem solid $color-green;
+	color: $color-green;
+	font-weight: 600;
 	width: 4rem;
 	height: 4rem;
 	margin-right: 3rem;
@@ -55,6 +54,6 @@
 .method__link {
 	&:hover,
 	&:focus {
-		color: $color-orange;
+		color: $color-green;
 	}
 }

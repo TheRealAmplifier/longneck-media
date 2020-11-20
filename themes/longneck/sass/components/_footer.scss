@@ -1,11 +1,51 @@
 .footer {
+	position: relative;
 	padding-top: 15rem;
-	// margin-top: 20rem;
-	// background-color: $color-gray;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 10rem;
+		height: 15rem;
+		background-image: url(../images/shapes/hexagon-medium.svg);
+		background-repeat: no-repeat;
+    background-size: contain;
+		left: -4rem;
+		top: 7rem;
+		transform: rotate(37deg);
+		z-index: -1;
+
+		@include breakpoint('min-tablet-landscape') {
+			width: 15rem;
+			height: 20rem;
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 15rem;
+		height: 20rem;
+		background-image: url(../images/shapes/hexagon-small.svg);
+		background-repeat: no-repeat;
+    background-size: contain;
+		right: -3rem;
+		bottom: 0;
+		transform: rotate(110deg);
+		z-index: -1;
+
+		@include breakpoint('min-tablet-landscape') {
+			width: 30rem;
+			height: 35rem;
+			bottom: -12.5rem;
+		}
+	}
 }
 .footer__wrapper {
 	@include flex($direction: column);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 }
 .footer__top {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);

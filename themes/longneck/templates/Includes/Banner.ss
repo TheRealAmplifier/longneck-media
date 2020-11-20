@@ -4,9 +4,6 @@
 			<h1 class="heading-1">{$MenuTitle}</h1>
 			{$BannerText}
 		</div>
-		<span class="banner__indicator">
-			{$SVG('arrow-down').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
-		</span>
 	</div>
 	<div class="banner__image">
 		<% with BannerImage %>

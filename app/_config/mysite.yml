@@ -37,5 +37,3 @@ StevieMayhew\SilverStripeSVG\SVGTemplate:
 Heyday\MenuManager\MenuItem:
   extensions:
     - Extensions\CustomMenuItem
-
-  

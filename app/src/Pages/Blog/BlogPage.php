@@ -7,14 +7,16 @@ use Page;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-
+use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\ListboxField;
 
 class BlogPage extends Page {
 	private static $table_name = 'BlogPage';
 	private static $singular_name = 'Artikel';
 
 	private static $db = [
+		'PublicationDate'		=> 'Date',
 		'Summary'						=> 'HTMLText'	
 	];
 
@@ -38,8 +40,10 @@ class BlogPage extends Page {
 		$fields = parent::getCMSFields();
 
 		$fields->addFieldsToTab('Root.Main', [
+			DateField::create('PublicationDate', 'Publicatiedatum'),
 			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
-			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Blog Thumbnails')		
+			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Blog Thumbnails'),
+			ListboxField::create('BlogTags', 'Tag', BlogTag::get())		
 		], 'Content');
 
 		return $fields;

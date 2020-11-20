@@ -6,12 +6,15 @@
 }
 %navigation__link--light {
 	@include font('worksans');
-	font-size: 2rem;
+	font-size: 2rem;	
 	color: $color-black;
 
 	&.current,
 	&.section {
 		font-weight: 800;
+	}
+
+	@include breakpoint('min-tablet-landscape') {
 	}
 }
 %defaultTextLink {

@@ -1,13 +1,15 @@
-.contact {
-	
-}
 .contact__wrapper {
-	@include flex;
+	@include flex($wrap: wrap);
 	@include sectionwrapper;
 }
 .form__socials {
-	@include flex($direction: column);
-	flex: 0 0 12.5em;
+	@include flex;
+	flex: 1;
+
+	@include breakpoint('min-tablet-landscape') {
+		flex-direction: column;
+		flex: 0 0 12.5em;
+	}
 }
 
 .form__box {

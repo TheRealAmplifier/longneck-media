@@ -1,10 +1,10 @@
 .services__wrapper {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $setBreakpointMaxWidth: 'min-desktop-large', $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $setBreakpointMaxWidth: 'min-desktop-large', $unsetPadding: true);
 }
 .services__wrapper--wide {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $setBreakpointMaxWidth: 'min-desktop-large', $unsetPadding: true);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 4rem, $setBreakpointMaxWidth: 'min-desktop-large', $unsetPadding: true);
 }
 .services--related {
 	margin: 10rem 0;

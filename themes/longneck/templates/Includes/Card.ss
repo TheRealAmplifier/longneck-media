@@ -6,7 +6,20 @@
 			<% end_with %>
 		</div>
 		<div class="card__content">
-			<h4 class="heading-4">{$MenuTitle}</h4>
+			<div class="card__meta">
+				<% if BlogTags %>
+				<div class="meta__tags">
+					<% loop BlogTags %>
+						<span class="meta__tag" style="background-color: {$Color}">{$Title}</span>
+					<% end_loop %>
+				</div>
+				<% end_if %>
+				<span class="meta__date">
+					{$PublicationDate.Long}
+				</span>
+			</div>
+	
+			<h3 class="heading-3">{$MenuTitle}</h3>
 			{$Summary}
 		</div>
 

@@ -1,5 +1,5 @@
 .articles__wrapper {
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 }
 
 .articles__list--column {
