@@ -15,10 +15,12 @@ class ContentClean extends BaseElement {
 	private static $description = 'Blok met content (simpel)';
 	private static $icon = 'font-icon-block-content';
 	private static $inline_editable = false;
+	private static $controller_template = 'ElementHolder';
 
 	private static $db = [
 		'TextIntro'						=> 'HTMLText',
 		'TextMain'						=> 'HTMLText',
+		'RemovePadding'				=> 'Boolean'
 	];
 
 	public function getCMSFields() {
@@ -29,6 +31,10 @@ class ContentClean extends BaseElement {
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
 			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(10),
+		]);
+
+		$fields->addFieldsToTab('Root.Settings', [
+			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
 		]);
 
 		return $fields;

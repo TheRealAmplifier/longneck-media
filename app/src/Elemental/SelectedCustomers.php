@@ -4,7 +4,7 @@ namespace Elements;
 
 use DataObject\Customer;
 use DNADesign\Elemental\Models\BaseElement;
-
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\ListboxField;
 
 class SelectedCustomers extends BaseElement {
@@ -13,6 +13,11 @@ class SelectedCustomers extends BaseElement {
 	private static $description = 'Blok met geselecteerde klanten';
 	private static $icon = 'font-icon-block-reports';
 	private static $inline_editable = false;
+	private static $controller_template = 'ElementHolder';
+
+	private static $db = [
+		'RemovePadding'		=> 'Boolean'
+	];
 
 	private static $many_many = [
 		'Customers'				=> Customer::class
@@ -23,6 +28,10 @@ class SelectedCustomers extends BaseElement {
 
 		$fields->addFieldsToTab('Root.Main', [
 			ListboxField::create('Customers', 'Geselecteerde partners', Customer::get())
+		]);
+
+		$fields->addFieldsToTab('Root.Settings', [
+			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
 		]);
 
 		return $fields;

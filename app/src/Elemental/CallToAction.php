@@ -8,6 +8,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
@@ -20,17 +21,20 @@ class CallToAction extends BaseElement {
 	private static $description = 'Blok met call to action naar een specifieke pagina';
 	private static $icon = 'font-icon-block-award';
 	private static $inline_editable = false;
+	private static $controller_template = 'ElementHolder';
+
 
 	private static $db = [
-		'TextIntro'			=> 'HTMLText',
-		'TextMain'			=> 'HTMLText',
-		'ButtonText'		=> 'Varchar',
-		'CTAType'				=> 'Varchar'
+		'TextIntro'				=> 'HTMLText',
+		'TextMain'				=> 'HTMLText',
+		'ButtonText'			=> 'Varchar',
+		'CTAType'					=> 'Varchar',
+		'RemovePadding'		=> 'Boolean'
 	];
 
 	private static $has_one = [
-		'Image'					=> Image::class,
-		'LinkedPage'		=> SiteTree::class
+		'Image'						=> Image::class,
+		'LinkedPage'			=> SiteTree::class
 	];
 
 	private static $owns = [
@@ -55,6 +59,10 @@ class CallToAction extends BaseElement {
 		$fields->addFieldsToTab('Root.Button', [
 			TextField::create('ButtonText', 'Button tekst'),
 			TreeDropdownField::create('LinkedPageID', 'Gelinkte Pagina', SiteTree::class)
+		]);
+
+		$fields->addFieldsToTab('Root.Settings', [
+			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
 		]);
 
 		return $fields;

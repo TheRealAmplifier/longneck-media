@@ -33,7 +33,6 @@
   font-style: normal;
   font-weight: 600;
   src: local(""), url("../fonts/work-sans-v8-latin-600.woff2") format("woff2"), url("../fonts/work-sans-v8-latin-600.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 *,
 *:before,
@@ -172,7 +171,7 @@ body {
 }
 @media (min-width: 64em) {
   .heading-4 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -186,7 +185,7 @@ p:not(:last-child) {
 }
 @media (min-width: 64em) {
   p {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -388,7 +387,7 @@ p:not(:last-child) {
 .link--icon {
   display: flex;
   align-items: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 .link--icon:hover .link__icon, .link--icon:focus .link__icon {
@@ -524,7 +523,7 @@ p:not(:last-child) {
     top: 0;
     bottom: 0;
     right: 0;
-    background: #E6ECF2;
+    background: #EEEEEE;
     transform: translateX(100%);
     width: 100%;
     padding: 15rem 5rem 5rem;
@@ -1237,7 +1236,7 @@ textarea {
 .form__message {
   margin-bottom: 7.5rem;
   font-weight: 600;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-style: italic;
 }
 
@@ -1504,8 +1503,12 @@ textarea {
 }
 @media (min-width: 64em) {
   .element:not(:last-child) {
-    padding: 0 0 12.5rem;
+    padding: 0 0 15rem;
   }
+}
+
+.element--nopadding {
+  padding: 0 0 !important;
 }
 
 .links__wrapper {
@@ -1601,33 +1604,31 @@ textarea {
   margin: 10rem 0;
 }
 
-.content__wrapper {
+.content--background {
+  background-color: #EEEEEE;
+}
+
+.content__wrapper--small {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100rem;
+  padding: 0 2rem;
+}
+@media (min-width: 90em) {
+  .content__wrapper--small {
+    padding: 0 0;
+  }
+}
+
+.content__wrapper--wide {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
   padding: 0 2rem;
 }
 @media (min-width: 90em) {
-  .content__wrapper {
+  .content__wrapper--wide {
     padding: 0 0;
-  }
-}
-
-.content__box {
-  background-color: #EEEEEE;
-}
-
-.box__image {
-  height: 30rem;
-}
-@media (min-width: 64em) {
-  .box__image {
-    height: 45rem;
-  }
-}
-@media (min-width: 90em) {
-  .box__image {
-    height: 60rem;
   }
 }
 

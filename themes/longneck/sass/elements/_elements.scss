@@ -6,7 +6,10 @@
 			padding: 0 0 10rem;
 		}
 		@include breakpoint('min-tablet-landscape') {
-			padding: 0 0 12.5rem;
+			padding: 0 0 15rem;
 		}
 	}
+}
+.element--nopadding {
+	padding: 0 0 !important;
 }

@@ -1,22 +1,16 @@
 .content {
 	@extend %defaultSectionPadding;
 }
-.content__wrapper {
-	@include sectionwrapper(133rem, $unsetPadding: true);
-}
-.content__box {
+.content--background {
 	background-color: $color-gray;
 }
-.box__image {
-	height: 30rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		height: 45rem;
-	}
-	@include breakpoint('min-desktop-large') {
-		height: 60rem;
-	}
+.content__wrapper--small {
+	@include sectionwrapper(100rem, $unsetPadding: true);
 }
+.content__wrapper--wide {
+	@include sectionwrapper(133rem, $unsetPadding: true);
+}
+
 .box__content {
 	padding: 3rem 5rem;
 

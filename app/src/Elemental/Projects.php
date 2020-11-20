@@ -16,10 +16,13 @@ class Projects extends BaseElement {
 	private static $description = 'Blok met projecten in een slider';
 	private static $icon = 'font-icon-block-globe';
 	private static $inline_editable = false;
+	private static $controller_template = 'ElementHolder';
 
 	private static $db = [
 		'TextMain'								=> 'HTMLText',
-		'ShowSelectedProjects'		=> 'Boolean'
+		'ShowSelectedProjects'		=> 'Boolean',
+		'RemovePadding'						=> 'Boolean'
+
 	];
 
 	private static $many_many = [
@@ -32,6 +35,10 @@ class Projects extends BaseElement {
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
 			CheckboxField::create('ShowSelectedProjects', 'Geselecteerde projecten tonen')->setDescription('Let op: wijziging gaat pas van kracht na het opslaan van de pagina.')
+		]);
+
+		$fields->addFieldsToTab('Root.Settings', [
+			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
 		]);
 
 		if( $this->ShowSelectedProjects == 1 ) {

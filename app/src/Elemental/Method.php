@@ -18,15 +18,18 @@ class Method extends BaseElement {
 	private static $description = 'Blok met beschrijving van de toegepaste methode';
 	private static $icon = 'font-icon-block-numbers';
 	private static $inline_editable = false;
+	private static $controller_template = 'ElementHolder';
 
 	private static $db = [
-		'TextIntro'			=> 'HTMLText',
-		'TextMain'			=> 'HTMLText',
-		'HasShadow'			=> 'Boolean'
+		'TextIntro'				=> 'HTMLText',
+		'TextMain'				=> 'HTMLText',
+		'HasShadow'				=> 'Boolean',
+		'RemovePadding'		=> 'Boolean'
+
 	];
 
 	private static $has_many = [
-		'MethodSteps'		=> MethodStep::class
+		'MethodSteps'			=> MethodStep::class
 	];
 
 	public function getCMSFields() {
@@ -38,6 +41,10 @@ class Method extends BaseElement {
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
 			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
 			CheckboxField::create('HasShadow', 'Schaduw achter blok toevoegen')
+		]);
+
+		$fields->addFieldsToTab('Root.Settings', [
+			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
 		]);
 
 		$config =  GridFieldConfig_RecordEditor::create();
