@@ -16,10 +16,10 @@
 .links__content {
 	flex: 1;
 	margin-top: 5rem;
-	padding: 0 7.5rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		margin-top: 0;
+		padding: 0 5rem;
 	}
 }
 .sevices__text {
@@ -27,15 +27,13 @@
 }
 
 .links__buttons {
-	@include flex;
 	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
 
-	.button {
-		&:not(:last-of-type) {
-			margin-right: 2rem;
-		}
-	}
 	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(3, 1fr);
 		margin-top: 5rem;
 	}
 }

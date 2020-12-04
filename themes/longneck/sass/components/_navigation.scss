@@ -1,5 +1,5 @@
 .navigation {
-	@include font('montserrat');
+	@include font('quicksand');
 }
 .navigation__link {
 	@extend %navigation__link--light;
