@@ -1,11 +1,17 @@
 .header {
+	position: fixed;
 	height: 10rem;
+	width: 100%;
+	top: 0;
+	background-color: $color-white;
+	z-index: 10;
+	transition: all .2s linear;
 
 	@include breakpoint('min-tablet-landscape') {
 		height: 15rem;
 	}
 	@include breakpoint('min-desktop-large') {
-		height: 20rem;
+		height: 17.5rem;
 	}
 }
 .header__wrapper {
