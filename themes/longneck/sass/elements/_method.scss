@@ -8,9 +8,12 @@
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $wrap: wrap);
 	background-color: $color-white;
 	padding: 3rem;
+	// border: 1rem dashed $color-gray-blue-soft;
+	box-shadow: 0 0 3rem rgba($color-black, .16);
+
 
 	@include breakpoint('min-tablet-landscape') {
-		padding: 7.5rem;
+		padding: 10rem;
 	}
 }
 
@@ -25,35 +28,42 @@
 		margin-top: 5rem;
 	}
 	@include breakpoint('min-tablet-landscape') {
-		flex: 0 0 35%;
+		flex: 0 0 40%;
 		margin-left: 10rem;
 	}
 }
+
 
 .method__list {
 	@include flex($direction: column);
 }
 .method__step {
-	@include flex($align: center);
+	@include flex($align: flex-start);
+	font-size: 2rem;
 
 	&:not(:last-child) {
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 }
 .method__number {
 	@include flex($align: center, $justify: center);
 	border-radius: 50%;
-	border: .3rem solid $color-green;
+	border: .4rem solid $color-green;
 	color: $color-green;
-	font-weight: 600;
-	width: 4rem;
-	height: 4rem;
+	font-weight: 500;
+	width: 6rem;
+	height: 6rem;
 	margin-right: 3rem;
-	flex: 0 0 4rem;
+	flex: 0 0 6rem;
 }
 .method__link {
 	&:hover,
 	&:focus {
 		color: $color-green;
 	}
+}
+.method__text {
+	margin-top: 1.75rem;
+	font-weight: 500;
+	font-size: 2.2rem;
 }

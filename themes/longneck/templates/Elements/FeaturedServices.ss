@@ -1,8 +1,8 @@
-<div class="services">
+<div class="services background__particles--default">
 	<div class="services__wrapper">
 		<% if ShowTitle %>
 			<div class="services__title content--wide">
-				<h2 class="heading-2">{$Title}</h2>
+				<h2 class="heading-2 ">{$Title}</h2>
 			</div>
 		<% end_if %>
 
@@ -15,11 +15,11 @@
 		</div>
 
 		<% if LinkedServices %>
-		<div class="services__blocks--narrow">
-			<% loop LinkedServices %>
-				<% include ServiceCard %>
-			<% end_loop %>
-		</div>
-	<% end_if %>
+			<div class="services__blocks--narrow">
+				<% loop LinkedServices %>
+					<% include ServiceCard %>
+				<% end_loop %>
+			</div>
+		<% end_if %>
 	</div>
 </div>

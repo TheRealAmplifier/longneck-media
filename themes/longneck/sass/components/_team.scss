@@ -1,5 +1,6 @@
 .team {
 	@extend %defaultSectionPadding;
+	position: relative;
 }
 .team__wrapper {
 	@include sectionwrapper($unsetPadding: true, $setDefaultPadding: 0 4rem);

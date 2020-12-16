@@ -1,7 +1,7 @@
 <div class="banner">
 	<div class="banner__content">
 		<div class="content--boxed">
-			<h1 class="heading-1">{$MenuTitle}</h1>
+			<h1 class="heading-1 heading--background">{$MenuTitle}</h1>
 			{$BannerText}
 		</div>
 	</div>

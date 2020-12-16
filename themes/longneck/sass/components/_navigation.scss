@@ -1,6 +1,3 @@
-.navigation {
-	@include font('quicksand');
-}
 .navigation__link {
 	@extend %navigation__link--light;
 	line-height: 2;
@@ -8,7 +5,7 @@
 	&:not(:last-child) {
 		margin-bottom: 2rem;
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min-desktop') {
 			margin-right: 5rem;
 			margin-bottom: 0;
 		}
@@ -29,7 +26,7 @@
 		background-color: darken($color-blue, 10);
 	}
 
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max-desktop') {
 		margin-top: 2rem;
 	}
 }

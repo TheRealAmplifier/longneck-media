@@ -1,4 +1,4 @@
-<div class="card {$Type} {$ExtraClasses}">
+<div class="card {$Type} {$ExtraClasses} <% if $Even %>card--even<% end_if %>">
 	<a class="card__link" href="{$Link}">
 		<div class="card__image">
 			<% with ThumbnailImage %>

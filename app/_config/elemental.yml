@@ -7,6 +7,7 @@ Pages\HomePage:
     - Elements\CallToAction
     - Elements\Projects
     - Elements\Content
+    - Elements\ContentImage
     - Elements\SelectedCustomers
 
 Pages\ProjectPage:
@@ -23,6 +24,7 @@ Pages\AboutPage:
     - DNADesign\Elemental\Extensions\ElementalPageExtension 
   allowed_elements:
     - Elements\Content
+    - Elements\ContentImage
     - Elements\SelectedCustomers
     - Elements\Method
     - Elements\Team

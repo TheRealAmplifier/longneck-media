@@ -2,7 +2,7 @@
 	<div class="projects__wrapper--narrow">
 		<div class="projects__title content--wide">
 			<% if ShowTitle %>
-				<h2 class="heading-2 heading--uppercase">{$Title}</h2>
+				<h2 class="heading-2 heading--uppercase ">{$Title}</h2>
 			<% end_if %>
 		</div>
 

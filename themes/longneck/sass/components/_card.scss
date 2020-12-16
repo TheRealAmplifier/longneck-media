@@ -12,17 +12,24 @@
 }
 
 .card--shadow-boxed {
-	box-shadow: 0 0 5rem rgba($color-black, .16);
+	box-shadow: 0 0 3rem rgba($color-black, .16);
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 1rem 3rem rgba($color-black, .32);
+		transform: translateY(-.5rem);
+	}
 }
+
 .card--border-green {
 	border-bottom: .8rem solid $color-green;
 
 	&:hover,
 	&:focus {
-		border-bottom: .8rem solid darken($color-green, 10);
+		border-bottom: .8rem solid $color-blue;
 
 		.card__arrow {
-			background-color: darken($color-green, 10);
+			background-color: $color-blue;
 		}
 	}
 
@@ -33,41 +40,52 @@
 .card--border-blue {
 	border-bottom: .8rem solid $color-blue;
 
-	&:hover,
-	&:focus {
-		border-bottom: .8rem solid darken($color-blue, 15);
-
-		.card__arrow {
-			background-color: darken($color-blue, 15);
-		}
-	}
-
 	.card__arrow {
 		background-color: $color-blue;
+	}
+
+	&:hover,
+	&:focus {
+		border-bottom: .8rem solid $color-green;
+
+		.card__arrow {
+			background-color:  $color-green;
+		}
 	}
 }
 
 .card--row {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include flex;
 	position: relative;
-	flex: 0  0 100%;
 
 	&:not(:last-child){
 		margin-bottom: 10rem;
 	}
 
 	.card__link {
-		display: flex;
+		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 	}
-
 	.card__image {
-		height: 55rem;
-		flex: 0 0 40%;
+		height: 37.5rem;
+
+		@include breakpoint('min-tablet-landscape') {
+			height: 55rem;
+			flex: 0 0 45%;
+		}
 	}
 	.card__content {
 		@include flex($direction: column);
 		flex: 1;
-		padding: 10rem 5rem;
+		padding: 7.5rem 5rem;
+	}
+	&.card--even {
+		.card__image {
+			order: 2;
+		}
+		.card__arrow {
+			right: unset;
+			left: 0;
+		}
 	}
 }
 

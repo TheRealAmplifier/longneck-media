@@ -1,3 +1,6 @@
+.services {
+	position: relative;
+}
 .services__wrapper {
 	@include flex($wrap: wrap);
 	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $setBreakpointMaxWidth: 'min-desktop-large', $unsetPadding: true);

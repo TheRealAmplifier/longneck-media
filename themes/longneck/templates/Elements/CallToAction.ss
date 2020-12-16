@@ -3,7 +3,7 @@
 		<div class="cta__wrapper">
 			<div class="cta__inner">
 				<% if ShowTitle %>
-					<h2 class="heading-2">{$Title}</h2>
+					<h2 class="heading-2 ">{$Title}</h2>
 				<% end_if %>
 
 				<% if $TextMain %>
@@ -73,7 +73,7 @@
 			<div class="cta__content">
 				<% if ShowTitle %>
 					<div class="cta__title">
-						<h2 class="heading-2">{$Title}</h2>
+						<h2 class="heading-2 ">{$Title}</h2>
 					</div>
 				<% end_if %>
 				<div class="cta__text">

@@ -14,8 +14,7 @@
 @import 'partials/images';
 @import 'partials/buttons';
 @import 'partials/links';
-
-@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import 'partials/particles';
 
 @import 'components/header';
 @import 'components/navigation';
@@ -45,3 +44,5 @@
 @import 'pages/project';
 @import 'pages/about';
 @import 'pages/articles';
+
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';

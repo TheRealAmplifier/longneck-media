@@ -6,7 +6,7 @@
 	</div>	
 	<div class="detail__content">
 		<% if ShowTitle %>
-			<h2 class="heading-2">{$Title}</h2>
+			<h2 class="heading-2 ">{$Title}</h2>
 		<% end_if %>	
 		<div class="text__intro text--accentuated">
 			{$TextIntro}

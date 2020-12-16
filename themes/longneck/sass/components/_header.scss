@@ -9,14 +9,9 @@
 	}
 }
 .header__wrapper {
-	@include flex($justify: space-between);
+	@include flex($align: center, $justify: space-between);
 	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 2rem, $setBreakpointPadding: 'min-desktop-desktop-large');
-	align-items: flex-end;
 	height: 100%;
-
-	@include breakpoint('min-tablet-landscape') {
-		align-items: center,
-	}
 }
 
 .brand__image {
@@ -24,7 +19,7 @@
 	width: 16.5rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		width: 22.5rem;
+		width: 27.5rem;
 	}
 }
 
@@ -65,7 +60,6 @@
 	background: $color-blue;
 	cursor: pointer;
 	z-index: 10;
-
 	
 	&:hover,
 	&:focus,

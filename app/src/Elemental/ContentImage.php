@@ -7,12 +7,13 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\DropdownField;
 
-class ContentClean extends BaseElement {
-	private static $table_name = 'ContentClean';
-	private static $singular_name = 'Content Simpel';
-	private static $plural_name = 'Content Simpel';
-	private static $description = 'Blok met content (simpel)';
+class ContentImage extends BaseElement {
+	private static $table_name = 'ContentImage';
+	private static $singular_name = 'Content met afbeelding';
+	private static $plural_name = 'Content met afbeelding';
+	private static $description = 'Blok met content en links of rechts een afbeelding';
 	private static $icon = 'font-icon-block-content';
 	private static $inline_editable = false;
 	private static $controller_template = 'ElementHolder';
@@ -20,7 +21,16 @@ class ContentClean extends BaseElement {
 	private static $db = [
 		'TextIntro'						=> 'HTMLText',
 		'TextMain'						=> 'HTMLText',
-		'RemovePadding'				=> 'Boolean'
+		'RemovePadding'				=> 'Boolean',
+		'Layout'							=> 'Varchar'
+	];
+
+	private static $has_one = [
+		'Image' 							=> Image::class 
+	];
+
+	private static $owns = [
+		'Image'
 	];
 
 	public function getCMSFields() {
@@ -31,6 +41,11 @@ class ContentClean extends BaseElement {
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
 			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(10),
+			DropdownField::create('Layout', 'Positie afbeelding', [
+				'left' => 'Links', 
+				'right' => 'Rechts'	
+			]),			
+			UploadField::create('Image', 'Afbeedling')->setFolderName('Content Afbeeldingen')
 		]);
 
 		$fields->addFieldsToTab('Root.Settings', [
@@ -41,6 +56,6 @@ class ContentClean extends BaseElement {
 	}
 
 	public function getType() {
-		return 'Content Simpel';
+		return 'Content + Afbeelding';
 	}
 }

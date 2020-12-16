@@ -33,7 +33,7 @@
 			<div class="cta__wrapper">
 				<div class="cta__inner">
 					<% if ContactTitle %>
-						<h2 class="heading-2">{$ContactTitle}</h2>
+						<h2 class="heading-2 ">{$ContactTitle}</h2>
 					<% end_if %>
 					<% if $ContactText %>
 						<p>{$ContactText}</p>

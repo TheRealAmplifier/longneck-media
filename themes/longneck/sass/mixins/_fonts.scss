@@ -1,90 +1,44 @@
-// @font-face {
-//   font-family: 'Montserrat';
-//   font-style: normal;
-//   font-weight: 600;
-//   src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
-//        url('../fonts/quicksand-v14-latin-600.woff2') format('woff2'), 
-//        url('../fonts/quicksand-v14-latin-600.woff') format('woff');
-// }
-// @font-face {
-//   font-family: 'Montserrat';
-//   font-style: normal;
-//   font-weight: 700;
-//   src: local('Montserrat Bold'), local('Montserrat-Bold'),
-//        url('../fonts/quicksand-v14-latin-700.woff2') format('woff2'),
-//        url('../fonts/quicksand-v14-latin-700.woff') format('woff');
-// }
-// @font-face {
-//   font-family: 'Montserrat';
-//   font-style: normal;
-//   font-weight: 800;
-//   src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
-//        url('../fonts/quicksand-v14-latin-800.woff2') format('woff2'),
-//        url('../fonts/quicksand-v14-latin-800.woff') format('woff');
-// }
-
-// @font-face {
-//   font-family: 'Work Sans';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: local(''),
-//        url('../fonts/work-sans-v8-latin-regular.woff2') format('woff2'), 
-//        url('../fonts/work-sans-v8-latin-regular.woff') format('woff'); 
-// }
-// @font-face {
-//   font-family: 'Work Sans';
-//   font-style: normal;
-//   font-weight: 500;
-//   src: local(''),
-//        url('../fonts/work-sans-v8-latin-500.woff2') format('woff2'), 
-//        url('../fonts/work-sans-v8-latin-500.woff') format('woff'); 
-// }
-// @font-face {
-//   font-family: 'Work Sans';
-//   font-style: normal;
-//   font-weight: 600;
-//   src: local(''),
-//        url('../fonts/work-sans-v8-latin-600.woff2') format('woff2'),
-//        url('../fonts/work-sans-v8-latin-600.woff') format('woff');
-// }
-
 @font-face {
-  font-family: 'Quicksand';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local(''),
-    url('../fonts/quicksand-v21-latin-300.woff2') format('woff2'),
-    url('../fonts/quicksand-v21-latin-300.woff') format('woff');
+        url('../fonts/inter-v2-latin-300.woff2') format('woff2'),
+        url('../fonts/inter-v2-latin-300.woff') format('woff');
 }
 @font-face {
-  font-family: 'Quicksand';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(''),
-    url('../fonts/quicksand-v21-latin-regular.woff2') format('woff2'), 
-    url('../fonts/quicksand-v21-latin-regular.woff') format('woff');
+       url('../fonts/inter-v2-latin-regular.woff2') format('woff2'),
+       url('../fonts/inter-v2-latin-regular.woff') format('woff');
 }
 @font-face {
-  font-family: 'Quicksand';
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
+  font-display: swap;
   src: local(''),
-    url('../fonts/quicksand-v21-latin-600.woff2') format('woff2'),
-    url('../fonts/quicksand-v21-latin-600.woff') format('woff');
+       url('../fonts/inter-v2-latin-500.woff2') format('woff2'),
+       url('../fonts/inter-v2-latin-500.woff') format('woff');
 }
 @font-face {
-  font-family: 'Quicksand';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(''),
-    url('../fonts/quicksand-v21-latin-700.woff2') format('woff2'),
-    url('../fonts/quicksand-v21-latin-700.woff') format('woff');
+       url('../fonts/inter-v2-latin-700.woff2') format('woff2'),
+       url('../fonts/inter-v2-latin-700.woff') format('woff');
 }
 
-$font-quicksand      : 'Quicksand';
+$font-inter      : 'Inter';
 
 $fonts: (
-  'quicksand'        : $font-quicksand,
+  'inter'        : $font-inter,
 ) !default;
 
 @mixin font($font, $weight: null, $size: null, $important: null) {

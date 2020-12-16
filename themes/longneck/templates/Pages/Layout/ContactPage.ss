@@ -16,7 +16,7 @@
 		<div class="form__box">
 			<div class="form__intro">
 				<% if FormTitle %>
-					<h2 class="heading-2">{$FormTitle}</h2>
+					<h2 class="heading-2 ">{$FormTitle}</h2>
 				<% end_if %>
 				<% if FormIntro %>
 					{$FormIntro}

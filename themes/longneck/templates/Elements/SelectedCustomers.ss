@@ -2,7 +2,7 @@
 	<div class="customers__wrapper">
 		<div class="customers__title title--centered">
 			<% if ShowTitle %>
-				<h2 class="heading-2 heading--uppercase">{$Title}</h2>
+				<h2 class="heading-2 heading--uppercase ">{$Title}</h2>
 			<% end_if %>
 		</div>
 		<% if Customers %>

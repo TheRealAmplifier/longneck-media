@@ -3,7 +3,7 @@
 		<div class="method__boxed">
 			<% if ShowTitle %>
 				<div class="method__title">
-					<h2 class="heading-2">{$Title}</h2>
+					<h2 class="heading-2 ">{$Title}</h2>
 				</div>
 			<% end_if %>
 			<div class="method__left">
@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="method__right">
-				<h4 class="heading-4 text--accentuated">Hoe wij werken:</h4>
+				<h3 class="heading-3 text--accentuated">Hoe wij werken:</h3>
 				<% if MethodSteps %>
 					<div class="method__list">
 						<% loop MethodSteps %>
@@ -23,7 +23,7 @@
 								<span class="method__number">
 									{$Pos}
 								</span>
-								<span class="method__name">
+								<span class="method__text">
 									<a class="method__link" href="{$Target.Link}">{$Title}</a>
 								</span>
 							</span>

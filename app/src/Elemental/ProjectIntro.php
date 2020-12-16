@@ -23,7 +23,6 @@ class ProjectIntro extends BaseElement {
 		'TextMain'					=> 'HTMLText',
 		'Year'							=> 'Varchar',
 		'RemovePadding'			=> 'Boolean'
-
 	];
 
 	private static $has_one = [

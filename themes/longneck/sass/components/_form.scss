@@ -65,7 +65,7 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-	@include font('quicksand', $weight: 400);
+	font-weight: 400;
 	font-size: 1.4rem;
 
 	@include breakpoint('min-tablet-landscape') {

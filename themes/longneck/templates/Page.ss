@@ -2,22 +2,25 @@
 <html lang="{$ContentLocale}">
 <head>
 	<% base_tag %>
-
-	<title><% if $MetaTitle %>{$MetaTitle}<% else %>{$Title}<% end_if %> &hyphen; {$SiteConfig.Title}</title>
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	{$MetaTags(false)}
 
-	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
+	<title><% if $MetaTitle %>{$MetaTitle}<% else %>{$Title}<% end_if %> &hyphen; {$SiteConfig.Title}</title>
 
-	<% require themedCSS('main') %>
+	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-300.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+	<link rel="preload" href="{$ThemeDir}/css/main.css" as="style">
+  <link rel="preload" href="{$ThemeDir}/dist/app.js" as="script">
+
+	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
+	<link rel="stylesheet" href="{$ThemeDir}/css/main.css">
 </head>
 <body class="{$ClassName.ShortName}">
-	<!-- <div class="background">
-		<img class="image--cover" src="{$ThemeDir}/images/shapes/background-hexagon.svg" alt="">
-	</div> -->
 	
 	<% include Header %>
 	<main class="content--main">
@@ -25,6 +28,6 @@
 	</main>
 	<% include Footer %>
 
-	<% require themedJavascript('dist/app') %>
+	<script src="{$ThemeDir}/dist/app.js"></script>
 </body>
 </html>

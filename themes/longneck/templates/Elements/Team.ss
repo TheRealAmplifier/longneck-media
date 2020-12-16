@@ -1,9 +1,9 @@
-<div class="team">
+<div class="team background__particles--default">
 	<div class="team__wrapper">
 		<div class="section__title">
 			<% if ShowTitle %>
 				<div class="method__title">
-					<h2 class="heading-2">{$Title}</h2>
+					<h2 class="heading-2 ">{$Title}</h2>
 				</div>
 			<% end_if %>
 			<div class="method__left">
