@@ -1,4 +1,4 @@
-<% include TitleSection ExtraClasses='title--centered' %>
+<% include TitleSection ExtraClasses='title--centered', ShapesPosition='title--shapes-both' %>
 
 <div class="articles">
 	<div class="articles__wrapper">

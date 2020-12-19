@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer footer--particles">
 	<div class="footer__wrapper">
 		<div class="footer__top">
 			<div class="footer__title">

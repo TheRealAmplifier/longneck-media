@@ -258,7 +258,7 @@
 													</p>
 													<p>
 														<strong>Type Project:</strong> {$ProjectType} <br />
-														<strong>Gewenste services:</strong> {$ServicesType} <br />
+														<strong>Gewenste diensten:</strong> {$ServicesType} <br />
 														<strong>Gewenste CMS:</strong> {$CMSType} <br />
 														<strong>Aantal pagina's:</strong> {$PageAmount} <br />
 														<strong>Beschrijving:</strong> <br />

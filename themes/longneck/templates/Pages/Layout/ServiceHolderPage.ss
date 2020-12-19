@@ -1,4 +1,4 @@
-<% include TitleSection ExtraClasses='title--centered' %>
+<% include TitleSection ExtraClasses='title--centered', ShapesPosition='title--shapes-both' %>
 
 <div class="services">
 	<div class="services__wrapper">
@@ -12,21 +12,18 @@
 						</div>
 						<div class="block__content">
 							<h3 class="heading-3"> <a class="link__title" href="{$Link}">{$Title}</a> </h3>
-							<p>
-								{$Summary}
-							</p>
-
-	
-								<span class="card__arrow">
-									<span class="card__arrow--inner">
-										{$SVG('arrow-right-white').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
-									</span>
+							<% if Summary %>
+								<p>{$Summary}</p>
+							<% end_if %>
+							<span class="card__arrow">
+								<span class="card__arrow--inner">
+									{$SVG('arrow-right-white').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
 								</span>
-					
+							</span>
 						</div>
 					</div>
 
-					<% if MultipleOf(2) %>
+					<% if MultipleOf(3) %>
 						</div>
 						<div class="block__column">
 					<% end_if %>

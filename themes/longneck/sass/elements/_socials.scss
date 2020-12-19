@@ -1,11 +1,13 @@
 .navigation__socials {
 	@include flex;
 	padding-right: 4rem;
-	margin-top: 4rem;
+	margin-bottom: 4rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		flex-direction: column;
 		align-items: flex-end;
+		margin-top: 4rem;
+		margin-bottom: 0;
 	}
 }
 .social__link {

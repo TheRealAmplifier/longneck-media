@@ -1,4 +1,4 @@
-<div class="team background__particles--default">
+<div class="team">
 	<div class="team__wrapper">
 		<div class="section__title">
 			<% if ShowTitle %>

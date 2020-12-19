@@ -3,11 +3,17 @@
 }
 
 .form__row {
-	@include flex;
+	@include flex($dynamicDirection: column, $breakpoint: 'min-tablet-portrait');
 	flex: 0 0 100%;
 
 	&:not(:last-child) {
 		margin-bottom: 3rem;
+	}
+
+	@include breakpoint('max-tablet-portrait') {
+		.form__group--spacer {
+			margin-bottom: 3rem;
+		}
 	}
 }
 
@@ -18,7 +24,9 @@
 	flex: 0 0 calc(50% - 1.5rem)
 }
 .form__group--spacer {
-	margin-right: 3rem;
+	@include breakpoint('min-tablet-portrait') {
+		margin-right: 3rem;
+	}
 }
 
 .form__label {

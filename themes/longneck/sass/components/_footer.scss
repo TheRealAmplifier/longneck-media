@@ -1,47 +1,6 @@
 .footer {
 	position: relative;
 	padding-top: 15rem;
-	overflow: hidden;
-
-	&:before {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 10rem;
-		height: 15rem;
-		background-image: url(../images/shapes/hexagon-medium.svg);
-		background-repeat: no-repeat;
-    background-size: contain;
-		left: -4rem;
-		top: 7rem;
-		transform: rotate(37deg);
-		z-index: -1;
-
-		@include breakpoint('min-tablet-landscape') {
-			width: 15rem;
-			height: 20rem;
-		}
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 15rem;
-		height: 20rem;
-		background-image: url(../images/shapes/hexagon-small.svg);
-		background-repeat: no-repeat;
-    background-size: contain;
-		right: -3rem;
-		bottom: 0;
-		transform: rotate(110deg);
-		z-index: -1;
-
-		@include breakpoint('min-tablet-landscape') {
-			width: 30rem;
-			height: 35rem;
-			bottom: -12.5rem;
-		}
-	}
 }
 .footer__wrapper {
 	@include flex($direction: column);
@@ -83,4 +42,23 @@
 
 .footer__copyright {
 	font-size: 1.4rem;
+}
+
+
+.footer--particles {
+	@extend %default-background-hexagons--after;
+
+	&:after {
+    right: -20rem;
+    bottom: 20rem;
+    width: 45rem;
+		height: 30rem;
+		
+		@include breakpoint('min-tablet-landscape') {
+			right: -17.5rem;
+			bottom: 25rem;
+			width: 55rem;
+			height: 45rem;
+		}
+	}
 }

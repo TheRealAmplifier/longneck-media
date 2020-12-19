@@ -1,4 +1,4 @@
-<% include TitleSection %>
+<% include TitleSection ShapesPosition='title--shapes-both' %>
 
 <div class="projects projects--all">
 	<div class="projects__wrapper--narrow">

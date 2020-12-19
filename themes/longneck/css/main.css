@@ -447,15 +447,11 @@ li {
   transition: all 0.2s ease;
 }
 
-.background__particles--default:before {
+.footer--particles:after {
   content: "";
   position: absolute;
-  right: -20rem;
-  bottom: -12.5rem;
-  width: 65rem;
-  height: 65rem;
   display: block;
-  background-image: url(../images/shapes/hexagon-cluster-gray.svg);
+  background-image: url(../images/shapes/hexagon-cluster-gray-3.svg);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -777,7 +773,7 @@ li {
   border-left: 1rem solid #EEEEEE;
 }
 .breadcrumb__link:before {
-  border-left: 1rem solid #ffffff;
+  border-left: 1rem solid #FFFFFF;
 }
 
 .breadcrumb__current {
@@ -788,7 +784,7 @@ li {
   border-left: 1rem solid #EEEEEE;
 }
 .breadcrumb__current:before {
-  border-left: 1rem solid #ffffff;
+  border-left: 1rem solid #FFFFFF;
 }
 
 .title {
@@ -796,7 +792,6 @@ li {
   align-items: center;
   position: relative;
   padding: 10rem 0;
-  overflow: hidden;
 }
 @media (min-width: 64em) {
   .title {
@@ -848,27 +843,55 @@ li {
   }
 }
 
-.title--shapes:before {
+@media (min-width: 64em) {
+  .title--shapes-left:before, .title--shapes-both:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(../images/shapes/hexagon-cluster-gray.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    bottom: -10rem;
+    left: -17.5rem;
+    width: 40rem;
+    height: 32.5rem;
+  }
+}
+@media (min-width: 85em) {
+  .title--shapes-left:before, .title--shapes-both:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(../images/shapes/hexagon-cluster-gray.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -30rem;
+    left: -37.5rem;
+    width: 80rem;
+    height: 67.5rem;
+  }
+}
+
+.title--shapes-right:after, .title--shapes-both:after {
   content: "";
   position: absolute;
   display: block;
-  width: 2rem;
-  height: 30rem;
-  background-image: url(../images/shapes/hexagon-big.svg);
+  background-image: url(../images/shapes/hexagon-cluster-gray-1.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  right: -7.5rem;
-  bottom: 0;
-  transform: rotate(132deg);
   z-index: -1;
+  top: 3rem;
+  right: -20rem;
+  width: 40rem;
+  height: 27.5rem;
 }
-@media (min-width: 64em) {
-  .title--shapes:before {
-    width: 50rem;
-    height: 55rem;
-    top: 5rem;
-    bottom: unset;
-    right: -15rem;
+@media (min-width: 85em) {
+  .title--shapes-right:after, .title--shapes-both:after {
+    top: 3rem;
+    right: -40rem;
+    width: 80rem;
+    height: 67.5rem;
   }
 }
 
@@ -879,10 +902,21 @@ li {
 
 .form__row {
   display: flex;
+  flex-direction: column;
   flex: 0 0 100%;
+}
+@media (min-width: 48em) {
+  .form__row {
+    flex-direction: row;
+  }
 }
 .form__row:not(:last-child) {
   margin-bottom: 3rem;
+}
+@media (max-width: 47.9375em) {
+  .form__row .form__group--spacer {
+    margin-bottom: 3rem;
+  }
 }
 
 .form__group {
@@ -893,8 +927,10 @@ li {
   flex: 0 0 calc(50% - 1.5rem);
 }
 
-.form__group--spacer {
-  margin-right: 3rem;
+@media (min-width: 48em) {
+  .form__group--spacer {
+    margin-right: 3rem;
+  }
 }
 
 .form__label {
@@ -1157,7 +1193,7 @@ textarea {
 .team__wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 133rem;
+  max-width: 123rem;
   padding: 0 4rem;
 }
 @media (min-width: 90em) {
@@ -1199,10 +1235,16 @@ textarea {
 .contact__wrapper {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
   padding: 0 2rem;
+}
+@media (min-width: 64em) {
+  .contact__wrapper {
+    flex-direction: row;
+  }
 }
 
 .form__socials {
@@ -1221,9 +1263,14 @@ textarea {
   flex-direction: column;
   flex: 1;
   position: relative;
-  padding: 10rem;
+  padding: 3rem;
   background-color: #FFFFFF;
   box-shadow: 0 0 5rem rgba(49, 48, 48, 0.16);
+}
+@media (min-width: 64em) {
+  .form__box {
+    padding: 10rem;
+  }
 }
 
 .form__intro {
@@ -1248,48 +1295,6 @@ textarea {
 .footer {
   position: relative;
   padding-top: 15rem;
-  overflow: hidden;
-}
-.footer:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 10rem;
-  height: 15rem;
-  background-image: url(../images/shapes/hexagon-medium.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  left: -4rem;
-  top: 7rem;
-  transform: rotate(37deg);
-  z-index: -1;
-}
-@media (min-width: 64em) {
-  .footer:before {
-    width: 15rem;
-    height: 20rem;
-  }
-}
-.footer:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 15rem;
-  height: 20rem;
-  background-image: url(../images/shapes/hexagon-small.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  right: -3rem;
-  bottom: 0;
-  transform: rotate(110deg);
-  z-index: -1;
-}
-@media (min-width: 64em) {
-  .footer:after {
-    width: 30rem;
-    height: 35rem;
-    bottom: -12.5rem;
-  }
 }
 
 .footer__wrapper {
@@ -1363,9 +1368,25 @@ textarea {
   font-size: 1.4rem;
 }
 
+.footer--particles:after {
+  right: -20rem;
+  bottom: 20rem;
+  width: 45rem;
+  height: 30rem;
+}
+@media (min-width: 64em) {
+  .footer--particles:after {
+    right: -17.5rem;
+    bottom: 25rem;
+    width: 55rem;
+    height: 45rem;
+  }
+}
+
 .card {
   position: relative;
   transition: all 0.2s ease-in;
+  background-color: #FFFFFF;
 }
 
 .card--shadow:hover, .card--shadow:focus {
@@ -1436,7 +1457,7 @@ textarea {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 7.5rem 5rem;
+  padding: 7.5rem 6rem;
 }
 .card--row.card--even .card__image {
   order: 2;
@@ -1452,7 +1473,7 @@ textarea {
 .card--column .card__content {
   display: flex;
   flex-direction: column;
-  padding: 5rem 5rem;
+  padding: 5rem 6rem;
 }
 
 .card__arrow {
@@ -1502,6 +1523,10 @@ textarea {
 .meta__date {
   color: #6d7175;
   font-size: 1.6rem;
+}
+
+.elements {
+  margin: 10rem 0 0;
 }
 
 .element:not(:last-child) {
@@ -1780,12 +1805,14 @@ textarea {
 .navigation__socials {
   display: flex;
   padding-right: 4rem;
-  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 @media (min-width: 64em) {
   .navigation__socials {
     flex-direction: column;
     align-items: flex-end;
+    margin-top: 4rem;
+    margin-bottom: 0;
   }
 }
 

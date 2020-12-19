@@ -11,7 +11,8 @@
         "heyday/silverstripe-menumanager": "~3.0.0",
         "stevie-mayhew/silverstripe-svg": "^2.2",
         "dnadesign/silverstripe-elemental": "^4",
-        "undefinedoffset/sortablegridfield": "^2.0"
+        "undefinedoffset/sortablegridfield": "^2.0",
+        "sheadawson/silverstripe-shortcodable": "4.0.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",

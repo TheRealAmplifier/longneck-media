@@ -1,11 +1,7 @@
-%default-background-hexagons {
-	&:before {
+%default-background-hexagons--before {
+	&:after {
 		content: '';
 		position: absolute;
-		right: -20rem;
-		bottom: -12.5rem;
-		width: 65rem;
-		height: 65rem;
 		display: block;
 		background-image: url(../images/shapes/hexagon-cluster-gray.svg);
 		background-repeat: no-repeat;
@@ -13,7 +9,14 @@
 		z-index: -1;
 	}
 }
-
-.background__particles--default {
-	@extend %default-background-hexagons;
+%default-background-hexagons--after {
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		background-image: url(../images/shapes/hexagon-cluster-gray-3.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
 }

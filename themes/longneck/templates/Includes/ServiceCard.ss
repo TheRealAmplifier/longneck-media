@@ -4,6 +4,6 @@
 		{$SVG($Icon.Name).addSubfolder('Service-Icons')}
 	</div>
 	<div class="block__content">
-		<h5 class="heading-5 heading--margin-none">{$Title} </h5>
+		<h3 class="heading-5 heading--margin-none">{$Title}</h3>
 	</div>
 </div>

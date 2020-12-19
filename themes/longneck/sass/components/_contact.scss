@@ -1,5 +1,5 @@
 .contact__wrapper {
-	@include flex($wrap: wrap);
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $wrap: wrap);
 	@include sectionwrapper;
 }
 .form__socials {
@@ -16,9 +16,13 @@
 	@include flex($direction: column);
 	flex: 1;
 	position: relative;
-	padding: 10rem;
+	padding: 3rem;
 	background-color: $color-white;
 	box-shadow: 0 0 5rem rgba($color-black, .16);
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 10rem;
+	}
 }
 
 .form__intro {

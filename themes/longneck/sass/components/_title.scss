@@ -2,7 +2,6 @@
 	@include flex($align: center);
 	position: relative;
 	padding: 10rem 0;
-	overflow: hidden;
 
 	@include breakpoint('min-tablet-landscape') {
 		min-height: 70rem;
@@ -40,27 +39,65 @@
 	}
 }
 
-.title--shapes {
+.title--shapes-left {
 	&:before {
+		@include breakpoint('min-tablet-landscape') {
+			content: '';
+			position: absolute;
+			display: block;
+			background-image: url(../images/shapes/hexagon-cluster-gray.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: -1;
+			bottom: -10rem;
+			left: -17.5rem;
+			width: 40rem;
+			height: 32.5rem;
+		}
+		@include breakpoint('min-desktop') {
+			content: '';
+			position: absolute;
+			display: block;
+			background-image: url(../images/shapes/hexagon-cluster-gray.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			bottom: -30rem;
+			left: -37.5rem;
+			width: 80rem;
+			height: 67.5rem;
+		}
+	}
+}
+.title--shapes-right {
+	&:after {
 		content: '';
 		position: absolute;
 		display: block;
-		width: 2rem;
-		height: 30rem;
-		background-image: url(../images/shapes/hexagon-big.svg);
+		background-image: url(../images/shapes/hexagon-cluster-gray-1.svg);
 		background-repeat: no-repeat;
-    background-size: contain;
-		right: -7.5rem;
-		bottom: 0;
-		transform: rotate(132deg);
+		background-size: contain;
 		z-index: -1;
-
-		@include breakpoint('min-tablet-landscape') {
-			width: 50rem;
-			height: 55rem;
-			top: 5rem;
-			bottom: unset;
-			right: -15rem;
+    top: 3rem;
+    right: -20rem;
+    width: 40rem;
+		height: 27.5rem;
+		
+		// @include breakpoint('min-tablet-landscape') {
+		// 	bottom: -30rem;
+		// 	left: -37.5rem;
+		// 	width: 80rem;
+		// 	height: 67.5rem;
+			
+		// }
+		@include breakpoint('min-desktop') {
+			top: 3rem;
+			right: -40rem;
+			width: 80rem;
+			height: 67.5rem;
 		}
 	}
+}
+.title--shapes-both {
+	@extend .title--shapes-left;
+	@extend .title--shapes-right;
 }

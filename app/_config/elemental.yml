@@ -34,5 +34,5 @@ Pages\ServicePage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension  
   allowed_elements:
-    - Elements\ContentClean
+    - Elements\Content
     - Elements\Method

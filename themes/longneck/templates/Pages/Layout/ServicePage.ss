@@ -1,4 +1,4 @@
-<% include TitleSection %>
+<% include TitleSection ShapesPosition='title--shapes-right' %>
 
 
 <div class="details">
@@ -17,7 +17,7 @@
 <div class="services services--related">
 	<div class="services__wrapper">
 		<div class="services__title content--wide">
-			<h2 class="heading-2 ">Onze andere services</h2>
+			<h2 class="heading-2 heading--margin-none">Onze andere diensten</h2>
 		</div>
 
 		<% if RelatedServices %>

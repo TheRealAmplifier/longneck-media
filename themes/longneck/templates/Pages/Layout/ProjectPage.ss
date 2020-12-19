@@ -1,4 +1,4 @@
-<% include TitleSection %>
+<% include TitleSection ShapesPosition='title--shapes-right' %>
 
 <div class="details">
 	<div class="details__wrapper">

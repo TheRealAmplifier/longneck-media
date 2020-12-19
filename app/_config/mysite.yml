@@ -37,3 +37,9 @@ StevieMayhew\SilverStripeSVG\SVGTemplate:
 Heyday\MenuManager\MenuItem:
   extensions:
     - Extensions\CustomMenuItem
+
+Silverstripe\Shortcodable\Shortcodable:
+  shortcodable_classes:
+    - Shortcode\ShortcodeButton
+  htmleditor_names:
+    - cwp

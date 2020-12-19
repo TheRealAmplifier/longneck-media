@@ -32,7 +32,6 @@ class ProjectResults extends BaseElement {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-
 		$fields->removeByName(['ProjectImages']);
 
 		$fields->addFieldsToTab('Root.Main', [

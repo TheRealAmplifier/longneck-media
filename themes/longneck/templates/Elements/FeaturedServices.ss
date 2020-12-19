@@ -1,8 +1,8 @@
-<div class="services background__particles--default">
+<div class="services">
 	<div class="services__wrapper">
 		<% if ShowTitle %>
 			<div class="services__title content--wide">
-				<h2 class="heading-2 ">{$Title}</h2>
+				<h2 class="heading-2 heading--margin-none">{$Title}</h2>
 			</div>
 		<% end_if %>
 
