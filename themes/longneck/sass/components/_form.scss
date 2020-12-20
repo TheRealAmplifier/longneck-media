@@ -51,14 +51,14 @@ input[type="text"],
 input[type="email"],
 select {
 	width: 100%;
-	border: 2px solid $color-gray;
+	border: 2px solid $color-gray-light-2;
 	height: 6rem;
 	padding: 0 2rem;
 }
 textarea {
 	width: 100%;
 	resize: vertical;
-	border: 2px solid $color-gray;
+	border: 2px solid $color-gray-light-2;
 	padding: 2rem;
 	min-height: 30rem;
 }

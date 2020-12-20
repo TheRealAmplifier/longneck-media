@@ -23,11 +23,11 @@
 }
 
 .card--border-green {
-	border-bottom: .8rem solid $color-green;
+	border-color: $color-green;
 
 	&:hover,
 	&:focus {
-		border-bottom: .8rem solid $color-blue;
+		border-color: $color-blue;
 
 		.card__arrow {
 			background-color: $color-blue;
@@ -37,9 +37,10 @@
 	.card__arrow {
 		background-color: $color-green;
 	}
+
 }
 .card--border-blue {
-	border-bottom: .8rem solid $color-blue;
+	border-color: $color-blue;
 
 	.card__arrow {
 		background-color: $color-blue;
@@ -47,18 +48,27 @@
 
 	&:hover,
 	&:focus {
-		border-bottom: .8rem solid $color-green;
+		border-color: $color-green;
 
 		.card__arrow {
 			background-color:  $color-green;
 		}
 	}
 }
+.card--border-green,
+.card--border-blue {
+	border-width: 0 0 .4rem 0;
+	border-style: solid;
+
+	@include breakpoint('min-tablet-landscape') {
+		border-width: 0 0 .8rem 0;
+	}
+}
 
 .card--row {
 	@include flex;
 	position: relative;
-
+	
 	&:not(:last-child){
 		margin-bottom: 10rem;
 	}
@@ -67,7 +77,7 @@
 		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 	}
 	.card__image {
-		height: 37.5rem;
+		height: 32.5rem;
 
 		@include breakpoint('min-tablet-landscape') {
 			height: 55rem;
@@ -76,10 +86,23 @@
 	}
 	.card__content {
 		@include flex($direction: column);
-		flex: 1;
-		padding: 7.5rem 6rem;
+		padding: 4rem 3rem;
+
+		@include breakpoint('min-tablet-landscape') {
+			padding: 7.5rem 6rem;
+		}
 	}
 	&.card--even {
+		.card__image {
+			order: 2;
+		}
+		.card__arrow {
+			right: unset;
+			left: 0;
+		}
+	}
+
+	@include breakpoint('max-tablet-landscape') {
 		.card__image {
 			order: 2;
 		}
@@ -96,7 +119,11 @@
 	}
 	.card__content {
 		@include flex($direction: column);
-		padding: 5rem 6rem;
+		padding: 4rem 3rem;
+
+		@include breakpoint('min-tablet-landscape') {
+			padding: 5rem 6rem;
+		}
 	}
 }
 
@@ -105,14 +132,24 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	width: 5.5rem;
-	height: 5rem;
+	width: 4rem;
+	height: 3.5rem;
 	transition: all .2s ease-in;
+
+	@include breakpoint('min-tablet-landscape') {
+		width: 5.5rem;
+		height: 5rem;
+	}
 }
 .card__arrow--inner {
 	display: block;
-	width: 2.2rem;
-	height: 2.2rem;
+	width: 1.8rem;
+	height: 1.8rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		width: 2.2rem;
+		height: 2.2rem;
+	}
 }
 
 .card__meta {
@@ -124,7 +161,7 @@
 }
 .meta__tag {
 	@include flex($align: center);
-	background-color: $color-gray;
+	background-color: $color-gray-light-2;
 	padding: .5rem 1rem;
 	height: 3.4rem;
 	line-height: 3.4rem;

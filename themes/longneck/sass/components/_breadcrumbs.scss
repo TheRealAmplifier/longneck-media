@@ -79,18 +79,18 @@
 }
 .breadcrumb__link {
 	@extend %breadcrumb__link--default;
-	background: $color-gray;
+	background: $color-gray-light-2;
 
 	&:hover,
 	&:focus {
-		background: darken($color-gray, 6);
+		background: darken($color-gray-light-2, 6);
 
 		&:after {
-			border-left: 1rem solid darken($color-gray, 6);
+			border-left: 1rem solid darken($color-gray-light-2, 6);
 		}
 	}
 	&:after {
-		border-left: 1rem solid $color-gray;
+		border-left: 1rem solid $color-gray-light-2;
 	}
 	&:before {
 		border-left: 1rem solid $color-white;
@@ -102,7 +102,7 @@
 	color: $color-white;
 
 	&:after {
-		border-left: 1rem solid $color-gray;
+		border-left: 1rem solid $color-gray-light-2;
 	}
 	&:before {
 		border-left: 1rem solid $color-white;

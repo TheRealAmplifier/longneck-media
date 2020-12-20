@@ -15,8 +15,9 @@ $color-blue-darken: darken($color-blue, 15);
 $color-green-darken: darken($color-green, 15);
 $color-yellow-darken: darken($color-yellow, 15);
 
-$color-gray: #EEEEEE;
-$color-gray-boxshadow: darken($color-gray, 12);
+$color-gray-light-1: #f3f3f3;
+$color-gray-light-2: #EEEEEE;
+$color-gray-boxshadow: darken($color-gray-light-2, 12);
 
 $color-gray-blue-soft: #E6ECF2;
 $color-gray-blue-soft-2: darken(#E6ECF2, 5);

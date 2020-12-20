@@ -1,8 +1,10 @@
 <footer class="footer footer--particles">
 	<div class="footer__wrapper">
 		<div class="footer__top">
-			<div class="footer__title">
-				<h2 class="heading-2 heading--margin-small">Longneck <br /> Media</h2>
+			<div class="footer__brand">
+				<a href="{$BaseHref}" aria-label="Back to homepage">
+					{$SVG('logo-longneck-text-vertical').customBasePath('themes/longneck/images/logo/').extraClass('image--cover')}
+				</a>
 			</div>
 			<div class="footer__navigation">
 				<% if $MenuSet('Footer1').MenuItems %>

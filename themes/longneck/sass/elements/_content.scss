@@ -2,7 +2,7 @@
 	@extend %defaultSectionPadding;
 }
 .content--background {
-	background-color: $color-gray;
+	background-color: $color-gray-light-1;
 }
 .content__wrapper--small {
 	@include sectionwrapper(100rem, $unsetPadding: true);

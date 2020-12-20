@@ -4,7 +4,7 @@
 	}
 	.cta__content {
 		@include flex($direction: column, $justify: center);
-		background-color: $color-gray;
+		background-color: $color-gray-light-2;
 		flex: 0 0 60%;
 		padding: 5rem 3rem;
 	
@@ -26,7 +26,7 @@
 	}
 }
 .cta--colored {
-	background-color: $color-gray;
+	background-color: $color-gray-light-1;
 
 	.cta__wrapper {
 		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');

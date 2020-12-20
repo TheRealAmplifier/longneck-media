@@ -22,11 +22,17 @@
 	}
 }
 
-.footer__title {
-	color: $color-blue;
-	
+.footer__brand {	
+	display: block;
+	width: 17.5rem;
+	height: 5.5rem;
+
 	@include breakpoint('max-tablet-landscape') {
-		margin-bottom: 5rem;
+		margin-bottom: 7.5rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		width: 25rem;
+		height: 7.5rem;
 	}
 }
 .footer__menu {

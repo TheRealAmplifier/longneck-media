@@ -142,7 +142,7 @@ body {
 
 p {
   font-size: 1.8rem;
-  margin-top: 0;
+  margin: 0 0;
   line-height: 1.6;
 }
 p:not(:last-child) {
@@ -1344,12 +1344,20 @@ textarea {
   }
 }
 
-.footer__title {
-  color: #303C6C;
+.footer__brand {
+  display: block;
+  width: 17.5rem;
+  height: 5.5rem;
 }
 @media (max-width: 61.9375em) {
-  .footer__title {
-    margin-bottom: 5rem;
+  .footer__brand {
+    margin-bottom: 7.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__brand {
+    width: 25rem;
+    height: 7.5rem;
   }
 }
 
@@ -1403,10 +1411,10 @@ textarea {
 }
 
 .card--border-green {
-  border-bottom: 0.8rem solid #7BC7D1;
+  border-color: #7BC7D1;
 }
 .card--border-green:hover, .card--border-green:focus {
-  border-bottom: 0.8rem solid #303C6C;
+  border-color: #303C6C;
 }
 .card--border-green:hover .card__arrow, .card--border-green:focus .card__arrow {
   background-color: #303C6C;
@@ -1416,16 +1424,28 @@ textarea {
 }
 
 .card--border-blue {
-  border-bottom: 0.8rem solid #303C6C;
+  border-color: #303C6C;
 }
 .card--border-blue .card__arrow {
   background-color: #303C6C;
 }
 .card--border-blue:hover, .card--border-blue:focus {
-  border-bottom: 0.8rem solid #7BC7D1;
+  border-color: #7BC7D1;
 }
 .card--border-blue:hover .card__arrow, .card--border-blue:focus .card__arrow {
   background-color: #7BC7D1;
+}
+
+.card--border-green,
+.card--border-blue {
+  border-width: 0 0 0.4rem 0;
+  border-style: solid;
+}
+@media (min-width: 64em) {
+  .card--border-green,
+.card--border-blue {
+    border-width: 0 0 0.8rem 0;
+  }
 }
 
 .card--row {
@@ -1445,7 +1465,7 @@ textarea {
   }
 }
 .card--row .card__image {
-  height: 37.5rem;
+  height: 32.5rem;
 }
 @media (min-width: 64em) {
   .card--row .card__image {
@@ -1456,8 +1476,12 @@ textarea {
 .card--row .card__content {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 7.5rem 6rem;
+  padding: 4rem 3rem;
+}
+@media (min-width: 64em) {
+  .card--row .card__content {
+    padding: 7.5rem 6rem;
+  }
 }
 .card--row.card--even .card__image {
   order: 2;
@@ -1466,6 +1490,15 @@ textarea {
   right: unset;
   left: 0;
 }
+@media (max-width: 61.9375em) {
+  .card--row .card__image {
+    order: 2;
+  }
+  .card--row .card__arrow {
+    right: unset;
+    left: 0;
+  }
+}
 
 .card--column .card__image {
   height: 32.5rem;
@@ -1473,7 +1506,12 @@ textarea {
 .card--column .card__content {
   display: flex;
   flex-direction: column;
-  padding: 5rem 6rem;
+  padding: 4rem 3rem;
+}
+@media (min-width: 64em) {
+  .card--column .card__content {
+    padding: 5rem 6rem;
+  }
 }
 
 .card__arrow {
@@ -1483,15 +1521,27 @@ textarea {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 5.5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 3.5rem;
   transition: all 0.2s ease-in;
+}
+@media (min-width: 64em) {
+  .card__arrow {
+    width: 5.5rem;
+    height: 5rem;
+  }
 }
 
 .card__arrow--inner {
   display: block;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+@media (min-width: 64em) {
+  .card__arrow--inner {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
 }
 
 .card__meta {
@@ -1645,7 +1695,7 @@ textarea {
 }
 
 .content--background {
-  background-color: #EEEEEE;
+  background-color: #f3f3f3;
 }
 
 .content__wrapper--small {
@@ -1719,7 +1769,7 @@ textarea {
 }
 
 .cta--colored {
-  background-color: #EEEEEE;
+  background-color: #f3f3f3;
 }
 .cta--colored .cta__wrapper {
   display: flex;
