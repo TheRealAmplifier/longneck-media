@@ -14,6 +14,7 @@ use SilverStripe\Forms\ListboxField;
 class BlogPage extends Page {
 	private static $table_name = 'BlogPage';
 	private static $singular_name = 'Artikel';
+	private static $icon_class = 'font-icon-p-article';
 
 	private static $db = [
 		'PublicationDate'		=> 'Date',

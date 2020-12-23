@@ -10,6 +10,7 @@ use SilverStripe\Forms\TextField;
 class QuotationPage extends Page {
 	private static $table_name = 'QuotationPage';
 	private static $singular_name = 'Offerte pagina';
+	private static $icon_class = 'font-icon-white-question';
 
 	private static $db = [
 		'BannerText'		=> 'HTMLText',

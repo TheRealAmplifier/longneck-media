@@ -13,6 +13,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 class ServicePage extends Page {
 	private static $table_name = 'ServicePage';
 	private static $singular_name = 'Dienst';
+	private static $icon_class = 'font-icon-check-mark-circle';
 
 	private static $db = [
 		'Summary'						=> 'HTMLText'

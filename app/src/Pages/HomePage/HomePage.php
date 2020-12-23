@@ -12,6 +12,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 class HomePage extends Page {
 	private static $table_name = 'HomePage';
 	private static $singular_name = 'Home pagina';
+	private static $icon_class = 'font-icon-p-home';
 
 	private static $db = [
 		'BannerText'		=> 'HTMLText'

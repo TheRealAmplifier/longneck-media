@@ -6,18 +6,12 @@ use Page;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-
-use SilverStripe\Forms\TextField;
-
-use SilverStripe\Forms\GridField\GridField;
-use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Forms\ListboxField;
-use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 class ProjectPage extends Page {
 	private static $table_name = 'ProjectPage';
 	private static $singular_name = 'Project';
+	private static $icon_class = 'font-icon-rocket';
 
 	private static $db = [
 		'Summary'						=> 'HTMLText'	

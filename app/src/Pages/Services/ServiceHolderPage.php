@@ -13,6 +13,7 @@ use SilverStripe\Forms\TreeDropdownField;
 class ServiceHolderPage extends Page {
 	private static $table_name = 'ServiceHolderPage';
 	private static $singular_name = 'Diensten overzicht';
+	private static $icon_class = 'font-icon-box';
 
 	private static $db = [
 		'BannerText'					=> 'HTMLText',

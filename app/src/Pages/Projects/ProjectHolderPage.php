@@ -16,6 +16,7 @@ use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class ProjectHolderPage extends Page {
 	private static $table_name = 'ProjectHolderPage';
 	private static $singular_name = 'Projecten Overzicht';
+	private static $icon_class = 'font-icon-p-archive';
 
 	private static $db = [
 		'BannerText'					=> 'HTMLText',

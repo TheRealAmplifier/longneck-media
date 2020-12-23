@@ -13,6 +13,7 @@ use SilverStripe\Forms\TextField;
 class ContactPage extends Page {
 	private static $table_name = 'ContactPage';
 	private static $singular_name = 'Contact pagina';
+	private static $icon_class = 'font-icon-p-mail';
 
 	private static $db = [
 		'BannerText'		=> 'HTMLText',

@@ -2,21 +2,17 @@
 
 namespace Pages;
 
-use DataObject\ContactSubmission;
 use DataObject\QuotationSubmission;
 use PageController;
 use SilverStripe\Control\Email\Email;
-use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\FileField;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
-use Tools\FileInjector;
 
 class QuotationPageController extends PageController {
 	private static $allowed_actions = [
