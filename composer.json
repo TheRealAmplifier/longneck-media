@@ -12,7 +12,8 @@
         "stevie-mayhew/silverstripe-svg": "^2.2",
         "dnadesign/silverstripe-elemental": "^4",
         "undefinedoffset/sortablegridfield": "^2.0",
-        "sheadawson/silverstripe-shortcodable": "4.0.x-dev"
+        "sheadawson/silverstripe-shortcodable": "4.0.x-dev",
+        "cyber-duck/silverstripe-seo": "^4"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",

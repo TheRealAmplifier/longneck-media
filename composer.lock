@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7da429d80ce9486e07e09c360449c1fe",
+    "content-hash": "1894a7b4adf4ae6e4c38ffe0ecd3fb87",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -294,6 +294,66 @@
                 }
             ],
             "time": "2020-04-07T06:57:05+00:00"
+        },
+        {
+            "name": "cyber-duck/silverstripe-seo",
+            "version": "4.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cyber-Duck/Silverstripe-SEO.git",
+                "reference": "1a1fdce55ecd1e5faa501ae2f8cfc232d5a2e43e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cyber-Duck/Silverstripe-SEO/zipball/1a1fdce55ecd1e5faa501ae2f8cfc232d5a2e43e",
+                "reference": "1a1fdce55ecd1e5faa501ae2f8cfc232d5a2e43e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "silverstripe/cms": "^4.0",
+                "silverstripe/framework": "^4.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "seo",
+                "expose": [
+                    "assets/css",
+                    "assets/img",
+                    "assets/js"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "CyberDuck\\SEO\\": "src/",
+                    "CyberDuck\\SEO\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Mc Cormack",
+                    "email": "andrewm@cyber-duck.co.uk",
+                    "homepage": "https://github.com/Andrew-Mc-Cormack"
+                }
+            ],
+            "description": "A SilverStripe module to optimise the Meta, crawling, indexing, and sharing of your website content",
+            "homepage": "http://github.com/cyber-duck/silverstripe-seo",
+            "keywords": [
+                "crawling",
+                "indexing",
+                "meta",
+                "search engine optimisation",
+                "seo",
+                "silverstripe",
+                "silverstripe 4",
+                "silverstripe seo",
+                "xml-sitemap"
+            ],
+            "time": "2020-09-24T09:42:44+00:00"
         },
         {
             "name": "dnadesign/silverstripe-elemental",

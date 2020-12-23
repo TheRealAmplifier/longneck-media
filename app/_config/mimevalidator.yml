@@ -14,5 +14,5 @@ SilverStripe\MimeValidator\MimeUploadValidator:
       - 'image/svg+xml'
       - 'image/svg'
 SilverStripe\Assets\File:
-    allowed_extensions:
+  allowed_extensions:
     - svg
