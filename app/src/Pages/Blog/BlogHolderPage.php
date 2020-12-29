@@ -13,7 +13,7 @@ use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class BlogHolderPage extends Page {
 	private static $table_name = 'BlogHolderPage';
 	private static $singular_name = 'Blog Overzicht';
-	private static $icon_class = 'font-icon-cart';
+	private static $icon_class = 'font-icon-news';
 
 	private static $db = [
 		'BannerText'					=> 'HTMLText'

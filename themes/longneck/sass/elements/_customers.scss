@@ -1,9 +1,5 @@
 .customers {
-	padding: 5rem 3rem;
-	
-	@include breakpoint('min-tablet-landscape') {
-		padding: 7.5rem 12.5rem;
-	}
+	@extend %bigSectionPadding;
 }
 .customers__wrapper {
 	@include sectionwrapper(100rem, $setDefaultPadding: 0 4rem);

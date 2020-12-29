@@ -1,6 +1,5 @@
 <% include TitleSection ShapesPosition='title--shapes-right' %>
 
-
 <div class="details">
 	<div class="details__wrapper">
 		<% include BreadCrumbs %>
@@ -13,13 +12,11 @@
 	</div>
 </div>
 
-
 <div class="services services--related">
 	<div class="services__wrapper">
 		<div class="services__title content--wide">
 			<h2 class="heading-2 heading--margin-none">Onze andere diensten</h2>
 		</div>
-
 		<% if RelatedServices %>
 			<div class="services__blocks--narrow">
 				<% loop RelatedServices %>

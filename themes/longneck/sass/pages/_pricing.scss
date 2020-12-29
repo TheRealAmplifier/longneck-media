@@ -1,0 +1,19 @@
+.pricing {
+	@extend %bigSectionPadding;
+}
+.pricing__wrapper {
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+}
+
+.pricing__list {
+	position: relative;
+	display: grid;	
+	grid-template-columns: 1fr;
+	grid-gap: 5rem;
+	width: 100%;
+	margin-top: 5rem;
+
+	@include breakpoint('min-tablet-portrait') {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

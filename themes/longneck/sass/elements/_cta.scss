@@ -4,13 +4,10 @@
 	}
 	.cta__content {
 		@include flex($direction: column, $justify: center);
+		@extend %bigSectionPadding;
 		background-color: $color-gray-light-2;
 		flex: 0 0 60%;
-		padding: 5rem 3rem;
-	
-		@include breakpoint('min-tablet-landscape') {
-			padding: 7.5rem 12.5rem;
-		}
+
 	}
 
 	.cta__image {
@@ -72,4 +69,12 @@
 	.cta__right {
 		flex: 0 0 25%
 	}
+}
+
+
+.card__points {
+	@include flex($direction: column);
+}
+.point__item {
+	color: $color-gray-dark-1;
 }

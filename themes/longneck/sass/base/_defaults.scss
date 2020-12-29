@@ -61,6 +61,13 @@ li {
 		padding: 10rem 0;
 	}
 }
+%bigSectionPadding {
+  padding: 5rem 3rem;
+	
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem 12.5rem;
+	}
+}
 
 .section__title {
   margin-bottom: 7.5rem;

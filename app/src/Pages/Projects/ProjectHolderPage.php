@@ -5,13 +5,10 @@ namespace Pages;
 use Page;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
-use SilverStripe\Forms\GridField\GridField;
-use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TreeDropdownField;
-use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 class ProjectHolderPage extends Page {
 	private static $table_name = 'ProjectHolderPage';
@@ -23,7 +20,7 @@ class ProjectHolderPage extends Page {
 		'ShowContact'					=> 'Boolean',
 		'ContactTitle'	 			=> 'Varchar',
 		'ContactText'	 				=> 'Text',
-		'ContactLinkText'			=> 'Varchar',
+		'ContactLinkText'			=> 'Varchar'
 	];
 
 	private static $has_one = [
