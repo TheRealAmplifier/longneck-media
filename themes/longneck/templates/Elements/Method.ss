@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="method__right">
-				<h3 class="heading-3 text--accentuated">Hoe wij werken:</h3>
+				<h3 class="heading-4 text--accentuated">Hoe wij werken:</h3>
 				<% if MethodSteps %>
 					<div class="method__list">
 						<% loop MethodSteps %>

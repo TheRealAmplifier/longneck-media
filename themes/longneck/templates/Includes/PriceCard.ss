@@ -1,21 +1,24 @@
-<div class="block card--shadow-boxed">
+<div class="block block__pricing card--shadow-boxed">
 	<div class="block__content">
-		<a class="block__link" href="{$Link}" aria-label="{$Title}"></a>
-		<h3 class="heading-3 heading--margin-none">{$Title}</h3>
+		<h3 class="heading-3 heading--margin-none">
+			<a href="{$Link}">{$Title}</a>
+		</h3>
 		<% if Summary %>
-			$Summary
-		<% end_if %>
-
-		<% if SellingPoints %>
-			<div class="card__points">
-				<% loop SellingPoints %>
-				<span class="point__item">> {$Title}</span>
-				<% end_loop %>
+			<div class="text--accentuated-soft">
+				{$Summary}
 			</div>
 		<% end_if %>
 
+		<% if SellingPoints %>
+			<ul class="card__points">
+				<% loop SellingPoints %>
+				<li class="point__item">{$Title}</li>
+				<% end_loop %>
+			</ul>
+		<% end_if %>
+
 		<% if Price %>
-			<span class="card__price">€ {$Price}</span>
+			<span class="card__price">Vanaf €{$Price}</span>
 		<% end_if %>
 		<div class="button__box button__box--spacer">
 			<a class="button button--icon button--solid-blue" href="{$Link}">

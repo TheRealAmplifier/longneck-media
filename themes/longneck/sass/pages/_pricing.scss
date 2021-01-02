@@ -1,8 +1,13 @@
 .pricing {
-	@extend %bigSectionPadding;
+  padding: 5rem 0;
+	
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem 12.5rem;
+	}
 }
+
 .pricing__wrapper {
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
 }
 
 .pricing__list {
@@ -15,5 +20,14 @@
 
 	@include breakpoint('min-tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+.block__pricing {
+	padding: 4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem;
 	}
 }
