@@ -210,18 +210,28 @@ body {
 
 body {
   overflow-x: hidden;
-  margin-top: 10rem;
+  margin-top: 7rem;
   transition: all 0.2s linear;
 }
 body.navigation--open {
   overflow-y: hidden;
 }
 body.headroom--not-top {
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 body.headroom--not-top .header {
-  height: 10rem;
+  height: 7rem;
   box-shadow: 0px 0px 3px 3px rgba(109, 113, 117, 0.1);
+}
+@media (min-width: 90em) {
+  body.headroom--not-top .header {
+    height: 10rem;
+  }
+}
+@media (min-width: 90em) {
+  body.headroom--not-top {
+    margin-top: 10rem;
+  }
 }
 @media (min-width: 64em) {
   body {
@@ -472,7 +482,7 @@ li {
 
 .header {
   position: fixed;
-  height: 10rem;
+  height: 7rem;
   width: 100%;
   top: 0;
   background-color: #FFFFFF;
@@ -508,7 +518,7 @@ li {
 
 .brand__image {
   height: auto;
-  width: 16.5rem;
+  width: 20rem;
 }
 @media (min-width: 64em) {
   .brand__image {
@@ -666,14 +676,24 @@ li {
   position: relative;
   flex: 1;
   height: 100%;
-  padding: 5rem;
+  padding: 3rem;
 }
 .banner__content p {
-  font-size: 2.4rem;
+  font-size: 2rem;
+}
+@media (min-width: 64em) {
+  .banner__content p {
+    font-size: 2.4rem;
+  }
 }
 @media (max-width: 84.9375em) {
   .banner__content {
     order: 2;
+  }
+}
+@media (min-width: 48em) {
+  .banner__content {
+    padding: 5rem;
   }
 }
 @media (min-width: 64em) {
@@ -817,7 +837,7 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .title__wrapper {
@@ -1215,7 +1235,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 123rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .team__wrapper {
@@ -1226,7 +1246,7 @@ textarea {
 .team__list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 5rem 0;
+  grid-gap: 3rem 0;
 }
 @media (min-width: 64em) {
   .team__list {
@@ -1250,7 +1270,12 @@ textarea {
 }
 
 .member__content {
-  padding: 5rem;
+  padding: 3rem;
+}
+@media (min-width: 64em) {
+  .member__content {
+    padding: 5rem;
+  }
 }
 
 .contact__wrapper {
@@ -1324,7 +1349,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .footer__wrapper {
@@ -1474,7 +1499,12 @@ textarea {
   position: relative;
 }
 .card--row:not(:last-child) {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
+}
+@media (min-width: 64em) {
+  .card--row:not(:last-child) {
+    margin-bottom: 10rem;
+  }
 }
 .card--row .card__link {
   display: flex;
@@ -1646,7 +1676,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 64em) {
   .links__wrapper {
@@ -1711,7 +1741,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .services__wrapper {
@@ -1725,7 +1755,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .services__wrapper--wide {
@@ -1745,7 +1775,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .content__wrapper--small {
@@ -1757,7 +1787,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .content__wrapper--wide {
@@ -1814,7 +1844,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 48em) {
   .cta--colored .cta__wrapper {
@@ -1840,7 +1870,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .cta--contact .cta__wrapper {
@@ -1854,9 +1884,9 @@ textarea {
 }
 
 .cta--bar {
-  padding: 5rem;
   background-color: #303C6C;
   color: #FFFFFF;
+  padding: 5rem 3rem;
 }
 .cta--bar .cta__wrapper {
   display: flex;
@@ -1864,7 +1894,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 4rem;
+  padding: 0 0;
 }
 @media (min-width: 64em) {
   .cta--bar .cta__wrapper {
@@ -1887,6 +1917,11 @@ textarea {
 }
 .cta--bar .cta__right {
   flex: 0 0 25%;
+}
+@media (min-width: 64em) {
+  .cta--bar {
+    padding: 7.5rem 5rem;
+  }
 }
 
 .navigation__socials {
@@ -1947,7 +1982,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .projects__wrapper {
@@ -1961,7 +1996,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 153rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .projects__wrapper--medium {
@@ -1975,7 +2010,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .projects__wrapper--narrow {
@@ -1988,11 +2023,13 @@ textarea {
   grid-template-columns: 1fr;
   grid-gap: 4rem;
   width: 100%;
+  margin-top: 3rem;
 }
 @media (min-width: 64em) {
   .projects__list--column {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 7.5rem;
+    margin-top: 5rem;
   }
 }
 
@@ -2006,7 +2043,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .details__wrapper {
@@ -2018,7 +2055,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 
 .customers__list {
@@ -2038,7 +2075,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 
 .method__boxed {
@@ -2300,7 +2337,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .articles__wrapper {
@@ -2344,7 +2381,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 153rem;
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 @media (min-width: 90em) {
   .pricing__wrapper {

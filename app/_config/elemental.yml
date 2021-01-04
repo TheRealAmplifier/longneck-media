@@ -26,9 +26,10 @@ Pages\AboutPage:
     - Elements\Content
     - Elements\ContentImage
     - Elements\SelectedCustomers
-    - Elements\Method
     - Elements\Team
     - Elements\Projects
+    - Elements\CallToAction
+    - Elements\FeaturedServices
 
 Pages\ServicePage:
   extensions:

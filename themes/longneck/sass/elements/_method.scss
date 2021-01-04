@@ -2,7 +2,7 @@
 	@extend %boxed--shadow;
 }
 .method__wrapper {
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 4rem);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
 }
 .method__boxed {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $wrap: wrap);

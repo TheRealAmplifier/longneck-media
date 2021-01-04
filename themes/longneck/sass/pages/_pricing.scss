@@ -7,7 +7,7 @@
 }
 
 .pricing__wrapper {
-	@include sectionwrapper(153rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 
 .pricing__list {

@@ -4,7 +4,7 @@
 }
 .footer__wrapper {
 	@include flex($direction: column);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .footer__top {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);

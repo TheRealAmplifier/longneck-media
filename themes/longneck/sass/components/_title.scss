@@ -9,7 +9,7 @@
 	}
 }
 .title__wrapper {
-	@include sectionwrapper($setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper($setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .title__inner {
 	max-width: 100%;

@@ -70,7 +70,11 @@
 	position: relative;
 	
 	&:not(:last-child){
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
+
+		@include breakpoint('min-tablet-landscape') {
+			margin-bottom: 10rem;
+		}
 	}
 
 	.card__link {

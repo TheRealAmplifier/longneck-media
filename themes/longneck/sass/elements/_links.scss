@@ -1,6 +1,6 @@
 .links__wrapper {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 
 	@include breakpoint('min-tablet-landscape') {
 		justify-content: space-between;

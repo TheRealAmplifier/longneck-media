@@ -27,7 +27,7 @@
 	</div>
 <% else_if CTAType == 'bar' %>
 	<div class="cta cta--bar">
-		<div class="cta__wrapper">
+		<div class="cta__wrapper cta--no-padding">
 			<div class="cta__left">
 				<% if ShowTitle %>
 					<h3 class="heading-3">{$Title}</h3>
@@ -42,7 +42,7 @@
 			</div>
 			<div class="cta__right">
 				<% if LinkedPage %>
-					<div class="button__box">
+					<div class="button__box button__box--spacer">
 						<% with LinkedPage %>
 							<a class="button button--icon button--solid-white" href="{Link}">
 								<span class="link__text">{$Up.ButtonText}</span>

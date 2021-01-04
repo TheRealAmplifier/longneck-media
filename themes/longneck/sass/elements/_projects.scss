@@ -17,15 +17,15 @@
 
 .projects__wrapper {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .projects__wrapper--medium {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(153rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .projects__wrapper--narrow {
 	@include flex($wrap: wrap);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 
 .projects__list--column {
@@ -33,10 +33,12 @@
 	grid-template-columns: 1fr;
 	grid-gap: 4rem;
 	width: 100%;
+	margin-top: 3rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		grid-template-columns: repeat(2, 1fr);	
 		grid-gap: 7.5rem;
+		margin-top: 5rem;
 	}
 }
 .projects__list--row {
@@ -45,5 +47,5 @@
 }
 
 .details__wrapper {
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }

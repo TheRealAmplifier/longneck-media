@@ -1,6 +1,6 @@
 .header {
 	position: fixed;
-	height: 10rem;
+	height: 7rem;
 	width: 100%;
 	top: 0;
 	background-color: $color-white;
@@ -22,7 +22,7 @@
 
 .brand__image {
 	height: auto;
-	width: 16.5rem;
+	width: 20rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		width: 27.5rem;

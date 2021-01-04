@@ -3,12 +3,12 @@
 	position: relative;
 }
 .team__wrapper {
-	@include sectionwrapper(123rem, $unsetPadding: true, $setDefaultPadding: 0 4rem);
+	@include sectionwrapper(123rem, $unsetPadding: true, $setDefaultPadding: 0 3rem);
 }
 .team__list {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-gap: 5rem 0;
+	grid-gap: 3rem 0;
 
 	@include breakpoint('min-tablet-landscape') {
 		grid-template-columns: repeat(2, 1fr);
@@ -25,9 +25,12 @@
 
 	@include breakpoint('min-tablet-landscape') {
 		height: 50rem;
-
 	}
 }
 .member__content {
-	padding: 5rem;
+	padding: 3rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 5rem;
+	}
 }

@@ -27,7 +27,7 @@
 
 	.cta__wrapper {
 		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
-		@include sectionwrapper(100rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+		@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 	}
 	.cta__content { 
 		background-color: none;
@@ -40,7 +40,7 @@
 	
 	.cta__wrapper {
 		@include flex($direction: column);
-		@include sectionwrapper(100rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+		@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 	}
 
 	@include breakpoint('min-tablet-landscape') {
@@ -49,14 +49,13 @@
 }
 
 .cta--bar {
-	padding: 5rem;
-	// background-image: linear-gradient(134deg, $color-yellow 0%, $color-yellow-darken 100%);
 	background-color: $color-blue;
 	color: $color-white;
+	padding: 5rem 3rem;
 	
 	.cta__wrapper {
 		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-		@include sectionwrapper(133rem, $setDefaultPadding: 0 4rem, $unsetPadding: true);
+		@include sectionwrapper(133rem, $setDefaultPadding: 0 0, $unsetPadding: true);
 
 		@include breakpoint('min-tablet-landscape') {
 			align-items: center;
@@ -68,5 +67,9 @@
 	}
 	.cta__right {
 		flex: 0 0 25%
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem 5rem;
 	}
 }

@@ -5,10 +5,10 @@
 	background-color: $color-gray-light-1;
 }
 .content__wrapper--small {
-	@include sectionwrapper(100rem, $unsetPadding: true);
+	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .content__wrapper--wide {
-	@include sectionwrapper(133rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 
 .box__content {
