@@ -23,7 +23,7 @@
 						</div>
 					</div>
 
-					<% if MultipleOf(3) %>
+					<% if MultipleOf(2) %>
 						</div>
 						<div class="block__column">
 					<% end_if %>
