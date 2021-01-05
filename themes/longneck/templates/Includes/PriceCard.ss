@@ -1,6 +1,6 @@
 <div class="block block__pricing card--shadow-boxed">
 	<div class="block__content">
-		<h3 class="heading-3 heading--margin-none">
+		<h3 class="heading-3 heading--margin-small">
 			<a href="{$Link}">{$Title}</a>
 		</h3>
 		<% if Summary %>
