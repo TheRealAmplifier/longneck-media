@@ -282,15 +282,6 @@ li {
   }
 }
 
-.method--shadow {
-  box-shadow: 0 0 3rem rgba(49, 48, 48, 0.16);
-}
-@media (min-width: 64em) {
-  .method--shadow {
-    box-shadow: 0 0 5rem rgba(49, 48, 48, 0.16);
-  }
-}
-
 @-webkit-keyframes bounce {
   0% {
     transform: translateY(0);
@@ -2071,29 +2062,14 @@ textarea {
   margin-right: 7.5rem;
 }
 
-.method__wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 163rem;
-  padding: 0 3rem;
-}
-
-.method__boxed {
+.method {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: #FFFFFF;
-  padding: 3rem;
-  box-shadow: 0 0 3rem rgba(49, 48, 48, 0.16);
 }
-@media (min-width: 64em) {
-  .method__boxed {
+@media (min-width: 85em) {
+  .method {
     flex-direction: row;
-  }
-}
-@media (min-width: 64em) {
-  .method__boxed {
-    padding: 10rem;
   }
 }
 
@@ -2101,19 +2077,37 @@ textarea {
   flex: 0 0 100%;
 }
 
+.method__left,
+.method__right {
+  padding: 3rem 5rem;
+}
+@media (min-width: 64em) {
+  .method__left,
+.method__right {
+    padding: 10rem 15rem;
+  }
+}
+
 .method__left {
   flex: 1;
 }
 
+.method__right {
+  background-color: #E6ECF2;
+}
 @media (max-width: 61.9375em) {
   .method__right {
     margin-top: 5rem;
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .method__right {
-    flex: 0 0 45%;
-    margin-left: 7.5rem;
+    flex: 0 0 37.5%;
+  }
+}
+@media (min-width: 85em) {
+  .method__right {
+    flex: 0 0 47.5%;
   }
 }
 
@@ -2124,14 +2118,14 @@ textarea {
 
 .method__step {
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 .method__step:not(:last-child) {
   margin-bottom: 3rem;
 }
 @media (min-width: 64em) {
   .method__step {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -2139,39 +2133,12 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 0.2rem solid #7BC7D1;
-  color: #7BC7D1;
   font-weight: 500;
-  width: 4rem;
-  height: 4rem;
   margin-right: 2rem;
-  flex: 0 0 4rem;
-}
-@media (min-width: 64em) {
-  .method__number {
-    border-width: 0.4rem;
-    width: 6rem;
-    height: 6rem;
-    margin-right: 4rem;
-    flex: 0 0 6rem;
-  }
 }
 
 .method__link:hover, .method__link:focus {
   color: #7BC7D1;
-}
-
-.method__text {
-  margin-top: 0.75rem;
-  font-weight: 500;
-  font-size: 1.4rem;
-}
-@media (min-width: 64em) {
-  .method__text {
-    margin-top: 1.25rem;
-    font-size: 2rem;
-  }
 }
 
 .details {

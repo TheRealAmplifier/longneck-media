@@ -27,7 +27,7 @@
 	</div>
 <% else_if CTAType == 'bar' %>
 	<div class="cta cta--bar">
-		<div class="cta__wrapper cta--no-padding">
+		<div class="cta__wrapper cta__wrapper--no-padding">
 			<div class="cta__left">
 				<% if ShowTitle %>
 					<h3 class="heading-3">{$Title}</h3>
