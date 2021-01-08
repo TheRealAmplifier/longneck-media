@@ -18,6 +18,7 @@ Pages\ProjectPage:
     - Elements\ProjectStats
     - Elements\ProjectResults
     - Elements\SelectedCustomers
+    - Elements\Content
 
 Pages\AboutPage:
   extensions:
@@ -36,7 +37,10 @@ Pages\ServicePage:
     - DNADesign\Elemental\Extensions\ElementalPageExtension  
   allowed_elements:
     - Elements\Content
+    - Elements\CallToAction
     - Elements\Method
+    - Elements\Projects
+
 
 Pages\PricingPage:
   extensions:

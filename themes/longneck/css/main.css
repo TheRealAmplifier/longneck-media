@@ -819,7 +819,7 @@ li {
 }
 @media (min-width: 64em) {
   .title {
-    min-height: 70rem;
+    min-height: 65rem;
     padding: 0 0;
   }
 }

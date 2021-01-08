@@ -6,14 +6,17 @@
 					<h2 class="heading-2 ">{$Title}</h2>
 				</div>
 			<% end_if %>
-			<div class="method__left">
+
+			<% if TextIntro %>
 				<div class="text__intro text--accentuated">
 					{$TextIntro}
 				</div>
+			<% end_if %>
+			<% if TextMain %>
 				<div class="text__main">
 					{$TextMain}			
 				</div>
-			</div>
+			<% end_if %>
 		</div>
 		<div class="team__list">
 			<% if ShowAllMembers %>
