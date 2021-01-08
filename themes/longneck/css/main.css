@@ -200,7 +200,6 @@ html {
 
 html,
 body {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
   position: relative;
   margin: 0;
   padding: 0;
@@ -498,7 +497,7 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 2rem;
+  padding: 0 3rem;
   height: 100%;
 }
 @media (min-width: 90em) {

@@ -16,7 +16,7 @@
 }
 .header__wrapper {
 	@include flex($align: center, $justify: space-between);
-	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 2rem, $setBreakpointPadding: 'min-desktop-desktop-large');
+	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-desktop-desktop-large');
 	height: 100%;
 }
 
