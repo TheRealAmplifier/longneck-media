@@ -1057,7 +1057,12 @@ textarea {
 @media (min-width: 32.5em) {
   .services__blocks {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 7.5rem;
+    grid-gap: 3rem;
+  }
+}
+@media (min-width: 64em) {
+  .services__blocks {
+    grid-gap: 5rem;
   }
 }
 

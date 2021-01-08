@@ -18,7 +18,10 @@
 
 	@include breakpoint('min-mobile') {
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 7.5rem;
+		grid-gap: 3rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		grid-gap: 5rem;
 	}
 }
 
