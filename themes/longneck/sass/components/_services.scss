@@ -10,13 +10,13 @@
 		&:not(:last-of-type) {
 			margin-bottom: 3rem;
 	
-			@include breakpoint('min-tablet-landscape') {
+			@include breakpoint('min-tablet-portrait') {
 				margin-bottom: 7.5rem;
 			}
 		}
 	}
 
-	@include breakpoint('min-mobile') {
+	@include breakpoint('min-tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 3rem;
 	}
@@ -46,8 +46,10 @@
 }
 
 .block__column {
-	&:nth-of-type(2) {
-		margin-top: 15rem;
+	@include breakpoint('min-tablet-landscape') {
+		&:nth-of-type(2) {
+			margin-top: 15rem;
+		}
 	}
 }
 

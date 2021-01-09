@@ -40,7 +40,7 @@
 	
 	.cta__wrapper {
 		@include flex($direction: column);
-		@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+		@include sectionwrapper(100rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
 	}
 
 	@include breakpoint('min-tablet-landscape') {

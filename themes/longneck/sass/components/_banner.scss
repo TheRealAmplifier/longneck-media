@@ -1,6 +1,8 @@
 .banner {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-desktop');
-
+	@include breakpoint('max-desktop') {
+		border-bottom: .4rem dashed $color-gray-light-2;
+	}
 	@include breakpoint('min-desktop') {
 		justify-content: space-between;
 		align-items: center;
@@ -12,12 +14,15 @@
 	position: relative;
 	flex: 1;	
 	height: 100%;
-	padding: 3rem;
+	padding: 5rem 3rem;
 
 	p {
 		font-size: 2rem;
 
 		@include breakpoint('min-tablet-landscape') {
+			font-size: 2.2rem;
+		}
+		@include breakpoint('min-desktop') {
 			font-size: 2.4rem;
 		}
 	}
@@ -29,7 +34,7 @@
 		padding: 5rem;
 	}
 	@include breakpoint('min-tablet-landscape') {
-		padding: 15rem;
+		padding: 12.5rem;
 	}
 }
 .banner__image {
@@ -39,7 +44,11 @@
 	@include breakpoint('max-desktop') {
 		order: 1;
 	}
+
 	@include breakpoint('min-tablet-landscape') {
+		height: 50rem;
+	}
+	@include breakpoint('min-desktop') {
 		height: 100%;
 		flex: 0 0 50%;
 	}

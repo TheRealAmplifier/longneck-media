@@ -44,6 +44,11 @@
 			z-index: 1;
 			transition: transform .2s linear;
 		}
+		.navigation__link {
+			@include breakpoint('max-tablet-landscape') {
+				font-size: 2.2rem;
+			}
+		}
 		@include breakpoint('min-desktop') {
 			display: flex;
 		}
