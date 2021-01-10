@@ -1,6 +1,7 @@
 .footer {
 	position: relative;
 	padding-top: 15rem;
+	background-color: $color-gray-light-1;
 }
 .footer__wrapper {
 	@include flex($direction: column);
@@ -49,23 +50,4 @@
 
 .footer__copyright {
 	font-size: 1.4rem;
-}
-
-
-.footer--particles {
-	@extend %default-background-hexagons--after;
-
-	&:after {
-    right: -20rem;
-    bottom: 20rem;
-    width: 45rem;
-		height: 30rem;
-		
-		@include breakpoint('min-tablet-landscape') {
-			right: -17.5rem;
-			bottom: 25rem;
-			width: 55rem;
-			height: 45rem;
-		}
-	}
 }

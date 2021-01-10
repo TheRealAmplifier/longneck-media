@@ -1,7 +1,11 @@
 <div class="banner">
 	<div class="banner__content">
 		<div class="content--boxed">
-			<h1 class="heading-1 heading--background">{$MenuTitle}</h1>
+			<% if ClassName.ShortName == 'HomePage' %>
+				<h1 class="heading-1 heading--background">{$Title}</h1>
+			<% else %>
+				<h1 class="heading-1 heading--background">{$MenuTitle}</h1>
+			<% end_if %>
 			{$BannerText}
 		</div>
 	</div>

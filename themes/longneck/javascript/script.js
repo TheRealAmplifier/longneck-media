@@ -1,19 +1,18 @@
 import $ from 'jquery';
 import Headroom from "headroom.js";
 
-const initHeadroom = function() {
-	var headerElement = document.querySelector("body");
-	var headroom  = new Headroom(headerElement);
-	headroom.init();
-}
-$(function() {
-	initHeadroom();
+// const initHeadroom = function() {
+// 	const headerElement = document.querySelector("body");
+// 	const headroom  = new Headroom(headerElement);
+// 	headroom.init();
+// }
 
-	$(document).ready(function(){
-		$('.header__toggle').click(function() {
-			$(this).toggleClass('active');
-			$('body').toggleClass('navigation--open');
-		 });
-	});
+$(document).ready(function(){
+	// initHeadroom();
+	
+	$('.header__toggle').click(function() {
+		$(this).toggleClass('active');
+		$('body').toggleClass('navigation--open');
+		});
 });
 

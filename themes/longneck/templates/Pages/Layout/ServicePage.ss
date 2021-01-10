@@ -27,10 +27,6 @@
 	</div>
 </div>
 
-<div class="elements">
-	{$ElementalArea}
-</div>
-
 <% if ShowContact %>
 	<div class="cta cta--contact">
 		<div class="cta__wrapper">

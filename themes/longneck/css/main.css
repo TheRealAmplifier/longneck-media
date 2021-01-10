@@ -63,7 +63,7 @@
   background-color: #EEEEEE;
 }
 .text__main p a:hover:after, .text__main p a:focus:after {
-  background-color: #B8942C;
+  background-color: #FBEE6E;
 }
 
 body {
@@ -164,7 +164,7 @@ p:not(:last-child) {
 
 .text--yellow,
 .heading--yellow {
-  color: #B8942C;
+  color: #FBEE6E;
 }
 
 .text--green,
@@ -209,14 +209,14 @@ body {
 }
 
 body {
-  margin-top: 7rem;
+  padding-top: 7rem;
   transition: all 0.2s linear;
 }
 body.navigation--open {
   overflow-y: hidden;
 }
 body.headroom--not-top {
-  margin-top: 7rem;
+  padding-top: 7rem;
 }
 body.headroom--not-top .header {
   height: 7rem;
@@ -229,17 +229,17 @@ body.headroom--not-top .header {
 }
 @media (min-width: 90em) {
   body.headroom--not-top {
-    margin-top: 10rem;
+    padding-top: 10rem;
   }
 }
 @media (min-width: 64em) {
   body {
-    margin-top: 15rem;
+    padding-top: 15rem;
   }
 }
 @media (min-width: 90em) {
   body {
-    margin-top: 17.5rem;
+    padding-top: 17.5rem;
   }
 }
 
@@ -460,16 +460,6 @@ li {
   transition: all 0.2s ease;
 }
 
-.footer--particles:after {
-  content: "";
-  position: absolute;
-  display: block;
-  background-image: url(../images/shapes/hexagon-cluster-gray-3.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-}
-
 .header {
   position: fixed;
   height: 7rem;
@@ -554,8 +544,8 @@ li {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 4.4rem;
+  height: 4.4rem;
   background: #303C6C;
   cursor: pointer;
   z-index: 10;
@@ -1265,10 +1255,15 @@ textarea {
   grid-template-columns: 1fr;
   grid-gap: 3rem 0;
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .team__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0 7.5rem;
+    grid-gap: 0 3rem;
+  }
+}
+@media (min-width: 85em) {
+  .team__list {
+    grid-gap: 0 5rem;
   }
 }
 
@@ -1348,7 +1343,7 @@ textarea {
 }
 
 .form__message--success {
-  color: #B8942C;
+  color: #FBEE6E;
 }
 
 .form__message--bad {
@@ -1358,6 +1353,7 @@ textarea {
 .footer {
   position: relative;
   padding-top: 15rem;
+  background-color: #f3f3f3;
 }
 
 .footer__wrapper {
@@ -1440,21 +1436,6 @@ textarea {
 
 .footer__copyright {
   font-size: 1.4rem;
-}
-
-.footer--particles:after {
-  right: -20rem;
-  bottom: 20rem;
-  width: 45rem;
-  height: 30rem;
-}
-@media (min-width: 64em) {
-  .footer--particles:after {
-    right: -17.5rem;
-    bottom: 25rem;
-    width: 55rem;
-    height: 45rem;
-  }
 }
 
 .card {
@@ -1856,7 +1837,7 @@ textarea {
 }
 
 .cta--colored {
-  background-color: #f3f3f3;
+  background-color: #E6ECF2;
 }
 .cta--colored .cta__wrapper {
   display: flex;
@@ -2177,7 +2158,7 @@ textarea {
 .details__box {
   display: flex;
   position: relative;
-  padding: 15rem;
+  padding: 7.5rem;
   background-color: #FFFFFF;
   box-shadow: 0 0 5rem rgba(49, 48, 48, 0.16);
 }
