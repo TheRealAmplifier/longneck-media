@@ -31,7 +31,10 @@
 
 .form__label {
 	@include flex;
-	margin-bottom: 1rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		margin-bottom: 1rem;
+	}
 }
 
 .form__actions {
@@ -45,6 +48,19 @@
 		appearance: none;
 		border: 0;
 	}
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+button {
+	appearance: none;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+	background: none;
+	line-height: 1;
 }
 
 input[type="text"],

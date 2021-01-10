@@ -1,4 +1,5 @@
 .services {
+	@extend %contentPaddingBottom;
 	position: relative;
 }
 .services__wrapper {

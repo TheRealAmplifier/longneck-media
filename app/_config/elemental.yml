@@ -42,7 +42,6 @@ Pages\ServicePage:
     - Elements\Projects
     # - Elements\Method
 
-
 Pages\PricingPage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension  

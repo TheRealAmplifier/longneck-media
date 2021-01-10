@@ -6,12 +6,10 @@
 	background-color: $color-white;
 	z-index: 10;
 	transition: all .2s linear;
+	border-bottom: .2rem solid $color-gray-light-2;
 
 	@include breakpoint('min-tablet-landscape') {
-		height: 15rem;
-	}
-	@include breakpoint('min-desktop-large') {
-		height: 17.5rem;
+		height: 10rem;
 	}
 }
 .header__wrapper {
