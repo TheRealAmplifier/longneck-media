@@ -45,26 +45,19 @@
 			content: '';
 			position: absolute;
 			display: block;
-			background-image: url(../images/shapes/hexagon-cluster-gray.svg);
+			background-image: url(../images/shapes/hexagon-cluster-gray-2.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
 			z-index: -1;
 			bottom: -10rem;
-			left: -17.5rem;
+			left: 0rem;
 			width: 40rem;
 			height: 32.5rem;
 		}
 		@include breakpoint('min-desktop') {
-			content: '';
-			position: absolute;
-			display: block;
-			background-image: url(../images/shapes/hexagon-cluster-gray.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
 			bottom: -30rem;
-			left: -37.5rem;
-			width: 80rem;
-			height: 67.5rem;
+			width: 75rem;
+			height: 60rem;
 		}
 	}
 }
@@ -78,22 +71,17 @@
 		background-size: contain;
 		z-index: -1;
     top: 3rem;
-    right: -20rem;
-    width: 40rem;
+    right: 0;
 		height: 27.5rem;
+		width: 18rem;
 		
-		// @include breakpoint('min-tablet-landscape') {
-		// 	bottom: -30rem;
-		// 	left: -37.5rem;
-		// 	width: 80rem;
-		// 	height: 67.5rem;
-			
-		// }
+		@include breakpoint('min-tablet-landscape') {
+			height: 45rem;
+			width: 25rem;
+		}
 		@include breakpoint('min-desktop') {
-			top: 3rem;
-			right: -40rem;
-			width: 80rem;
-			height: 67.5rem;
+			height: 60rem;
+			width: 40rem;
 		}
 	}
 }

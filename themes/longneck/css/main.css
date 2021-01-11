@@ -205,7 +205,6 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -859,28 +858,21 @@ li {
     content: "";
     position: absolute;
     display: block;
-    background-image: url(../images/shapes/hexagon-cluster-gray.svg);
+    background-image: url(../images/shapes/hexagon-cluster-gray-2.svg);
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
     bottom: -10rem;
-    left: -17.5rem;
+    left: 0rem;
     width: 40rem;
     height: 32.5rem;
   }
 }
 @media (min-width: 85em) {
   .title--shapes-left:before, .title--shapes-both:before {
-    content: "";
-    position: absolute;
-    display: block;
-    background-image: url(../images/shapes/hexagon-cluster-gray.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
     bottom: -30rem;
-    left: -37.5rem;
-    width: 80rem;
-    height: 67.5rem;
+    width: 75rem;
+    height: 60rem;
   }
 }
 
@@ -893,16 +885,20 @@ li {
   background-size: contain;
   z-index: -1;
   top: 3rem;
-  right: -20rem;
-  width: 40rem;
+  right: 0;
   height: 27.5rem;
+  width: 18rem;
+}
+@media (min-width: 64em) {
+  .title--shapes-right:after, .title--shapes-both:after {
+    height: 45rem;
+    width: 25rem;
+  }
 }
 @media (min-width: 85em) {
   .title--shapes-right:after, .title--shapes-both:after {
-    top: 3rem;
-    right: -40rem;
-    width: 80rem;
-    height: 67.5rem;
+    height: 60rem;
+    width: 40rem;
   }
 }
 
@@ -1351,7 +1347,7 @@ textarea {
 .footer {
   position: relative;
   padding-top: 15rem;
-  background-color: #f3f3f3;
+  background-color: #E6ECF2;
 }
 
 .footer__wrapper {
