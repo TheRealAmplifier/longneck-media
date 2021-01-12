@@ -5,9 +5,7 @@
 	.cta__content {
 		@include flex($direction: column, $justify: center);
 		@extend %bigSectionPadding;
-		background-color: $color-gray-light-2;
 		flex: 0 0 60%;
-
 	}
 
 	.cta__image {

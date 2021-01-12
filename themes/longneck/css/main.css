@@ -1820,7 +1820,6 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #EEEEEE;
   flex: 0 0 60%;
 }
 .cta--image .cta__image {
