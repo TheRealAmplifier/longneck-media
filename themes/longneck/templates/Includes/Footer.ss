@@ -31,6 +31,16 @@
 		</div>
 		<div class="footer__bottom">
 			<span class="footer__copyright">Copyright &copy; {$Now.Format('Y')} - {$SiteConfig.Title}</span>
+
+			<% if $SiteConfig.SocialAccounts %>
+				<nav class="footer__socials navigation__socials--row">
+					<% loop SiteConfig.SocialAccounts %>
+						<a class="social__link--small" href="{$AccountLink}" target="_blank" rel="noreferrer">
+							{$SVG($Icon.Name).addSubfolder('Social')}
+						</a>
+					<% end_loop %>
+				</nav>
+			<% end_if %>
 		</div>
 	</div>
 </footer>

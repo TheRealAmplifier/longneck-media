@@ -3,7 +3,7 @@
 		<div class="header__brand">
 			<div class="brand__image">
 				<a href="{$BaseHref}" aria-label="Back to homepage">
-					{$SVG('logo-longneck-text-horizontal').customBasePath('themes/longneck/images/logo/').extraClass('image--cover')}
+					{$SVG('logo-longneck-text-horizontal-v2').customBasePath('themes/longneck/images/logo/').extraClass('image--cover')}
 				</a>
 			</div>
 		</div>

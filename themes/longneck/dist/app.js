@@ -10990,10 +10990,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
   var scroll = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
-  console.log(scroll);
 
-  if (scroll >= 100) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').toggleClass('header--scrolled');
+  if (scroll >= 70) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').addClass('header--scrolled');
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').removeClass('header--scrolled');
   }
 });
 

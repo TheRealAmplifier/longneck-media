@@ -6,7 +6,7 @@
 			<% if $SiteConfig.SocialAccounts %>
 				<nav class="navigation__socials">
 					<% loop SiteConfig.SocialAccounts %>
-						<a class="social__link" href="{$AccountLink}" target="_blank" rel="noreferrer">
+						<a class="social__link social__link--vertical" href="{$AccountLink}" target="_blank" rel="noreferrer">
 							{$SVG($Icon.Name).addSubfolder('Social')}
 						</a>
 					<% end_loop %>

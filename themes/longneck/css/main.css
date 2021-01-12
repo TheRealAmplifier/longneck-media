@@ -47,6 +47,7 @@
 }
 .current.navigation__link, .section.navigation__link {
   font-weight: 800;
+  color: #303C6C;
 }
 
 .text__main p a {
@@ -454,7 +455,9 @@ li {
   background-color: #FFFFFF;
   z-index: 10;
   transition: all 0.2s linear;
-  border-bottom: 0.2rem solid #EEEEEE;
+}
+.header.header--scrolled {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(49, 48, 48, 0.2);
 }
 @media (min-width: 64em) {
   .header {
@@ -480,7 +483,7 @@ li {
 
 .brand__image {
   height: auto;
-  width: 20rem;
+  width: 22.5rem;
 }
 @media (min-width: 64em) {
   .brand__image {
@@ -1041,6 +1044,10 @@ textarea {
   flex: 0 0 100%;
 }
 
+.text__intro {
+  margin-bottom: 2rem;
+}
+
 .services__blocks {
   position: relative;
   display: grid;
@@ -1379,6 +1386,7 @@ textarea {
 .footer__bottom {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 7rem;
 }
 
@@ -1933,6 +1941,16 @@ textarea {
   }
 }
 
+.navigation__socials--row {
+  display: flex;
+}
+.navigation__socials--row .social__link:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.navigation__socials--row .social__link--small:not(:last-child) {
+  margin-right: 1rem;
+}
+
 .social__link {
   display: block;
   width: 4rem;
@@ -1945,8 +1963,16 @@ textarea {
 .social__link:hover, .social__link:focus {
   transform: scale(1.12);
 }
+
+.social__link--small {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.15s linear;
+}
+
 @media (min-width: 64em) {
-  .social__link:not(:last-child) {
+  .social__link--vertical:not(:last-child) {
     margin-right: 0;
     margin-bottom: 2rem;
   }

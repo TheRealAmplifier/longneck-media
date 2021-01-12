@@ -10,9 +10,9 @@ import $ from 'jquery';
 
 	$(window).scroll(function() {
 		let scroll = $(window).scrollTop();
-
-		console.log(scroll);
-		if (scroll >= 100) {
-			$('.header').toggleClass('header--scrolled');
-		} 
+		if (scroll >= 70) {
+			$('.header').addClass('header--scrolled');
+		} else {
+			$('.header').removeClass('header--scrolled');
+		}
 	});

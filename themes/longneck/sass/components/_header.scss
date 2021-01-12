@@ -6,12 +6,18 @@
 	background-color: $color-white;
 	z-index: 10;
 	transition: all .2s linear;
-	border-bottom: .2rem solid $color-gray-light-2;
+	// border-bottom: .3rem solid transparent;
+
+	&.header--scrolled {
+		box-shadow: 0 .2rem .5rem 0 rgba($color-black, .2);
+	}
 
 	@include breakpoint('min-tablet-landscape') {
 		height: 10rem;
 	}
 }
+
+
 .header__wrapper {
 	@include flex($align: center, $justify: space-between);
 	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-desktop-desktop-large');
@@ -20,7 +26,7 @@
 
 .brand__image {
 	height: auto;
-	width: 20rem;
+	width: 22.5rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		width: 27.5rem;

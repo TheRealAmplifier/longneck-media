@@ -10,7 +10,7 @@
 
 		gtag('config', 'G-RV7CVPQ4Y0');
 	</script>
-	
+
 	<% base_tag %>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
 	<link rel="preload" href="{$ThemeDir}/css/main.css" as="style">
   <link rel="preload" href="{$ThemeDir}/dist/app.js" as="script">
 
-	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
+	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.png" />
 	<link rel="stylesheet" href="{$ThemeDir}/css/main.css">
 </head>
 <body class="{$ClassName.ShortName}">
