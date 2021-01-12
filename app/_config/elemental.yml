@@ -31,6 +31,7 @@ Pages\AboutPage:
     - Elements\Projects
     - Elements\CallToAction
     - Elements\FeaturedServices
+    - Elements\Method
     # - Elements\SelectedCustomers
 
 Pages\ServicePage:
