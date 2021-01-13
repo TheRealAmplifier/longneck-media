@@ -42,10 +42,10 @@ class ContentImage extends BaseElement {
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
 			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(10),
 			DropdownField::create('Layout', 'Positie afbeelding', [
-				'left' => 'Links', 
+				'left' 	=> 'Links', 
 				'right' => 'Rechts'	
 			]),			
-			UploadField::create('Image', 'Afbeedling')->setFolderName('Content Afbeeldingen')
+			UploadField::create('Image', 'Afbeelding')->setFolderName('Content Afbeeldingen')
 		]);
 
 		$fields->addFieldsToTab('Root.Settings', [

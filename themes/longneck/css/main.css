@@ -1242,7 +1242,7 @@ textarea {
 .team__wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 123rem;
+  max-width: 133rem;
   padding: 0 3rem;
 }
 @media (min-width: 90em) {
@@ -1807,6 +1807,24 @@ textarea {
   }
 }
 
+.content__boxed {
+  display: flex;
+  box-shadow: 0 0 1rem 0 rgba(49, 48, 48, 0.2);
+}
+.content__boxed .content__image {
+  flex: 0 0 40%;
+  max-height: 65rem;
+}
+.content__boxed .content__body {
+  flex: 1;
+  padding: 3rem;
+}
+@media (min-width: 64em) {
+  .content__boxed .content__body {
+    padding: 7.5rem;
+  }
+}
+
 .cta--image .cta__wrapper {
   display: flex;
   flex-direction: column;
@@ -2143,31 +2161,6 @@ textarea {
 .method__list {
   display: flex;
   flex-direction: column;
-}
-
-.method__step {
-  display: flex;
-  font-size: 1.8rem;
-}
-.method__step:not(:last-child) {
-  margin-bottom: 3rem;
-}
-@media (min-width: 64em) {
-  .method__step {
-    font-size: 2.4rem;
-  }
-}
-
-.method__number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  margin-right: 2rem;
-}
-
-.method__link:hover, .method__link:focus {
-  color: #7BC7D1;
 }
 
 .details {

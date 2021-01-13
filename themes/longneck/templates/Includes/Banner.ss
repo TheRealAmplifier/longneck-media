@@ -11,7 +11,7 @@
 	</div>
 	<div class="banner__image">
 		<% with BannerImage %>
-			<img class="image--cover" src="{$Link}" alt="Banner afbeelding">
+			<img class="image--cover" src="{$Link}" alt="Banner afbeelding" loading="lazy">
 		<% end_with %>
 	</div>
 </div>

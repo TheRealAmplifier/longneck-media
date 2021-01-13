@@ -3,7 +3,7 @@
 	position: relative;
 }
 .team__wrapper {
-	@include sectionwrapper(123rem, $unsetPadding: true, $setDefaultPadding: 0 3rem);
+	@include sectionwrapper(133rem, $unsetPadding: true, $setDefaultPadding: 0 3rem);
 }
 .team__list {
 	display: grid;

@@ -34,26 +34,26 @@
 .method__list {
 	@include flex($direction: column);
 }
-.method__step {
-	@include flex($align: flex-start);
-	font-size: 1.8rem;
+// .method__step {
+// 	@include flex($align: flex-start);
+// 	font-size: 1.8rem;
 
-	&:not(:last-child) {
-		margin-bottom: 3rem;
-	}
+// 	&:not(:last-child) {
+// 		margin-bottom: 3rem;
+// 	}
 
-	@include breakpoint('min-tablet-landscape') {
-		font-size: 2.4rem;
-	}
-}
-.method__number {
-	@include flex($align: center, $justify: center);
-	font-weight: 500;
-	margin-right: 2rem;
-}
-.method__link {
-	&:hover,
-	&:focus {
-		color: $color-green;
-	}
-}
+// 	@include breakpoint('min-tablet-landscape') {
+// 		font-size: 2.4rem;
+// 	}
+// }
+// .method__number {
+// 	@include flex($align: center, $justify: center);
+// 	font-weight: 500;
+// 	margin-right: 2rem;
+// }
+// .method__link {
+// 	&:hover,
+// 	&:focus {
+// 		color: $color-green;
+// 	}
+// }

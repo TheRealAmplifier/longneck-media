@@ -6,11 +6,13 @@
 			<% end_if %>
 		</div>
 
-		<div class="projects__content content--narrowed">
-			<div class="text__main">
-				{$TextMain}			
+		<% if TextMain %>
+			<div class="projects__content content--narrowed">
+				<div class="text__main">
+					{$TextMain}			
+				</div>
 			</div>
-		</div>
+		<% end_if %>
 
 		<div class="projects__list--column">
 			<% if ShowSelectedProjects %>

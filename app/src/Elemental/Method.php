@@ -25,7 +25,6 @@ class Method extends BaseElement {
 		'TextMain'				=> 'HTMLText',
 		'HasShadow'				=> 'Boolean',
 		'RemovePadding'		=> 'Boolean'
-
 	];
 
 	private static $has_many = [
