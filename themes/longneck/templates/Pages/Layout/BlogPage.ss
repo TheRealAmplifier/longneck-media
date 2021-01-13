@@ -1,5 +1,5 @@
 <div class="content">
-	<div class="content__wrapper--wide">
+	<div class="content__wrapper--default">
 		{$Content}
 	</div>
 </div>

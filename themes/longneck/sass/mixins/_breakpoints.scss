@@ -3,6 +3,7 @@ $screen-tablet-portrait: screen and (min-width : 48em);
 $screen-tablet-landscape: screen and (min-width : 64em);
 $screen-desktop: screen and (min-width : 85em);
 $screen-desktop-large: screen and (min-width : 90em);
+$screen-desktop-xlarge: screen and (min-width : 120em);
 
 $screen-max-mobile: screen and (max-width : 32.4375em);
 $screen-max-tablet-portrait: screen and (max-width : 47.9375em);
@@ -16,6 +17,7 @@ $breakpoints: (
   'min-tablet-landscape'                          : ( $screen-tablet-landscape ),
   'min-desktop'                                   : ( $screen-desktop ),
   'min-desktop-large'                             : ( $screen-desktop-large ),
+  'min-desktop-xlarge'                            : ( $screen-desktop-xlarge ),
   'max-mobile'                                    : ( $screen-max-mobile),
   'max-tablet-portrait'                           : ( $screen-max-tablet-portrait ),
   'max-tablet-landscape'                          : ( $screen-max-tablet-landscape ),

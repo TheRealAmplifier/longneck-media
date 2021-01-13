@@ -1,14 +1,19 @@
 .content {
 	@extend %defaultSectionPadding;
 }
-.content--background {
-	background-color: $color-gray-light-1;
-}
+
 .content__wrapper--small {
-	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@extend %wrapper--small;
+}
+.content__wrapper--default {
+	@extend %wrapper--default;
 }
 .content__wrapper--wide {
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@extend %wrapper--wide;
+}
+
+.content--background {
+	background-color: $color-gray-light-1;
 }
 
 .box__content {

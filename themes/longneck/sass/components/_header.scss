@@ -6,7 +6,6 @@
 	background-color: $color-white;
 	z-index: 10;
 	transition: all .2s linear;
-	// border-bottom: .3rem solid transparent;
 
 	&.header--scrolled {
 		box-shadow: 0 .2rem .5rem 0 rgba($color-black, .2);
@@ -20,7 +19,7 @@
 
 .header__wrapper {
 	@include flex($align: center, $justify: space-between);
-	@include sectionwrapper(163rem, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 183rem, $setDefaultPadding: 0 3rem, $setBreakpointPadding: 'min-desktop-desktop-large');
+	@extend %wrapper--wide;
 	height: 100%;
 }
 

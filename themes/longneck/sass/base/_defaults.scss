@@ -70,3 +70,13 @@ li {
     max-width: 75%;
   }
 }
+
+%wrapper--default {
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+}
+%wrapper--small {
+	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+}
+%wrapper--wide {
+	@include sectionwrapper(100%, $setDefaultPadding: 0 3rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem)
+}

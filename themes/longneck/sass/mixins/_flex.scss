@@ -1,6 +1,6 @@
-@mixin flex($dynamicDirection: false, $breakpoint: 'min-desktop', $flex: null, $direction: null, $align: flex-start, $justify: baseline, $wrap: null, $important: false) {
-  @if ($flex) {
-    display: $flex;
+@mixin flex($dynamicDirection: false, $breakpoint: 'min-desktop', $type: null, $direction: null, $align: flex-start, $justify: baseline, $wrap: null, $important: false) {
+  @if ($type) {
+    display: $type;
   } 
   @if $important { 
     display: flex !important;
