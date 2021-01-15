@@ -1,6 +1,6 @@
 	<div class="content <% if HasBackgroundColor %>content--background<% end_if %>">
-		<div class="content__wrapper--test {$Layout}">
-			<div class="content__boxed">
+		<div class="content__wrapper--wide">
+			<div class="content__boxed content__boxed--{$Layout}">
 				<div class="content__image">
 					<% with Image %>
 						<img class="image--cover" src="{$Link}" alt="Banner afbeelding" loading="lazy">

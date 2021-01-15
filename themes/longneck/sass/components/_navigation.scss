@@ -1,5 +1,5 @@
 .navigation__link {
-	@extend %navigation__link--light;
+	@extend %navigation__link--current;
 	line-height: 2;
 
 	&:not(:last-child) {

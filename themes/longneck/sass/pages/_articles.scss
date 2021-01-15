@@ -1,3 +1,6 @@
+.articles {
+	@extend %contentPaddingBottom;
+}
 .articles__wrapper {
 	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }

@@ -12,10 +12,10 @@
 
 	@include breakpoint('min-tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 0 3rem;
+		grid-gap: 0 5rem;
 	}
 	@include breakpoint('min-desktop') {
-		grid-gap: 0 5rem;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
@@ -25,15 +25,7 @@
 }
 .member__image {
 	height: 35rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		height: 50rem;
-	}
 }
 .member__content {
 	padding: 3rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		padding: 5rem;
-	}
 }

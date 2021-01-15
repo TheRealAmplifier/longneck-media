@@ -13,7 +13,7 @@
     display: block;
 	}
 }
-%navigation__link--light {
+%navigation__link--current {
 	@include font('quicksand');
 	font-size: 1.8rem;	
 	color: $color-black;

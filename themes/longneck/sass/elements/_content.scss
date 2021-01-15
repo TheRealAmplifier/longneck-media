@@ -24,21 +24,37 @@
 	}
 }
 
-
 .content__boxed {
-	@include flex;
-	box-shadow: 0 0 1rem 0 rgba($color-black,.2);
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	box-shadow: 0 0 5rem 0 rgba($color-black,.2);
+
+
+	&.content__boxed--right {
+		.content__image {
+			order: 2; 
+		}
+		.content__body {
+			order: 1;
+		}
+	}
 
 	.content__image {
 		flex: 0 0 40%;
-		max-height: 65rem;
+		height: 45rem;
+
+		@include breakpoint('min-tablet-landscape') { 
+			height: 65rem;
+		}
 	}
 	.content__body {
 		flex: 1;
-		padding: 3rem;
+		padding: 5rem 3rem;
 
 		@include breakpoint('min-tablet-landscape') { 
 			padding: 7.5rem;
+		}
+		@include breakpoint('min-desktop') { 
+			padding: 15rem;
 		}
 	}
 }
