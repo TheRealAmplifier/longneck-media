@@ -16,6 +16,7 @@ Heyday\MenuManager\MenuSet:
     - Primary
     - Footer1
     - Footer2
+    - Footer3
 
 StevieMayhew\SilverStripeSVG\SVGTemplate:
   base_path: './public/assets/'

@@ -16,7 +16,8 @@ namespace {
 	class CustomSiteConfig extends DataExtension {
 		private static $db = [
 			'FooterTitle1'	=> 'Varchar',
-			'FooterTitle2'	=> 'Varchar'
+			'FooterTitle2'	=> 'Varchar',
+			'FooterTitle3'	=> 'Varchar'
 		];
 
 		private static $has_many = [
@@ -37,7 +38,8 @@ namespace {
 
 			$fields->addFieldsToTab('Root.Footer', [
 				TextField::create('FooterTitle1', 'Menu titel links'),
-				TextField::create('FooterTitle2', 'Menu titel rechts')
+				TextField::create('FooterTitle2', 'Menu titel midden'),
+				TextField::create('FooterTitle3', 'Menu titel rechts')
 			]);
 		}
 	}

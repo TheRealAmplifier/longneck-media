@@ -2,8 +2,8 @@
 	<div class="footer__wrapper">
 		<div class="footer__top">
 			<div class="footer__brand">
-				<a href="{$BaseHref}" aria-label="Back to homepage">
-					{$SVG('logo-longneck-text-vertical').customBasePath('themes/longneck/images/logo/').extraClass('image--cover')}
+				<a href="{$BaseHref}" aria-label="Terug naar home">
+					{$SVG('logo-longneck-text-horizontal-v2').customBasePath('themes/longneck/images/logo/').extraClass('image--cover')}
 				</a>
 			</div>
 			<div class="footer__navigation">
@@ -22,6 +22,16 @@
 						<span class="navigation__title">{$SiteConfig.FooterTitle2}</span>
 						<nav class="navigation--column">
 							<% loop $MenuSet('Footer2').MenuItems %>
+								<a class="navigation__link {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
+							<% end_loop %>
+						</nav>
+					</div>
+				<% end_if %>
+				<% if $MenuSet('Footer3').MenuItems %>
+					<div class="footer__menu">
+						<span class="navigation__title">{$SiteConfig.FooterTitle3}</span>
+						<nav class="navigation--column">
+							<% loop $MenuSet('Footer3').MenuItems %>
 								<a class="navigation__link {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
 							<% end_loop %>
 						</nav>

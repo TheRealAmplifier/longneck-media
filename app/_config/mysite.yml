@@ -41,5 +41,6 @@ Heyday\MenuManager\MenuItem:
 Silverstripe\Shortcodable\Shortcodable:
   shortcodable_classes:
     - Shortcode\ShortcodeButton
+    - Shortcode\ShortcodeQuote
   htmleditor_names:
     - cwp

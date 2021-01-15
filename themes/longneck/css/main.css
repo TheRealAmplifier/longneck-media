@@ -488,6 +488,31 @@ li {
   transition: all 0.2s ease;
 }
 
+.content__quote {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+  background-color: #E6ECF2;
+  padding: 3rem;
+}
+.content__quote:before {
+  content: "";
+  display: block;
+  background-image: url("../images/svg/quote.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 8rem;
+  height: 4rem;
+}
+
+@media (min-width: 64em) {
+  .quote__text {
+    font-size: 2.2rem;
+    font-style: italic;
+    padding-left: 4rem;
+  }
+}
+
 .header {
   position: fixed;
   height: 7rem;
@@ -1391,7 +1416,7 @@ textarea {
   flex-direction: column;
   padding-bottom: 10rem;
 }
-@media (min-width: 64em) {
+@media (min-width: 85em) {
   .footer__top {
     flex-direction: row;
   }
@@ -1406,33 +1431,32 @@ textarea {
 
 .footer__navigation {
   display: flex;
-  flex-direction: column;
-}
-@media (min-width: 48em) {
-  .footer__navigation {
-    flex-direction: row;
-  }
+  flex-wrap: wrap;
 }
 @media (min-width: 64em) {
   .footer__navigation {
-    flex: 0 0 45%;
+    flex: 0 0 65%;
+  }
+}
+@media (min-width: 85em) {
+  .footer__navigation {
+    flex: 0 0 55%;
   }
 }
 
 .footer__brand {
   display: block;
-  width: 17.5rem;
-  height: 5.5rem;
-}
-@media (max-width: 61.9375em) {
-  .footer__brand {
-    margin-bottom: 7.5rem;
-  }
+  width: 22.5rem;
+  margin-bottom: 7.5rem;
 }
 @media (min-width: 64em) {
   .footer__brand {
-    width: 25rem;
-    height: 7.5rem;
+    width: 27.5rem;
+  }
+}
+@media (min-width: 85em) {
+  .footer__brand {
+    margin-bottom: auto;
   }
 }
 
@@ -1447,6 +1471,11 @@ textarea {
 @media (min-width: 48em) {
   .footer__menu {
     flex: 0 0 50%;
+  }
+}
+@media (min-width: 64em) {
+  .footer__menu {
+    flex: 0 0 33.3%;
   }
 }
 

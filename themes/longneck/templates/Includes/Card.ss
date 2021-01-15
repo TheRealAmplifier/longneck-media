@@ -2,7 +2,7 @@
 	<a class="card__link" href="{$Link}">
 		<div class="card__image">
 			<% with ThumbnailImage %>
-				<img class="image--cover image--animated" src="{$Link}" alt="Thumbnail {$MenuTitle}">
+				<img class="image--cover image--animated" src="{$Link}" alt="Thumbnail {$MenuTitle}" loading="lazy">
 			<% end_with %>
 		</div>
 		<div class="card__content">

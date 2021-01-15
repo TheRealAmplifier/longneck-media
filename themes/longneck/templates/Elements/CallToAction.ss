@@ -64,7 +64,7 @@
 				<% if Image %>
 					<div class="cta__image">
 						<% with Image %>
-							<img class="image--cover" src="{$Link}" alt="Call to action afbeelding">
+							<img class="image--cover" src="{$Link}" alt="Call to action afbeelding" loading="lazy">
 						<% end_with %>
 					</div>
 				<% end_if %>

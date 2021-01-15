@@ -1,7 +1,7 @@
 <div class="box__intro">
 	<div class="detail__image">
 		<% with IntroImage %>
-		<img class="image--cover" src="{$Link}" alt="Afbeelding voor {$Top.MenuTitle}">
+		<img class="image--cover" src="{$Link}" alt="Afbeelding voor {$Top.MenuTitle}" loading="lazy">
 		<% end_with %>
 	</div>	
 	<div class="detail__content">

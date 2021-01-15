@@ -4,7 +4,7 @@
 			<% loop LeftImages %>
 				<div class="image">
 					<% with Image %>
-						<img class="image--cover" src="{$Link}" alt="Afbeelding {$Name}">
+						<img class="image--cover" src="{$Link}" alt="Afbeelding {$Name}" loading="lazy">
 					<% end_with %>
 				</div>
 			<% end_loop %>
@@ -13,7 +13,7 @@
 			<% loop RightImages %>
 				<div class="image">
 					<% with Image %>
-						<img class="image--cover" src="{$Link}" alt="Afbeelding {$Name}">
+						<img class="image--cover" src="{$Link}" alt="Afbeelding {$Name}" loading="lazy">
 					<% end_with %>
 				</div>
 			<% end_loop %>

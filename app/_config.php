@@ -17,6 +17,7 @@ $validator = PasswordValidator::create();
 Member::set_password_validator($validator);
 
 ShortcodeParser::get('default')->register('Shortcode_ShortcodeButton', ['Page', 'parse_shortcode_button']);
+ShortcodeParser::get('default')->register('Shortcode_ShortcodeQuote', ['Page', 'parse_shortcode_quote']);
 
 CMSMenu::remove_menu_class(CampaignAdmin::class);
 CMSMenu::remove_menu_class(ArchiveAdmin::class);
