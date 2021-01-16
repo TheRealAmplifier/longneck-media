@@ -14,7 +14,7 @@ class ContentImage extends BaseElement {
 	private static $singular_name = 'Content met afbeelding';
 	private static $plural_name = 'Content met afbeelding';
 	private static $description = 'Blok met content en links of rechts een afbeelding';
-	private static $icon = 'font-icon-block-content';
+	private static $icon = 'font-icon-block-story';
 	private static $inline_editable = false;
 	private static $controller_template = 'ElementHolder';
 
