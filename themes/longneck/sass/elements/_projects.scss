@@ -31,14 +31,16 @@
 .projects__list--column {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-gap: 4rem;
+	grid-gap: 3rem;
 	width: 100%;
 	margin-top: 3rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min-tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);	
-		grid-gap: 7.5rem;
 		margin-top: 5rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		grid-gap: 7.5rem;
 	}
 }
 .projects__list--row {

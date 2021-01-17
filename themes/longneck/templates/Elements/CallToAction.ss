@@ -42,7 +42,7 @@
 			</div>
 			<div class="cta__right">
 				<% if LinkedPage %>
-					<div class="button__box button__box--spacer">
+					<div class="button__box">
 						<% with LinkedPage %>
 							<a class="button button--icon button--solid-white" href="{Link}">
 								<span class="link__text">{$Up.ButtonText}</span>

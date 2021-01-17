@@ -33,12 +33,11 @@ class MethodStep extends DataObject {
 	public function getCMSfields() {
 		$fields = parent::getCMSFields();
 
-		$fields->removeByName(['SortID', 'ProjectResultsID']);
+		$fields->removeByName(['SortID', 'MethodID']);
 
 		$fields->addFieldsToTab('Root.Main', [
 			TextField::create('Title', 'Title'),
-			HTMLEditorField::create('Text', 'Tekst')->setRows(3),
-			TreeDropdownField::create('TargetID', 'Doeladres', SiteTree::class)
+			HTMLEditorField::create('Text', 'Tekst')->setRows(3)
 		]);
 
 		return $fields;

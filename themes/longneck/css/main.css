@@ -232,8 +232,10 @@ li {
   list-style: none;
 }
 
-.about, .projects--latest, .content, .team {
-  padding: 5rem 0;
+@media (min-width: 64em) {
+  .about, .projects--latest, .content, .team {
+    padding: 5rem 0;
+  }
 }
 @media (min-width: 85em) {
   .about, .projects--latest, .content, .team {
@@ -298,12 +300,12 @@ li {
   max-width: 100%;
   padding: 0 3rem;
 }
-@media (min-width: 120em) {
+@media (min-width: 90em) {
   .content__wrapper--wide, .footer__wrapper, .header__wrapper {
-    max-width: 183rem;
+    max-width: 163rem;
   }
 }
-@media (min-width: 120em) {
+@media (min-width: 90em) {
   .content__wrapper--wide, .footer__wrapper, .header__wrapper {
     padding: 0 0;
   }
@@ -1316,12 +1318,13 @@ textarea {
 @media (min-width: 48em) {
   .team__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0 5rem;
+    grid-gap: 0 3rem;
   }
 }
-@media (min-width: 85em) {
+@media (min-width: 64em) {
   .team__list {
-    grid-template-columns: repeat(3, 1fr);
+    max-width: 80%;
+    grid-gap: 0 5rem;
   }
 }
 
@@ -2100,15 +2103,19 @@ textarea {
 .projects__list--column {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 4rem;
+  grid-gap: 3rem;
   width: 100%;
   margin-top: 3rem;
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .projects__list--column {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 7.5rem;
     margin-top: 5rem;
+  }
+}
+@media (min-width: 64em) {
+  .projects__list--column {
+    grid-gap: 7.5rem;
   }
 }
 
@@ -2217,29 +2224,27 @@ textarea {
 @media (min-width: 48em) {
   .method__list {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem 3rem;
   }
 }
 @media (min-width: 64em) {
   .method__list {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 7.5rem 7.5rem;
+    grid-gap: 4rem 3rem;
   }
 }
 
 .method__step {
   display: flex;
+  flex-direction: column;
   position: relative;
-  padding: 2rem 2rem;
-  font-weight: 600;
+  padding: 2rem 3rem;
   background-color: #f3f3f3;
-}
-.method__step:not(:last-child) {
-  margin-bottom: 3rem;
 }
 @media (min-width: 64em) {
   .method__step {
     font-size: 2rem;
-    padding: 4rem 3rem;
+    padding: 5rem 6rem;
   }
 }
 
@@ -2259,7 +2264,7 @@ textarea {
 @media (min-width: 64em) {
   .method__number {
     font-size: 7rem;
-    top: -4rem;
+    top: -3rem;
   }
 }
 

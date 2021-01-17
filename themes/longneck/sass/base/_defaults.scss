@@ -41,8 +41,9 @@ li {
 }
 
 %defaultSectionPadding {
-  padding: 5rem 0;
-
+  @include breakpoint('min-tablet-landscape') {
+    padding: 5rem 0;
+  }
   @include breakpoint('min-desktop') {
 		padding: 10rem 0;
 	}
@@ -78,5 +79,5 @@ li {
 	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 %wrapper--wide {
-	@include sectionwrapper(100%, $setDefaultPadding: 0 3rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem)
+	@include sectionwrapper(100%, $setDefaultPadding: 0 3rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 163rem)
 }
