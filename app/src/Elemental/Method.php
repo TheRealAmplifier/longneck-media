@@ -21,9 +21,6 @@ class Method extends BaseElement {
 	private static $controller_template = 'ElementHolder';
 
 	private static $db = [
-		'TextIntro'				=> 'HTMLText',
-		'TextMain'				=> 'HTMLText',
-		'HasShadow'				=> 'Boolean',
 		'RemovePadding'		=> 'Boolean'
 	];
 
@@ -36,19 +33,13 @@ class Method extends BaseElement {
 
 		$fields->removeByName(['LinkedPages', 'MethodSteps']);
 
-		$fields->addFieldsToTab('Root.Main', [
-			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
-			HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
-			CheckboxField::create('HasShadow', 'Schaduw achter blok toevoegen')
-		]);
-
 		$fields->addFieldsToTab('Root.Settings', [
 			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
 		]);
 
 		$config =  GridFieldConfig_RecordEditor::create();
 		$config->addComponent(new GridFieldSortableRows('SortID'));
-		$fields->addFieldToTab('Root.Stappen', GridField::create(
+		$fields->addFieldToTab('Root.Main', GridField::create(
 			'MethodSteps',
 			'Methode stap',
 			$this->MethodSteps(),

@@ -30,30 +30,56 @@
 	}
 }
 
+.method__steps {
+	margin-top: 5rem;
 
-.method__list {
-	@include flex($direction: column);
+	@include breakpoint('min-tablet-landscape') {
+		margin-top: 7.5rem;
+	}
 }
-// .method__step {
-// 	@include flex($align: flex-start);
-// 	font-size: 1.8rem;
+.method__list {
+	display: grid;	
+	grid-template-columns: 1fr;
+	width: 100%;
+	grid-gap: 2rem 0;
 
-// 	&:not(:last-child) {
-// 		margin-bottom: 3rem;
-// 	}
+	@include breakpoint('min-tablet-portrait') {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 7.5rem 7.5rem;
+	}
+}
 
-// 	@include breakpoint('min-tablet-landscape') {
-// 		font-size: 2.4rem;
-// 	}
-// }
-// .method__number {
-// 	@include flex($align: center, $justify: center);
-// 	font-weight: 500;
-// 	margin-right: 2rem;
-// }
-// .method__link {
-// 	&:hover,
-// 	&:focus {
-// 		color: $color-green;
-// 	}
-// }
+.method__step {
+	@include flex($align: flex-start);
+	position: relative;
+	padding: 2rem 2rem;
+	font-weight: 600;
+	background-color: $color-gray-light-1;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 2rem;
+		padding: 4rem 3rem;
+	}
+}
+.method__number {
+	@include flex($align: center, $justify: center);
+	font-weight: 700;
+	line-height: 1;
+	position: absolute;
+	font-size: 3.4rem;
+	right: 1.5rem;
+	top: -2rem;
+	z-index: 1;
+	color: $color-green;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 7rem;
+		top: -4rem;
+	}
+}

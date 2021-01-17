@@ -7,6 +7,7 @@ use Elements\Method;
 use SilverStripe\ORM\DataObject;
 
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TreeDropdownField;
 
@@ -17,16 +18,16 @@ class MethodStep extends DataObject {
 	private static $db = [
 		'SortID'            => 'Int',
 		'Title'             => 'Varchar',
+		'Text'							=> 'HTMLText'
 	];
 
 	private static $has_one = [
-		'Target'      			=> SiteTree::class,
 		'Method'						=> Method::class
 	];
 
 	private static $summary_fields = [
-		'Title'							=> 'Naame',
-		// 'Target.Link'				=> 'Doeladres'
+		'Title'							=> 'Titel',
+		'Text'							=> 'Tekst',
 	];
 
 	public function getCMSfields() {
@@ -36,6 +37,7 @@ class MethodStep extends DataObject {
 
 		$fields->addFieldsToTab('Root.Main', [
 			TextField::create('Title', 'Title'),
+			HTMLEditorField::create('Text', 'Tekst')->setRows(3),
 			TreeDropdownField::create('TargetID', 'Doeladres', SiteTree::class)
 		]);
 
