@@ -1,4 +1,4 @@
-<div class="method <% if HasShadow %>method--shadow<% end_if %>">
+<div class="element <% if HasShadow %>method--shadow<% end_if %>">
 	<% if ShowTitle %>
 		<div class="method__title">
 			<h2 class="heading-2 ">{$Title}</h2>

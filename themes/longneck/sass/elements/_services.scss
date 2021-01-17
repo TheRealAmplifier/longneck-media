@@ -1,6 +1,8 @@
 .services {
-	@extend %contentPaddingBottom;
 	position: relative;
+}
+.services--spacer {
+	@extend %contentPaddingBottom;
 }
 .services__wrapper {
 	@include flex($wrap: wrap);

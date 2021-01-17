@@ -1,6 +1,6 @@
 <% include TitleSection ExtraClasses='title--centered', ShapesPosition='title--shapes-both' %>
 
-<div class="services">
+<div class="services services--spacer">
 	<div class="services__wrapper">
 		<div class="services__blocks">
 			<div class="block__column">
