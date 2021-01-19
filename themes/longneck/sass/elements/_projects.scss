@@ -39,7 +39,7 @@
 		grid-template-columns: repeat(2, 1fr);	
 		margin-top: 5rem;
 	}
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min-desktop') {
 		grid-gap: 7.5rem;
 	}
 }
@@ -50,4 +50,11 @@
 
 .details__wrapper {
 	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+
+	.content__wrapper,
+	.content__wrapper--default {
+		max-width: unset;
+		padding: 0 0;
+		margin: 0 0;
+	}
 }

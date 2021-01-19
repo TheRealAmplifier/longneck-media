@@ -4,14 +4,13 @@
 	@include breakpoint('min-desktop') {
 		justify-content: space-between;
 		align-items: center;
-		height: calc(100vh - 17.5rem);
+		height: calc(100vh - 10rem);	
 	}
 }
 .banner__content {
 	@include flex($align: center);
 	position: relative;
 	flex: 1;	
-	height: 100%;
 	padding: 5rem 3rem;
 
 	p {
@@ -25,24 +24,34 @@
 		}
 	}
 
+	@include breakpoint('max-tablet-landscape') {
+		margin: 0 2rem;
+    z-index: 2;
+    margin-top: -4rem;
+    background-color: white;
+    box-shadow: 0 .5rem 2rem 0 rgba(0,0,0, .12);
+	}
 	@include breakpoint('max-desktop') {
 		order: 2;
 	}
 	@include breakpoint('min-tablet-portrait') {
-		padding: 5rem;
+		padding: 7.5rem;
+		height: 100%;
 	}
-	@include breakpoint('min-tablet-landscape') {
-		padding: 12.5rem;
+	@include breakpoint('min-desktop') {
+		padding: 0 15rem;
 	}
 }
 .banner__image {
 	position: relative;
-	height: 32.5rem;
+	height: 35%;
 
+	@include breakpoint('max-tablet-landscape') {
+		z-index: -1;
+	}
 	@include breakpoint('max-desktop') {
 		order: 1;
 	}
-
 	@include breakpoint('min-tablet-landscape') {
 		height: 50rem;
 	}

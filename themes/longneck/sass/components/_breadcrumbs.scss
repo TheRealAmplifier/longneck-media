@@ -38,12 +38,17 @@
 .breadcrumb__navigation {
 	@include flex;
 	margin-bottom: 4rem;
+	list-style: none;
 
 	li {
 		&:not(:first-child) {
 			.breadcrumb__link,
 			.breadcrumb__current {
-				padding: 0 2rem 0 3rem;
+				padding: 0 1rem 0 2rem;
+
+				@include breakpoint('min-tablet-landscape') {
+					padding: 0 1rem 0 2rem;
+				}
 			}
 		}
 

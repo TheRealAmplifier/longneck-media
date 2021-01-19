@@ -37,7 +37,6 @@ a {
 li {
   margin: 0 0;
   padding: 0 0;
-  list-style: none;
 }
 
 %defaultSectionPadding {
@@ -78,6 +77,9 @@ li {
 %wrapper--small {
 	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
+%wrapper--medium {
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+}
 %wrapper--wide {
-	@include sectionwrapper(100%, $setDefaultPadding: 0 3rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-large', $setBreakpointMaxWidthSize: 163rem)
+	@include sectionwrapper(100%, $setDefaultPadding: 0 3rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem)
 }

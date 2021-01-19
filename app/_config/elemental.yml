@@ -8,7 +8,6 @@ Pages\HomePage:
     - Elements\Content
     - Elements\ContentImage
     - Elements\SelectedCustomers
-    # - Elements\Links
 
 Pages\ProjectPage:
   extensions:
@@ -19,7 +18,6 @@ Pages\ProjectPage:
     - Elements\ProjectResults
     - Elements\Content
     # - Elements\SelectedCustomers
-    # - Elements\Links
 
 Pages\AboutPage:
   extensions:
@@ -41,7 +39,6 @@ Pages\ServicePage:
     - Elements\Content
     - Elements\CallToAction    
     - Elements\Projects
-    # - Elements\Method
 
 Pages\PricingPage:
   extensions:

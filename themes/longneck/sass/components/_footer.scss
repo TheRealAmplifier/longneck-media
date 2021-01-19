@@ -12,8 +12,16 @@
 	padding-bottom: 10rem;
 }
 .footer__bottom {
-	@include flex($align: center, $justify: space-between);
-	height: 7rem;
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
+
+	@include breakpoint('max-tablet-portrait') {
+		padding: 0 0 2rem 0;
+	}
+	@include breakpoint('min-tablet-portrait') {
+		height: 7rem;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 .footer__navigation {
 	@include flex($wrap: wrap);
@@ -56,4 +64,8 @@
 
 .footer__copyright {
 	font-size: 1.4rem;
+
+	@include breakpoint('max-tablet-portrait') {
+		margin-bottom: 2rem;
+	}
 }

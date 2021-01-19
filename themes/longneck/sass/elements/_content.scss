@@ -8,6 +8,9 @@
 .content__wrapper--default {
 	@extend %wrapper--default;
 }
+.content__wrapper--medium {
+	@extend %wrapper--medium;
+}
 .content__wrapper--wide {
 	@extend %wrapper--wide;
 }

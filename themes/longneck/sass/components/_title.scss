@@ -4,8 +4,12 @@
 	padding: 10rem 0;
 
 	@include breakpoint('min-tablet-landscape') {
-		min-height: 65rem;
+		min-height: 50rem;
 		padding: 0 0;
+	}
+
+	@include breakpoint('min-desktop') {
+		min-height: 65rem;
 	}
 }
 .title__wrapper {

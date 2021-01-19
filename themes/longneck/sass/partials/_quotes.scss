@@ -1,12 +1,16 @@
 .content__quote {
+	position: relative;
 	@include flex($align: center);
-	margin: 4rem 0;
+	margin: 5rem 0;
 	background-color: $color-gray-blue-soft;
 	padding: 3rem;
 
 	&:before {
 		content: '';
 		display: block;
+		position: absolute;
+		top: -1.5rem;
+		right: -1rem;
 		background-image: url('../images/svg/quote.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -19,6 +23,5 @@
 	@include breakpoint('min-tablet-landscape') {
 		font-size: 2.2rem;
 		font-style: italic;
-		padding-left: 4rem;
 	}
 }

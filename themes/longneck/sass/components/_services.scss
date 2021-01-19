@@ -16,10 +16,8 @@
 		}
 	}
 
-	@include breakpoint('min-tablet-portrait') {
-		grid-template-columns: repeat(2, 1fr);
-	}
 	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(2, 1fr);
 		column-gap: 5rem;
 	}
 }
@@ -35,7 +33,7 @@
 	@include breakpoint('min-tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min-desktop') {
 		grid-gap: 0 3rem;
 		grid-template-columns: repeat(4, 1fr);
 	}
@@ -45,6 +43,11 @@
 }
 
 .block__column {
+	@include breakpoint('min-tablet-portrait') {
+		&:nth-of-type(2) {
+			margin-top: 3rem;
+		}
+	}
 	@include breakpoint('min-tablet-landscape') {
 		&:nth-of-type(2) {
 			margin-top: 15rem;

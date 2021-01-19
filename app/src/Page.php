@@ -2,7 +2,6 @@
 
 namespace {
 
-	use Elements\Links;
 	use Shortcode\ShortcodeButton;
   use Shortcode\ShortcodeQuote;
   use SilverStripe\CMS\Model\SiteTree;
@@ -10,10 +9,6 @@ namespace {
 	use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
 	class Page extends SiteTree {
-		private static $has_one = [
-			'Links'							=> Links::class
-		];
-
 		private static $has_many = [
 			'ShortcodeButtons'	=> ShortcodeButton::class,
 			'ShortcodeQuotes'		=> ShortcodeQuote::class
