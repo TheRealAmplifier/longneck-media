@@ -1,3 +1,5 @@
+<% include TitleSection ShapesPosition='title--shapes-both' %>
+
 <div class="content">
 	<div class="content__wrapper--default">
 		{$Content}

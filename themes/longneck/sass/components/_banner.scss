@@ -44,16 +44,13 @@
 }
 .banner__image {
 	position: relative;
-	height: 35%;
+	height: 50rem;
 
 	@include breakpoint('max-tablet-landscape') {
 		z-index: -1;
 	}
 	@include breakpoint('max-desktop') {
 		order: 1;
-	}
-	@include breakpoint('min-tablet-landscape') {
-		height: 50rem;
 	}
 	@include breakpoint('min-desktop') {
 		height: 100%;

@@ -45,33 +45,38 @@ class ContactPageController extends PageController {
 		]);
 
 		$form = new Form($this, 'ContactForm', $fields, $actions, $validator);
+		$form->enableSpamProtection()->Fields()->fieldByName('Captcha');
 		$form->setTemplate('Form//ContactForm');
 
 		return $form;
 	}
 
 	public function sendMessage($data, $form) {
-		$contactName = "{$data['FirstName']} {$data['LastName']}";
+    $captchaResponse = $form->Fields()->fieldByName('Captcha')->getVerifyResponse();
 
-		$newContact = new ContactSubmission();
-		$newContact->Title = $contactName;
-		$newContact->FirstName = $data['FirstName'];
-		$newContact->LastName = $data['LastName'];
-		$newContact->Email = $data['Email'];
-		$newContact->Company = $data['Company'];
-		$newContact->Subject = $data['Subject'];
-		$newContact->Message = strip_tags($data['Message']);
-		$newContact->write();
+		if($captchaResponse) {
+			$contactName = "{$data['FirstName']} {$data['LastName']} - {$data['Email']}";
 
-		if($newContact) {
-			$emailSent = $this->sendEmail($contactName, $newContact);
+			$newContact = new ContactSubmission();
+			$newContact->Title = $contactName;
+			$newContact->FirstName = $data['FirstName'];
+			$newContact->LastName = $data['LastName'];
+			$newContact->Email = $data['Email'];
+			$newContact->Company = $data['Company'];
+			$newContact->Subject = $data['Subject'];
+			$newContact->Message = strip_tags($data['Message']);
+			$newContact->write();
 
-			if( $emailSent == true ) {
-				$form->sessionMessage('Je bericht is succesvol ontvangen!', 'success');
-				return $this->redirectBack();
+			if($newContact) {
+				$emailSent = $this->sendEmail($contactName, $newContact);
+
+				if( $emailSent == true ) {
+					$form->sessionMessage('Je bericht is succesvol ontvangen!', 'success');
+					return $this->redirectBack();
+				}
 			}
 		}
-
+		
 		$form->sessionMessage('Er is iets mis gegaan, probeer opnieuw', 'bad');
 		return $this->redirectBack();
 	}

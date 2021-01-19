@@ -181,6 +181,10 @@ p:not(:last-child) {
   font-weight: 500;
 }
 
+.text--gray {
+  color: #a2a2a2;
+}
+
 .heading--line:after {
   content: "";
   display: block;
@@ -765,7 +769,7 @@ li {
 
 .banner__image {
   position: relative;
-  height: 35%;
+  height: 50rem;
 }
 @media (max-width: 61.9375em) {
   .banner__image {
@@ -775,11 +779,6 @@ li {
 @media (max-width: 84.9375em) {
   .banner__image {
     order: 1;
-  }
-}
-@media (min-width: 64em) {
-  .banner__image {
-    height: 50rem;
   }
 }
 @media (min-width: 85em) {
@@ -1113,15 +1112,16 @@ input[type=text],
 input[type=email],
 select,
 textarea {
+  font-family: inherit;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 @media (min-width: 64em) {
   input[type=text],
 input[type=email],
 select,
 textarea {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -1129,9 +1129,39 @@ textarea {
   margin-top: 10rem;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.form__protection {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.form__protection p {
+  font-size: inherit;
+}
+
+.protection__icon {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin-right: 2rem;
+}
+
+.protection__text a {
+  text-decoration: underline;
+}
+
 .content--main {
   font-size: 1.8rem;
   line-height: 1.8;
+  padding: 10rem 0;
+}
+@media (min-width: 64em) {
+  .content--main {
+    padding: 15rem 0;
+  }
 }
 
 .content--narrowed {
@@ -1440,7 +1470,7 @@ textarea {
 }
 
 .form__message--success {
-  color: #FBEE6E;
+  color: #7BC7D1;
 }
 
 .form__message--bad {

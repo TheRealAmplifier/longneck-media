@@ -13,7 +13,8 @@
         "dnadesign/silverstripe-elemental": "^4",
         "undefinedoffset/sortablegridfield": "^2.0",
         "sheadawson/silverstripe-shortcodable": "4.0.x-dev",
-        "cyber-duck/silverstripe-seo": "^4"
+        "cyber-duck/silverstripe-seo": "^4",
+        "undefinedoffset/silverstripe-nocaptcha": "^2.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",

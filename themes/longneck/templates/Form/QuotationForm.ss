@@ -56,6 +56,18 @@
 					{$Fields.dataFieldByName(Company)}
 				</div>
 			</div>
+			<div class="form__row">
+				<div class="form__protection text--gray">
+					<span class="protection__icon">
+						<a href="//www.google.com/recaptcha/about/" target="_blank" rel="noreferrer">
+							{$SVG('recaptcha-logo').customBasePath('themes/longneck/images/svg/').extraClass('image--cover icon--arrow')}
+						</a>
+					</span>
+					<span class="protection__text">
+						<p>Lees de <a href="//policies.google.nl/privacy?hl=nl" target="_blank" rel="noreferrer">Privacy Verklaring</a> of de <a href="//policies.google.com/terms?hl=nl" target="_blank" rel="noreferrer">Algemene voorwaarden</a> van Google.</p>
+					</span>
+				</div>
+			</div>
 		</div>
 		<div class="form__actions">
 			<% loop $Actions %>

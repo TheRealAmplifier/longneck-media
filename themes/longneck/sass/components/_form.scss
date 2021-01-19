@@ -89,14 +89,38 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
+	font-family: inherit;
 	font-weight: 400;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 	}
 }
 
 .form--spacer {
 	margin-top: 10rem;
+}
+
+.grecaptcha-badge { 
+	visibility: hidden; 
+}
+.form__protection {
+	@include flex($align: center);
+	font-size: 1.3rem;
+
+	p {
+		font-size: inherit;
+	}
+}
+.protection__icon {
+	display: block;
+	width: 6rem;
+	height: 6rem;
+	margin-right: 2rem;
+}
+.protection__text {
+	a {
+		text-decoration: underline;
+	}
 }
