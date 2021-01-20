@@ -1,8 +1,8 @@
-<% include TitleSection ShapesPosition='title--shapes-right' %>
+<% include Banner ShapesPosition='title--shapes-right' %>
 
 <div class="details">
 	<div class="details__wrapper">
-		<% include BreadCrumbs %>
+		<% include BreadCrumbsColored %>
 		
 		<div class="details__box">
 			<div class="details__list">

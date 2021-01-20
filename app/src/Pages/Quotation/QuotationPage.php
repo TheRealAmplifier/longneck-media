@@ -13,7 +13,6 @@ class QuotationPage extends Page {
 	private static $icon_class = 'font-icon-white-question';
 
 	private static $db = [
-		'BannerText'		=> 'HTMLText',
 		'FormTitle'			=> 'Varchar',
 		'FormIntro'			=> 'HTMLText'
 	];
@@ -21,15 +20,10 @@ class QuotationPage extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldsToTab('Root.Banner', [
-			HTMLEditorField::create('BannerText', 'Banner tekst')
-		]);
-
 		$fields->addFieldsToTab('Root.Form', [
 			TextField::create('FormTitle', 'Form titel'),
 			HTMLEditorField::create('FormIntro', 'Form introductie tekst')->setRows(4)
 		]);
-
 
 		return $fields;
 	}

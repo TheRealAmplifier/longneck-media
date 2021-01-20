@@ -2,18 +2,14 @@
 
 namespace Pages;
 
+use Elements\CallToAction;
+use Elements\FeaturedServices;
 use Page;
 use Pages\ServiceHolderPage;
-
-use Elements\FeaturedServices;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
 use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Forms\TextareaField;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\TreeDropdownField;
 
 class ServicePage extends Page {
 	private static $table_name = 'ServicePage';
@@ -25,12 +21,12 @@ class ServicePage extends Page {
 		'ShowContact'					=> 'Boolean',
 		'ContactTitle'	 			=> 'Varchar',
 		'ContactText'	 				=> 'Text',
-		'ContactLinkText'			=> 'Varchar',
+		'ContactLinkText'			=> 'Varchar'
 	];
 
 	private static $has_one = [
 		'ContactLinkTarget'		=> SiteTree::class,
-		'Icon'								=> File::class
+		'Icon'								=> File::class,
 	];
 
 	private static $allowed_parent = [
@@ -49,14 +45,42 @@ class ServicePage extends Page {
 			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5)
 		], 'Content');
 
-		$fields->addFieldsToTab('Root.Contact', [
-			CheckboxField::create('ShowContact', 'Contact sectie tonen op project pagina\'s'),
-			TextField::create('ContactTitle', 'Contact titel'),
-			TextareaField::create('ContactText', 'Contact tekst'),
-			TextField::create('ContactLinkText', 'Contact link tekst'),
-			TreeDropdownField::create('ContactLinkTargetID', 'Contact link doeladres', SiteTree::class),
-		]);
-
 		return $fields;
 	}
+
+
+	 /**
+   * Event handler called before writing to the database.
+   *
+   * @uses DataExtension->onAfterWrite()
+   */
+  public function onAfterWrite() {
+    parent::onAfterWrite();
+
+    $elementalArea = $this->ElementalArea();
+    $elementalAreaID = $elementalArea->ID;
+
+    // check if page has elements
+    if( ! $elementalArea->Elements()->exists() ) {
+
+			// Automatically add Services on page creation
+			$newServices = new FeaturedServices();
+			$newServices->Title = 'Onze andere diensten';
+			$newServices->ShowTitle = true;
+			$newServices->ShowAllServices = true;
+      $newServices->ParentID = $elementalAreaID;
+			$newServices->write();
+			
+			// Automatically add Call to Action on page creation
+			$newCTA = new CallToAction();
+			$newCTA->Title = 'Heb je vragen?';
+			$newCTA->ShowTitle = true;
+			$newCTA->TextMain	= 'Dit kan per chat of per e-mail. Doorgaans reageren wij op werkdagen binnen 2 uur.';
+			$newCTA->CTAType = 'simple';
+			$newCTA->ParentID = $elementalAreaID;
+			$newCTA->write();
+		}
+		
+		return false;
+  }
 }

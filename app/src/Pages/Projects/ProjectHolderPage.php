@@ -16,7 +16,6 @@ class ProjectHolderPage extends Page {
 	private static $icon_class = 'font-icon-p-archive';
 
 	private static $db = [
-		'BannerText'					=> 'HTMLText',
 		'ShowContact'					=> 'Boolean',
 		'ContactTitle'	 			=> 'Varchar',
 		'ContactText'	 				=> 'Text',
@@ -33,10 +32,6 @@ class ProjectHolderPage extends Page {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-
-		$fields->addFieldsToTab('Root.Banner', [
-			HTMLEditorField::create('BannerText', 'Banner tekst')
-		]);
 
 		$fields->addFieldsToTab('Root.Contact', [
 			CheckboxField::create('ShowContact', 'Contact sectie tonen op project pagina\'s'),

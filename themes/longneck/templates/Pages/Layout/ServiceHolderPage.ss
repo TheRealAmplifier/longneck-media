@@ -1,4 +1,4 @@
-<% include TitleSection ExtraClasses='title--centered', ShapesPosition='title--shapes-both' %>
+<% include Banner ExtraClasses='title--centered', ShapesPosition='title--shapes-both' %>
 
 <div class="services services--spacer">
 	<div class="services__wrapper">

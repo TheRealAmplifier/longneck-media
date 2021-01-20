@@ -14,10 +14,6 @@ class HomePage extends Page {
 	private static $singular_name = 'Home pagina';
 	private static $icon_class = 'font-icon-p-home';
 
-	private static $db = [
-		'BannerText'		=> 'HTMLText'
-	];
-
 	private static $has_one = [
 		'BannerImage'		=> Image::class
 	];
@@ -25,17 +21,6 @@ class HomePage extends Page {
 	private static $owns = [
 		'BannerImage'
 	];
-
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
-
-		$fields->addFieldsToTab('Root.Banner', [
-			UploadField::create('BannerImage', 'Banner Image')->setFolderName('Banners'),
-			HTMLEditorField::create('BannerText', 'Banner tekst')
-		]);
-
-		return $fields;
-	}
 
 	public function getProjects() {
 		return ProjectPage::get();

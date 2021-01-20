@@ -3,19 +3,56 @@
 namespace {
 
 	use Shortcode\ShortcodeButton;
-  use Shortcode\ShortcodeQuote;
-  use SilverStripe\CMS\Model\SiteTree;
+	use Shortcode\ShortcodeQuote;
+	use Silverstripe\Assets\Image;
+	use SilverStripe\AssetAdmin\Forms\UploadField;
+	use SilverStripe\CMS\Model\SiteTree;
+	use SilverStripe\Forms\DropdownField;
 	use SilverStripe\Forms\GridField\GridField;
 	use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+	use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 	class Page extends SiteTree {
+
+		private static $db = [
+			'BannerFunction'		=> 'Varchar',
+			'BannerText'				=> 'HTMLText',
+			'BannerLayout'			=> 'Varchar'
+		];
+
+		private static $has_one = [
+			'BannerImage'				=> image::class
+		];
+
 		private static $has_many = [
 			'ShortcodeButtons'	=> ShortcodeButton::class,
 			'ShortcodeQuotes'		=> ShortcodeQuote::class
 		];
 
+		private static $owns = [
+			'BannerImage'
+		];
+
 		public function getCMSFields() {
 			$fields = parent::getCMSFields();
+
+			$fields->addFieldsToTab('Root.Banner', [
+				DropdownField::create('BannerFunction', 'Banner Type', [
+					'text'	=> 'Titel (standaard)',
+					'image'	=> 'Afbeelding',
+				]),
+				HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(3)
+			]);
+
+			if ($this->BannerFunction == 'image') {
+				$fields->addFieldsToTab('Root.Banner', [
+					DropdownField::create('BannerType', 'Banner Type', [
+						'left'	=> 'Links',
+						'right'	=> 'Rechts'
+					]),
+					UploadField::create('BannerImage', 'Banner Image')->setFolderName('Banners'),
+				]);
+			}
 
 			$config = GridFieldConfig_RecordEditor::create();
 			$fields->addFieldToTab('Root.Buttons', GridField::create(

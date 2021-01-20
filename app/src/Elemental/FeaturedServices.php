@@ -20,8 +20,8 @@ class FeaturedServices extends BaseElement {
 
 	private static $db = [
 		'TextIntro'					=> 'HTMLText',
-		'RemovePadding'			=> 'Boolean'
-
+		'RemovePadding'			=> 'Boolean',
+		'ShowAllServices'		=> 'Boolean'
 	];
 
 	private static $many_many = [
@@ -35,8 +35,14 @@ class FeaturedServices extends BaseElement {
 
 		$fields->addFieldsToTab('Root.Main', [
 			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
-			ListboxField::create('LinkedServices', 'Gelinkte Services', ServicePage::get())
+			CheckboxField::create('ShowAllServices', 'Alle overige services tonen')->setDescription('Let op: Deze optie is bedoeld voor de Service Page!'),
 		]);
+
+		if( ! $this->ShowAllServices ) {
+			$fields->addFieldsToTab('Root.Main', [
+				ListboxField::create('LinkedServices', 'Gelinkte Services', ServicePage::get())
+			]);
+		}
 
 		$fields->addFieldsToTab('Root.Settings', [
 			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
@@ -47,5 +53,17 @@ class FeaturedServices extends BaseElement {
 
 	public function getType() {
 		return 'Uitgelichte Diensten';
+	}
+
+	public function getServices() {
+		if($this->ShowAllServices) {
+			$services = ServicePage::get()->exclude([
+				'ID' => $this->ID
+			]);
+		} else {
+			$services = $this->LinkedServices();
+		}
+
+		return $services;
 	}
 }

@@ -14,9 +14,9 @@
 			</div>
 		</div>
 
-		<% if LinkedServices %>
+		<% if Services %>
 			<div class="services__blocks--narrow">
-				<% loop LinkedServices %>
+				<% loop Services %>
 					<% include ServiceCard %>
 				<% end_loop %>
 			</div>

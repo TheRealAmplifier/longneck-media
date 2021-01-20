@@ -16,17 +16,12 @@ class ContactPage extends Page {
 	private static $icon_class = 'font-icon-p-mail';
 
 	private static $db = [
-		'BannerText'		=> 'HTMLText',
 		'FormTitle'			=> 'Varchar',
 		'FormIntro'			=> 'HTMLText'
 	];
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-
-		$fields->addFieldsToTab('Root.Banner', [
-			HTMLEditorField::create('BannerText', 'Banner tekst')
-		]);
 
 		$fields->addFieldsToTab('Root.Form', [
 			TextField::create('FormTitle', 'Form titel'),

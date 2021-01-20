@@ -13,18 +13,4 @@ class AboutPage extends Page {
 	private static $table_name = 'AboutPage';
 	private static $singular_name = 'Over Ons pagina';
 	private static $icon_class = 'font-icon-p-profile';
-
-	private static $db = [
-		'BannerText'		=> 'HTMLText'
-	];
-
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
-
-		$fields->addFieldsToTab('Root.Banner', [
-			HTMLEditorField::create('BannerText', 'Banner tekst')
-		]);
-
-		return $fields;
-	}
 }

@@ -15,10 +15,6 @@ class BlogHolderPage extends Page {
 	private static $singular_name = 'Blog Overzicht';
 	private static $icon_class = 'font-icon-news';
 
-	private static $db = [
-		'BannerText'					=> 'HTMLText'
-	];
-
 	private static $has_many = [
 		'BlogTags'						=> BlogTag::class
 	];
@@ -29,10 +25,6 @@ class BlogHolderPage extends Page {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-
-		$fields->addFieldsToTab('Root.Banner', [
-			HTMLEditorField::create('BannerText', 'Banner tekst')
-		]);
 
 		$config =  GridFieldConfig_RecordEditor::create();
 		$config->addComponent(new GridFieldSortableRows('SortID'));

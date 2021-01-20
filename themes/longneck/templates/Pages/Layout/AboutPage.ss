@@ -1,4 +1,4 @@
-<% include TitleSection ShapesPosition='title--shapes-both' %>
+<% include Banner ShapesPosition='title--shapes-both' %>
 
 <div class="elements">
 	{$ElementalArea}
