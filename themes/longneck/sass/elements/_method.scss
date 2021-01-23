@@ -2,9 +2,6 @@
 	@include flex($dynamicDirection: true, $breakpoint: 'min-desktop', $wrap: wrap);
 }
 
-.method__title {
-	flex: 0 0 100%;
-}
 .method__left,
 .method__right {
 	padding: 3rem 5rem;

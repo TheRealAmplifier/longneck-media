@@ -72,9 +72,7 @@
 
 			<div class="cta__content">
 				<% if ShowTitle %>
-					<div class="cta__title">
-						<h2 class="heading-2 ">{$Title}</h2>
-					</div>
+					<h2 class="heading-2 ">{$Title}</h2>
 				<% end_if %>
 				<div class="cta__text">
 					<div class="text__intro text--accentuated">

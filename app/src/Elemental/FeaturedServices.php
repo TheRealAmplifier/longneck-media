@@ -38,10 +38,12 @@ class FeaturedServices extends BaseElement {
 			CheckboxField::create('ShowAllServices', 'Alle overige services tonen')->setDescription('Let op: Deze optie is bedoeld voor de Service Page!'),
 		]);
 
-		if( ! $this->ShowAllServices ) {
-			$fields->addFieldsToTab('Root.Main', [
-				ListboxField::create('LinkedServices', 'Gelinkte Services', ServicePage::get())
-			]);
+		if($this->ClassName == 'ServicePage') {
+			if( ! $this->ShowAllServices ) {
+				$fields->addFieldsToTab('Root.Main', [
+					ListboxField::create('LinkedServices', 'Gelinkte Services', ServicePage::get())
+				]);
+			}
 		}
 
 		$fields->addFieldsToTab('Root.Settings', [
@@ -56,9 +58,11 @@ class FeaturedServices extends BaseElement {
 	}
 
 	public function getServices() {
+		$relationID = $this->getPage()->ID;
+
 		if($this->ShowAllServices) {
 			$services = ServicePage::get()->exclude([
-				'ID' => $this->ID
+				'ID' => $relationID
 			]);
 		} else {
 			$services = $this->LinkedServices();

@@ -533,6 +533,10 @@ li {
   }
 }
 
+.title--wide {
+  flex: 0 0 100%;
+}
+
 .header {
   position: fixed;
   height: 7rem;
@@ -1513,7 +1517,7 @@ textarea {
 .footer {
   position: relative;
   padding-top: 15rem;
-  background-color: #E6ECF2;
+  background-color: #EEEEEE;
 }
 
 .footer__wrapper {
@@ -2015,12 +2019,12 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 0 0 60%;
+  flex: 0 0 65%;
 }
 .cta--image .cta__image {
-  height: 32.5rem;
+  height: 35rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .cta--image .cta__image {
     height: unset;
     flex: 1;
@@ -2028,7 +2032,7 @@ textarea {
 }
 @media (min-width: 85em) {
   .cta--image .cta__image {
-    max-height: 60rem;
+    max-height: 70rem;
   }
 }
 
@@ -2310,10 +2314,6 @@ textarea {
   .method {
     flex-direction: row;
   }
-}
-
-.method__title {
-  flex: 0 0 100%;
 }
 
 .method__left,

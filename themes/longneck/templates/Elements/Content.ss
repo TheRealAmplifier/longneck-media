@@ -1,9 +1,7 @@
 <div class="content <% if HasBackgroundColor %>content--background<% end_if %>">
 	<div class="content__wrapper--{$SectionWidth}">
 		<% if ShowTitle %>
-			<div class="cta__title">
-				<h2 class="heading-2 ">{$Title}</h2>
-			</div>
+			<h2 class="heading-2 ">{$Title}</h2>
 		<% end_if %>
 		
 		<% if TextIntro %>

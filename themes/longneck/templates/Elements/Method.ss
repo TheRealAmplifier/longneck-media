@@ -1,9 +1,7 @@
 <div class="content">
 	<div class="content__wrapper--default">
 		<% if ShowTitle %>
-			<div class="method__title">
-				<h2 class="heading-2 ">{$Title}</h2>
-			</div>
+			<h2 class="heading-2 ">{$Title}</h2>
 		<% end_if %>
 		<% if MethodSteps %>
 			<div class="method__steps">

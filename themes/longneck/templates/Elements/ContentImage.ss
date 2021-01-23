@@ -8,9 +8,7 @@
 				</div>
 				<div class="content__body">
 					<% if ShowTitle %>
-						<div class="cta__title">
-							<h2 class="heading-2 ">{$Title}</h2>
-						</div>
+						<h2 class="heading-2 ">{$Title}</h2>
 					<% end_if %>
 					
 					<% if TextIntro %>

@@ -5,18 +5,18 @@
 	.cta__content {
 		@include flex($direction: column, $justify: center);
 		@extend %bigSectionPadding;
-		flex: 0 0 60%;
+		flex: 0 0 65%;
 	}
 
 	.cta__image {
-		height: 32.5rem;
+		height: 35rem;
 	
-		@include breakpoint('min-tablet-portrait') {
+		@include breakpoint('min-tablet-landscape') {
 			height: unset;
 			flex: 1;
 		}
 		@include breakpoint('min-desktop') {
-			max-height: 60rem;
+			max-height: 70rem;
 		}
 	}
 }
