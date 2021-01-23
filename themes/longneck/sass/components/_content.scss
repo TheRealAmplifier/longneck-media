@@ -1,12 +1,14 @@
 .content--main {
 	font-size: 1.8rem;
 	line-height: 1.8;
-	padding: 7.5rem 0;
-
-	@include breakpoint('min-tablet-landscape') {
-		padding: 12.5rem 0;
-	}
 }
+// .content--spacer {
+// 	padding: 7.5rem 0;
+
+// 	@include breakpoint('min-tablet-landscape') {
+// 		padding: 12.5rem 0;
+// 	}
+// }
 
 .content--narrowed {
 	flex: 0 0 90%;

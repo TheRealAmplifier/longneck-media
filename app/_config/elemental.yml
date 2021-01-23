@@ -39,10 +39,5 @@ Pages\ServicePage:
     - Elements\Content
     - Elements\CallToAction    
     - Elements\Projects
-
-Pages\PricingPage:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension  
-  allowed_elements:
-    - Elements\Content
-    - Elements\CallToAction
+    - Elements\Method
+    - Elements\FeaturedServices

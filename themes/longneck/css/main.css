@@ -1195,12 +1195,6 @@ textarea {
 .content--main {
   font-size: 1.8rem;
   line-height: 1.8;
-  padding: 7.5rem 0;
-}
-@media (min-width: 64em) {
-  .content--main {
-    padding: 12.5rem 0;
-  }
 }
 
 .content--narrowed {
