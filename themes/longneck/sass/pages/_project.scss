@@ -36,6 +36,11 @@
 
 .details__list {
 	@include flex($direction: column);
+	padding-top: 7.5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding-top: 15rem;
+	}
 }
 
 .box__intro {

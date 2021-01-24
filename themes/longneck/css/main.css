@@ -50,10 +50,10 @@
   color: #303C6C;
 }
 
-.text__main p a {
+.text__main p a:not(.button) {
   position: relative;
 }
-.text__main p a:after {
+.text__main p a:not(.button):after {
   content: "";
   position: absolute;
   bottom: 0.2rem;
@@ -63,7 +63,7 @@
   z-index: -1;
   background-color: #EEEEEE;
 }
-.text__main p a:hover:after, .text__main p a:focus:after {
+.text__main p a:hover:not(.button):after, .text__main p a:focus:not(.button):after {
   background-color: #FBEE6E;
 }
 
@@ -236,12 +236,12 @@ li {
 }
 
 @media (min-width: 64em) {
-  .about, .projects--latest, .content, .team {
+  .about, .projects--latest, .team {
     padding: 5rem 0;
   }
 }
 @media (min-width: 85em) {
-  .about, .projects--latest, .content, .team {
+  .about, .projects--latest, .team {
     padding: 10rem 0;
   }
 }
@@ -2453,6 +2453,12 @@ textarea {
 .details__list {
   display: flex;
   flex-direction: column;
+  padding-top: 7.5rem;
+}
+@media (min-width: 64em) {
+  .details__list {
+    padding-top: 15rem;
+  }
 }
 
 .box__intro {

@@ -97,7 +97,7 @@ class QuotationPageController extends PageController {
 			$emailSent = $this->sendEmail($contactName, $newQuotation);
 
 			if( $emailSent == true ) {
-				$form->sessionMessage('De offerteaanvraag is succesvol door ons ontvangen. Je ontvangt de offerte op ' . $newQuotation->Email . ' !', 'success');
+				$form->sessionMessage('De offerteaanvraag is succesvol door ons ontvangen. Je ontvangt de offerte binnen drie werkdagen op ' . $newQuotation->Email . '.', 'success');
 				return $this->redirectBack();
 			}
 		}

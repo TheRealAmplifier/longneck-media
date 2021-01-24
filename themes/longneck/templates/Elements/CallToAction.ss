@@ -13,7 +13,7 @@
 				<% if LinkedPage %>
 					<div class="button__box button__box--spacer">
 						<% with LinkedPage %>
-							<a class="link link--icon" href="{Link}">
+							<a class="link link--icon" href="{$Link}">
 								<span class="link__text">{$Up.ButtonText}</span>
 								<span class="link__icon">
 									{$SVG('forward-dark').customBasePath('themes/longneck/images/svg/').extraClass('image--cover icon--arrow')}
