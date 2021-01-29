@@ -33,8 +33,25 @@
 				</div>
 			<% end_if %>
 		</div>
+		<div class="footer__contact">
+			<a class="contact__author" href="mailto:info@longneckmedia.nl">info@longneckmedia.nl</a>
+
+			<% if $SiteConfig.SocialAccounts %>
+				<nav class="copyright__socials navigation__socials--row">
+					<% loop SiteConfig.SocialAccounts %>
+						<a class="social__link--small" href="{$AccountLink}" target="_blank" rel="noreferrer">
+							{$SVG($Icon.Name).addSubfolder('Social')}
+						</a>
+					<% end_loop %>
+				</nav>
+			<% end_if %>
+		</div>
 	</div>
-	<div class="footer__copyright"></div>
+	<div class="footer__copyright">
+		<div class="copyright__wrapper">
+			<span class="copyright__author">Copyright &copy; {$Now.Format('Y')} - {$SiteConfig.Title}</span>
+		</div>
+	</div>
 </footer>
 
 

@@ -309,19 +309,19 @@ li {
   }
 }
 
-.content__wrapper--wide, .header__wrapper {
+.content__wrapper--wide, .copyright__wrapper, .header__wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
   padding: 0 3rem;
 }
 @media (min-width: 120em) {
-  .content__wrapper--wide, .header__wrapper {
+  .content__wrapper--wide, .copyright__wrapper, .header__wrapper {
     max-width: 183rem;
   }
 }
 @media (min-width: 120em) {
-  .content__wrapper--wide, .header__wrapper {
+  .content__wrapper--wide, .copyright__wrapper, .header__wrapper {
     padding: 0 0;
   }
 }
@@ -1524,13 +1524,87 @@ textarea {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  padding-top: 15rem;
+  background-color: #303C6C;
+  margin-top: 15rem;
+}
+
+.footer__box {
   background-color: #EEEEEE;
+  color: #FFFFFF;
+  width: 85%;
+  align-self: flex-end;
+  padding: 3rem;
+  margin-top: -5rem;
+}
+@media (min-width: 64em) {
+  .footer__box {
+    padding: 5rem;
+    margin-top: -10rem;
+  }
+}
+@media (min-width: 85em) {
+  .footer__box {
+    padding: 10rem;
+    width: 75%;
+    margin-top: -15rem;
+  }
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2rem;
+  margin-top: 5rem;
+  color: #313030;
+  font-weight: 600;
+}
+@media (min-width: 64em) {
+  .footer__contact {
+    flex-direction: row;
+  }
+}
+@media (min-width: 64em) {
+  .footer__contact {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 61.9375em) {
+  .contact__author {
+    margin-bottom: 3rem;
+  }
+}
+
+.footer__navigation {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .footer__navigation {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 61.9375em) {
+  .footer__menu:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__menu {
+    flex: 0 0 33%;
+  }
 }
 
 .footer__copyright {
+  display: flex;
+  align-items: center;
+  height: 8rem;
   font-size: 1.4rem;
+  color: #FFFFFF;
 }
 @media (max-width: 47.9375em) {
   .footer__copyright {
@@ -1538,10 +1612,10 @@ textarea {
   }
 }
 
-.footer__box {
-  background-color: #303C6C;
-  color: #FFFFFF;
-  width: 75%;
+@media (min-width: 48em) {
+  .copyright__wrapper {
+    justify-content: space-between;
+  }
 }
 
 .card {

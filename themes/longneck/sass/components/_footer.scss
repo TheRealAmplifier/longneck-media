@@ -1,19 +1,74 @@
 .footer {
+	@include flex($direction: column);
 	position: relative;
-	padding-top: 15rem;
+	background-color: $color-blue;
+	margin-top: 15rem;
+}
+
+.footer__box {
 	background-color: $color-gray-light-2;
+	color: $color-white;
+	width: 85%;
+	align-self: flex-end;
+	padding: 3rem;
+	margin-top: -5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 5rem;
+		margin-top: -10rem;
+	}
+	@include breakpoint('min-desktop') {
+		padding: 10rem;
+		width: 75%;
+		margin-top: -15rem;
+	}
+}
+
+.footer__contact {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	font-size: 2.2rem;
+	margin-top: 5rem;
+	color: $color-black;
+	font-weight: 600;
+
+	@include breakpoint('min-tablet-landscape') {
+		justify-content: space-between;
+	}
+}
+.contact__author { 	
+	@include breakpoint('max-tablet-landscape') {
+		margin-bottom: 3rem;
+	}
+}
+
+.footer__navigation {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+}
+.footer__menu {	
+	@include breakpoint('max-tablet-landscape') {
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+		}
+	}
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 33%;
+	}
 }
 
 .footer__copyright {
+	@include flex($align: center);
+	height: 8rem;
 	font-size: 1.4rem;
+	color: $color-white;
 
 	@include breakpoint('max-tablet-portrait') {
 		margin-bottom: 2rem;
 	}
 }
+.copyright__wrapper {
+	@extend %wrapper--wide;
 
-.footer__box {
-	background-color: $color-blue;
-	color: $color-white;
-	width: 75%;
+	@include breakpoint('min-tablet-portrait') {
+		justify-content: space-between;
+	}
 }

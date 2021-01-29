@@ -11018,8 +11018,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/MAMP/htdocs/longneckmedia/themes/longneck/javascript/script.js */"./themes/longneck/javascript/script.js");
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/longneckmedia/themes/longneck/sass/main.scss */"./themes/longneck/sass/main.scss");
+__webpack_require__(/*! /Users/jeroen/Sites/localhost/longneckmedia/themes/longneck/javascript/script.js */"./themes/longneck/javascript/script.js");
+module.exports = __webpack_require__(/*! /Users/jeroen/Sites/localhost/longneckmedia/themes/longneck/sass/main.scss */"./themes/longneck/sass/main.scss");
 
 
 /***/ })
