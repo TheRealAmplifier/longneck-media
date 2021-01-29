@@ -1532,12 +1532,13 @@ textarea {
 }
 
 .footer__box {
-  background-color: #EEEEEE;
+  background-color: #FFFFFF;
   color: #FFFFFF;
-  width: 85%;
+  width: 82.5%;
   align-self: flex-end;
   padding: 3rem;
   margin-top: -5rem;
+  box-shadow: 0 0 4rem rgba(49, 48, 48, 0.2);
 }
 @media (min-width: 64em) {
   .footer__box {
@@ -1548,7 +1549,6 @@ textarea {
 @media (min-width: 85em) {
   .footer__box {
     padding: 10rem;
-    width: 75%;
     margin-top: -15rem;
   }
 }
@@ -1605,6 +1605,7 @@ textarea {
   height: 8rem;
   font-size: 1.4rem;
   color: #FFFFFF;
+  text-align: center;
 }
 @media (max-width: 47.9375em) {
   .footer__copyright {
