@@ -11,6 +11,14 @@
 		}
 	}
 }
+.navigation__link--small {
+	font-weight: 600;
+
+	&:not(:last-child) {
+		margin-right: 2rem;
+	}
+}
+
 .navigation__link--button {
 	@include flex($align: center);
 	height: 5rem;

@@ -5,54 +5,62 @@
 	margin-top: 15rem;
 }
 
-.footer__box {
-	background-color: $color-white;
-	color: $color-white;
-	width: 87.5%;
-	align-self: flex-end;
+.footer__details {
+	@include breakpoint('max-tablet-landscape') {
+		order: 2;
+		margin-top: 5rem;
+    border-top: 3px solid darken($color-gray-blue-soft, 7);
+    padding-top: 5rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem 10rem;
+		flex: 1;
+	}
+}
+
+.footer__top {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 	padding: 3rem;
-	margin-top: -7.5rem;
-	box-shadow: -.5rem -.5rem 2rem rgba($color-gray-dark-2, .1);
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 0 0;
+		justify-content: space-between;
+	}
+}
+.footer__box {
+	width: 100%;
+	margin-top: 5rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		padding: 5rem;
 		margin-top: -10rem;
-	}
-	@include breakpoint('min-desktop') {
-		padding: 10rem;
-		margin-top: -15rem;
-		width: 67.5%;
+		background-color: $color-white;
+		color: $color-white;
+		width: 60%;
+		box-shadow: -.5rem -.5rem 2rem rgba($color-gray-dark-2, .1);
 	}
 }
 
 .footer__contact {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include flex($direction: column);
 	font-size: 2.2rem;
-	margin-top: 5rem;
 	color: $color-black;
 	font-weight: 600;
-
-	@include breakpoint('min-tablet-landscape') {
-		justify-content: space-between;
-	}
 }
 .contact__author { 	
-	@include breakpoint('max-desktop') {
-		margin-bottom: 3rem;
-	}
+	margin-bottom: 3rem;
 }
 
 .footer__navigation {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
 }
 .footer__menu {	
-	@include breakpoint('max-desktop') {
+	flex: 1;
+
+	@include breakpoint('max-tablet-landscape') {
 		&:not(:last-child) {
 			margin-bottom: 5rem;
 		}
-	}
-	@include breakpoint('min-tablet-landscape') {
-		flex: 0 0 33%;
 	}
 }
 
@@ -60,16 +68,23 @@
 	@include flex($align: center);
 	height: 10rem;
 	font-size: 1.4rem;
-	text-align: center;
 
-	@include breakpoint('max-tablet-portrait') {
-		margin-bottom: 2rem;
+	@include breakpoint('max-tablet-landscape') {
+		margin-top: 5rem;
 	}
 }
 .copyright__wrapper {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 	@extend %wrapper--wide;
 
-	@include breakpoint('min-tablet-portrait') {
+	@include breakpoint('min-tablet-landscape') {
 		justify-content: space-between;
+	}
+}
+
+.copyright__author {
+	@include breakpoint('max-tablet-landscape') {
+		margin-top: 3rem;
+		order: 2;
 	}
 }
