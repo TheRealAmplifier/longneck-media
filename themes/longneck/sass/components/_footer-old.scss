@@ -1,0 +1,72 @@
+.footer {
+	position: relative;
+	padding-top: 15rem;
+	background-color: $color-gray-light-2;
+	// color: $white;
+}
+.footer__wrapper {
+	@include flex($direction: column);
+	@extend %wrapper--wide;
+}
+.footer__top {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-desktop', $justify: space-between);
+	padding-bottom: 10rem;
+}
+.footer__bottom {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
+
+	@include breakpoint('max-tablet-portrait') {
+		padding: 0 0 2rem 0;
+	}
+	@include breakpoint('min-tablet-portrait') {
+		height: 7rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.footer__navigation {
+	@include flex($wrap: wrap);
+
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 65%;
+	}
+	@include breakpoint('min-desktop') {
+		flex: 0 0 55%;
+	}
+}
+
+.footer__brand {	
+	display: block;
+	width: 22.5rem;
+	margin-bottom: 7.5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		width: 27.5rem;
+	}
+	@include breakpoint('min-desktop') {
+		margin-bottom: auto;
+	}
+}
+.footer__menu {
+	flex: 0 0 100%;
+
+	@include breakpoint('max-tablet-landscape') {
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+		}
+	}
+	@include breakpoint('min-tablet-portrait') {
+		flex: 0 0 50%;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 33.3%;
+	}
+}
+
+.footer__copyright {
+	font-size: 1.4rem;
+
+	@include breakpoint('max-tablet-portrait') {
+		margin-bottom: 2rem;
+	}
+}

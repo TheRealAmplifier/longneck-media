@@ -31,6 +31,10 @@
 .breadcrumb {
 	@include flex($align: center);	
 	margin-bottom: 5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		margin-bottom: 5rem;
+	}
 }
 
 .breadcrumbs__wrapper {
@@ -39,7 +43,6 @@
 }
 
 .breadcrumb--simple {
-	background-color: $color-gray-light-1;
 	height: 10rem;
 
 	.breadcrumb__item {
@@ -68,6 +71,10 @@
 			width: 1.8rem;
 			height: 1.8rem;
 		}
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		background-color: $color-gray-light-1;
 	}
 }
 .breadcrumb--colored {
