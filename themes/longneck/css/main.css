@@ -1527,18 +1527,18 @@ textarea {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #303C6C;
+  background-color: #E6ECF2;
   margin-top: 15rem;
 }
 
 .footer__box {
   background-color: #FFFFFF;
   color: #FFFFFF;
-  width: 82.5%;
+  width: 87.5%;
   align-self: flex-end;
   padding: 3rem;
-  margin-top: -5rem;
-  box-shadow: 0 0 4rem rgba(49, 48, 48, 0.2);
+  margin-top: -7.5rem;
+  box-shadow: -0.5rem -0.5rem 2rem rgba(71, 71, 71, 0.1);
 }
 @media (min-width: 64em) {
   .footer__box {
@@ -1550,6 +1550,7 @@ textarea {
   .footer__box {
     padding: 10rem;
     margin-top: -15rem;
+    width: 67.5%;
   }
 }
 
@@ -1572,7 +1573,7 @@ textarea {
   }
 }
 
-@media (max-width: 61.9375em) {
+@media (max-width: 84.9375em) {
   .contact__author {
     margin-bottom: 3rem;
   }
@@ -1588,7 +1589,7 @@ textarea {
   }
 }
 
-@media (max-width: 61.9375em) {
+@media (max-width: 84.9375em) {
   .footer__menu:not(:last-child) {
     margin-bottom: 5rem;
   }
@@ -1602,9 +1603,8 @@ textarea {
 .footer__copyright {
   display: flex;
   align-items: center;
-  height: 8rem;
+  height: 10rem;
   font-size: 1.4rem;
-  color: #FFFFFF;
   text-align: center;
 }
 @media (max-width: 47.9375em) {

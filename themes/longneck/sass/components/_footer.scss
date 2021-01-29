@@ -1,18 +1,18 @@
 .footer {
 	@include flex($direction: column);
 	position: relative;
-	background-color: $color-blue;
+	background-color: $color-gray-blue-soft;	
 	margin-top: 15rem;
 }
 
 .footer__box {
 	background-color: $color-white;
 	color: $color-white;
-	width: 82.5%;
+	width: 87.5%;
 	align-self: flex-end;
 	padding: 3rem;
-	margin-top: -5rem;
-	box-shadow: 0 0 4rem rgba($color-black, .2);
+	margin-top: -7.5rem;
+	box-shadow: -.5rem -.5rem 2rem rgba($color-gray-dark-2, .1);
 
 	@include breakpoint('min-tablet-landscape') {
 		padding: 5rem;
@@ -21,6 +21,7 @@
 	@include breakpoint('min-desktop') {
 		padding: 10rem;
 		margin-top: -15rem;
+		width: 67.5%;
 	}
 }
 
@@ -36,7 +37,7 @@
 	}
 }
 .contact__author { 	
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max-desktop') {
 		margin-bottom: 3rem;
 	}
 }
@@ -45,7 +46,7 @@
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 }
 .footer__menu {	
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max-desktop') {
 		&:not(:last-child) {
 			margin-bottom: 5rem;
 		}
@@ -57,9 +58,8 @@
 
 .footer__copyright {
 	@include flex($align: center);
-	height: 8rem;
+	height: 10rem;
 	font-size: 1.4rem;
-	color: $color-white;
 	text-align: center;
 
 	@include breakpoint('max-tablet-portrait') {
