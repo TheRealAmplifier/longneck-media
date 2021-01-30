@@ -57,14 +57,15 @@
   content: "";
   position: absolute;
   bottom: 0.2rem;
-  left: 0;
-  right: 0;
+  left: -0.2rem;
+  right: -0.2rem;
   height: 0.6rem;
   z-index: -1;
-  background-color: #EEEEEE;
+  background-color: #7BC7D1;
+  transition: height 0.2s ease;
 }
 .text__main p a:hover:not(.button):after, .text__main p a:focus:not(.button):after {
-  background-color: #FBEE6E;
+  height: 0.9rem;
 }
 
 body {
@@ -1548,15 +1549,20 @@ textarea {
 }
 @media (min-width: 64em) {
   .footer__details {
-    padding: 7.5rem 10rem;
+    padding: 5rem 4rem;
     flex: 1;
+  }
+}
+@media (min-width: 85em) {
+  .footer__details {
+    padding: 7.5rem 4rem;
   }
 }
 
 .footer__top {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 7.5rem 3rem;
 }
 @media (min-width: 64em) {
   .footer__top {
@@ -1572,16 +1578,22 @@ textarea {
 
 .footer__box {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 7.5rem;
 }
 @media (min-width: 64em) {
   .footer__box {
-    padding: 5rem;
+    padding: 7.5rem;
     margin-top: -10rem;
     background-color: #FFFFFF;
     color: #FFFFFF;
-    width: 60%;
+    width: 62.5%;
     box-shadow: -0.5rem -0.5rem 2rem rgba(71, 71, 71, 0.1);
+  }
+}
+@media (min-width: 85em) {
+  .footer__box {
+    width: 57.5%;
+    padding: 12.5rem;
   }
 }
 
@@ -1591,6 +1603,11 @@ textarea {
   font-size: 2.2rem;
   color: #313030;
   font-weight: 600;
+}
+@media (min-width: 64em) {
+  .footer__contact {
+    margin-top: 5rem;
+  }
 }
 
 .contact__author {
@@ -1619,12 +1636,17 @@ textarea {
 .footer__copyright {
   display: flex;
   align-items: center;
-  height: 10rem;
   font-size: 1.4rem;
+  height: 10rem;
 }
 @media (max-width: 61.9375em) {
   .footer__copyright {
     margin-top: 5rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__copyright {
+    height: 15rem;
   }
 }
 
@@ -1632,18 +1654,18 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .copyright__wrapper {
     flex-direction: row;
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .copyright__wrapper {
     justify-content: space-between;
   }
 }
 
-@media (max-width: 61.9375em) {
+@media (max-width: 47.9375em) {
   .copyright__author {
     margin-top: 3rem;
     order: 2;

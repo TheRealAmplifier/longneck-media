@@ -31,17 +31,18 @@
 		content: "";
     position: absolute;
     bottom: .2rem;
-    left: 0;
-    right: 0;
+    left: -.2rem;
+    right: -.2rem;
     height: .6rem;
     z-index: -1;
-		background-color:  $color-gray-light-2;
+		background-color: $color-green;
+		transition: height .2s ease;
   }
 
   &:hover,
   &:focus {
     &:after {
-      background-color: $color-yellow;
+      height: .9rem;
     }
   }
 }

@@ -13,14 +13,17 @@
     padding-top: 5rem;
 	}
 	@include breakpoint('min-tablet-landscape') {
-		padding: 7.5rem 10rem;
+		padding: 5rem 4rem;
 		flex: 1;
+	}
+	@include breakpoint('min-desktop') {
+		padding: 7.5rem 4rem;
 	}
 }
 
 .footer__top {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	padding: 3rem;
+	padding: 7.5rem 3rem;
 
 	@include breakpoint('min-tablet-landscape') {
 		padding: 0 0;
@@ -29,15 +32,19 @@
 }
 .footer__box {
 	width: 100%;
-	margin-top: 5rem;
+	margin-top: 7.5rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		padding: 5rem;
+		padding: 7.5rem;
 		margin-top: -10rem;
 		background-color: $color-white;
 		color: $color-white;
-		width: 60%;
+		width: 62.5%;
 		box-shadow: -.5rem -.5rem 2rem rgba($color-gray-dark-2, .1);
+	}
+	@include breakpoint('min-desktop') {
+		width: 57.5%;
+		padding: 12.5rem;
 	}
 }
 
@@ -46,6 +53,10 @@
 	font-size: 2.2rem;
 	color: $color-black;
 	font-weight: 600;
+
+	@include breakpoint('min-tablet-landscape') {
+		margin-top: 5rem;
+	}
 }
 .contact__author { 	
 	margin-bottom: 3rem;
@@ -66,24 +77,28 @@
 
 .footer__copyright {
 	@include flex($align: center);
-	height: 10rem;
 	font-size: 1.4rem;
+	height: 10rem;
 
 	@include breakpoint('max-tablet-landscape') {
 		margin-top: 5rem;
 	}
-}
-.copyright__wrapper {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	@extend %wrapper--wide;
 
 	@include breakpoint('min-tablet-landscape') {
+		height: 15rem;
+	}
+}
+.copyright__wrapper {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
+	@extend %wrapper--wide;
+
+	@include breakpoint('min-tablet-portrait') {
 		justify-content: space-between;
 	}
 }
 
 .copyright__author {
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max-tablet-portrait') {
 		margin-top: 3rem;
 		order: 2;
 	}

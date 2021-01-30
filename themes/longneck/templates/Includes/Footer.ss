@@ -1,11 +1,6 @@
 <footer class="footer">
 <div class="footer__top">
 	<div class="footer__details">
-		<p>
-			<strong>Longneck Media</strong> <br />
-			Koolwitje 5 <br />
-			7826 GH Emmen
-		</p>
 		<div class="footer__contact">
 			<a class="contact__author" href="mailto:info@longneckmedia.nl">info@longneckmedia.nl</a>
 
