@@ -5,6 +5,7 @@ namespace Pages;
 use DataObject\QuotationSubmission;
 use PageController;
 use SilverStripe\Control\Email\Email;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
@@ -26,24 +27,26 @@ class QuotationPageController extends PageController {
 	public function QuotationForm() {
 		$fields = new FieldList(
 			DropdownField::create('ProjectType', '', [
-				'website'								=> 'Website',
-				'webshop'								=> 'Webshop'
+				'website'											=> 'Website',
+				'webshop'											=> 'Webshop'
 			]),
-			DropdownField::create('ServicesType', '', [
-				'ontwerp'								=> 'Ontwerp',
-				'ontwikkeling'					=> 'Ontwikkeling',
-				'ontwerp-ontwikkeling' 	=> 'Ontwerp ontwikkeling',
+			CheckboxField::create('ServicesType', '', [
+				'ontwerp'											=> 'Ontwerp',
+				'ontwikkeling'								=> 'Ontwikkeling',
+				'zoekmachineoptimalisatie' 		=> 'Zoekmachineoptimalisatie',
+				'onderhoud' 									=> 'Onderhoud',
+				'hosting' 										=> 'Hosting'
 			]),
 			DropdownField::create('CMSType', '', [
-				'silverstripe'					=> 'SilverStripe',
-				'wordpress'							=> 'Wordpress',
-				'other' 								=> 'Geen voorkeur',
+				'silverstripe'								=> 'SilverStripe',
+				'wordpress'										=> 'Wordpress',
+				'other' 											=> 'Geen voorkeur'
 			]),	
 			DropdownField::create('PageAmount', '', [
-				'small' 			=> '1 - 10 pagina\'s', 
-				'medium'			=> '10 - 20 pagina\'s', 
-				'large'				=> '20 - 30 pagina\'s', 
-				'other'				=> '30+ pagina\'s', 
+				'small' 											=> '1 - 10 pagina\'s', 
+				'medium'											=> '10 - 20 pagina\'s', 
+				'large'												=> '20 - 30 pagina\'s', 
+				'other'												=> '30+ pagina\'s'
 			]),	
 			TextareaField::create('Description'),
 			TextField::create('FirstName'),
