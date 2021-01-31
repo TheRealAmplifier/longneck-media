@@ -1107,6 +1107,7 @@ li {
 
 .form__label {
   display: flex;
+  font-weight: 600;
 }
 @media (min-width: 64em) {
   .form__label {
@@ -1211,6 +1212,12 @@ textarea {
 
 .protection__text a {
   text-decoration: underline;
+}
+
+.form__checkboxes {
+  list-style: none;
+  padding: 0 0;
+  margin: 0 0;
 }
 
 .content--main {

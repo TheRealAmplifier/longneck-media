@@ -12,16 +12,12 @@
 					<label class="form__label">Type project</label>
 					{$Fields.dataFieldByName(ProjectType)}
 				</div>
-				<div class="form__group">
-					<label class="form__label">Gewenste diensten</label>
-					{$Fields.dataFieldByName(ServicesType)}
-				</div>
-			</div>
-			<div class="form__row">
 				<div class="form__group form__group--half form__group--spacer">
 					<label class="form__label">Gewenst CMS systeem</label>
 					{$Fields.dataFieldByName(CMSType)}
 				</div>
+			</div>
+			<div class="form__row">
 				<div class="form__group form__group--half">
 					<label class="form__label">Schatting van aantal pagina's</label>
 					{$Fields.dataFieldByName(PageAmount)}
@@ -33,7 +29,12 @@
 					{$Fields.dataFieldByName(Description)}
 				</div>
 			</div>
-
+			<div class="form__row">
+				<div class="form__group">
+					<label class="form__label">Gewenste diensten</label>
+					{$Fields.dataFieldByName(ServicesType)}
+				</div>
+			</div>
 			<div class="form__row form--spacer">
 				<div class="form__group form__group--half form__group--spacer">
 					<label class="form__label">Voornaam</label>

@@ -6,6 +6,7 @@ use DataObject\QuotationSubmission;
 use PageController;
 use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
@@ -30,23 +31,23 @@ class QuotationPageController extends PageController {
 				'website'											=> 'Website',
 				'webshop'											=> 'Webshop'
 			]),
-			CheckboxField::create('ServicesType', '', [
+			CheckboxSetField::create('ServicesType', '', [
 				'ontwerp'											=> 'Ontwerp',
 				'ontwikkeling'								=> 'Ontwikkeling',
 				'zoekmachineoptimalisatie' 		=> 'Zoekmachineoptimalisatie',
 				'onderhoud' 									=> 'Onderhoud',
 				'hosting' 										=> 'Hosting'
-			]),
+			])->addExtraClass('form__checkboxes'),
 			DropdownField::create('CMSType', '', [
 				'silverstripe'								=> 'SilverStripe',
 				'wordpress'										=> 'Wordpress',
-				'other' 											=> 'Geen voorkeur'
+				'anders' 											=> 'Geen voorkeur'
 			]),	
 			DropdownField::create('PageAmount', '', [
 				'small' 											=> '1 - 10 pagina\'s', 
 				'medium'											=> '10 - 20 pagina\'s', 
 				'large'												=> '20 - 30 pagina\'s', 
-				'other'												=> '30+ pagina\'s'
+				'anders'												=> '30+ pagina\'s'
 			]),	
 			TextareaField::create('Description'),
 			TextField::create('FirstName'),
