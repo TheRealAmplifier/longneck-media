@@ -7,7 +7,7 @@
 				<% end_if %>
 
 				<% if $TextMain %>
-					<p>{$TextMain}</p>
+					{$TextMain}
 				<% end_if %>
 
 				<% if LinkedPage %>
@@ -33,18 +33,23 @@
 					<h3 class="heading-3">{$Title}</h3>
 				<% end_if %>
 
-				<div class="text__intro text--accentuated">
-					{$TextIntro}
-				</div>
-				<div class="text__main">
-					{$TextMain}			
-				</div>
+				<% if TextIntro %>
+					<div class="text__intro text--accentuated">
+						{$TextIntro}
+					</div>
+				<% end_if %>
+
+				<% if TextMain %>
+					<div class="text__main">
+						{$TextMain}			
+					</div>
+				<% end_if %>
 			</div>
 			<div class="cta__right">
 				<% if LinkedPage %>
 					<div class="button__box">
 						<% with LinkedPage %>
-							<a class="button button--icon button--solid-white" href="{Link}">
+							<a class="button button--icon button--solid-white" href="{$Link}">
 								<span class="link__text">{$Up.ButtonText}</span>
 								<span class="link__icon">
 									{$SVG('forward-dark').customBasePath('themes/longneck/images/svg/').extraClass('image--cover icon--arrow')}
@@ -75,12 +80,17 @@
 					<h2 class="heading-2 ">{$Title}</h2>
 				<% end_if %>
 				<div class="cta__text">
-					<div class="text__intro text--accentuated">
-						{$TextIntro}
-					</div>
-					<div class="text__main">
-						{$TextMain}			
-					</div>
+					<% if TextIntro %>
+						<div class="text__intro text--accentuated">
+							{$TextIntro}
+						</div>
+					<% end_if %>
+
+					<% if TextMain %>
+						<div class="text__main">
+							{$TextMain}			
+						</div>
+					<% end_if %>
 
 					<% if LinkedPage %>
 						<div class="button__box button__box--spacer">
