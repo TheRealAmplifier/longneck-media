@@ -11,9 +11,11 @@
 			</div>
 		</div>
 		<div class="banner__image">
-			<% with BannerImage %>
-				<img class="image--cover" src="{$Link}" alt="Banner afbeelding" loading="lazy">
-			<% end_with %>
+			<picture>
+				<source media="(min-width:1024px)" srcset="{$BannerImage.ScaleHeight(1000).Link}">
+				<source media="(min-width:768px)" srcset="{$BannerImage.ScaleHeight(800).Link}">
+				<img class="image--cover" src="{$BannerImage.ScaleHeight(600).Link}" alt="Banner afbeelding" loading="lazy">
+			</picture>
 		</div>
 	</div>
 <% else_if BannerFunction == 'text' %>

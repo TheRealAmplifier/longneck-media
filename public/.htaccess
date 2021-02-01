@@ -46,8 +46,6 @@ ErrorDocument 500 /assets/error-500.html
 </IfModule>
 ### SILVERSTRIPE END ###
 
-
-
 # GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE application/javascript
@@ -73,6 +71,7 @@ ErrorDocument 500 /assets/error-500.html
   AddOutputFilterByType DEFLATE text/xml
 </IfModule>
 
+# Cache
 <IfModule mod_expires.c>  
   ExpiresActive on
 

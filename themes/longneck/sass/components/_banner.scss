@@ -24,21 +24,20 @@
 		}
 	}
 
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max-desktop') {
 		margin: 0 2rem;
     z-index: 2;
     margin-top: -4rem;
     background-color: white;
     box-shadow: 0 .5rem 2rem 0 rgba(0,0,0, .12);
-	}
-	@include breakpoint('max-desktop') {
 		order: 2;
 	}
-	@include breakpoint('min-tablet-portrait') {
+
+	@include breakpoint('min-tablet-landscape') {
 		padding: 7.5rem;
 		height: 100%;
 	}
-	@include breakpoint('min-desktop') {
+	@include breakpoint('min-desktop-large') {
 		padding: 0 15rem;
 	}
 }
@@ -51,6 +50,10 @@
 	}
 	@include breakpoint('max-desktop') {
 		order: 1;
+	}
+	
+	@include breakpoint('min-tablet-landscape') {
+		height: 60rem;
 	}
 	@include breakpoint('min-desktop') {
 		height: 100%;
