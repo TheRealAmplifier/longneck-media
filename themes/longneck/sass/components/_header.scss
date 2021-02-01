@@ -28,10 +28,10 @@
 }
 .brand__image {
 	height: auto;
-	width: 22.5rem;
+	width: 17.5rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		width: 27.5rem;
+		width: 25rem;
 	}
 }
 
