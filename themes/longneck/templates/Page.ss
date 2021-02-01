@@ -15,7 +15,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 	{$MetaTags(false)}
+	{$PageMetaTags}
 
 	<title><% if $MetaTitle %>{$MetaTitle}<% else %>{$Title}<% end_if %> &hyphen; {$SiteConfig.Title}</title>
 
@@ -24,8 +26,8 @@
 	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-	<link rel="preload" href="{$ThemeDir}/css/main.css" as="style">
-  <link rel="preload" href="{$ThemeDir}/dist/app.js" as="script">
+	<link rel="prefetch" href="{$ThemeDir}/css/main.css" as="style">
+  <link rel="prefetch" href="{$ThemeDir}/dist/app.js" as="script">
 
 	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.png" />
 	<link rel="stylesheet" href="{$ThemeDir}/css/main.css">
