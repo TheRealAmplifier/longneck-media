@@ -42,7 +42,7 @@
 
 	.content__image {
 		flex: 0 0 40%;
-		height: 45rem;
+		height: 35rem;
 
 		@include breakpoint('min-tablet-landscape') { 
 			height: unset;
