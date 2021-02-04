@@ -42,6 +42,7 @@
 				</div>
 			</div>
 			<div class="form__row">
+				<span>{$Fields.dataFieldByName(Captcha)}</span>
 				<div class="form__protection text--gray">
 					<span class="protection__icon">
 						<a href="//www.google.com/recaptcha/about/" target="_blank" rel="noreferrer">
