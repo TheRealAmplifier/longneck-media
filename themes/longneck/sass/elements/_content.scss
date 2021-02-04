@@ -1,6 +1,6 @@
-// .content {
-// 	@extend %defaultSectionPadding;
-// }
+.content--spacer {
+	@extend %defaultSectionPadding;
+}
 
 .content__wrapper--small {
 	@extend %wrapper--small;

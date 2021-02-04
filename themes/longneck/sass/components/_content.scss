@@ -1,13 +1,12 @@
 .content--main {
 	font-size: 1.6rem;
 	line-height: 2;
+	flex: 1;
 
 	@include breakpoint('min-tablet-landscape') {
 		font-size: 1.8rem;
 	}
 }
-
-.HomePahe
 
 .content--narrowed {
 	flex: 0 0 90%;

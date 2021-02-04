@@ -52,4 +52,5 @@ UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
   site_key: "6LcJSjMaAAAAAPekOS6nRWHptjSsw5yg6tOtOQ6T"
   secret_key: "6LcJSjMaAAAAAEDjE7boZBURZZBYjEf0wvVTd9U7"
   recaptcha_version: 3
-  minimum_score: 0.2
+  minimum_score: 0.3
+  default_size: "invisible"

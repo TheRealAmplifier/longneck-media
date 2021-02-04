@@ -1,5 +1,6 @@
 <form class="form custom--validation" {$FormAttributes}>
 	$Fields.dataFieldByName(SecurityID)
+	$Fields.dataFieldByName(Captcha)
 	
 	<% if $Message %>
 		<div class="form__message form__message--{$MessageType}">

@@ -27,10 +27,14 @@
 	z-index: 3;
 }
 .brand__image {
-	height: auto;
-	width: 17.5rem;
+	height: 4rem;
+	width: auto;
 
 	@include breakpoint('min-tablet-landscape') {
+		
+	}
+	@include breakpoint('min-tablet-landscape') {
+		height: auto;
 		width: 25rem;
 	}
 }

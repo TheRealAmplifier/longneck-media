@@ -17,6 +17,7 @@ body {
 }
 
 body {
+  @include flex($direction: column);
   padding-top: 7rem;
   transition: all .2s linear;
 
