@@ -34,7 +34,7 @@ class QuotationPageController extends PageController {
 			CheckboxSetField::create('ServicesType', '', [
 				'ontwerp'											=> 'Ontwerp',
 				'ontwikkeling'								=> 'Ontwikkeling',
-				'zoekmachine-optimalisatie' 		=> 'Zoekmachineoptimalisatie',
+				'zoekmachineoptimalisatie' 		=> 'Zoekmachineoptimalisatie',
 				'onderhoud' 									=> 'Onderhoud',
 				'hosting' 										=> 'Hosting'
 			], "ontwerp" )->addExtraClass('form__checkboxes'),
