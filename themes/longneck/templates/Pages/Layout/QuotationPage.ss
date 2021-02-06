@@ -13,7 +13,7 @@
 				</nav>
 			<% end_if %>
 		</div>		
-		<div class="form__box">
+		<div id="form" class="form__box">
 			<div class="form__intro">
 				<% if FormTitle %>
 					<h2 class="heading-2">{$FormTitle}</h2>

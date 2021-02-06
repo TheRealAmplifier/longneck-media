@@ -72,7 +72,7 @@ class ContactPageController extends PageController {
 
 				if( $emailSent == true ) {
 					$form->sessionMessage('Je bericht is succesvol ontvangen!', 'success');
-					return $this->redirectBack();
+					return $this->redirect($this->AbsoluteLink() . '#form');
 				}
 			}
 		}
@@ -88,8 +88,8 @@ class ContactPageController extends PageController {
 			->setData([
 				'MailData' => $data
 			])
-			->setFrom('contact@longneckmedia.nl')
-			->setTo('info@jeroenpielage.nl')
+			->setFrom('contact@longneckmedia.nl', 'Longneck Media')
+			->setTo('info@longneckmedia.nl')
 			->setSubject('Nieuw bericht van: ' . $contactName)
 			->setHTMLTemplate('Email\\ContactSubmission');
 		$emailAdmin->send();

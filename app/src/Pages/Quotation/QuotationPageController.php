@@ -37,7 +37,7 @@ class QuotationPageController extends PageController {
 				'zoekmachineoptimalisatie' 		=> 'Zoekmachineoptimalisatie',
 				'onderhoud' 									=> 'Onderhoud',
 				'hosting' 										=> 'Hosting'
-			])->addExtraClass('form__checkboxes'),
+			], "ontwerp" )->addExtraClass('form__checkboxes'),
 			DropdownField::create('CMSType', '', [
 				'silverstripe'								=> 'SilverStripe',
 				'wordpress'										=> 'Wordpress',
@@ -47,7 +47,7 @@ class QuotationPageController extends PageController {
 				'small' 											=> '1 - 10 pagina\'s', 
 				'medium'											=> '10 - 20 pagina\'s', 
 				'large'												=> '20 - 30 pagina\'s', 
-				'anders'												=> '30+ pagina\'s'
+				'anders'											=> '30+ pagina\'s'
 			]),	
 			TextareaField::create('Description'),
 			TextField::create('FirstName'),
@@ -73,6 +73,7 @@ class QuotationPageController extends PageController {
 		]);
 
 		$form = new Form($this, 'QuotationForm', $fields, $actions, $validator);
+		$form->enableSpamProtection()->Fields()->fieldByName('Captcha');
 		$form->setTemplate('Form//QuotationForm');
 
 		return $form;
@@ -80,6 +81,7 @@ class QuotationPageController extends PageController {
 
 	public function sendMessage($data, $form) {
 		$contactName = "{$data['FirstName']} {$data['LastName']}";
+		$serviceArray = [];
 
 		$newQuotation = new QuotationSubmission();
 
@@ -91,7 +93,8 @@ class QuotationPageController extends PageController {
 		$newQuotation->Description = strip_tags($data['Description']);
 
 		$newQuotation->ProjectType = $data['ProjectType'];
-		$newQuotation->ServicesType = $data['ServicesType'];
+
+		$newQuotation->ServicesType = implode(", ", $data['ServicesType']);
 		$newQuotation->CMSType = $data['CMSType'];
 		$newQuotation->PageAmount = $data['PageAmount'];
 
@@ -102,7 +105,7 @@ class QuotationPageController extends PageController {
 
 			if( $emailSent == true ) {
 				$form->sessionMessage('De offerteaanvraag is succesvol door ons ontvangen. Je ontvangt de offerte binnen drie werkdagen op ' . $newQuotation->Email . '.', 'success');
-				return $this->redirectBack();
+				return $this->redirect($this->AbsoluteLink() . '#form');
 			}
 		}
 
@@ -117,7 +120,7 @@ class QuotationPageController extends PageController {
 			->setData([
 				'MailData' => $data
 			])
-			->setFrom('noreply@longneckmedia.nl')
+			->setFrom('noreply@longneckmedia.nl', 'Longneck Media')
 			->setTo('offerte@longneckmedia.nl')
 			->setSubject('Nieuw bericht van: ' . $contactName)
 			->setHTMLTemplate('Email\\QuotationSubmission');
