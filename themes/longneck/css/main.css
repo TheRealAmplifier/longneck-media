@@ -584,7 +584,7 @@ li {
 @media (min-width: 85em) {
   .brand__image {
     height: auto;
-    width: 25rem;
+    width: 27.5rem;
   }
 }
 
@@ -1607,6 +1607,7 @@ textarea {
 }
 
 .footer__box {
+  position: relative;
   width: 100%;
   margin-top: 7.5rem;
 }
@@ -1700,6 +1701,40 @@ textarea {
     margin-top: 3rem;
     order: 2;
   }
+}
+
+@media (min-width: 48em) {
+  .copyright__menu {
+    margin-right: 7.5rem;
+  }
+}
+
+.footer__scroll {
+  display: none;
+  width: 7rem;
+  height: 7rem;
+  background: #303C6C;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.footer__scroll:hover .scroll__icon, .footer__scroll:focus .scroll__icon {
+  transform: scale(1.2);
+}
+@media (min-width: 64em) {
+  .footer__scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.scroll__icon {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  transition: transform 0.125s linear;
 }
 
 .card {

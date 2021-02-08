@@ -2,10 +2,19 @@ import $ from 'jquery';
 
 
 	$(document).ready(function() {	
-		$('.header__toggle').click(function() {
+		$('.header__toggle').on('click' , function() {
 			$(this).toggleClass('active');
 			$('body').toggleClass('navigation--open');
 		});
+
+		$('.footer__scroll').on('click', function(event) {
+			event.preventDefault();
+
+			$('html, body').animate({ 
+				scrollTop: 0
+			}, 400);
+		});
+		
 	});
 
 	$(window).scroll(function() {

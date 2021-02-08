@@ -10983,9 +10983,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__toggle').click(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__toggle').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').toggleClass('navigation--open');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.footer__scroll').on('click', function (event) {
+    event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').animate({
+      scrollTop: 0
+    }, 400);
   });
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {

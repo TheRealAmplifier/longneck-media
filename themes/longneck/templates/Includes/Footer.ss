@@ -16,6 +16,11 @@
 		</div>
 	</div>
 	<div class="footer__box">
+		<div class="footer__scroll">
+			<div class="scroll__icon">
+				{$SVG('up').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
+			</div>	
+		</div>
 		<div class="footer__navigation">
 			<% if $MenuSet('Footer1').MenuItems %>
 				<div class="footer__menu">
