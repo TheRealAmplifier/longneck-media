@@ -570,10 +570,18 @@ li {
 }
 
 .brand__image {
-  height: 4rem;
+  height: 4.4rem;
   width: auto;
 }
-@media (min-width: 64em) {
+@media (max-width: 84.9375em) {
+  .brand__image .text-secondary {
+    display: none;
+  }
+  .brand__image .image--cover {
+    width: unset;
+  }
+}
+@media (min-width: 85em) {
   .brand__image {
     height: auto;
     width: 25rem;

@@ -27,13 +27,18 @@
 	z-index: 3;
 }
 .brand__image {
-	height: 4rem;
+	height: 4.4rem;
 	width: auto;
 
-	@include breakpoint('min-tablet-landscape') {
-		
+	@include breakpoint('max-desktop') {
+		.text-secondary {
+			display: none;
+		}
+		.image--cover {
+			width: unset;
+		}
 	}
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min-desktop') {
 		height: auto;
 		width: 25rem;
 	}
