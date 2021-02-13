@@ -2492,7 +2492,6 @@ textarea {
 }
 @media (min-width: 64em) {
   .method__list {
-    grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem 3rem;
   }
 }

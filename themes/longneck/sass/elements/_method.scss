@@ -45,7 +45,6 @@
 		grid-gap: 3rem 3rem;
 	}
 	@include breakpoint('min-tablet-landscape') {
-		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 4rem 3rem;
 	}
 }
