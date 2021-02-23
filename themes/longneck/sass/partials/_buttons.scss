@@ -37,24 +37,24 @@
 }
 
 .button--solid-blue {
-	background: $color-blue;
+	background: $color-primary;
 	color: $color-white;
 	transition: all .15s ease-in;
 
 	&:hover,
 	&:focus {
-		box-shadow: .4rem .4rem darken($color-blue, 25);
+		box-shadow: .4rem .4rem darken($color-primary, 25);
 		transform: translate(-.4rem, -.4rem);
 	}
 }
 .button--solid-green {
-	background: $color-green;
+	background: $color-secondary;
 	color: $color-white;
 	transition: all .15s ease-in;
 
 	&:hover,
 	&:focus {
-		box-shadow: .4rem .4rem darken($color-green, 25);
+		box-shadow: .4rem .4rem darken($color-secondary, 25);
 		transform: translate(-.4rem, -.4rem);
 	}
 }

@@ -1,27 +1,27 @@
 %heading--uppercase-small {
-	@include font('quicksand', $weight: 700);
+	@include font('inter', $weight: 600);
 	text-transform: uppercase;
 	font-size: 1.8rem;
-	color: $color-black;
+	letter-spacing: .1rem;
+	// color: $color-black;
 
 	&:after {
 		content: "";
 		width: 3rem;
     height: .3rem;
     margin-top: .5rem;
-    background-color: $color-green;
+    background-color: $color-secondary;
     display: block;
 	}
 }
 %navigation__link--current {
-	@include font('quicksand');
+	@include font('inter');
 	font-size: 1.8rem;	
-	color: $color-black;
+	// color: $color-black;
 
 	&.current,
 	&.section {
 		font-weight: 800;
-		color: $color-blue;
 	}
 }
 %defaultTextLink {
@@ -35,7 +35,7 @@
     right: -.2rem;
     height: .6rem;
     z-index: -1;
-		background-color: $color-green;
+		background-color: $color-primary;
 		transition: height .2s ease;
   }
 
@@ -134,11 +134,11 @@ p {
 
 .text--yellow,
 .heading--yellow {
-	color: $color-yellow;
+	color: $color-secondary;
 }
 .text--green,
 .heading--green {
-	color: $color-green;
+	color: $color-secondary;
 }
 
 
@@ -150,7 +150,7 @@ p {
 }
 
 .text--gray {
-	color: $color-gray-light-3;
+	color: $color-tertiary;
 }
 
 .heading--line {
@@ -159,6 +159,6 @@ p {
 		display: block;
 		width: 6rem;
 		height: .75rem;
-		background-color: $color-green;
+		background-color: $color-secondary;
 	}
 }

@@ -68,14 +68,14 @@ input[type="text"],
 input[type="email"],
 select {
 	width: 100%;
-	border: 2px solid $color-gray-light-2;
+	border: 2px solid $color-tertiary;
 	height: 6rem;
 	padding: 0 2rem;
 }
 textarea {
 	width: 100%;
 	resize: vertical;
-	border: 2px solid $color-gray-light-2;
+	border: 2px solid $color-tertiary;
 	padding: 2rem;
 	min-height: 30rem;
 }

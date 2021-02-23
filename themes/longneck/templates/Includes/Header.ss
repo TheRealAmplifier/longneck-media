@@ -8,16 +8,16 @@
 			</div>
 		</div>
 		<div class="header__navigation">
-			<div class="header__toggle">
-				<span class="line"></span>
-				<span class="line"></span>
-				<span class="line"></span>
-			</div>
 			<nav class="navigation navigation--row">
 				<% loop $MenuSet('Primary').MenuItems %>
 					<a class="navigation__link {$LinkingMode} <% if ButtonStyle %>navigation__link--button<% end_if %>" href="{$Link}">{$MenuTitle}</a>
 				<% end_loop %>
 			</nav>
+			<div class="header__toggle">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
 		</div>
 	</div>	
 </header>

@@ -84,3 +84,39 @@ li {
 %wrapper--wide {
 	@include sectionwrapper(100%, $setDefaultPadding: 0 3rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem)
 }
+
+
+.text__main {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      @include flex($align: center);
+      list-style: none;
+      font-size: inherit;
+      font-size: 1.6rem;
+      line-height: 1.6;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        background-image: url('../images/svg/list-item.svg');
+        background-repeat: no-repeat;
+        background-size: 3.2rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        padding-left: 5rem;
+      }
+
+      @include breakpoint('min-tablet-landscape') { 
+        font-size: 2rem;
+      }
+    }
+  }
+}

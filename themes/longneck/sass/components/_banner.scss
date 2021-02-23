@@ -7,6 +7,7 @@
 		height: calc(100vh - 10rem);	
 	}
 }
+
 .banner__content {
 	@include flex($align: center);
 	position: relative;
@@ -29,7 +30,7 @@
     z-index: 2;
     margin-top: -4rem;
     background-color: white;
-    box-shadow: 0 .5rem 2rem 0 rgba(0,0,0, .12);
+    box-shadow: 0 .5rem 2rem 0 rgba($color-black, .12);
 		order: 2;
 	}
 
@@ -41,6 +42,32 @@
 		padding: 0 15rem;
 	}
 }
+
+
+.banner__left {
+	@include flex($direction: column);
+	position: relative;
+	flex: 0 1 50%;
+	height: 100%;
+
+	@include breakpoint('max-desktop') {
+		order: 2;
+	}
+}
+.banner__right {
+	@include flex($direction: column);
+	flex: 0 1 50%;
+	height: 100%;
+
+	@include breakpoint('max-desktop') {
+		order: 1;
+	}
+}
+
+.content__box {
+	@include flex($direction: column, $justify: center);
+}
+
 .banner__image {
 	position: relative;
 	height: 50rem;
@@ -48,19 +75,14 @@
 	@include breakpoint('max-tablet-landscape') {
 		z-index: -1;
 	}
-	@include breakpoint('max-desktop') {
-		order: 1;
-	}
 	
 	@include breakpoint('min-tablet-landscape') {
 		height: 60rem;
 	}
 	@include breakpoint('min-desktop') {
 		height: 100%;
-		flex: 0 0 50%;
 	}
 }
-
 
 
 .title {
@@ -157,4 +179,59 @@
 .title--shapes-both {
 	@extend .title--shapes-left;
 	@extend .title--shapes-right;
+}
+
+
+.banner__actions,
+.banner__bar {
+	@include flex;
+
+	@include breakpoint('max-desktop') {
+		display: none;
+	}
+}
+.banner__actions {
+	height: 12.5rem;
+}
+.banner__bar {
+	position: absolute;
+	background-color: $color-gray-light-1;
+	height: 25rem;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.action__button {
+	@include flex($align: center, $justify: center);
+	text-align: center;
+	flex: 0 0 50%;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	font-weight: 600;
+
+	&:hover,
+	&:focus {
+		background-color: darken($color-primary, 7);
+	}
+}
+
+.action__button--colored {
+	background-color: darken($color-secondary, 4);
+	color: $color-white;
+
+	&:hover,
+	&:focus {
+		background-color: darken($color-secondary, 12);
+	}
+}
+.action__button--colored-dark {
+	background-color: darken($color-secondary, 8);
+	color: $color-white;
+
+	&:hover,
+	&:focus {
+		background-color: darken($color-secondary, 12);
+	}
 }

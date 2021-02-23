@@ -24,7 +24,7 @@
 }
 
 .detail__year {
-	color: $color-gray-light-2;
+	color: $color-tertiary;
 	font-size: 14rem;
 	position: absolute;
 	right: 0;
@@ -103,7 +103,7 @@
 }
 .tag__item {
 	@include flex($align: center);
-	background: $color-gray-light-2;
+	background: $color-tertiary;
 	border-radius: .5rem;
 	height: 5rem;
 	padding: 0 3rem;

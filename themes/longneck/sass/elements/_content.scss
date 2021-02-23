@@ -16,7 +16,7 @@
 }
 
 .content--background {
-	background-color: $color-gray-light-1;
+	background-color: $color-tertiary;
 }
 
 .box__content {
@@ -30,6 +30,9 @@
 .content__boxed {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 	box-shadow: 0 0 5rem 0 rgba($color-black,.2);
+
+	border-top-left-radius: 2rem;
+	overflow: hidden;
 
 	&.content__boxed--right {
 		.content__image {

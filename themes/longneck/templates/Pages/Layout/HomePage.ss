@@ -1,4 +1,4 @@
-<% include Banner %>
+<% include BannerHome %>
 
 <div class="elements">
 	{$ElementalArea}

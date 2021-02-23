@@ -7,6 +7,9 @@
 	column-gap: 3rem;
 
 	.block {
+		border-top-right-radius: 2rem;
+		overflow: hidden;
+
 		&:not(:last-of-type) {
 			margin-bottom: 3rem;
 	
@@ -82,6 +85,7 @@
 	left:0;
 	bottom: 0rem;
 	right: 0rem;
+	z-index: 2;
 }
 
 .block__icon {
@@ -95,4 +99,8 @@
 }
 .block__half {
 	flex: 0 0 50%;
+}
+
+.block__top {
+	@include flex;
 }

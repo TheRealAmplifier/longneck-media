@@ -5,13 +5,15 @@
 		<div class="services__blocks">
 			<div class="block__column">
 				<% loop Children %>
-					<div class="block card--border-green card--shadow-boxed">
+					<div class="block card--border-blue card--shadow-boxed">
 						<a class="block__link" href="{$Link}"></a>
-						<div class="block__icon">
-							{$SVG($Icon.Name).addSubfolder('Service-Icons')}
+						<div class="block__top">
+							<div class="block__icon">
+								{$SVG($Icon.Name).addSubfolder('Service-Icons')}
+							</div>
+							<h3 class="heading-3"> <a class="link__title" href="{$Link}">{$Title}</a> </h3>
 						</div>
 						<div class="block__content">
-							<h3 class="heading-3"> <a class="link__title" href="{$Link}">{$Title}</a> </h3>
 							<% if Summary %>
 								<p>{$Summary}</p>
 							<% end_if %>

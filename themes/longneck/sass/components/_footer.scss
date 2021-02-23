@@ -1,140 +1,136 @@
 .footer {
-	@include flex($direction: column);
-	position: relative;
-	background-color: $color-gray-blue-soft;	
-	margin-top: 15rem;
+	@include flex($justify: space-between);
+	background-color: $color-secondary;
+	color: $color-white;
 }
-
-.footer__details {
-	@include breakpoint('max-tablet-landscape') {
-		order: 2;
-		margin-top: 5rem;
-    border-top: 3px solid darken($color-gray-blue-soft, 7);
-    padding-top: 5rem;
-	}
-	@include breakpoint('min-tablet-landscape') {
-		padding: 5rem 4rem;
-		flex: 1;
-	}
-	@include breakpoint('min-desktop') {
-		padding: 7.5rem 4rem;
-	}
-}
-
-.footer__top {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
-	padding: 7.5rem 3rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		padding: 0 0;
-		justify-content: space-between;
-	}
-}
-.footer__box {
-	position: relative;
-	width: 100%;
-	margin-top: 7.5rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		padding: 7.5rem;
-		margin-top: -10rem;
-		background-color: $color-white;
-		color: $color-white;
-		width: 62.5%;
-		box-shadow: -.5rem -.5rem 2rem rgba($color-gray-dark-2, .1);
-	}
-	@include breakpoint('min-desktop') {
-		width: 57.5%;
-		padding: 12.5rem;
-	}
+.footer__left {
+	flex: 1;
+	padding: 10rem 5rem 0;
 }
 
 .footer__contact {
-	@include flex($direction: column);
-	font-size: 2.2rem;
-	color: $color-black;
-	font-weight: 600;
-
-	@include breakpoint('min-tablet-landscape') {
-		margin-top: 5rem;
-	}
-}
-.contact__author { 	
-	margin-bottom: 3rem;
-}
-
-.footer__navigation {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
-}
-.footer__menu {	
-	flex: 1;
-
-	@include breakpoint('max-tablet-landscape') {
-		&:not(:last-child) {
-			margin-bottom: 5rem;
-		}
-	}
-}
-
-.footer__copyright {
-	@include flex($align: center);
-	font-size: 1.4rem;
-	height: 10rem;
-
-	@include breakpoint('max-tablet-landscape') {
-		margin-top: 5rem;
-	}
-
-	@include breakpoint('min-tablet-landscape') {
-		height: 15rem;
-	}
-}
-.copyright__wrapper {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
-	@extend %wrapper--wide;
-
-	@include breakpoint('min-tablet-portrait') {
-		justify-content: space-between;
-	}
-}
-
-.copyright__author {
-	@include breakpoint('max-tablet-portrait') {
-		margin-top: 3rem;
-		order: 2;
-	}
-}
-
-.copyright__menu {
-	@include breakpoint('min-tablet-portrait') {
-		margin-right: 7.5rem;
-	}
-}
-
-.footer__scroll {
-	display: none;
-	width: 7rem;
-	height: 7rem;
-	background: $color-blue;
-	position: absolute;
-	top: 0;
-	right: 0;
-	cursor: pointer;
+	flex: 0 0 30%;
+	margin: -3rem 0 0;
+	color: darken($color-secondary, 20);
 
 	&:hover,
 	&:focus {
+		.contact__icon {				
+			transform: translateX(2rem);
+
+			g#image {
+				stroke: darken($color-secondary, 20);
+				fill: darken($color-secondary, 20);
+			}
+		}
+	}
+}
+.contact__link {
+	cursor: pointer;
+	display: inline-block;
+}
+.contact__title {
+	font-size: 5.6rem;
+	line-height: 1;
+	width: min-content;
+  white-space: break-space;
+	margin-left: auto;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 7.2rem;
+	}
+}
+.contact__icon {
+	@include flex;
+	width: 6rem;
+	height: 6rem;
+	margin-left: .5rem;
+	margin-top: 3rem;
+
+	g#image {
+		stroke: darken($color-secondary, 20);
+	}
+}
+
+.footer__top,
+.footer__bottom {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+}
+.footer__bottom {
+	margin-top: 10rem;
+	margin-bottom: 3rem;
+}
+.footer__copyright {
+	font-size: 1.2rem;
+
+	p {
+		font-size: inherit;
+	}
+}
+
+.footer__navigation {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	color: $color-white;
+
+	@include breakpoint('max-tablet-landscape') {
+		margin-top: 7.5rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 50%;
+		margin-left: auto;
+	}
+}
+.footer__menu {
+	flex: 0 0 50%;
+
+
+	@include breakpoint('max-tablet-landscape') {
+		margin-top: 7.5rem;
+	}
+}
+
+.footer__right {
+	@include flex($align: center);
+	flex: 0 0 10rem;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}
+.contact__author {
+	@include flex($align: center);
+	font-size: 1.6rem;
+	letter-spacing: .1rem;
+	padding: 10rem 0;
+	width: 10rem;
+	transition: all .125s linear;
+
+	&:hover,
+	&:focus {
+		background: darken($color-secondary, 10);
+	}
+}
+
+
+
+.footer__scroll {
+	@include flex($align: center, $justify: center);
+	width: 10rem;
+	height: 10rem;
+	background: darken($color-secondary, 10);
+	cursor: pointer;
+
+	.scroll__icon {
+		width: 2.6rem;
+		height: 2.6rem;
+		display: block;
+		transition: all .125s linear;
+	}
+
+	&:hover,
+	&:focus {
+		background: darken($color-secondary, 14);
+
 		.scroll__icon {
 			transform: scale(1.2);
 		}
 	}
-
-	@include breakpoint('min-tablet-landscape') {
-		@include flex($align: center, $justify: center)
-	}
-}
-.scroll__icon {
-	width: 3rem;
-	height: 3rem;
-	display: block;
-	transition: transform .125s linear;
 }

@@ -2,7 +2,7 @@
 
 <div class="details">
 	<div class="details__wrapper">
-		<% include BreadCrumbsColored %>
+		<%-- include BreadCrumbsColored --%>
 		
 		<div class="details__box">
 			<div class="details__list">

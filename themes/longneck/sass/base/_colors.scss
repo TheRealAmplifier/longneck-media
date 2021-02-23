@@ -1,27 +1,27 @@
-$color-gray-dark-1: #6d7175;
-$color-gray-dark-2: #474747;
+
+
+$color-green: #46A880;
+$color-yellow: #FADA69;
+$color-red: #F06060;
+
 
 $color-error: #CF000F;
-
 $color-white: #FFFFFF;
 $color-black: #313030;
 
-$color-green: #7BC7D1;
-$color-yellow: #FBEE6E;
-$color-blue: #303C6C;
+$color-primary: #F06060;
+$color-secondary: #577590;
+$color-tertiary: #E4DFDA;
+$color-fourth: #FFD23F;
 
-$color-blue-darken: darken($color-blue, 15);
-$color-green-darken: darken($color-green, 15);
-$color-yellow-darken: darken($color-yellow, 15);
+$color-unknown-1: #243B50;
 
+///----
 $color-gray-light-1: #f3f3f3;
-$color-gray-light-2: #EEEEEE;
-$color-gray-light-3: #a2a2a2;
-
-$color-gray-boxshadow: darken($color-gray-light-2, 12);
+$color-gray-dark-1: #6d7175;
+$color-gray-dark-2: #1E2D24;
 
 $color-gray-blue-soft: #E6ECF2;
 $color-gray-blue-soft-2: darken(#E6ECF2, 5);
 
-$color-gray-dark-1: #6d7175;
-$color-gray-dark-2: #474747;
+$color-gray-boxshadow: darken($color-tertiary, 12);

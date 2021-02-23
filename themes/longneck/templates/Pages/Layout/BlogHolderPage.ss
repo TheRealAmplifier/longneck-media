@@ -5,7 +5,7 @@
 		<% if AllBlogs %>
 			<div class="articles__list--column">
 				<% loop AllBlogs %>
-					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-green", ShowButton="true" %>
+					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-blue", ShowButton="true" %>
 				<% end_loop %>
 			</div>
 			<% include Pagination CurrentLoop=$AllBlogs %>
