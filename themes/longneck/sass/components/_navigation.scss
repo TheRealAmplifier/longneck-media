@@ -16,6 +16,20 @@
 		margin-right: 2rem;
 	}
 }
+.navigation__link--medium  {
+	font-size: 1.8rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 2.2rem;
+	}
+}
+.navigation__link--big {
+	font-size: 2.4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 3.2rem;
+	}
+}
 
 .navigation__link--button {
 	@include flex($align: center);
@@ -51,7 +65,19 @@
 
 .navigation--column {
 	@include flex($direction: column);
+
+	.navigation__link {
+		margin-right: 0;
+	}
 }
 .navigation--row {
 	@include flex($align: center);
+}
+
+.navigation__link--colored {
+	color: $color-primary;
+}
+
+.navigation__spacer--top {
+	margin-top: 5rem;
 }

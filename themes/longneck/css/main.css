@@ -600,6 +600,7 @@ li {
 .header__brand {
   z-index: 3;
   padding-left: 2rem;
+  flex: 1;
 }
 
 .brand__image {
@@ -624,7 +625,7 @@ li {
 .header__navigation {
   display: flex;
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .header__navigation .navigation {
     display: flex;
     flex-direction: column;
@@ -641,7 +642,7 @@ li {
     transition: transform 0.2s linear;
   }
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .header__navigation .navigation .navigation__link {
     font-size: 2.2rem;
   }
@@ -725,6 +726,24 @@ li {
   margin-right: 2rem;
 }
 
+.navigation__link--medium {
+  font-size: 1.8rem;
+}
+@media (min-width: 64em) {
+  .navigation__link--medium {
+    font-size: 2.2rem;
+  }
+}
+
+.navigation__link--big {
+  font-size: 2.4rem;
+}
+@media (min-width: 64em) {
+  .navigation__link--big {
+    font-size: 3.2rem;
+  }
+}
+
 .navigation__link--button {
   display: flex;
   align-items: center;
@@ -759,10 +778,21 @@ li {
   display: flex;
   flex-direction: column;
 }
+.navigation--column .navigation__link {
+  margin-right: 0;
+}
 
 .navigation--row {
   display: flex;
   align-items: center;
+}
+
+.navigation__link--colored {
+  color: #F06060;
+}
+
+.navigation__spacer--top {
+  margin-top: 5rem;
 }
 
 .banner {
@@ -804,12 +834,8 @@ li {
 }
 @media (max-width: 84.9375em) {
   .banner__content {
-    margin: 0 2rem;
-    z-index: 2;
-    margin-top: -4rem;
-    background-color: white;
-    box-shadow: 0 0.5rem 2rem 0 rgba(49, 48, 48, 0.12);
-    order: 2;
+    min-height: 25rem;
+    border-bottom: 0.5rem solid #f3f3f3;
   }
 }
 @media (min-width: 64em) {
@@ -853,13 +879,15 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  background-color: #FFFFFF;
 }
 
 .banner__image {
   position: relative;
-  height: 50rem;
+  height: 47.5rem;
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .banner__image {
     z-index: -1;
   }
@@ -989,24 +1017,29 @@ li {
 .banner__bar {
   display: flex;
 }
+
 @media (max-width: 84.9375em) {
-  .banner__actions,
-.banner__bar {
-    display: none;
+  .banner__bar {
+    display: none !important;
   }
 }
 
-.banner__actions {
-  height: 12.5rem;
+.banner__actions,
+.banner__bar {
+  height: 7.5rem;
+}
+@media (min-width: 64em) {
+  .banner__actions,
+.banner__bar {
+    height: 12.5rem;
+  }
 }
 
 .banner__bar {
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
   background-color: #f3f3f3;
-  height: 25rem;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  padding: 0 3rem;
 }
 
 .action__button {
@@ -1015,13 +1048,18 @@ li {
   justify-content: center;
   text-align: center;
   flex: 0 0 50%;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-weight: 600;
 }
 .action__button:hover, .action__button:focus {
   background-color: #ed3f3f;
+}
+@media (min-width: 64em) {
+  .action__button {
+    font-size: 1.6rem;
+  }
 }
 
 .action__button--colored {
@@ -1038,6 +1076,27 @@ li {
 }
 .action__button--colored-dark:hover, .action__button--colored-dark:focus {
   background-color: #40566a;
+}
+
+.banner__indicator {
+  display: flex;
+  align-items: center;
+}
+
+.indicator__icon {
+  width: 4.6rem;
+  height: 100%;
+}
+
+.banner__socials {
+  display: flex;
+  align-items: center;
+}
+.banner__socials .cls-1 {
+  fill: #577590;
+}
+.banner__socials .cls-2 {
+  fill: #f3f3f3;
 }
 
 .breadcrumb--colored .breadcrumb__current, .breadcrumb--colored .breadcrumb__link {
@@ -1778,7 +1837,7 @@ textarea {
     flex-direction: row;
   }
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .footer__navigation {
     margin-top: 7.5rem;
   }
@@ -1793,7 +1852,7 @@ textarea {
 .footer__menu {
   flex: 0 0 50%;
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .footer__menu {
     margin-top: 7.5rem;
   }
@@ -1807,6 +1866,11 @@ textarea {
       writing-mode: vertical-rl;
   -webkit-text-orientation: mixed;
           text-orientation: mixed;
+}
+@media (max-width: 47.9375em) {
+  .footer__right {
+    display: none;
+  }
 }
 
 .contact__author {
@@ -1954,7 +2018,7 @@ textarea {
   right: unset;
   left: 0;
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .card--row .card__image {
     order: 2;
   }
@@ -2059,6 +2123,100 @@ textarea {
 .card__points .point__item:not(:last-child) {
   margin-bottom: 0.5rem;
   border-bottom: 2px solid #E4DFDA;
+}
+
+.navigation__popup {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(49, 48, 48, 0.5);
+  z-index: 15;
+}
+
+.popup__wrapper {
+  position: relative;
+  margin: 2rem;
+  background-color: #FFFFFF;
+  color: #313030;
+  border-bottom: 1.6rem solid #F06060;
+  box-shadow: 0 0 2rem rgba(49, 48, 48, 0.2);
+  border-top-left-radius: 2rem;
+  flex: 1;
+}
+@media (min-width: 48em) {
+  .popup__wrapper {
+    border-bottom: 2rem solid #F06060;
+    margin: 2rem;
+  }
+}
+
+.popup__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+@media (min-width: 64em) {
+  .popup__inner {
+    flex-direction: row;
+  }
+}
+@media (min-width: 64em) {
+  .popup__inner {
+    justify-content: space-between;
+  }
+}
+
+.popup__image {
+  flex: 0 0 22.5%;
+  background-color: #f3f3f3;
+  border-top-left-radius: 2rem;
+}
+@media (max-width: 63.9375em) {
+  .popup__image {
+    display: none;
+  }
+}
+@media (min-width: 64em) {
+  .popup__image {
+    flex: 0 0 40%;
+  }
+}
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 7.5rem 4rem 3rem;
+}
+@media (min-width: 64em) {
+  .popup__content {
+    padding: 15rem 10rem 5rem;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  top: 2rem;
+  right: 2rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.popup__close:hover, .popup__close:focus {
+  transform: scale(1.2);
+}
+
+.popup__socials {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
 }
 
 .elements {
@@ -2353,7 +2511,7 @@ textarea {
 .cta--bar .cta__right {
   flex: 0 0 25%;
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .cta--bar .cta__right .button__box {
     margin-top: 3rem;
   }
@@ -2568,7 +2726,7 @@ textarea {
 .method__right {
   background-color: #E6ECF2;
 }
-@media (max-width: 61.9375em) {
+@media (max-width: 63.9375em) {
   .method__right {
     margin-top: 5rem;
   }

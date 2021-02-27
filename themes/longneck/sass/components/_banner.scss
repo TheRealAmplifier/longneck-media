@@ -26,12 +26,8 @@
 	}
 
 	@include breakpoint('max-desktop') {
-		margin: 0 2rem;
-    z-index: 2;
-    margin-top: -4rem;
-    background-color: white;
-    box-shadow: 0 .5rem 2rem 0 rgba($color-black, .12);
-		order: 2;
+		min-height: 25rem;
+		border-bottom: .5rem solid $color-gray-light-1;
 	}
 
 	@include breakpoint('min-tablet-landscape') {
@@ -42,7 +38,6 @@
 		padding: 0 15rem;
 	}
 }
-
 
 .banner__left {
 	@include flex($direction: column);
@@ -66,11 +61,13 @@
 
 .content__box {
 	@include flex($direction: column, $justify: center);
+	position: relative;
+	background-color: $color-white;
 }
 
 .banner__image {
 	position: relative;
-	height: 50rem;
+	height: 47.5rem;
 
 	@include breakpoint('max-tablet-landscape') {
 		z-index: -1;
@@ -83,7 +80,6 @@
 		height: 100%;
 	}
 }
-
 
 .title {
 	@include flex($align: center);
@@ -181,32 +177,34 @@
 	@extend .title--shapes-right;
 }
 
-
 .banner__actions,
 .banner__bar {
 	@include flex;
-
-	@include breakpoint('max-desktop') {
-		display: none;
-	}
-}
-.banner__actions {
-	height: 12.5rem;
 }
 .banner__bar {
-	position: absolute;
+	@include breakpoint('max-desktop') {
+		display: none !important;
+	}
+}
+.banner__actions,
+.banner__bar {
+	height: 7.5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		height: 12.5rem;
+	}
+}
+.banner__bar {
+	@include flex($justify: space-between);
 	background-color: $color-gray-light-1;
-	height: 25rem;
-	bottom: 0;
-	left: 0;
-	width: 100%;
+	padding: 0 3rem;
 }
 
 .action__button {
 	@include flex($align: center, $justify: center);
 	text-align: center;
 	flex: 0 0 50%;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: .1rem;
 	font-weight: 600;
@@ -214,6 +212,10 @@
 	&:hover,
 	&:focus {
 		background-color: darken($color-primary, 7);
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 1.6rem;
 	}
 }
 
@@ -233,5 +235,24 @@
 	&:hover,
 	&:focus {
 		background-color: darken($color-secondary, 12);
+	}
+}
+
+.banner__indicator {
+	@include flex($align: center);
+}
+.indicator__icon {
+	width: 4.6rem;
+	height: 100%;
+}
+
+.banner__socials {
+	@include flex($align: center);
+
+	.cls-1 {
+		fill: $color-secondary;
+	}
+	.cls-2 {
+		fill: $color-gray-light-1;
 	}
 }

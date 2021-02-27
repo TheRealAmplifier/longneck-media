@@ -6,7 +6,23 @@
 				{$BannerText}
 			</div>
 		</div>
-		<div class="banner__bar"></div>
+		<div class="banner__bar">	
+			<% if $SiteConfig.SocialAccounts %>
+				<nav class="banner__socials">
+					<% loop SiteConfig.SocialAccounts %>
+						<a class="social__link social__link--small social__link--horizontal" href="{$AccountLink}" target="_blank" rel="noreferrer">
+							{$SVG($Icon.Name).addSubfolder('Social')}
+						</a>
+					<% end_loop %>
+				</nav>
+			<% end_if %>
+
+			<span class="banner__indicator">
+				<span class="indicator__icon">
+					{$SVG('arrow-down').customBasePath('themes/longneck/images/svg/')}
+				</span>
+			</span>
+		</div>
 	</div>
 	<div class="banner__right">
 		<div class="banner__image">

@@ -39,6 +39,7 @@
 		{$Layout}
 	</main>
 	<% include Footer %>
+	<% include Popup %>
 
 	<script src="{$ThemeDir}/dist/app.js"></script>
 

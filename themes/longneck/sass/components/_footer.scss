@@ -94,6 +94,10 @@
 	flex: 0 0 10rem;
 	writing-mode: vertical-rl;
 	text-orientation: mixed;
+
+	@include breakpoint('max-tablet-portrait') {
+		display: none;
+	}
 }
 .contact__author {
 	@include flex($align: center);
@@ -108,8 +112,6 @@
 		background: darken($color-secondary, 10);
 	}
 }
-
-
 
 .footer__scroll {
 	@include flex($align: center, $justify: center);
