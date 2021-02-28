@@ -903,7 +903,7 @@ li {
 }
 @media (min-width: 85em) {
   .banner__image {
-    height: 100%;
+    flex: 1;
   }
 }
 
@@ -1932,6 +1932,10 @@ textarea {
   box-shadow: 0 1rem 3rem rgba(49, 48, 48, 0.32);
   transform: translateY(-0.5rem);
 }
+.card--shadow-boxed:active {
+  box-shadow: 0 0.5rem 3rem rgba(49, 48, 48, 0.32);
+  transform: translateY(-0.15rem);
+}
 
 .card--border-blue {
   border-color: #577590;
@@ -2388,12 +2392,6 @@ textarea {
 }
 .content__boxed .content__image {
   flex: 0 1 40%;
-  height: 35rem;
-}
-@media (min-width: 64em) {
-  .content__boxed .content__image {
-    height: 60rem;
-  }
 }
 .content__boxed .content__body {
   flex: 1;

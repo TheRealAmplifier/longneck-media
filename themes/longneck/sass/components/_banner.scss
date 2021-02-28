@@ -77,7 +77,7 @@
 		height: 60rem;
 	}
 	@include breakpoint('min-desktop') {
-		height: 100%;
+		flex: 1;
 	}
 }
 

@@ -4,6 +4,8 @@ namespace Pages;
 
 use Page;
 
+use SilverStripe\Assets\Image;
+
 class HomePage extends Page {
 	private static $table_name = 'HomePage';
 	private static $singular_name = 'Home pagina';
