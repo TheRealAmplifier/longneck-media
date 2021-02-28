@@ -44,11 +44,11 @@
 	}
 
 	.content__image {
-		flex: 0 0 40%;
+		flex: 0 1 40%;
 		height: 35rem;
 
 		@include breakpoint('min-tablet-landscape') { 
-			height: unset;
+			height: 60rem;
 		}
 	}
 	.content__body {
@@ -56,10 +56,10 @@
 		padding: 5rem 3rem;
 
 		@include breakpoint('min-tablet-landscape') { 
-			padding: 7.5rem;
+			padding: 7.5rem 7.5rem;
 		}
 		@include breakpoint('min-desktop') { 
-			padding: 15rem;
+			padding: 7.5rem 10rem;
 		}
 	}
 }

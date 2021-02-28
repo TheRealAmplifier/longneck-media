@@ -2,12 +2,10 @@
 
 namespace Pages;
 
-use DataObject\BlogTag;
-
 use Page;
+use DataObject\BlogTag;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 class BlogHolderPage extends Page {

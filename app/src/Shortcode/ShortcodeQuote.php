@@ -3,7 +3,6 @@
 namespace Shortcode;
 
 use Page;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;

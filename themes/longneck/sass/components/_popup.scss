@@ -7,8 +7,16 @@
 	bottom: 0;
 	right: 0;
 	background-color: rgba($color-black, .5);
+	transition: all .2s ease;
 	z-index: 15;
+	opacity: 0;
+	visibility: hidden;
 }
+.navigation__popup--open {
+	opacity: 1;
+	visibility: visible;
+}
+
 .popup__wrapper {
 	position: relative;
 	margin: 2rem;

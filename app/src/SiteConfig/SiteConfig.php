@@ -3,15 +3,13 @@
 namespace {
 
 	use DataObject\SocialAccount;
-    use SilverStripe\AssetAdmin\Forms\UploadField;
-    use SilverStripe\ORM\DataExtension;
-
+	use SilverStripe\AssetAdmin\Forms\UploadField;
+	use SilverStripe\Assets\Image;
+	use SilverStripe\ORM\DataExtension;
 	use SilverStripe\Forms\FieldList;
 	use SilverStripe\Forms\TextField;
-
 	use SilverStripe\Forms\GridField\GridField;
 	use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
-	use SilverStripe\Forms\GridField\GridFieldDetailForm;
 	use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 	class CustomSiteConfig extends DataExtension {
@@ -45,9 +43,10 @@ namespace {
 				)
 			]);
 
-			$fields->addFieldsToTab('Root.Footer', [
-				UploadField::create('PopupImage', 'Popup Afbeedling')->setFolderName('Popup') 
+			$fields->addFieldsToTab('Root.Popup', [
+				UploadField::create('PopupImage', 'Popup Afbeedling')->setFolderName('Popup')
 			]);
+
 			$fields->addFieldsToTab('Root.Footer', [
 				TextField::create('FooterTitle1', 'Menu titel links'),
 				TextField::create('FooterTitle2', 'Menu titel midden'),

@@ -32,7 +32,7 @@
 	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.png" />
 	<link rel="stylesheet" href="{$ThemeDir}/css/main.css">
 </head>
-<body class="{$ClassName.ShortName}">
+<body class="{$ClassName.ShortName} preload">
 
 	<% include Header %>
 	<main class="content--main">

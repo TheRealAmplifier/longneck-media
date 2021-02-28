@@ -2,8 +2,8 @@
 
 namespace Pages;
 
-use DataObject\ContactSubmission;
 use PageController;
+use DataObject\ContactSubmission;
 use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
@@ -52,9 +52,9 @@ class ContactPageController extends PageController {
 	}
 
 	public function sendMessage($data, $form) {
-    $captchaResponse = $form->Fields()->fieldByName('Captcha')->getVerifyResponse();
+		$captchaResponse = $form->Fields()->fieldByName('Captcha')->getVerifyResponse();
 
-		if($captchaResponse) {
+		if ($captchaResponse) {
 			$contactName = "{$data['FirstName']} {$data['LastName']} - {$data['Email']}";
 
 			$newContact = new ContactSubmission();
@@ -67,16 +67,16 @@ class ContactPageController extends PageController {
 			$newContact->Message = strip_tags($data['Message']);
 			$newContact->write();
 
-			if($newContact) {
+			if ($newContact) {
 				$emailSent = $this->sendEmail($contactName, $newContact);
 
-				if( $emailSent == true ) {
+				if ($emailSent == true) {
 					$form->sessionMessage('Je bericht is succesvol ontvangen!', 'success');
 					return $this->redirect($this->AbsoluteLink() . '#form');
 				}
 			}
 		}
-		
+
 		$form->sessionMessage('Er is iets mis gegaan, probeer opnieuw', 'bad');
 		return $this->redirectBack();
 	}
@@ -94,7 +94,7 @@ class ContactPageController extends PageController {
 			->setHTMLTemplate('Email\\ContactSubmission');
 		$emailAdmin->send();
 
-		if( $emailAdmin ) {
+		if ($emailAdmin) {
 			$emailStatus = true;
 		}
 

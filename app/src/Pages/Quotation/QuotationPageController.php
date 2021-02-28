@@ -2,10 +2,9 @@
 
 namespace Pages;
 
-use DataObject\QuotationSubmission;
 use PageController;
+use DataObject\QuotationSubmission;
 use SilverStripe\Control\Email\Email;
-use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\EmailField;
@@ -37,18 +36,18 @@ class QuotationPageController extends PageController {
 				'zoekmachineoptimalisatie' 		=> 'Zoekmachineoptimalisatie',
 				'onderhoud' 									=> 'Onderhoud',
 				'hosting' 										=> 'Hosting'
-			], "ontwerp" )->addExtraClass('form__checkboxes'),
+			], "ontwerp")->addExtraClass('form__checkboxes'),
 			DropdownField::create('CMSType', '', [
 				'silverstripe'								=> 'SilverStripe',
 				'wordpress'										=> 'Wordpress',
 				'anders' 											=> 'Geen voorkeur'
-			]),	
+			]),
 			DropdownField::create('PageAmount', '', [
-				'small' 											=> '1 - 10 pagina\'s', 
-				'medium'											=> '10 - 20 pagina\'s', 
-				'large'												=> '20 - 30 pagina\'s', 
+				'small' 											=> '1 - 10 pagina\'s',
+				'medium'											=> '10 - 20 pagina\'s',
+				'large'												=> '20 - 30 pagina\'s',
 				'anders'											=> '30+ pagina\'s'
-			]),	
+			]),
 			TextareaField::create('Description'),
 			TextField::create('FirstName'),
 			TextField::create('LastName'),
@@ -100,10 +99,10 @@ class QuotationPageController extends PageController {
 
 		$newQuotation->write();
 
-		if($newQuotation) {
+		if ($newQuotation) {
 			$emailSent = $this->sendEmail($contactName, $newQuotation);
 
-			if( $emailSent == true ) {
+			if ($emailSent == true) {
 				$form->sessionMessage('De offerteaanvraag is succesvol door ons ontvangen. Je ontvangt de offerte binnen drie werkdagen op ' . $newQuotation->Email . '.', 'success');
 				return $this->redirect($this->AbsoluteLink() . '#form');
 			}
@@ -126,7 +125,7 @@ class QuotationPageController extends PageController {
 			->setHTMLTemplate('Email\\QuotationSubmission');
 		$emailAdmin->send();
 
-		if( $emailAdmin ) {
+		if ($emailAdmin) {
 			$emailStatus = true;
 		}
 

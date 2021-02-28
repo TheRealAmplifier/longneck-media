@@ -2,9 +2,8 @@
 
 namespace Pages;
 
-use DataObject\BlogTag;
 use Page;
-
+use DataObject\BlogTag;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\DateField;
@@ -18,7 +17,7 @@ class BlogPage extends Page {
 
 	private static $db = [
 		'PublicationDate'		=> 'Date',
-		'Summary'						=> 'HTMLText'	
+		'Summary'						=> 'HTMLText'
 	];
 
 	private static $has_one = [
@@ -44,7 +43,7 @@ class BlogPage extends Page {
 			DateField::create('PublicationDate', 'Publicatiedatum'),
 			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
 			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Blog Thumbnails'),
-			ListboxField::create('BlogTags', 'Tag', BlogTag::get())		
+			ListboxField::create('BlogTags', 'Tag', BlogTag::get())
 		], 'Content');
 
 		return $fields;

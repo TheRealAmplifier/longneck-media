@@ -3,10 +3,6 @@
 namespace Pages;
 
 use Page;
-
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Assets\Image;
-
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 
@@ -27,7 +23,6 @@ class ContactPage extends Page {
 			TextField::create('FormTitle', 'Form titel'),
 			HTMLEditorField::create('FormIntro', 'Form introductie tekst')->setRows(4)
 		]);
-
 
 		return $fields;
 	}

@@ -3,7 +3,6 @@
 namespace Pages;
 
 use Page;
-
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 

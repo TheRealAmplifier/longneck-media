@@ -3,8 +3,6 @@
 namespace Pages;
 
 use Page;
-use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class ServiceHolderPage extends Page {
 	private static $table_name = 'ServiceHolderPage';

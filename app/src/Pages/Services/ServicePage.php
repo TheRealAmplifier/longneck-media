@@ -2,9 +2,9 @@
 
 namespace Pages;
 
+use Page;
 use Elements\CallToAction;
 use Elements\FeaturedServices;
-use Page;
 use Pages\ServiceHolderPage;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
@@ -48,29 +48,28 @@ class ServicePage extends Page {
 		return $fields;
 	}
 
+	/**
+	 * Event handler called before writing to the database.
+	 *
+	 * @uses DataExtension->onAfterWrite()
+	 */
+	public function onAfterWrite() {
+		parent::onAfterWrite();
 
-	 /**
-   * Event handler called before writing to the database.
-   *
-   * @uses DataExtension->onAfterWrite()
-   */
-  public function onAfterWrite() {
-    parent::onAfterWrite();
+		$elementalArea = $this->ElementalArea();
+		$elementalAreaID = $elementalArea->ID;
 
-    $elementalArea = $this->ElementalArea();
-    $elementalAreaID = $elementalArea->ID;
-
-    // check if page has elements
-    if( ! $elementalArea->Elements()->exists() ) {
+		// check if page has elements
+		if (!$elementalArea->Elements()->exists()) {
 
 			// Automatically add Services on page creation
 			$newServices = new FeaturedServices();
 			$newServices->Title = 'Onze andere diensten';
 			$newServices->ShowTitle = true;
 			$newServices->ShowAllServices = true;
-      $newServices->ParentID = $elementalAreaID;
+			$newServices->ParentID = $elementalAreaID;
 			$newServices->write();
-			
+
 			// Automatically add Call to Action on page creation
 			$newCTA = new CallToAction();
 			$newCTA->Title = 'Heb je vragen?';
@@ -80,7 +79,7 @@ class ServicePage extends Page {
 			$newCTA->ParentID = $elementalAreaID;
 			$newCTA->write();
 		}
-		
+
 		return false;
-  }
+	}
 }

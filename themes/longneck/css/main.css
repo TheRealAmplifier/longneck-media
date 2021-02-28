@@ -267,6 +267,10 @@ li {
   }
 }
 
+.preload * {
+  transition: none !important;
+}
+
 .section__title {
   margin-bottom: 7.5rem;
 }
@@ -2133,7 +2137,15 @@ textarea {
   bottom: 0;
   right: 0;
   background-color: rgba(49, 48, 48, 0.5);
+  transition: all 0.2s ease;
   z-index: 15;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navigation__popup--open {
+  opacity: 1;
+  visibility: visible;
 }
 
 .popup__wrapper {
@@ -2375,12 +2387,12 @@ textarea {
   order: 1;
 }
 .content__boxed .content__image {
-  flex: 0 0 40%;
+  flex: 0 1 40%;
   height: 35rem;
 }
 @media (min-width: 64em) {
   .content__boxed .content__image {
-    height: unset;
+    height: 60rem;
   }
 }
 .content__boxed .content__body {
@@ -2389,12 +2401,12 @@ textarea {
 }
 @media (min-width: 64em) {
   .content__boxed .content__body {
-    padding: 7.5rem;
+    padding: 7.5rem 7.5rem;
   }
 }
 @media (min-width: 85em) {
   .content__boxed .content__body {
-    padding: 15rem;
+    padding: 7.5rem 10rem;
   }
 }
 

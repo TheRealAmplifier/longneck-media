@@ -13,7 +13,6 @@ namespace {
 	use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 	class Page extends SiteTree {
-
 		private static $db = [
 			'BannerFunction'		=> 'Varchar',
 			'BannerText'				=> 'HTMLText',

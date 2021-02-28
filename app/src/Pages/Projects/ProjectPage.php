@@ -3,7 +3,6 @@
 namespace Pages;
 
 use Page;
-
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
@@ -14,7 +13,7 @@ class ProjectPage extends Page {
 	private static $icon_class = 'font-icon-rocket';
 
 	private static $db = [
-		'Summary'						=> 'HTMLText'	
+		'Summary'						=> 'HTMLText'
 	];
 
 	private static $has_one = [
