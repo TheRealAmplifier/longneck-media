@@ -26,6 +26,7 @@ class QuotationSubmission extends DataObject {
 	private static $summary_fields = [
 		'Title'									=> 'Titel',
 		'Email'									=> 'E-mailadres',
+		'Created'								=> 'Datum',
 		'Company'								=> 'Organisatie',
 		'ProjectType'						=> 'Type Project',
 		'ServicesType'          => 'Gewenste Services',
