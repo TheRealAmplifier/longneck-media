@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner banner__home">
 	<div class="banner__left">
 		<div class="banner__content">
 			<div class="content__box">
@@ -7,16 +7,6 @@
 			</div>
 		</div>
 		<div class="banner__bar">	
-			<% if $SiteConfig.SocialAccounts %>
-				<nav class="banner__socials">
-					<% loop SiteConfig.SocialAccounts %>
-						<a class="social__link social__link--small social__link--horizontal" href="{$AccountLink}" target="_blank" rel="noreferrer">
-							{$SVG($Icon.Name).addSubfolder('Social')}
-						</a>
-					<% end_loop %>
-				</nav>
-			<% end_if %>
-
 			<span class="banner__indicator">
 				<span class="indicator__icon">
 					{$SVG('arrow-down').customBasePath('themes/longneck/images/svg/')}

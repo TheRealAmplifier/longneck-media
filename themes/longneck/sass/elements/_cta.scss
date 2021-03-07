@@ -47,7 +47,8 @@
 }
 
 .cta--bar {
-	background-color: $color-primary;
+	background: $color-primary;
+	background: linear-gradient(135deg, lighten($color-primary, 7) 0%, $color-primary 100%);
 	color: $color-white;
 	padding: 5rem 3rem;
 	

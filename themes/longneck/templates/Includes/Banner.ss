@@ -1,5 +1,5 @@
 <% if BannerFunction == 'image' %>
-	<div class="banner banner--{$BannerLayout}">
+	<div class="banner banner__subpage">
 		<div class="banner__content">
 			<div class="content--boxed">
 				<h1 class="heading-1 heading--background">{$MenuTitle}</h1>

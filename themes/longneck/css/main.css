@@ -152,7 +152,7 @@ p:not(:last-child) {
 }
 @media (min-width: 64em) {
   p {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -361,7 +361,7 @@ li {
 }
 @media (min-width: 64em) {
   .text__main ul li {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -603,31 +603,28 @@ li {
 
 .header__brand {
   z-index: 3;
-  padding-left: 2rem;
-  flex: 1;
 }
 
 .brand__image {
-  height: 4.4rem;
-  width: auto;
+  height: auto;
+  width: 20rem;
+  padding-left: 2rem;
 }
 @media (max-width: 84.9375em) {
   .brand__image .text-secondary {
     display: none;
   }
-  .brand__image .image--cover {
-    width: unset;
-  }
 }
 @media (min-width: 85em) {
   .brand__image {
-    height: auto;
-    width: 27.5rem;
+    width: 25rem;
   }
 }
 
 .header__navigation {
   display: flex;
+  justify-content: flex-end;
+  flex: 1;
 }
 @media (max-width: 63.9375em) {
   .header__navigation .navigation {
@@ -824,12 +821,7 @@ li {
   padding: 5rem 3rem;
 }
 .banner__content p {
-  font-size: 2rem;
-}
-@media (min-width: 64em) {
-  .banner__content p {
-    font-size: 2.2rem;
-  }
+  font-size: 2.2rem;
 }
 @media (min-width: 85em) {
   .banner__content p {
@@ -889,16 +881,10 @@ li {
 
 .banner__image {
   position: relative;
-  height: 47.5rem;
 }
 @media (max-width: 63.9375em) {
   .banner__image {
     z-index: -1;
-  }
-}
-@media (min-width: 64em) {
-  .banner__image {
-    height: 60rem;
   }
 }
 @media (min-width: 85em) {
@@ -1101,6 +1087,19 @@ li {
 }
 .banner__socials .cls-2 {
   fill: #f3f3f3;
+}
+
+.banner__home .banner__image {
+  height: 47.5rem;
+}
+@media (min-width: 64em) {
+  .banner__home .banner__image {
+    height: 60rem;
+  }
+}
+
+.banner__subpage .banner__image {
+  height: 100%;
 }
 
 .breadcrumb--colored .breadcrumb__current, .breadcrumb--colored .breadcrumb__link {
@@ -1739,7 +1738,7 @@ textarea {
 .form__message {
   margin-bottom: 7.5rem;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-style: italic;
 }
 
@@ -2487,7 +2486,8 @@ textarea {
 }
 
 .cta--bar {
-  background-color: #F06060;
+  background: #F06060;
+  background: linear-gradient(135deg, #f38181 0%, #F06060 100%);
   color: #FFFFFF;
   padding: 5rem 3rem;
 }
@@ -2784,7 +2784,7 @@ textarea {
   flex-direction: column;
   position: relative;
   padding: 4rem 3rem;
-  background-color: #E4DFDA;
+  background-color: #f3f3f3;
   border-top-right-radius: 2rem;
 }
 @media (min-width: 64em) {

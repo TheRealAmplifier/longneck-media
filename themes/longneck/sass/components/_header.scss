@@ -24,30 +24,26 @@
 
 .header__brand {
 	z-index: 3;
-	padding-left: 2rem;
-	flex: 1;
 }
 .brand__image {
-	height: 4.4rem;
-	width: auto;
+	height: auto;
+	width: 20rem;
+	padding-left: 2rem;
 
 	@include breakpoint('max-desktop') {
 		.text-secondary {
 			display: none;
 		}
-		.image--cover {
-			width: unset;
-		}
 	}
 	@include breakpoint('min-desktop') {
-		height: auto;
-		width: 27.5rem;
+		width: 25rem;
 	}
 }
 
 .header__navigation {
-	@include flex;
-
+	@include flex($justify: flex-end);
+	flex: 1;
+	
 	.navigation {
 		@include breakpoint('max-tablet-landscape') {
 			@include flex($direction: column, $align: center);

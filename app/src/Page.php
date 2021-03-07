@@ -15,8 +15,7 @@ namespace {
 	class Page extends SiteTree {
 		private static $db = [
 			'BannerFunction'		=> 'Varchar',
-			'BannerText'				=> 'HTMLText',
-			'BannerLayout'			=> 'Varchar'
+			'BannerText'				=> 'HTMLText'		
 		];
 
 		private static $has_one = [
