@@ -14,7 +14,8 @@ use SilverStripe\Forms\TextField;
 
 class ContactSubmission extends DataObject {
 	private static $table_name = 'ContactSubmission';
-	private static $singular_name = 'Formulier inzending';
+	private static $singular_name = 'Contactformulier inzending';
+	private static $plural_name = 'Contactformulier inzendingen';
 
 	private static $db = [
 		'SortID'						=> 'Int',
@@ -30,6 +31,7 @@ class ContactSubmission extends DataObject {
 	private static $summary_fields = [
 		'Title'							=> 'Titel',
 		'Email'							=> 'E-mailadres',
+		'Created'						=> 'Datum',
 		'Subject'       		=> 'Onderwerp',
 		'Company'						=> 'Organisatie',
 	];
