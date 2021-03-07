@@ -6,7 +6,8 @@ use SilverStripe\ORM\DataObject;
 
 class QuotationSubmission extends DataObject {
 	private static $table_name = 'QuotationSubmission';
-	private static $singular_name = 'Formulier inzending';
+	private static $singular_name = 'Offerte aanvraag';
+	private static $plural_name = 'Offerte aanvragen';
 
 	private static $db = [
 		'SortID'								=> 'Int',
