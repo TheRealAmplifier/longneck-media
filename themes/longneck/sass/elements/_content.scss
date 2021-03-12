@@ -45,11 +45,10 @@
 
 	.content__image {
 		flex: 0 1 40%;
-		// height: 35rem;
 
-		// @include breakpoint('min-tablet-landscape') { 
-		// 	height: 60rem;
-		// }
+		@include breakpoint('max-tablet-landscape') { 
+			height: 40rem;
+		}
 	}
 	.content__body {
 		flex: 1;

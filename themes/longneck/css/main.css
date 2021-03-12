@@ -2411,6 +2411,11 @@ textarea {
 .content__boxed .content__image {
   flex: 0 1 40%;
 }
+@media (max-width: 63.9375em) {
+  .content__boxed .content__image {
+    height: 40rem;
+  }
+}
 .content__boxed .content__body {
   flex: 1;
   padding: 5rem 3rem;
