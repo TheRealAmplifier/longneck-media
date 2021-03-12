@@ -19,17 +19,17 @@
 
 .popup__wrapper {
 	position: relative;
-	margin: 2rem;
+	margin: 1.5rem;
 	background-color: $color-white;
 	color: $color-black;
-	border-bottom: 1.6rem solid $color-primary;
+	border-bottom: 1.2rem solid $color-tertiary;
 	box-shadow: 0 0 2rem rgba($color-black, .2);
 	border-top-left-radius: 2rem;
 	flex: 1;
 	
 	@include breakpoint('min-tablet-portrait') {
-		border-bottom: 2rem solid $color-primary;
-		margin: 2rem;
+		border-bottom: 2rem solid $color-tertiary;
+		margin: 2.5rem;
 	}
 }
 .popup__inner {

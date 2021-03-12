@@ -1861,8 +1861,13 @@ textarea {
 }
 @media (min-width: 64em) {
   .footer__navigation {
-    flex: 0 0 55%;
+    flex: 0 0 60%;
     margin-left: auto;
+  }
+}
+@media (min-width: 85em) {
+  .footer__navigation {
+    flex: 0 0 50%;
   }
 }
 
@@ -2167,18 +2172,18 @@ textarea {
 
 .popup__wrapper {
   position: relative;
-  margin: 2rem;
+  margin: 1.5rem;
   background-color: #FFFFFF;
   color: #313030;
-  border-bottom: 1.6rem solid #F06060;
+  border-bottom: 1.2rem solid #E4DFDA;
   box-shadow: 0 0 2rem rgba(49, 48, 48, 0.2);
   border-top-left-radius: 2rem;
   flex: 1;
 }
 @media (min-width: 48em) {
   .popup__wrapper {
-    border-bottom: 2rem solid #F06060;
-    margin: 2rem;
+    border-bottom: 2rem solid #E4DFDA;
+    margin: 2.5rem;
   }
 }
 

@@ -86,8 +86,11 @@
 		margin-top: 7.5rem;
 	}
 	@include breakpoint('min-tablet-landscape') {
-		flex: 0 0 55%;
+		flex: 0 0 60%;
 		margin-left: auto;
+	}
+	@include breakpoint('min-desktop') {
+		flex: 0 0 50%;
 	}
 }
 .footer__menu {
