@@ -1751,10 +1751,15 @@ textarea {
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
   background-color: #577590;
   color: #FFFFFF;
+  width: 100%;
+}
+@media (min-width: 64em) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__left {
@@ -1763,7 +1768,6 @@ textarea {
 }
 
 .footer__contact {
-  flex: 0 0 30%;
   margin: -3rem 0 0;
   color: #314150;
 }
@@ -1773,6 +1777,16 @@ textarea {
 .footer__contact:hover .contact__icon g#image, .footer__contact:focus .contact__icon g#image {
   stroke: #314150;
   fill: #314150;
+}
+@media (min-width: 32.5em) {
+  .footer__contact {
+    flex: 0 0 30%;
+  }
+}
+@media (min-width: 64em) {
+  .footer__contact {
+    flex: 0 0 27.5%;
+  }
 }
 
 .contact__link {
@@ -1789,7 +1803,7 @@ textarea {
   white-space: break-space;
   margin-left: auto;
 }
-@media (min-width: 64em) {
+@media (min-width: 85em) {
   .contact__title {
     font-size: 7.2rem;
   }
@@ -1835,7 +1849,7 @@ textarea {
   flex-direction: column;
   color: #FFFFFF;
 }
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .footer__navigation {
     flex-direction: row;
   }
@@ -1847,7 +1861,7 @@ textarea {
 }
 @media (min-width: 64em) {
   .footer__navigation {
-    flex: 0 0 50%;
+    flex: 0 0 55%;
     margin-left: auto;
   }
 }
@@ -1870,7 +1884,7 @@ textarea {
   -webkit-text-orientation: mixed;
           text-orientation: mixed;
 }
-@media (max-width: 47.9375em) {
+@media (max-width: 63.9375em) {
   .footer__right {
     display: none;
   }
