@@ -9,12 +9,16 @@
 }
 .footer__left {
 	flex: 1;
-	padding: 10rem 5rem 0;
+	padding: 10rem 4rem 0;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 10rem 5rem 0;
+	}
 }
 
 .footer__contact {
 	margin: -3rem 0 0;
-	color: darken($color-secondary, 20);
+	color: darken($color-secondary, 25);
 
 	&:hover,
 	&:focus {
@@ -22,8 +26,8 @@
 			transform: translateX(2rem);
 
 			g#image {
-				stroke: darken($color-secondary, 20);
-				fill: darken($color-secondary, 20);
+				stroke: darken($color-secondary, 25);
+				fill: darken($color-secondary, 25);
 			}
 		}
 	}

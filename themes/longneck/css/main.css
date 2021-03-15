@@ -1763,19 +1763,24 @@ textarea {
 
 .footer__left {
   flex: 1;
-  padding: 10rem 5rem 0;
+  padding: 10rem 4rem 0;
+}
+@media (min-width: 64em) {
+  .footer__left {
+    padding: 10rem 5rem 0;
+  }
 }
 
 .footer__contact {
   margin: -3rem 0 0;
-  color: #314150;
+  color: #273441;
 }
 .footer__contact:hover .contact__icon, .footer__contact:focus .contact__icon {
   transform: translateX(2rem);
 }
 .footer__contact:hover .contact__icon g#image, .footer__contact:focus .contact__icon g#image {
-  stroke: #314150;
-  fill: #314150;
+  stroke: #273441;
+  fill: #273441;
 }
 @media (min-width: 32.5em) {
   .footer__contact {
