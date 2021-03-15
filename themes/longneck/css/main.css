@@ -1089,11 +1089,11 @@ li {
 }
 
 .banner__home .banner__image {
-  height: 35rem;
+  height: 30rem;
 }
 @media (min-width: 64em) {
   .banner__home .banner__image {
-    height: 60rem;
+    height: 55rem;
   }
 }
 
