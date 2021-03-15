@@ -828,11 +828,6 @@ li {
     font-size: 2rem;
   }
 }
-@media (max-width: 84.9375em) {
-  .banner__content {
-    min-height: 35rem;
-  }
-}
 @media (min-width: 64em) {
   .banner__content {
     padding: 7.5rem;
