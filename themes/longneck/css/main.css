@@ -2355,7 +2355,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 @media (min-width: 90em) {
   .services__wrapper {
@@ -2369,7 +2369,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 @media (min-width: 90em) {
   .services__wrapper--wide {
@@ -2517,7 +2517,7 @@ textarea {
   background: #F06060;
   background: linear-gradient(135deg, #f38181 0%, #F06060 100%);
   color: #FFFFFF;
-  padding: 6rem 5rem;
+  padding: 6rem 3rem;
 }
 .cta--bar .cta__wrapper {
   display: flex;
