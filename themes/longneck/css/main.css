@@ -1763,7 +1763,7 @@ textarea {
 
 .footer__left {
   flex: 1;
-  padding: 10rem 4rem 0;
+  padding: 10rem 3rem 0;
 }
 @media (min-width: 64em) {
   .footer__left {
