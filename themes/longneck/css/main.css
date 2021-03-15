@@ -828,6 +828,11 @@ li {
     font-size: 2rem;
   }
 }
+@media (max-width: 84.9375em) {
+  .banner__content {
+    min-height: 35rem;
+  }
+}
 @media (min-width: 64em) {
   .banner__content {
     padding: 7.5rem;
@@ -847,22 +852,12 @@ li {
   flex: 0 1 50%;
   height: 100%;
 }
-@media (max-width: 84.9375em) {
-  .banner__left {
-    order: 2;
-  }
-}
 
 .banner__right {
   display: flex;
   flex-direction: column;
   flex: 0 1 50%;
   height: 100%;
-}
-@media (max-width: 84.9375em) {
-  .banner__right {
-    order: 1;
-  }
 }
 
 .content__box {

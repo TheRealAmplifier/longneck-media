@@ -22,6 +22,9 @@
 		}
 	}
 
+	@include breakpoint('max-desktop') {
+		min-height: 35rem;
+	}
 	@include breakpoint('min-tablet-landscape') {
 		padding: 7.5rem;
 		height: 100%;
@@ -36,19 +39,11 @@
 	position: relative;
 	flex: 0 1 50%;
 	height: 100%;
-
-	@include breakpoint('max-desktop') {
-		order: 2;
-	}
 }
 .banner__right {
 	@include flex($direction: column);
 	flex: 0 1 50%;
 	height: 100%;
-
-	@include breakpoint('max-desktop') {
-		order: 1;
-	}
 }
 
 .content__box {
