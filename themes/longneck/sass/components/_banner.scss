@@ -245,10 +245,10 @@
 
 .banner__home {
 	.banner__image {
-		height: 30rem;
+		height: 27.5rem;
 		
 		@include breakpoint('min-tablet-landscape') {
-			height: 55rem;
+			height: 45rem;
 		}
 	}
 }
