@@ -12,19 +12,18 @@
 	@include flex($align: center);
 	position: relative;
 	flex: 1;	
-	padding: 5rem 3rem;
+	padding: 5rem 2rem;
 
 	p {
-		font-size: 2.2rem;
+		font-size: 2rem;
 
 		@include breakpoint('min-desktop') {
-			font-size: 2.4rem;
+			font-size: 2rem;
 		}
 	}
 
 	@include breakpoint('max-desktop') {
-		min-height: 25rem;
-		border-bottom: .5rem solid $color-gray-light-1;
+		min-height: 35rem;
 	}
 
 	@include breakpoint('min-tablet-landscape') {
