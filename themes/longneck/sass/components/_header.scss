@@ -78,19 +78,50 @@
 	}
 }
 
+.header__phone {
+	@include flex;
+	background: $color-primary;
+	color: $color-white;
+
+	&:hover,
+	&:focus,
+	.active {
+		background: darken($color-primary, 7);
+	}
+}
+.phone__link {
+	@include flex($align: center, $justify: center);
+	flex: 1;
+	padding: 0 3rem;
+}
+.phone__icon {
+	width: 2.8rem;
+	height: 2.8rem;
+}
+.phone__text {
+	font-size: 2rem;
+	margin-left: 2rem;
+}
+
+.action--spacer {
+	@include breakpoint('min-tablet-landscape') {
+		margin-left: 5rem;
+	}
+}
+.header__phone,
 .header__toggle {
 	@include flex($direction: column, $align: center, $justify: center);
 	position: relative;
   width: 7rem;
 	height: 7rem;  
-	background: $color-primary;
+	background: darken($color-primary, 7);	
 	cursor: pointer;
 	z-index: 10;
 	
 	&:hover,
 	&:focus,
 	.active {
-		background: darken($color-primary, 7);
+		background: darken($color-primary, 14);
 
 		.line-1 {
 			transform: translateY($menu-icon-line / 2 * -1);
@@ -128,6 +159,5 @@
 	@include breakpoint('min-tablet-landscape') {
 		width: 10rem;
 		height: 10rem; 
-		margin-left: 5rem;
 	}
 }

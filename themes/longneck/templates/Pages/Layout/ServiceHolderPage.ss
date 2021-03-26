@@ -8,7 +8,7 @@
 					<div class="block card--border-blue card--shadow-boxed">
 						<a class="block__link" href="{$Link}"></a>
 						<div class="block__top">
-							<div class="block__icon">
+							<div class="block__icon block__icon--spacer">
 								{$SVG($Icon.Name).addSubfolder('Service-Icons')}
 							</div>
 							<h3 class="heading-3"> <a class="link__title" href="{$Link}">{$Title}</a> </h3>

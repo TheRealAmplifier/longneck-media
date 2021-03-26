@@ -16,7 +16,8 @@ namespace {
 		private static $db = [
 			'FooterTitle1'		=> 'Varchar',
 			'FooterTitle2'		=> 'Varchar',
-			'FooterTitle3'		=> 'Varchar'
+			'FooterTitle3'		=> 'Varchar',
+			'Phone'						=> 'Varchar'
 		];
 
 		private static $has_one = [
@@ -41,6 +42,10 @@ namespace {
 					$this->owner->SocialAccounts(),
 					$gridfieldConfig
 				)
+			]);
+
+			$fields->addFieldsToTab('Root.NAW', [
+				TextField::create('Phone', 'Telefoonnummer')
 			]);
 
 			$fields->addFieldsToTab('Root.Popup', [

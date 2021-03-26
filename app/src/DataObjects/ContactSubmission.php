@@ -36,7 +36,6 @@ class ContactSubmission extends DataObject {
 		'Company'						=> 'Organisatie',
 	];
 
-
 	public function getCMSfields() {
 		$fields = parent::getCMSFields();
 
@@ -53,9 +52,5 @@ class ContactSubmission extends DataObject {
 		]);
 
 		return $fields;
-	}
-
-	public function ThumbnailImage() {
-		return $this->Image()->ScaleHeight(125);
 	}
 }
