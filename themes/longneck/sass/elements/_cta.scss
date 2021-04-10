@@ -1,0 +1,81 @@
+.cta--image { 
+	.cta__wrapper {
+		@include flex($dynamicDirection: true, $breakpoint: 'min-desktop');
+	}
+	.cta__content {
+		@include flex($direction: column, $justify: center);
+		@extend %bigSectionPadding;
+		flex: 0 0 65%;
+	}
+
+	.cta__image {
+		height: 35rem;
+	
+		@include breakpoint('min-tablet-landscape') {
+			height: 50rem;
+		}
+		@include breakpoint('min-desktop') {
+			height: unset;
+			flex: 1;
+			max-height: 70rem;
+		}
+	}
+}
+.cta--colored {
+	background-color: $color-gray-blue-soft;
+
+	.cta__wrapper {
+		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
+		@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+	}
+	.cta__content { 
+		background-color: none;
+		padding: 10rem 0;
+	}
+}
+
+.cta--contact {
+	padding: 5rem 0;
+	
+	.cta__wrapper {
+		@include flex($direction: column);
+		@include sectionwrapper(100rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 15rem 0;
+	}
+}
+
+.cta--bar {
+	background: $color-primary;
+	background: linear-gradient(135deg, lighten($color-primary, 7) 0%, $color-primary 100%);
+	color: $color-white;
+	padding: 6rem 3rem;
+	
+	.cta__wrapper {
+		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+		@include sectionwrapper(133rem, $setDefaultPadding: 0 0, $unsetPadding: true);
+
+		@include breakpoint('min-tablet-landscape') {
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	.cta__left {
+		flex: 0 0 60%;
+	}
+	.cta__right {
+		flex: 0 0 25%;
+
+		@include breakpoint('max-tablet-landscape') {
+			.button__box {
+				margin-top: 3rem;
+			}
+		}
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem 5rem;
+	}
+}

@@ -1,0 +1,29 @@
+<div class="projects projects--latest">
+	<div class="projects__wrapper--narrow">
+		<div class="projects__title content--wide">
+			<% if ShowTitle %>
+				<h2 class="heading-2 heading--uppercase ">{$Title}</h2>
+			<% end_if %>
+		</div>
+
+		<% if TextMain %>
+			<div class="projects__content content--narrowed">
+				<div class="text__main">
+					{$TextMain}			
+				</div>
+			</div>
+		<% end_if %>
+
+		<div class="projects__list--column">
+			<% if ShowSelectedProjects %>
+				<% loop ProjectPages %>
+					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-blue", ShowButton="true" %>
+				<% end_loop %>
+			<% else %>
+				<% loop FeaturedProjects %>
+					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-blue", ShowButton="true" %>
+				<% end_loop %>
+			<% end_if %>
+		</div>
+	</div>
+</div>

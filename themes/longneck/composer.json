@@ -17,7 +17,8 @@
             "css",
             "images",
             "javascript",
-            "fonts"
+            "fonts",
+            "dist"
         ]
 	}
 }

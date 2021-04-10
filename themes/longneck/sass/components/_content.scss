@@ -1,0 +1,32 @@
+.content--main {
+	font-size: 1.6rem;
+	line-height: 2;
+	flex: 1;
+
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 1.8rem;
+	}
+}
+
+.content--narrowed {
+	flex: 0 0 90%;
+
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 60%;
+	}
+}
+
+.content--wide {
+	flex: 0 0 100%;
+}
+
+.text__main {
+	p {
+		a:not(.button) {
+			@extend %defaultTextLink;
+		}
+	}
+}
+.text__intro {
+	margin-bottom: 2rem;
+}

@@ -1,0 +1,60 @@
+.projects--all {
+	padding: 0 0 20rem;
+}
+
+.projects--latest {
+	@include flex;
+	@extend %defaultSectionPadding;
+	width: 100%;
+
+	@include breakpoint('min-tablet-portrait') {
+		padding: 7.5rem 0;
+	}
+	@include breakpoint('min-desktop') {
+		padding: 10rem 0;
+	}
+}
+
+.projects__wrapper {
+	@include flex($wrap: wrap);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+}
+.projects__wrapper--medium {
+	@include flex($wrap: wrap);
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+}
+.projects__wrapper--narrow {
+	@include flex($wrap: wrap);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+}
+
+.projects__list--column {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 3rem;
+	width: 100%;
+	margin-top: 3rem;
+
+	@include breakpoint('min-tablet-portrait') {
+		grid-template-columns: repeat(2, 1fr);	
+		margin-top: 5rem;
+	}
+	@include breakpoint('min-desktop') {
+		grid-gap: 7.5rem;
+	}
+}
+.projects__list--row {
+	@include flex($wrap: wrap);
+	width: 100%;
+}
+
+.details__wrapper {
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+
+	.content__wrapper,
+	.content__wrapper--default {
+		max-width: unset;
+		padding: 0 0;
+		margin: 0 0;
+	}
+}

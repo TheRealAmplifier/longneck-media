@@ -1,0 +1,27 @@
+.content__quote {
+	position: relative;
+	@include flex($align: center);
+	margin: 5rem 0;
+	background-color: $color-gray-blue-soft;
+	padding: 3rem;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -1.5rem;
+		right: -1rem;
+		background-image: url('../images/svg/quote.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 8rem;
+		height: 4rem; 
+	}
+}
+
+.quote__text {
+	@include breakpoint('min-tablet-landscape') {
+		font-size: 2rem;
+		font-style: italic;
+	}
+}

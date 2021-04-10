@@ -1,0 +1,33 @@
+.pricing {
+  padding: 5rem 0;
+	
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem 12.5rem;
+	}
+}
+
+.pricing__wrapper {
+	@include sectionwrapper(153rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+}
+
+.pricing__list {
+	position: relative;
+	display: grid;	
+	grid-template-columns: 1fr;
+	grid-gap: 5rem;
+	width: 100%;
+	margin-top: 5rem;
+
+	@include breakpoint('min-tablet-portrait') {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+.block__pricing {
+	padding: 4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 7.5rem;
+	}
+}

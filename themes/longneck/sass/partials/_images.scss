@@ -1,0 +1,16 @@
+.image--cover,
+.image--contain {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.image--cover {
+	object-fit: cover;
+}
+.image--contain {
+	object-fit: contain;
+}
+
+.image--animated {
+	transition: transform .2s ease-in;
+}

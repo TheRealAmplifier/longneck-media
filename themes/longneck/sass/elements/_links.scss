@@ -1,0 +1,39 @@
+.links__wrapper {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
+
+	@include breakpoint('min-tablet-landscape') {
+		justify-content: space-between;
+	}
+}
+.links__title {
+	border: 7px solid $color-black;
+	color: $color-black;
+	padding: 3rem 3rem;
+	flex: 0 0 3%;
+	align-self: flex-start;
+}
+.links__content {
+	flex: 1;
+	margin-top: 5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		margin-top: 0;
+		padding: 0 5rem;
+	}
+}
+.sevices__text {
+	@include flex($direction: column);
+}
+
+.links__buttons {
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(3, 1fr);
+		margin-top: 5rem;
+	}
+}
