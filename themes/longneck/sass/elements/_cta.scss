@@ -1,6 +1,6 @@
 .cta--image { 
 	.cta__wrapper {
-		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+		@include flex($dynamicDirection: true, $breakpoint: 'min-desktop');
 	}
 	.cta__content {
 		@include flex($direction: column, $justify: center);
@@ -12,16 +12,17 @@
 		height: 35rem;
 	
 		@include breakpoint('min-tablet-landscape') {
-			height: unset;
-			flex: 1;
+			height: 50rem;
 		}
 		@include breakpoint('min-desktop') {
+			height: unset;
+			flex: 1;
 			max-height: 70rem;
 		}
 	}
 }
 .cta--colored {
-	background-color: $color-tertiary;
+	background-color: $color-gray-blue-soft;
 
 	.cta__wrapper {
 		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');

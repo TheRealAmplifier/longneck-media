@@ -59,6 +59,9 @@
 			transition: transform .2s linear;
 		}
 		.navigation__link {
+			@include flex($align: center);
+			height: 100%;
+
 			@include breakpoint('max-tablet-landscape') {
 				font-size: 2.2rem;
 			}
@@ -78,17 +81,6 @@
 	}
 }
 
-.header__phone {
-	@include flex;
-	background: $color-primary;
-	color: $color-white;
-
-	&:hover,
-	&:focus,
-	.active {
-		background: darken($color-primary, 7);
-	}
-}
 .phone__link {
 	@include flex($align: center, $justify: center);
 	flex: 1;
@@ -114,7 +106,7 @@
 	position: relative;
   width: 7rem;
 	height: 7rem;  
-	background: darken($color-primary, 7);	
+	background: $color-primary;	
 	cursor: pointer;
 	z-index: 10;
 	

@@ -56,7 +56,7 @@ namespace {
 			$fields->addFieldToTab('Root.Buttons', GridField::create(
 				'ShortcodeButtons',
 				'Shortcode Buttons',
-				$this->ShortcodeButtons(),
+				ShortcodeButton::get(),
 				$config
 			));
 
@@ -64,7 +64,7 @@ namespace {
 			$fields->addFieldToTab('Root.Quotes', GridField::create(
 				'ShortcodeQuotes',
 				'Shortcode Quotes',
-				$this->ShortcodeQuotes(),
+				ShortcodeQuote::get(),
 				$config
 			));
 

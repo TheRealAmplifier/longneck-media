@@ -6,14 +6,12 @@ use Elements\ProjectResults;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataObject;
-
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextField;
 
 class ProjectImage extends DataObject {
 	private static $table_name = 'ProjectImage';
 	private static $singular_name = 'Project afbeelding';
-
 
 	private static $db = [
 		'SortID'            => 'Int',

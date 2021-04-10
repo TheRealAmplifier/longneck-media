@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e991fe3c139223083c7b40b01a9138a5",
+    "content-hash": "639bed0903c40a11e99b6dfa75dffbc8",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -515,16 +515,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.7.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3"
+                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/53330f47520498c0ae1f61f7e2c90f55690c06a3",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
                 "shasum": ""
             },
             "require": {
@@ -584,22 +584,22 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.7.0"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.1"
             },
-            "time": "2020-09-30T07:37:11+00:00"
+            "time": "2021-03-21T16:25:00+00:00"
         },
         {
             "name": "heyday/silverstripe-menumanager",
-            "version": "3.0.6",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heyday/silverstripe-menumanager.git",
-                "reference": "9b0c80689884e464268ccfb9b191b53cce18b01f"
+                "reference": "e11ab2bba4de3c3d36d4838729fbb81f78367137"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heyday/silverstripe-menumanager/zipball/9b0c80689884e464268ccfb9b191b53cce18b01f",
-                "reference": "9b0c80689884e464268ccfb9b191b53cce18b01f",
+                "url": "https://api.github.com/repos/heyday/silverstripe-menumanager/zipball/e11ab2bba4de3c3d36d4838729fbb81f78367137",
+                "reference": "e11ab2bba4de3c3d36d4838729fbb81f78367137",
                 "shasum": ""
             },
             "require": {
@@ -633,9 +633,9 @@
             "description": "Allows complex menu management to be handled through the CMS when a simple tree structure is not enough.",
             "support": {
                 "issues": "https://github.com/heyday/silverstripe-menumanager/issues",
-                "source": "https://github.com/heyday/silverstripe-menumanager/tree/3.0.6"
+                "source": "https://github.com/heyday/silverstripe-menumanager/tree/3.1.0"
             },
-            "time": "2021-02-25T05:17:01+00:00"
+            "time": "2021-03-04T21:57:53+00:00"
         },
         {
             "name": "intervention/image",
@@ -2152,16 +2152,16 @@
         },
         {
             "name": "silverstripe/login-forms",
-            "version": "4.1.2",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-login-forms.git",
-                "reference": "6ae4225dbbe1c360a4df6fb87a17b271886d4191"
+                "reference": "30cf78d108167eb5e16dec7894b1cd71084ab01b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-login-forms/zipball/6ae4225dbbe1c360a4df6fb87a17b271886d4191",
-                "reference": "6ae4225dbbe1c360a4df6fb87a17b271886d4191",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-login-forms/zipball/30cf78d108167eb5e16dec7894b1cd71084ab01b",
+                "reference": "30cf78d108167eb5e16dec7894b1cd71084ab01b",
                 "shasum": ""
             },
             "require": {
@@ -2173,9 +2173,6 @@
             },
             "type": "silverstripe-vendormodule",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "4.x-dev"
-                },
                 "expose": [
                     "client/dist"
                 ]
@@ -2200,9 +2197,9 @@
             ],
             "support": {
                 "issues": "https://github.com/silverstripe/login-forms/issues",
-                "source": "https://github.com/silverstripe/silverstripe-login-forms/tree/4.1.2"
+                "source": "https://github.com/silverstripe/silverstripe-login-forms/tree/4.3.0"
             },
-            "time": "2020-02-13T01:04:47+00:00"
+            "time": "2020-11-02T02:55:58+00:00"
         },
         {
             "name": "silverstripe/mimevalidator",
@@ -5543,13 +5540,14 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "silverstripe/recipe-cms": 0,
         "silverstripe/login-forms": 0,
         "sheadawson/silverstripe-shortcodable": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1.0"
+        "php": "^7.1 || ^8"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

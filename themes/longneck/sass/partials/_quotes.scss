@@ -21,7 +21,7 @@
 
 .quote__text {
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 2.2rem;
+		font-size: 2rem;
 		font-style: italic;
 	}
 }

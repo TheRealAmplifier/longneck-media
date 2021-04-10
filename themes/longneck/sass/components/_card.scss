@@ -63,11 +63,11 @@
 }
 .card--border-blue,
 .card--border-red {
-	border-width: 0 0 .4rem 0;
+	border-width: 0 0 .6rem 0;
 	border-style: solid;
 
 	@include breakpoint('min-tablet-landscape') {
-		border-width: 0 0 .8rem 0;
+		border-width: 0 0 1rem 0;
 	}
 }
 

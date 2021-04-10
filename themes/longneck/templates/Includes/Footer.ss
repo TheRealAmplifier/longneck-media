@@ -44,7 +44,7 @@
 	<div class="footer__right">
 		<div class="footer__scroll">
 			<div class="scroll__icon">
-				{$SVG('up').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
+				{$SVG('up-arrow').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
 			</div>	
 		</div>
 		<a class="contact__author" href="mailto:info@longneckmedia.nl">info@longneckmedia.nl</a>

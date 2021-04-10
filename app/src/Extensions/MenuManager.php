@@ -21,7 +21,7 @@ class CustomMenuItem extends DataExtension {
 	];
 
 	public function updateCMSFields(FieldList $fields) {
-		$fields->addFieldsToTab('Root.Main', [
+		$fields->addFieldsToTab('Root.Instellingen', [
 			CheckboxField::create('ShowChildren', 'Subpagina\'s tonen'),
 			CheckboxField::create('ButtonStyle', 'Als button weergeven')
 		]);

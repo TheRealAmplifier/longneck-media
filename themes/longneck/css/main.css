@@ -150,9 +150,14 @@ p {
 p:not(:last-child) {
   margin-bottom: 2rem;
 }
+@media (min-width: 48em) {
+  p {
+    font-size: 1.8rem;
+  }
+}
 @media (min-width: 64em) {
   p {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -361,7 +366,7 @@ li {
 }
 @media (min-width: 64em) {
   .text__main ul li {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -567,7 +572,7 @@ li {
 
 @media (min-width: 64em) {
   .quote__text {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-style: italic;
   }
 }
@@ -643,6 +648,11 @@ li {
     transition: transform 0.2s linear;
   }
 }
+.header__navigation .navigation .navigation__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 @media (max-width: 63.9375em) {
   .header__navigation .navigation .navigation__link {
     font-size: 2.2rem;
@@ -657,16 +667,6 @@ li {
 
 .navigation--open .header__navigation .navigation {
   transform: translateX(0);
-}
-
-.header__phone {
-  display: flex;
-  background: #F06060;
-  color: #FFFFFF;
-}
-.header__phone:hover, .header__phone:focus,
-.header__phone .active {
-  background: #ed3f3f;
 }
 
 .phone__link {
@@ -702,7 +702,7 @@ li {
   position: relative;
   width: 7rem;
   height: 7rem;
-  background: #ed3f3f;
+  background: #F06060;
   cursor: pointer;
   z-index: 10;
 }
@@ -843,6 +843,39 @@ li {
 
 .navigation__spacer--top {
   margin-top: 5rem;
+}
+
+.navigation__submenu {
+  position: relative;
+  height: 10rem;
+}
+.navigation__submenu:hover .navigation__popover, .navigation__submenu:focus .navigation__popover {
+  max-height: 99rem;
+  visibility: visible;
+}
+.navigation__submenu .navigation__link {
+  margin-right: 0;
+}
+
+.navigation__popover {
+  display: flex;
+  flex-direction: column;
+  border-left: 0.7rem solid #F06060;
+  background-color: #FFFFFF;
+  box-shadow: 0 0.5rem 0.5rem rgba(49, 48, 48, 0.3);
+  border-bottom-right-radius: 1.5rem;
+  position: absolute;
+  top: 10rem;
+  min-width: 27.5rem;
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.navigation__popover .navigation__link {
+  padding: 1rem 3rem;
+}
+.navigation__popover .navigation__link:hover, .navigation__popover .navigation__link:focus, .navigation__popover .navigation__link:active {
+  background-color: #E4DFDA;
 }
 
 .banner {
@@ -1137,7 +1170,17 @@ li {
 }
 
 .banner__subpage .banner__image {
-  height: 100%;
+  height: 27.5rem;
+}
+@media (min-width: 64em) {
+  .banner__subpage .banner__image {
+    height: 45rem;
+  }
+}
+@media (min-width: 85em) {
+  .banner__subpage .banner__image {
+    height: 100%;
+  }
 }
 
 .breadcrumb--colored .breadcrumb__current, .breadcrumb--colored .breadcrumb__link {
@@ -1511,7 +1554,7 @@ textarea {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   width: 100%;
   margin-top: 5rem;
 }
@@ -1527,7 +1570,12 @@ textarea {
   }
 }
 .services__blocks--narrow .block {
-  padding: 5rem 3rem;
+  padding: 3rem 3rem;
+}
+@media (min-width: 48em) {
+  .services__blocks--narrow .block {
+    padding: 5rem 3rem;
+  }
 }
 
 .block__column:nth-of-type(2) {
@@ -1572,7 +1620,12 @@ textarea {
 .block__icon {
   width: 7.5rem;
   height: 7.5rem;
-  margin: 0 0 3rem;
+  margin: 0 0 1.5rem;
+}
+@media (min-width: 64em) {
+  .block__icon {
+    margin: 0 0 2.5rem;
+  }
 }
 
 .block--splitted {
@@ -1779,7 +1832,7 @@ textarea {
 .form__message {
   margin-bottom: 7.5rem;
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-style: italic;
 }
 
@@ -2029,13 +2082,13 @@ textarea {
 
 .card--border-blue,
 .card--border-red {
-  border-width: 0 0 0.4rem 0;
+  border-width: 0 0 0.6rem 0;
   border-style: solid;
 }
 @media (min-width: 64em) {
   .card--border-blue,
 .card--border-red {
-    border-width: 0 0 0.8rem 0;
+    border-width: 0 0 1rem 0;
   }
 }
 
@@ -2204,7 +2257,6 @@ textarea {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(49, 48, 48, 0.5);
   transition: all 0.2s ease;
   z-index: 15;
   opacity: 0;
@@ -2218,18 +2270,15 @@ textarea {
 
 .popup__wrapper {
   position: relative;
-  margin: 1.5rem;
   background-color: #FFFFFF;
   color: #313030;
-  border-bottom: 1.2rem solid #E4DFDA;
+  border: 1.5rem solid #E4DFDA;
   box-shadow: 0 0 2rem rgba(49, 48, 48, 0.2);
-  border-top-left-radius: 2rem;
   flex: 1;
 }
 @media (min-width: 48em) {
   .popup__wrapper {
-    border-bottom: 2rem solid #E4DFDA;
-    margin: 2.5rem;
+    border: 3rem solid #E4DFDA;
   }
 }
 
@@ -2281,16 +2330,18 @@ textarea {
 
 .popup__close {
   position: absolute;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 4.6rem;
+  height: 4.6rem;
   display: block;
-  top: 2rem;
-  right: 2rem;
+  top: 0;
+  right: 0;
+  padding: 1rem;
   transition: all 0.2s ease;
   cursor: pointer;
+  background: #577590;
 }
 .popup__close:hover, .popup__close:focus {
-  transform: scale(1.2);
+  background: #445b70;
 }
 
 .popup__socials {
@@ -2481,7 +2532,7 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 64em) {
+@media (min-width: 85em) {
   .cta--image .cta__wrapper {
     flex-direction: row;
   }
@@ -2497,18 +2548,19 @@ textarea {
 }
 @media (min-width: 64em) {
   .cta--image .cta__image {
-    height: unset;
-    flex: 1;
+    height: 50rem;
   }
 }
 @media (min-width: 85em) {
   .cta--image .cta__image {
+    height: unset;
+    flex: 1;
     max-height: 70rem;
   }
 }
 
 .cta--colored {
-  background-color: #E4DFDA;
+  background-color: #E6ECF2;
 }
 .cta--colored .cta__wrapper {
   display: flex;
@@ -2840,12 +2892,13 @@ textarea {
 @media (min-width: 48em) {
   .method__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4rem 4rem;
+    grid-gap: 3rem 3rem;
   }
 }
 @media (min-width: 64em) {
   .method__list {
-    grid-gap: 6rem 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem 4rem;
   }
 }
 
@@ -2857,10 +2910,13 @@ textarea {
   background-color: #f3f3f3;
   border-top-right-radius: 2rem;
 }
+.method__step p {
+  font-size: 1.8rem;
+}
 @media (min-width: 64em) {
   .method__step {
     font-size: 2rem;
-    padding: 5rem 6rem;
+    padding: 4rem 5rem;
     border-top-right-radius: 3rem;
   }
 }
