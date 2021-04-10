@@ -1,0 +1,17 @@
+.link--icon {
+	@include flex($align: center);
+	font-size: 2rem;
+	font-weight: 500;
+
+	&:hover,
+	&:focus {
+		.link__icon { 
+			transform: translateX(1.2rem);
+		}
+	}
+}
+.link__icon {
+	@include flex;
+	width: 3rem;
+	transition: all .2s ease;
+}

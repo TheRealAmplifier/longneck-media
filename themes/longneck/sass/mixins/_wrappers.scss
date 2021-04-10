@@ -1,0 +1,39 @@
+@mixin sectionwrapper($maxWidth: null, $setBreakpointMaxWidth: null, $setBreakpointMaxWidthSize: null, $setDefaultPadding: null, $setBreakpointPadding: null, $setBreakpointPaddingSize: null, $unsetPadding: null) { 
+  margin: 0 auto;
+  width: 100%;
+
+  @if ($maxWidth != null) {
+    max-width: $maxWidth;
+  } @else {
+    max-width: 133rem;
+  }
+
+  @if $setDefaultPadding != null {
+    padding: $setDefaultPadding;
+  } @else {
+    padding: 0 2rem;
+  }
+
+  @if ($setBreakpointMaxWidth != null and $setBreakpointMaxWidthSize != null) {
+    @include breakpoint($setBreakpointMaxWidth) {
+      max-width: $setBreakpointMaxWidthSize;
+    }
+  }
+  @if ($setBreakpointPadding != null and $setBreakpointPaddingSize != null) {
+    @include breakpoint($setBreakpointPadding) {
+      padding: $setBreakpointPaddingSize;
+    }
+  }
+
+  @if ($unsetPadding != null and $unsetPadding == true) {
+    @if ($setBreakpointMaxWidth != null) {
+      @include breakpoint($setBreakpointMaxWidth) {
+        padding: 0 0;
+      }
+    } @else {
+      @include breakpoint('min-desktop-large') {
+        padding: 0 0;
+      } 
+    }
+  }
+}

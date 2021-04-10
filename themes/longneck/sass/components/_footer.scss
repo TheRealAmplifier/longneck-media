@@ -1,0 +1,154 @@
+.footer {
+	background-color: $color-secondary;
+	color: $color-white;
+	width: 100%;
+
+	@include breakpoint('min-tablet-landscape') {
+		@include flex($justify: space-between);
+	}
+}
+.footer__left {
+	flex: 1;
+	padding: 10rem 3rem 0;
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 10rem 5rem 0;
+	}
+}
+
+.footer__contact {
+	margin: -3rem 0 0;
+	color: darken($color-secondary, 25);
+
+	&:hover,
+	&:focus {
+		.contact__icon {				
+			transform: translateX(2rem);
+
+			g#image {
+				stroke: darken($color-secondary, 25);
+				fill: darken($color-secondary, 25);
+			}
+		}
+	}
+
+	@include breakpoint('min-mobile') {
+		flex: 0 0 30%;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 27.5%;
+	}
+}
+.contact__link {
+	cursor: pointer;
+	display: inline-block;
+}
+.contact__title {
+	font-size: 5.6rem;
+	line-height: 1;
+	width: min-content;
+  white-space: break-space;
+	margin-left: auto;
+
+	@include breakpoint('min-desktop') {
+		font-size: 7.2rem;
+	}
+}
+.contact__icon {
+	@include flex;
+	width: 6rem;
+	height: 6rem;
+	margin-left: .5rem;
+	margin-top: 3rem;
+
+	g#image {
+		stroke: darken($color-secondary, 20);
+	}
+}
+
+.footer__top,
+.footer__bottom {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+}
+.footer__bottom {
+	margin-top: 10rem;
+	margin-bottom: 3rem;
+}
+.footer__copyright {
+	font-size: 1.2rem;
+
+	p {
+		font-size: inherit;
+	}
+}
+
+.footer__navigation {
+	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
+	color: $color-white;
+
+	@include breakpoint('max-tablet-landscape') {
+		margin-top: 7.5rem;
+	}
+	@include breakpoint('min-tablet-landscape') {
+		flex: 0 0 60%;
+		margin-left: auto;
+	}
+	@include breakpoint('min-desktop') {
+		flex: 0 0 50%;
+	}
+}
+.footer__menu {
+	flex: 0 0 50%;
+
+	@include breakpoint('max-tablet-landscape') {
+		margin-top: 7.5rem;
+	}
+}
+
+.footer__right {
+	@include flex($align: center);
+	flex: 0 0 10rem;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+
+	@include breakpoint('max-tablet-landscape') {
+		display: none;
+	}
+}
+.contact__author {
+	@include flex($align: center);
+	font-size: 1.6rem;
+	letter-spacing: .1rem;
+	padding: 10rem 0;
+	width: 10rem;
+	transition: all .125s linear;
+
+	&:hover,
+	&:focus {
+		background: darken($color-secondary, 10);
+	}
+}
+
+.footer__scroll {
+	@include flex($align: center, $justify: center);
+	width: 10rem;
+	height: 10rem;
+	background: darken($color-secondary, 10);
+	cursor: pointer;
+
+	.scroll__icon {
+		width: 2.6rem;
+		height: 2.6rem;
+		display: block;
+		transition: all .125s linear;
+	}
+
+	&:hover,
+	&:focus {
+		background: darken($color-secondary, 14);
+
+		.scroll__icon {
+			transform: scale(1.2);
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.navigation__socials {
+	@include flex;
+	padding-right: 4rem;
+	margin-bottom: 4rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		flex-direction: column;
+		align-items: flex-end;
+		margin-top: 4rem;
+		margin-bottom: 0;
+	}
+}
+.navigation__socials--row {
+	@include flex;
+
+	.social__link {
+		&:not(:last-child) {
+			margin-right: 1.5rem;
+		}
+	}
+	.social__link--small {
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
+}
+
+.social__link {
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	transition: all .15s linear;
+
+	&:not(:last-child) {
+		margin-right: 2rem;
+	}
+
+	&:hover,
+	&:focus {
+		transform: scale(1.12);
+	}
+}
+
+.social__link--small {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	transition: all .15s linear;
+}
+
+.social__link--vertical {
+	@include breakpoint('min-tablet-landscape') {
+		&:not(:last-child) {
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+	}
+}

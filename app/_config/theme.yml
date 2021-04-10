@@ -6,3 +6,18 @@ SilverStripe\View\SSViewer:
     - '$public'
     - 'longneck'
     - '$default'
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - CustomSiteConfig    
+
+Heyday\MenuManager\MenuSet:
+  default_sets:
+    - Primary
+    - Secondary
+    - Footer1
+    - Footer2
+    - Footer3
+
+StevieMayhew\SilverStripeSVG\SVGTemplate:
+  base_path: './public/assets/'
