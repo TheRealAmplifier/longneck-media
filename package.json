@@ -1,5 +1,5 @@
 {
-  "name": "longneck-media",
+  "name": "Longneck Media",
   "version": "1.0.0",
   "description": "Website for Longneck Media",
   "main": "index.js",
@@ -20,8 +20,6 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
-    "headroom.js": "^0.12.0",
     "jquery": "^3.4.1",
     "slick-carousel": "^1.8.1"
   }
