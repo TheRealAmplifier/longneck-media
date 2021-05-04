@@ -12,7 +12,7 @@
 	padding: 10rem 3rem 0;
 
 	@include breakpoint('min-tablet-landscape') {
-		padding: 10rem 5rem 0;
+		padding: 15rem 5rem 0;
 	}
 }
 
@@ -51,7 +51,7 @@
 	margin-left: auto;
 
 	@include breakpoint('min-desktop') {
-		font-size: 7.2rem;
+		font-size: 6.4rem;
 	}
 }
 .contact__icon {
@@ -68,11 +68,15 @@
 
 .footer__top,
 .footer__bottom {
-	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include flex($dynamicDirection: true, $breakpoint: 'min-desktop');
 }
 .footer__bottom {
 	margin-top: 10rem;
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
+
+	@include breakpoint('min-tablet-landscape') {
+		margin-bottom: 7.5rem;
+	}
 }
 .footer__copyright {
 	font-size: 1.2rem;
@@ -86,19 +90,16 @@
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
 	color: $color-white;
 
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max-desktop') {
 		margin-top: 7.5rem;
 	}
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min-desktop') {
 		flex: 0 0 60%;
 		margin-left: auto;
 	}
-	@include breakpoint('min-desktop') {
-		flex: 0 0 50%;
-	}
 }
 .footer__menu {
-	flex: 0 0 50%;
+	flex: 0 0 33.3%;
 
 	@include breakpoint('max-tablet-landscape') {
 		margin-top: 7.5rem;
@@ -116,16 +117,18 @@
 	}
 }
 .contact__author {
-	@include flex($align: center);
+	@include flex($align: center, $justify: center);
 	font-size: 1.6rem;
 	letter-spacing: .1rem;
 	padding: 10rem 0;
 	width: 10rem;
 	transition: all .125s linear;
+	flex: 1;
+	background: darken($color-secondary, 10);
 
 	&:hover,
 	&:focus {
-		background: darken($color-secondary, 10);
+		background: darken($color-secondary, 14);
 	}
 }
 

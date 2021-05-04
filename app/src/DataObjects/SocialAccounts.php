@@ -12,6 +12,7 @@ use SilverStripe\Forms\TextField;
 class SocialAccount extends DataObject {
   private static $table_name = 'SocialAccount';
   private static $singular_name = 'Social Media account';
+  private static $plural_name = 'Social Media accounts';
   
   private static $db = [
     'SortID'              => 'Int',

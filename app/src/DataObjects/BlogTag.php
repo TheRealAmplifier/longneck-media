@@ -12,6 +12,7 @@ use SilverStripe\Forms\TextField;
 class BlogTag extends DataObject {
 	private static $table_name = 'BlogTag';
 	private static $singular_name = 'Blog tag';
+	private static $plural_name = 'Blog tag';
 
 	private static $db = [
 		'SortID'            	=> 'Int',

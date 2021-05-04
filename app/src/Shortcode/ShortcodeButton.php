@@ -20,8 +20,11 @@ class ShortcodeButton extends DataObject {
 	];
 
 	private static $has_one = [
-		'Page'								=> Page::class,
 		'ButtonTarget'				=> SiteTree::class
+	];
+
+	private static $belongs_many_many = [
+		'Page'								=> Page::class
 	];
 
 	private static $summary_fields = [

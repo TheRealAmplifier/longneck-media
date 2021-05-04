@@ -14,6 +14,7 @@ use SilverStripe\Forms\TextField;
 class Customer extends DataObject {
 	private static $table_name = 'Customer';
 	private static $singular_name = 'Klant';
+	private static $plural_name = 'Klanten';
 
 	private static $db = [
 		'SortID'            	=> 'Int',

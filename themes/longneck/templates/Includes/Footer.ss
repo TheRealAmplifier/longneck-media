@@ -31,6 +31,20 @@
 						</nav>
 					</div>
 				<% end_if %>
+				<% if $MenuSet('Footer3').MenuItems %>
+				<div class="footer__menu">
+					<span class="navigation__title">{$SiteConfig.FooterTitle3}</span>
+					<nav class="navigation--column">
+						<% loop $MenuSet('Footer3').MenuItems %>
+							<% if Link != '/' %>
+								<a class="navigation__link {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
+							<% else %>
+								<span class="navigation__link">{$MenuTitle}</span>
+							<% end_if %>
+						<% end_loop %>
+					</nav>
+				</div>
+			<% end_if %>
 			</div>
 		</div>
 		<div class="footer__bottom">

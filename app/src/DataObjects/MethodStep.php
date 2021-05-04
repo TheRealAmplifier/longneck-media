@@ -14,6 +14,7 @@ use SilverStripe\Forms\TreeDropdownField;
 class MethodStep extends DataObject {
 	private static $table_name = 'MethodStep';
 	private static $singular_name = 'Methode stap';
+	private static $plural_name = 'Methode stappen';
 
 	private static $db = [
 		'SortID'            => 'Int',

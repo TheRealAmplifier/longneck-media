@@ -71,7 +71,7 @@ namespace {
 			return $fields;
 		}
 
-		public static function parse_shortcode_button($attributes, $content, $parser, $shortcode) {
+		public static function parseShortcodeButton($attributes, $content, $parser, $shortcode) {
 			$buttonID = strip_tags($attributes['id']);
 			$button = ShortcodeButton::get()->filter('ID', $buttonID)->first();
 
@@ -82,7 +82,7 @@ namespace {
 			}
 		}
 
-		public static function parse_shortcode_quote($attributes, $content, $parser, $shortcode) {
+		public static function parseShortcodeQuote($attributes, $content, $parser, $shortcode) {
 			$quoteID = strip_tags($attributes['id']);
 			$quote = ShortcodeQuote::get()->filter('ID', $quoteID)->first();
 

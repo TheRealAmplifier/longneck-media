@@ -2,24 +2,25 @@
 
 namespace DataObject;
 
-
 use SilverStripe\ORM\DataObject;
 
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
-
+use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\TextField;
 
 class TeamMember extends DataObject {
 	private static $table_name = 'TeamMember';
 	private static $singular_name = 'Teamlid';
+	private static $plural_name = 'Teamleden';
 
 	private static $db = [
 		'SortID'            	=> 'Int',
 		'Title'             	=> 'Varchar',
 		'FirstName'						=> 'Varchar',
 		'LastName'						=> 'Varchar',
-		'Function'						=> 'Varchar'
+		'Function'						=> 'Varchar',
+		'Email'								=> 'Varchar'
 	];
 
 	private static $has_one = [
@@ -35,8 +36,9 @@ class TeamMember extends DataObject {
 	];
 
 	private static $summary_fields = [
-		'getPreviewImage'    	=> 'Afbeelding',
+		'Thumbnail'    				=> 'Afbeelding',
 		'Title' 							=> 'Naam',
+		'Email' 							=> 'E-mailadres',
 		'Function'						=> 'Function'
 	];
 
@@ -49,6 +51,7 @@ class TeamMember extends DataObject {
 			TextField::create('FirstName', 'Voornaam'),
 			TextField::create('LastName', 'Achternaam'),
 			TextField::create('Function', 'Functie'),
+			EmailField::create('Email', 'E-mailadres'),
 			UploadField::create('Image', 'Foto')->setFolderName('Profile Images'),
 		]);
 
@@ -73,7 +76,11 @@ class TeamMember extends DataObject {
 		$this->Title = $titleName;
 	}
 
-	public function getPreviewImage() {
-		return $this->Image->scaleMaxHeight(100);
+	public function getThumbnail() {
+		if ($this->Image()->exists()) { 
+			return $this->Image()->CMSThumbnail();
+		} else { 
+			return 'Geen foto toegevoegd'; 
+		}
 	}
 }

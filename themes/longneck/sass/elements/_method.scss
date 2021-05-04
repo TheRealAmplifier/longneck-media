@@ -58,7 +58,11 @@
 	border-top-right-radius: 2rem;
 
 	p {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
+
+		@include breakpoint('min-tablet-landscape') {
+			font-size: 2rem;
+		}
 	}
 
 	@include breakpoint('min-tablet-landscape') {

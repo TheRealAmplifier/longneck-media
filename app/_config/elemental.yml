@@ -17,7 +17,6 @@ Pages\ProjectPage:
     - Elements\ProjectStats
     - Elements\ProjectResults
     - Elements\Content
-    # - Elements\SelectedCustomers
 
 Pages\AboutPage:
   extensions:
@@ -30,7 +29,6 @@ Pages\AboutPage:
     - Elements\CallToAction
     - Elements\FeaturedServices
     - Elements\Method
-    # - Elements\SelectedCustomers
 
 Pages\ServicePage:
   extensions:

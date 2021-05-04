@@ -12,6 +12,7 @@ use SilverStripe\Forms\TextField;
 class ProjectImage extends DataObject {
 	private static $table_name = 'ProjectImage';
 	private static $singular_name = 'Project afbeelding';
+	private static $plural_name = 'Project afbeeldingen';
 
 	private static $db = [
 		'SortID'            => 'Int',

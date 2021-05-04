@@ -102,7 +102,7 @@ body {
 }
 @media (min-width: 64em) {
   .heading-1 {
-    font-size: 6.4rem;
+    font-size: 5.8rem;
   }
 }
 
@@ -430,20 +430,20 @@ li {
   font-weight: 500;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 1.2rem;
-  height: 4.2rem;
-  line-height: 4.2rem;
-  padding: 0 2rem;
+  font-size: 1.3rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 3rem;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
   overflow: hidden;
 }
 @media (min-width: 64em) {
   .button, .form__actions .action {
-    font-size: 1.4rem;
-    height: 5.5rem;
-    line-height: 5.5rem;
-    padding: 0 5rem;
+    font-size: 1.6rem;
+    height: 6.5rem;
+    line-height: 6.5rem;
+    padding: 0 7.5rem;
   }
 }
 
@@ -907,7 +907,7 @@ li {
 }
 @media (min-width: 85em) {
   .banner__content p {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 }
 @media (max-width: 84.9375em) {
@@ -1776,11 +1776,34 @@ textarea {
 }
 
 .member__image {
-  height: 35rem;
+  height: 40rem;
+}
+.member__image .image--cover {
+  -o-object-position: top center;
+     object-position: top center;
+}
+@media (min-width: 64em) {
+  .member__image {
+    height: 47.5rem;
+  }
 }
 
 .member__content {
+  display: flex;
+  flex-direction: column;
   padding: 3rem;
+}
+
+.member__function {
+  font-size: 2.2rem;
+}
+
+.member__email {
+  margin-top: 1.5rem;
+  color: #577590;
+}
+.member__email:hover, .member__email:focus {
+  color: #3a4e60;
 }
 
 .contact__wrapper {
@@ -1862,7 +1885,7 @@ textarea {
 }
 @media (min-width: 64em) {
   .footer__left {
-    padding: 10rem 5rem 0;
+    padding: 15rem 5rem 0;
   }
 }
 
@@ -1904,7 +1927,7 @@ textarea {
 }
 @media (min-width: 85em) {
   .contact__title {
-    font-size: 7.2rem;
+    font-size: 6.4rem;
   }
 }
 
@@ -1924,7 +1947,7 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 64em) {
+@media (min-width: 85em) {
   .footer__top,
 .footer__bottom {
     flex-direction: row;
@@ -1933,7 +1956,12 @@ textarea {
 
 .footer__bottom {
   margin-top: 10rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+}
+@media (min-width: 64em) {
+  .footer__bottom {
+    margin-bottom: 7.5rem;
+  }
 }
 
 .footer__copyright {
@@ -1953,25 +1981,20 @@ textarea {
     flex-direction: row;
   }
 }
-@media (max-width: 63.9375em) {
+@media (max-width: 84.9375em) {
   .footer__navigation {
     margin-top: 7.5rem;
   }
 }
-@media (min-width: 64em) {
+@media (min-width: 85em) {
   .footer__navigation {
     flex: 0 0 60%;
     margin-left: auto;
   }
 }
-@media (min-width: 85em) {
-  .footer__navigation {
-    flex: 0 0 50%;
-  }
-}
 
 .footer__menu {
-  flex: 0 0 50%;
+  flex: 0 0 33.3%;
 }
 @media (max-width: 63.9375em) {
   .footer__menu {
@@ -1997,14 +2020,17 @@ textarea {
 .contact__author {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   padding: 10rem 0;
   width: 10rem;
   transition: all 0.125s linear;
+  flex: 1;
+  background: #445b70;
 }
 .contact__author:hover, .contact__author:focus {
-  background: #445b70;
+  background: #3c5163;
 }
 
 .footer__scroll {
@@ -2911,7 +2937,12 @@ textarea {
   border-top-right-radius: 2rem;
 }
 .method__step p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+}
+@media (min-width: 64em) {
+  .method__step p {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 64em) {
   .method__step {
