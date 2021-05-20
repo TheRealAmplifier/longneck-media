@@ -1,7 +1,6 @@
 .content__quote {
-	position: relative;
 	@include flex($align: center);
-	margin: 5rem 0;
+	position: relative;
 	background-color: $color-gray-blue-soft;
 	padding: 3rem;
 

@@ -244,12 +244,12 @@ li {
 }
 
 @media (min-width: 64em) {
-  .about, .projects--latest, .content--spacer, .team {
+  .about, .projects--latest, .content--spacer {
     padding: 5rem 0;
   }
 }
 @media (min-width: 85em) {
-  .about, .projects--latest, .content--spacer, .team {
+  .about, .projects--latest, .content--spacer {
     padding: 10rem 0;
   }
 }
@@ -550,10 +550,9 @@ li {
 }
 
 .content__quote {
-  position: relative;
   display: flex;
   align-items: center;
-  margin: 5rem 0;
+  position: relative;
   background-color: #E6ECF2;
   padding: 3rem;
 }
@@ -1734,10 +1733,6 @@ textarea {
   top: 100%;
   width: 0;
   border-top: 11.55px solid #577590;
-}
-
-.team {
-  position: relative;
 }
 
 .team__wrapper {

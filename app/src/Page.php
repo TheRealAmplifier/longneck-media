@@ -13,6 +13,9 @@ namespace {
 	use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 	class Page extends SiteTree {
+		private static $singular_name = 'Informatie pagina';
+		private static $icon_class = 'font-icon-p-article';
+
 		private static $db = [
 			'BannerFunction'		=> 'Varchar',
 			'BannerText'				=> 'HTMLText'		
