@@ -59,10 +59,11 @@ class FeaturedServices extends BaseElement {
 
 	public function getServices() {
 		$relationID = $this->getPage()->ID;
-
 		if($this->ShowAllServices) {
-			$services = ServicePage::get()->exclude([
-				'ID' => $relationID
+			$services = ServicePage::get()->filter([
+				'IsLandingPage' 	=> 0
+			])->exclude([
+				'ID' 							=> $relationID
 			]);
 		} else {
 			$services = $this->LinkedServices();

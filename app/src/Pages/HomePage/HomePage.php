@@ -9,9 +9,7 @@ class HomePage extends Page {
 	private static $singular_name = 'Home pagina';
 	private static $icon_class = 'font-icon-p-home';
 
-	private static $db = [
-		'Dummy' 			=> 'Boolean'
-	];
+	private static $db = [];
 
 	public function getProjects() {
 		return ProjectPage::get();

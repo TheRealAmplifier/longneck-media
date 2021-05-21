@@ -9,7 +9,5 @@ class AboutPage extends Page {
 	private static $singular_name = 'Over Ons pagina';
 	private static $icon_class = 'font-icon-p-profile';
 
-	private static $db = [
-		'Dummy' 			=> 'Boolean'
-	];
+	private static $db = [];
 }

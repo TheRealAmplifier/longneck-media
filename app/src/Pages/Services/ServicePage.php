@@ -9,6 +9,7 @@ use Pages\ServiceHolderPage;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class ServicePage extends Page {
@@ -21,7 +22,8 @@ class ServicePage extends Page {
 		'ShowContact'					=> 'Boolean',
 		'ContactTitle'	 			=> 'Varchar',
 		'ContactText'	 				=> 'Text',
-		'ContactLinkText'			=> 'Varchar'
+		'ContactLinkText'			=> 'Varchar',
+		'IsLandingPage'				=> 'Boolean'
 	];
 
 	private static $has_one = [
@@ -42,7 +44,8 @@ class ServicePage extends Page {
 
 		$fields->addFieldsToTab('Root.Main', [
 			UploadField::create('Icon', 'Icoon')->setFolderName('Service Icons'),
-			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5)
+			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
+			CheckboxField::create('IsLandingPage', 'Dit is een landingspagina')
 		], 'Content');
 
 		return $fields;

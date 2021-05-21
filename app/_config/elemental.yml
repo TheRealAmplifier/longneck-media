@@ -1,3 +1,12 @@
+Pages\InformationPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension 
+  allowed_elements:
+    - Elements\Content
+    - Elements\ContentImage
+    - Elements\CallToAction
+    - Elements\Projects
+
 Pages\HomePage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension  
