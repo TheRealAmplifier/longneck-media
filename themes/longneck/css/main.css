@@ -145,7 +145,7 @@ body {
 p {
   font-size: 1.6rem;
   margin: 0 0;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 p:not(:last-child) {
   margin-bottom: 2rem;
@@ -289,7 +289,7 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 90em) {
   .content__wrapper--default {
@@ -301,7 +301,7 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 90em) {
   .content__wrapper--small {
@@ -313,7 +313,7 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 90em) {
   .content__wrapper--medium {
@@ -325,7 +325,7 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 120em) {
   .content__wrapper--wide {
@@ -349,7 +349,7 @@ li {
   list-style: none;
   font-size: inherit;
   font-size: 1.6rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 .text__main ul li:not(:last-child) {
   margin-bottom: 2rem;
@@ -611,8 +611,8 @@ li {
 
 .brand__image {
   height: auto;
-  width: 20rem;
-  padding-left: 2rem;
+  width: 18rem;
+  padding-left: 2.5rem;
 }
 @media (max-width: 84.9375em) {
   .brand__image .text-secondary {
@@ -621,7 +621,7 @@ li {
 }
 @media (min-width: 85em) {
   .brand__image {
-    width: 25rem;
+    width: 22.5rem;
   }
 }
 
@@ -967,7 +967,7 @@ li {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 10rem 0;
+  padding: 8rem 0;
 }
 @media (min-width: 64em) {
   .title {
@@ -1227,7 +1227,7 @@ li {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 90em) {
   .breadcrumbs__wrapper {
@@ -1355,11 +1355,16 @@ li {
   }
 }
 .form__row:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .form__row:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
 @media (max-width: 47.9375em) {
   .form__row .form__group--spacer {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1419,8 +1424,15 @@ input[type=email],
 select {
   width: 100%;
   border: 2px solid #E4DFDA;
-  height: 6rem;
+  height: 4.8rem;
   padding: 0 2rem;
+}
+@media (min-width: 64em) {
+  input[type=text],
+input[type=email],
+select {
+    height: 6rem;
+  }
 }
 
 textarea {
@@ -1739,7 +1751,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 3rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 90em) {
   .team__wrapper {
@@ -1771,7 +1783,7 @@ textarea {
 }
 
 .member__image {
-  height: 40rem;
+  height: 37.5rem;
 }
 .member__image .image--cover {
   -o-object-position: top center;
@@ -1786,11 +1798,16 @@ textarea {
 .member__content {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 2.5rem;
 }
 
 .member__function {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+}
+@media (min-width: 64em) {
+  .member__function {
+    font-size: 2.2rem;
+  }
 }
 
 .member__email {
@@ -1832,7 +1849,7 @@ textarea {
   flex-direction: column;
   flex: 1;
   position: relative;
-  padding: 3rem;
+  padding: 2.5rem;
   background-color: #FFFFFF;
   box-shadow: 0 0 5rem rgba(49, 48, 48, 0.16);
   border-top: 1rem solid #577590;
@@ -1876,7 +1893,7 @@ textarea {
 
 .footer__left {
   flex: 1;
-  padding: 10rem 3rem 0;
+  padding: 10rem 2.5rem 0;
 }
 @media (min-width: 64em) {
   .footer__left {
@@ -2469,7 +2486,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 133rem;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 90em) {
   .services__wrapper {
@@ -2483,7 +2500,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 163rem;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 90em) {
   .services__wrapper--wide {
@@ -2536,7 +2553,7 @@ textarea {
 }
 .content__boxed .content__body {
   flex: 1;
-  padding: 5rem 3rem;
+  padding: 5rem 2.5rem;
 }
 @media (min-width: 64em) {
   .content__boxed .content__body {
@@ -2589,7 +2606,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-  padding: 0 3rem;
+  padding: 0 2.5rem;
 }
 @media (min-width: 48em) {
   .cta--colored .cta__wrapper {
@@ -2632,7 +2649,7 @@ textarea {
   background: #F06060;
   background: linear-gradient(135deg, #f38181 0%, #F06060 100%);
   color: #FFFFFF;
-  padding: 6rem 3rem;
+  padding: 6rem 2.5rem;
 }
 .cta--bar .cta__wrapper {
   display: flex;
@@ -2927,7 +2944,7 @@ textarea {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 4rem 3rem;
+  padding: 4rem 2.5rem;
   background-color: #f3f3f3;
   border-top-right-radius: 2rem;
 }
@@ -3104,7 +3121,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 
 .about__box {

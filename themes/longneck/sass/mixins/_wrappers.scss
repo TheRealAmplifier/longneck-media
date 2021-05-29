@@ -11,7 +11,7 @@
   @if $setDefaultPadding != null {
     padding: $setDefaultPadding;
   } @else {
-    padding: 0 2rem;
+    padding: 0 2.5rem;
   }
 
   @if ($setBreakpointMaxWidth != null and $setBreakpointMaxWidthSize != null) {

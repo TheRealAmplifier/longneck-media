@@ -52,7 +52,7 @@
 	}
 	.content__body {
 		flex: 1;
-		padding: 5rem 3rem;
+		padding: 5rem 2.5rem;
 
 		@include breakpoint('min-tablet-landscape') { 
 			padding: 7.5rem 7.5rem;

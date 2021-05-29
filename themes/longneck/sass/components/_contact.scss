@@ -19,7 +19,7 @@
 	@include flex($direction: column);
 	flex: 1;
 	position: relative;
-	padding: 3rem;
+	padding: 2.5rem;
 	background-color: $color-white;
 	box-shadow: 0 0 5rem rgba($color-black, .16);
 	border-top: 1rem solid $color-secondary;
