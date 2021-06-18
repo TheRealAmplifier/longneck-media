@@ -18,17 +18,18 @@ class ServicePage extends Page {
 	private static $icon_class = 'font-icon-check-mark-circle';
 
 	private static $db = [
-		'Summary'							=> 'HTMLText',
-		'ShowContact'					=> 'Boolean',
-		'ContactTitle'	 			=> 'Varchar',
-		'ContactText'	 				=> 'Text',
-		'ContactLinkText'			=> 'Varchar',
-		'IsLandingPage'				=> 'Boolean'
+		'Summary'								=> 'HTMLText',
+		'ShowContact'						=> 'Boolean',
+		'ContactTitle'	 				=> 'Varchar',
+		'ContactText'	 					=> 'Text',
+		'ContactLinkText'				=> 'Varchar',
+		'IsLandingPage'					=> 'Boolean',
+		'RemoveElementSpacing'	=> 'Boolean'
 	];
 
 	private static $has_one = [
-		'ContactLinkTarget'		=> SiteTree::class,
-		'Icon'								=> File::class,
+		'ContactLinkTarget'			=> SiteTree::class,
+		'Icon'									=> File::class,
 	];
 
 	private static $allowed_parent = [
@@ -47,6 +48,10 @@ class ServicePage extends Page {
 			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
 			CheckboxField::create('IsLandingPage', 'Dit is een landingspagina')
 		], 'Content');
+
+		$fields->addFieldsToTab('Root.Elements', [
+			CheckboxField::create('RemoveElementSpacing', 'Ruimte onderaan elements verwijderen')->setDescription('Deze optie is heel handig wanneer er slechts één contentblok op de pagina staat.')
+		]);
 
 		return $fields;
 	}

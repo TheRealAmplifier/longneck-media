@@ -1,50 +1,58 @@
 Pages\InformationPage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension 
-  allowed_elements:
-    - Elements\Content
-    - Elements\ContentImage
-    - Elements\CallToAction
-    - Elements\Projects
+  allowed_:
+    - \Content
+    - \ContentImage
+    - \CallToAction
+    - \Projects
 
 Pages\HomePage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension  
-  allowed_elements:
-    - Elements\FeaturedServices
-    - Elements\CallToAction
-    - Elements\Projects
-    - Elements\Content
-    - Elements\ContentImage
-    - Elements\SelectedCustomers
+  allowed_:
+    - \FeaturedServices
+    - \CallToAction
+    - \Projects
+    - \Content
+    - \ContentImage
+    - \SelectedCustomers
 
 Pages\ProjectPage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension 
-  allowed_elements:
-    - Elements\ProjectIntro
-    - Elements\ProjectStats
-    - Elements\ProjectResults
-    - Elements\Content
+  allowed_:
+    - \ProjectIntro
+    - \ProjectStats
+    - \ProjectResults
+    - \Content
 
 Pages\AboutPage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension 
-  allowed_elements:
-    - Elements\Content
-    - Elements\ContentImage
-    - Elements\Team
-    - Elements\Projects
-    - Elements\CallToAction
-    - Elements\FeaturedServices
-    - Elements\Method
+  allowed_:
+    - \Content
+    - \ContentImage
+    - \Team
+    - \Projects
+    - \CallToAction
+    - \FeaturedServices
+    - \Method
 
 Pages\ServicePage:
   extensions:
     - DNADesign\Elemental\Extensions\ElementalPageExtension  
-  allowed_elements:
-    - Elements\Content
-    - Elements\CallToAction    
-    - Elements\Projects
-    - Elements\Method
-    - Elements\FeaturedServices
+  allowed_:
+    - \Content
+    - \CallToAction    
+    - \Projects
+    - \Method
+    - \FeaturedServices
+
+Pages\BlogPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension 
+  allowed_:
+    - \Content
+    - \ContentImage
+    - \CallToAction

@@ -17,7 +17,6 @@
 %navigation__link--current {
 	@include font('inter');
 	font-size: 1.8rem;	
-	// color: $color-black;
 
 	&.current,
 	&.section {
@@ -25,7 +24,8 @@
 	}
 }
 %defaultTextLink {
-  position: relative;
+	position: relative;
+	font-weight: 600;
 
   &:after {
 		content: "";
@@ -35,7 +35,7 @@
     right: -.2rem;
     height: .6rem;
     z-index: -1;
-		background-color: $color-primary;
+		background-color: $color-tertiary;
 		transition: height .2s ease;
   }
 
@@ -78,14 +78,14 @@ body {
 	font-size: 3.4rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 5.8rem;
+		font-size: 5rem;
 	}
 }
 .heading-2 {
 	font-size: 2.6rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 4.2rem;
+		font-size: 4rem;
 	}
 }
 .heading-3 {
@@ -128,6 +128,9 @@ p {
 }
 
 .heading--margin-small {
+	margin-bottom: 2rem;
+}
+.heading--margin-big {
 	margin-bottom: 2rem;
 }
 .heading--margin-none {

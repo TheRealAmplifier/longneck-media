@@ -4,7 +4,7 @@
 	@include breakpoint('min-desktop') {
 		justify-content: space-between;
 		align-items: center;
-		height: calc(100vh - 10rem);	
+		height: calc(80vh - 10rem);	
 	}
 }
 
@@ -50,13 +50,21 @@
 	@include flex($direction: column, $justify: center);
 	position: relative;
 	background-color: $color-white;
+	z-index: 1;
 }
 
 .banner__image {
 	position: relative;
+	border-bottom-left-radius: 3rem;
+	overflow: hidden;
 
 	@include breakpoint('max-tablet-landscape') {
 		z-index: -1;
+	}
+	@include breakpoint('max-desktop') {
+		border-top-left-radius: 3rem;
+		width: 80%;	
+		margin-left: auto;
 	}
 	@include breakpoint('min-desktop') {
 		flex: 1;
@@ -69,12 +77,12 @@
 	padding: 8rem 0;
 
 	@include breakpoint('min-tablet-landscape') {
-		min-height: 50rem;
+		min-height: 32.5rem;
 		padding: 0 0;
 	}
 
 	@include breakpoint('min-desktop') {
-		min-height: 57.5rem;
+		min-height: 42.5rem;
 	}
 }
 .title__wrapper {
@@ -107,7 +115,7 @@
 	}
 }
 
-.title--shapes-left {
+.title__shapes-left {
 	&:before {
 		@include breakpoint('min-tablet-landscape') {
 			content: '';
@@ -124,12 +132,12 @@
 		}
 		@include breakpoint('min-desktop') {
 			bottom: -30rem;
-			width: 75rem;
-			height: 60rem;
+			width: 65rem;
+			height: 50rem;
 		}
 	}
 }
-.title--shapes-right {
+.title__shapes-right {
 	&:after {
 		content: '';
 		position: absolute;
@@ -138,85 +146,20 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		z-index: -1;
-    top: 3rem;
+    top: 5rem;
     right: 0;
 		height: 27.5rem;
 		width: 18rem;
 		
 		@include breakpoint('min-tablet-landscape') {
-			height: 45rem;
-			width: 25rem;
-		}
-		@include breakpoint('min-desktop') {
-			height: 60rem;
-			width: 40rem;
+			height: 40rem;
+			width: 26rem;
 		}
 	}
 }
 .title--shapes-both {
-	@extend .title--shapes-left;
-	@extend .title--shapes-right;
-}
-
-.banner__actions,
-.banner__bar {
-	@include flex;
-}
-.banner__bar {
-	@include breakpoint('max-desktop') {
-		display: none !important;
-	}
-}
-.banner__actions,
-.banner__bar {
-	height: 7.5rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		height: 12.5rem;
-	}
-}
-.banner__bar {
-	@include flex($justify: space-between);
-	background-color: $color-gray-light-1;
-	padding: 0 3rem;
-}
-
-.action__button {
-	@include flex($align: center, $justify: center);
-	text-align: center;
-	flex: 0 0 50%;
-	font-size: 1.2rem;
-	text-transform: uppercase;
-	letter-spacing: .1rem;
-	font-weight: 600;
-
-	&:hover,
-	&:focus {
-		background-color: darken($color-primary, 7);
-	}
-
-	@include breakpoint('min-tablet-landscape') {
-		font-size: 1.6rem;
-	}
-}
-
-.action__button--colored {
-	background-color: darken($color-secondary, 4);
-	color: $color-white;
-
-	&:hover,
-	&:focus {
-		background-color: darken($color-secondary, 12);
-	}
-}
-.action__button--colored-dark {
-	background-color: darken($color-secondary, 8);
-	color: $color-white;
-
-	&:hover,
-	&:focus {
-		background-color: darken($color-secondary, 12);
-	}
+	@extend .title__shapes-left;
+	@extend .title__shapes-right;
 }
 
 .banner__indicator {
@@ -258,5 +201,22 @@
 		@include breakpoint('min-desktop') {
 			height: 100%;
 		}
+	}
+}
+
+.banner__text {
+	margin-top: 3rem;
+}
+.banner__text--small {
+	margin-top: 3rem;
+	font-size: 2rem;
+	font-style: italic;
+
+	& > p {
+		font-size: inherit;
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		margin-top: 5rem;	
 	}
 }

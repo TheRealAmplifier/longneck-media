@@ -7,7 +7,8 @@ namespace {
 	use Silverstripe\Assets\Image;
 	use SilverStripe\AssetAdmin\Forms\UploadField;
 	use SilverStripe\CMS\Model\SiteTree;
-	use SilverStripe\Forms\DropdownField;
+    use SilverStripe\Forms\CheckboxField;
+    use SilverStripe\Forms\DropdownField;
 	use SilverStripe\Forms\GridField\GridField;
 	use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 	use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
@@ -17,17 +18,18 @@ namespace {
 		private static $icon_class = 'font-icon-p-article';
 
 		private static $db = [
-			'BannerFunction'		=> 'Varchar',
-			'BannerText'				=> 'HTMLText'		
+			'BannerFunction'				=> 'Varchar',
+			'BannerText'						=> 'HTMLText',
+			'BannerTextSecondary'		=> 'HTMLText'
 		];
 
 		private static $has_one = [
-			'BannerImage'				=> image::class
+			'BannerImage'						=> image::class
 		];
 
 		private static $has_many = [
-			'ShortcodeButtons'	=> ShortcodeButton::class,
-			'ShortcodeQuotes'		=> ShortcodeQuote::class
+			'ShortcodeButtons'			=> ShortcodeButton::class,
+			'ShortcodeQuotes'				=> ShortcodeQuote::class
 		];
 
 		private static $owns = [
@@ -42,7 +44,8 @@ namespace {
 					'text'	=> 'Titel (standaard)',
 					'image'	=> 'Afbeelding',
 				]),
-				HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(3)
+				HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(5),
+				HTMLEditorField::create('BannerTextSecondary', 'Banner tekst klein')->setRows(3)
 			]);
 
 			if ($this->BannerFunction == 'image') {

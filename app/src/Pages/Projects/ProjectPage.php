@@ -5,6 +5,7 @@ namespace Pages;
 use Page;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class ProjectPage extends Page {
@@ -13,7 +14,8 @@ class ProjectPage extends Page {
 	private static $icon_class = 'font-icon-rocket';
 
 	private static $db = [
-		'Summary'						=> 'HTMLText'
+		'Summary'						=> 'HTMLText',
+		'RemoveElementSpacing'	=> 'Boolean'
 	];
 
 	private static $has_one = [
@@ -35,6 +37,10 @@ class ProjectPage extends Page {
 			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
 			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Project Thumbnails'),
 		], 'Content');
+
+		$fields->addFieldsToTab('Root.Elements', [
+			CheckboxField::create('RemoveElementSpacing', 'Ruimte onderaan elements verwijderen')->setDescription('Deze optie is heel handig wanneer er slechts één contentblok op de pagina staat.')
+		]);
 
 		return $fields;
 	}

@@ -2,10 +2,17 @@
 	<div class="banner banner__subpage">
 		<div class="banner__content">
 			<div class="content--boxed">
-				<h1 class="heading-1 heading--background">{$MenuTitle}</h1>
-				<% if BannerText %>
-					{$BannerText}
-				<% end_if %>
+				<h1 class="heading-1 heading--background heading--margin-none">{$MenuTitle}</h1>
+				<div class="banner__text">
+					<% if BannerText %>
+						{$BannerText}
+					<% end_if %>
+				</div>
+				<div class="banner__text--small">
+					<% if BannerTextSecondary %>
+						{$BannerTextSecondary}
+					<% end_if %>
+				</div>
 			</div>
 		</div>
 		<div class="banner__image">
@@ -20,10 +27,17 @@
 	<div class="title {$ExtraClasses} <% if ShapesPosition %>{$ShapesPosition}<% end_if %>">
 		<div class="title__wrapper">
 			<div class="title__inner">
-				<h1 class="heading-1">{$MenuTitle}</h1>
-				<% if BannerText %>
-					{$BannerText}
-				<% end_if %>
+				<h1 class="heading-1 heading--margin-none">{$MenuTitle}</h1>
+				<div class="banner__text">
+					<% if BannerText %>
+						{$BannerText}
+					<% end_if %>
+				</div>
+				<div class="banner__text--small">
+					<% if BannerTextSecondary %>
+						{$BannerTextSecondary}
+					<% end_if %>
+				</div>
 			</div>
 		</div>
 	</div>

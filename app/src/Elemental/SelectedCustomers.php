@@ -26,6 +26,8 @@ class SelectedCustomers extends BaseElement {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
+		$fields->removeByName(['Customers']);
+
 		$fields->addFieldsToTab('Root.Main', [
 			ListboxField::create('Customers', 'Geselecteerde partners', Customer::get())
 		]);

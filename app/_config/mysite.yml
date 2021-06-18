@@ -54,3 +54,19 @@ UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
   recaptcha_version: 3
   minimum_score: 0.4
   default_size: "invisible"
+
+ModelAdmin\TeamMemberAdmin:
+  menu_priority: -12
+
+ModelAdmin\CustomerAdmin:
+  menu_priority: -14
+
+ModelAdmin\ContactSubmissionAdmin:
+  menu_priority: -16
+  
+ModelAdmin\QuotationSubmissionAdmin:
+  menu_priority: -18
+
+SilverStripe\SiteConfig\SiteConfigLeftAndMain:
+  menu_priority: -20
+

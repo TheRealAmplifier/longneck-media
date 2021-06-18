@@ -2,16 +2,18 @@
 	<div class="banner__left">
 		<div class="banner__content">
 			<div class="content__box">
-				<h1 class="heading-1 heading--background">{$Title}</h1>
-				{$BannerText}
+				<h1 class="heading-1 heading--background heading--margin-none">{$Title}</h1>
+				<div class="banner__text">
+					<% if BannerText %>
+						{$BannerText}
+					<% end_if %>
+				</div>
+				<div class="banner__text--small">
+					<% if BannerTextSecondary %>
+						{$BannerTextSecondary}
+					<% end_if %>
+				</div>
 			</div>
-		</div>
-		<div class="banner__bar">	
-			<span class="banner__indicator">
-				<span class="indicator__icon">
-					{$SVG('arrow-down').customBasePath('themes/longneck/images/svg/')}
-				</span>
-			</span>
 		</div>
 	</div>
 	<div class="banner__right">
@@ -21,10 +23,6 @@
 				<source media="(min-width:768px)" srcset="{$BannerImage.ScaleHeight(800).Link}">
 				<img class="image--cover" src="{$BannerImage.ScaleHeight(600).Link}" alt="Banner afbeelding" loading="lazy">
 			</picture>
-		</div>
-		<div class="banner__actions">
-			<a class="action__button action__button--colored" href="{$BaseHref}diensten">Bekijk diensten</a>
-			<a class="action__button action__button--colored-dark" href="{$BaseHref}contact">Contact opnemen</a>
 		</div>
 	</div>
 </div>

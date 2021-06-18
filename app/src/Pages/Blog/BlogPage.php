@@ -6,6 +6,7 @@ use Page;
 use DataObject\BlogTag;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\ListboxField;
@@ -16,16 +17,17 @@ class BlogPage extends Page {
 	private static $icon_class = 'font-icon-p-article';
 
 	private static $db = [
-		'PublicationDate'		=> 'Date',
-		'Summary'						=> 'HTMLText'
+		'PublicationDate'				=> 'Date',
+		'Summary'								=> 'HTMLText',
+		'RemoveElementSpacing'	=> 'Boolean'
 	];
-
+	
 	private static $has_one = [
-		'ThumbnailImage'		=> Image::class
+		'ThumbnailImage'				=> Image::class
 	];
 
 	private static $many_many = [
-		'BlogTags'					=> BlogTag::class
+		'BlogTags'							=> BlogTag::class
 	];
 
 	private static $allowed_parent = [
@@ -45,6 +47,10 @@ class BlogPage extends Page {
 			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Blog Thumbnails'),
 			ListboxField::create('BlogTags', 'Tag', BlogTag::get())
 		], 'Content');
+
+		$fields->addFieldsToTab('Root.Elements', [
+			CheckboxField::create('RemoveElementSpacing', 'Ruimte onderaan elements verwijderen')->setDescription('Deze optie is heel handig wanneer er slechts één contentblok op de pagina staat.')
+		]);
 
 		return $fields;
 	}

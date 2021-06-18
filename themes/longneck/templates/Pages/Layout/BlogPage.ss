@@ -1,5 +1,5 @@
-<div class="content">
-	<div class="content__wrapper--default">
-		{$Content}
-	</div>
+<% include Banner ShapesPosition='title--shapes-both' %>
+
+<div class="elements <% if RemoveElementSpacing %>elements--nospacing-bottom <% end_if %>">
+	{$ElementalArea}
 </div>

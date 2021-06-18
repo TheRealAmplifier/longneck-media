@@ -1,5 +1,7 @@
 <?php
 
+namespace ModelAdmin;
+
 use DataObject\ContactSubmission;
 use SilverStripe\Admin\ModelAdmin;
 

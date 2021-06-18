@@ -1,5 +1,7 @@
 <?php
 
+namespace ModelAdmin;
+
 use DataObject\Customer;
 use SilverStripe\Admin\ModelAdmin;
 

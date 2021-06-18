@@ -5,14 +5,18 @@
 	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem);
 }
 .customers__list {
-	@include flex($justify: center);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 .customer {
-	flex:  0 0 10rem;
 	height: auto;
-
-	&:not(:last-child) {
-		margin-right: 7.5rem;
-	}
+	max-height: 4rem;
 }

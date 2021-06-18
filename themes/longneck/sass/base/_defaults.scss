@@ -41,11 +41,16 @@ li {
 }
 
 %defaultSectionPadding {
+  padding: 3rem 0 5rem;
+
+  @include breakpoint('min-tablet-portrait') {
+    padding: 5rem 0 7.5rem;
+  }
   @include breakpoint('min-tablet-landscape') {
-    padding: 5rem 0;
+    padding: 5rem 0 10rem 0;
   }
   @include breakpoint('min-desktop') {
-		padding: 10rem 0;
+		padding: 5rem 0 12.5rem 0;
 	}
 }
 %bigSectionPadding {

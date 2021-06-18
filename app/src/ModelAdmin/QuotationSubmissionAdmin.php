@@ -1,5 +1,7 @@
 <?php
 
+namespace ModelAdmin;
+
 use DataObject\QuotationSubmission;
 use SilverStripe\Admin\ModelAdmin;
 
