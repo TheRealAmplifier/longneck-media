@@ -35,7 +35,7 @@
 
 .form__label {
 	@include flex;
-	font-weight: 600;
+	font-weight: 500;
 
 	@include breakpoint('min-tablet-landscape') {
 		margin-bottom: 1rem;

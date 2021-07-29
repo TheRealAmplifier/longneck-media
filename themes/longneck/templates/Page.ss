@@ -2,13 +2,13 @@
 <html lang="{$ContentLocale}">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RV7CVPQ4Y0"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186907414-1">
+	</script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-RV7CVPQ4Y0');
+		gtag('js', new Date()); 
+		gtag('config', 'UA-186907414-1');
 	</script>
 
 	<% base_tag %>

@@ -89,13 +89,13 @@ li {
 }
 
 %wrapper--default {
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge',);
 }
 %wrapper--small {
-	@include sectionwrapper(100rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true);
+	@include sectionwrapper(100rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge',);
 }
 %wrapper--medium {
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true);
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
 }
 %wrapper--wide {
 	@include sectionwrapper(100%, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem)

@@ -8,11 +8,6 @@
 						{$BannerText}
 					<% end_if %>
 				</div>
-				<div class="banner__text--small">
-					<% if BannerTextSecondary %>
-						{$BannerTextSecondary}
-					<% end_if %>
-				</div>
 			</div>
 		</div>
 		<div class="banner__image">
@@ -24,18 +19,13 @@
 		</div>
 	</div>
 <% else_if BannerFunction == 'text' %>
-	<div class="title {$ExtraClasses} <% if ShapesPosition %>{$ShapesPosition}<% end_if %>">
+	<div class="title">
 		<div class="title__wrapper">
 			<div class="title__inner">
 				<h1 class="heading-1 heading--margin-none">{$MenuTitle}</h1>
 				<div class="banner__text">
 					<% if BannerText %>
 						{$BannerText}
-					<% end_if %>
-				</div>
-				<div class="banner__text--small">
-					<% if BannerTextSecondary %>
-						{$BannerTextSecondary}
 					<% end_if %>
 				</div>
 			</div>

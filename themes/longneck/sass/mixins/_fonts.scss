@@ -1,44 +1,57 @@
+
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local(''),
-        url('../fonts/inter-v2-latin-300.woff2') format('woff2'),
-        url('../fonts/inter-v2-latin-300.woff') format('woff');
-}
-@font-face {
-  font-family: 'Inter';
+  font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local(''),
-       url('../fonts/inter-v2-latin-regular.woff2') format('woff2'),
-       url('../fonts/inter-v2-latin-regular.woff') format('woff');
+    url('../fonts/rubik/rubik-v14-latin-regular.woff2') format('woff2'),
+    url('../fonts/rubik/rubik-v14-latin-regular.woff') format('woff');
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src: local(''),
-       url('../fonts/inter-v2-latin-500.woff2') format('woff2'),
-       url('../fonts/inter-v2-latin-500.woff') format('woff');
+    url('../fonts/rubik/rubik-v14-latin-500.woff2') format('woff2'),
+    url('../fonts/rubik/rubik-v14-latin-500.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+    url('../fonts/karla/karla-v15-latin-regular.woff2') format('woff2'),
+    url('../fonts/karla/karla-v15-latin-regular.woff') format('woff');
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+    url('../fonts/karla/karla-v15-latin-500.woff2') format('woff2')
+    url('../fonts/karla/karla-v15-latin-500.woff') format('woff');
+}
+@font-face {
+  font-family: 'Karla';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: local(''),
-       url('../fonts/inter-v2-latin-700.woff2') format('woff2'),
-       url('../fonts/inter-v2-latin-700.woff') format('woff');
+    url('../fonts/karla/karla-v15-latin-700.woff2') format('woff2'),
+    url('../fonts/karla/karla-v15-latin-700.woff') format('woff');
 }
 
-$font-inter      : 'Inter';
+$font-heading : 'Rubik';
+$font-body : 'Karla';
 
 $fonts: (
-  'inter'        : $font-inter,
+  'rubik' : $font-heading,
+  'karla' : $font-body,
 ) !default;
 
 @mixin font($font, $weight: null, $size: null, $important: null) {

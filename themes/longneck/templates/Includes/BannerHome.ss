@@ -8,11 +8,6 @@
 						{$BannerText}
 					<% end_if %>
 				</div>
-				<div class="banner__text--small">
-					<% if BannerTextSecondary %>
-						{$BannerTextSecondary}
-					<% end_if %>
-				</div>
 			</div>
 		</div>
 	</div>

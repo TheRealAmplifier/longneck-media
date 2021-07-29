@@ -1,4 +1,4 @@
-<% include Banner ShapesPosition='title__shapes-left' %>
+<% include Banner %>
 
 <div class="contact">
 	<div class="contact__wrapper">

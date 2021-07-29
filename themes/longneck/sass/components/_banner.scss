@@ -60,10 +60,11 @@
 
 	@include breakpoint('max-tablet-landscape') {
 		z-index: -1;
+		width: 87.5%;
 	}
 	@include breakpoint('max-desktop') {
 		border-top-left-radius: 3rem;
-		width: 80%;	
+		width: 77.5%;	
 		margin-left: auto;
 	}
 	@include breakpoint('min-desktop') {
@@ -72,28 +73,19 @@
 }
 
 .title {
-	@include flex($align: center);
 	position: relative;
-	padding: 8rem 0;
+	padding: 4rem 0;
 
 	@include breakpoint('min-tablet-landscape') {
-		min-height: 32.5rem;
-		padding: 0 0;
-	}
-
-	@include breakpoint('min-desktop') {
-		min-height: 42.5rem;
+		padding: 12.5rem 0 7.5rem;
 	}
 }
 .title__wrapper {
-	@include sectionwrapper($setDefaultPadding: 0 3rem, $unsetPadding: true);
+	@include flex($align: flex-end);
+	@include sectionwrapper(90rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 .title__inner {
 	max-width: 100%;
-
-	@include breakpoint('min-tablet-landscape') {
-		max-width: 45%;
-	}
 }
 .title__inner--wide {
 	max-width: 100%;
@@ -113,53 +105,6 @@
 			max-width: 60%;
 		}
 	}
-}
-
-.title__shapes-left {
-	&:before {
-		@include breakpoint('min-tablet-landscape') {
-			content: '';
-			position: absolute;
-			display: block;
-			background-image: url(../images/shapes/hexagon-cluster-gray-2.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
-			z-index: -1;
-			bottom: -10rem;
-			left: 0rem;
-			width: 40rem;
-			height: 32.5rem;
-		}
-		@include breakpoint('min-desktop') {
-			bottom: -30rem;
-			width: 65rem;
-			height: 50rem;
-		}
-	}
-}
-.title__shapes-right {
-	&:after {
-		content: '';
-		position: absolute;
-		display: block;
-		background-image: url(../images/shapes/hexagon-cluster-gray-1.svg);
-		background-repeat: no-repeat;
-		background-size: contain;
-		z-index: -1;
-    top: 5rem;
-    right: 0;
-		height: 27.5rem;
-		width: 18rem;
-		
-		@include breakpoint('min-tablet-landscape') {
-			height: 40rem;
-			width: 26rem;
-		}
-	}
-}
-.title--shapes-both {
-	@extend .title__shapes-left;
-	@extend .title__shapes-right;
 }
 
 .banner__indicator {
@@ -206,6 +151,11 @@
 
 .banner__text {
 	margin-top: 3rem;
+	font-size: 2.4rem;
+
+	p {
+		font-size: inherit;
+	}
 }
 .banner__text--small {
 	margin-top: 3rem;

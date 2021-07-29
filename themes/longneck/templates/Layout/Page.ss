@@ -1,7 +1,7 @@
 <% if ClassName.ShortName == 'HomePage' %>
 	<% include BannerHome %>
 <% else %>
-	<% include Banner ShapesPosition='title__shapes-left' %>
+	<% include Banner %>
 <% end_if %>
 
 <div class="content content--spacer">

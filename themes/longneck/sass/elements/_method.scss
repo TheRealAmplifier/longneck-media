@@ -14,7 +14,7 @@
 	flex: 1;
 }
 .method__right {
-		background-color: $color-gray-blue-soft;
+	background-color: $color-gray-blue-soft;
 
 	@include breakpoint('max-tablet-landscape') {
 		margin-top: 5rem;
@@ -35,27 +35,16 @@
 	}
 }
 .method__list {
-	display: grid;	
-	grid-template-columns: 1fr;
-	width: 100%;
-	grid-gap: 3rem 0;
-
-	@include breakpoint('min-tablet-portrait') {
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 3rem 3rem;
-	}
-	@include breakpoint('min-tablet-landscape') {
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 4rem 4rem;
-	}
+	@include flex($direction: column);
 }
 
 .method__step {
 	@include flex($direction: column);
 	position: relative;
-	padding: 4rem 2.5rem;
-	background-color: $color-gray-light-1;
-	border-top-right-radius: 2rem;
+	
+	&:not(:last-child) {
+		margin-bottom: 10rem;
+	}
 
 	p {
 		font-size: 1.6rem;
@@ -67,23 +56,13 @@
 
 	@include breakpoint('min-tablet-landscape') {
 		font-size: 2rem;
-		padding: 4rem 5rem;
-		border-top-right-radius: 3rem;
 	}
 }
+.method__title {
+	@include flex($align: flex-end);
+	margin-bottom: 2rem;
+}
 .method__number {
-	@include flex($align: center, $justify: center);
-	font-weight: 700;
-	line-height: 1;
-	position: absolute;
-	font-size: 3.4rem;
-	right: 1.5rem;
-	top: -1.5rem;
-	z-index: 1;
-	color: $color-secondary;
-
-	@include breakpoint('min-tablet-landscape') {
-		font-size: 7rem;
-		top: -3rem;
-	}
+	color: $color-primary;
+	margin-right: 2rem;
 }

@@ -26,16 +26,7 @@
 					<% end_if %>
 				<% end_loop %>
 			</nav>
-			<% if $SiteConfig.Phone %>
-				<div class="header__phone action--spacer">
-					<a class="phone__link" href="tel:{$SiteConfig.Phone}">		
-						<span class="phone__icon">
-							{$SVG('phone-call').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
-						</span>			
-					</a>
-				</div>
-			<% end_if %>
-			<div class="header__toggle <% if not $SiteConfig.Phone %>action--spacer<% end_if %>">
+			<div class="header__toggle action--spacer">
 				<span class="line"></span>
 				<span class="line"></span>
 				<span class="line"></span>

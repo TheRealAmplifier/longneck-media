@@ -1,4 +1,4 @@
-<% include Banner ShapesPosition='title--shapes-both' %>
+<% include Banner %>
 
 <div class="projects projects--all">
 	<div class="projects__wrapper--narrow">

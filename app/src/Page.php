@@ -19,8 +19,7 @@ namespace {
 
 		private static $db = [
 			'BannerFunction'				=> 'Varchar',
-			'BannerText'						=> 'HTMLText',
-			'BannerTextSecondary'		=> 'HTMLText'
+			'BannerText'						=> 'HTMLText'
 		];
 
 		private static $has_one = [
@@ -44,8 +43,7 @@ namespace {
 					'text'	=> 'Titel (standaard)',
 					'image'	=> 'Afbeelding',
 				]),
-				HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(5),
-				HTMLEditorField::create('BannerTextSecondary', 'Banner tekst klein')->setRows(3)
+				HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(5)
 			]);
 
 			if ($this->BannerFunction == 'image') {

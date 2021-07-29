@@ -10,7 +10,7 @@
 	}
 }
 .navigation__link--small {
-	font-weight: 600;
+	font-weight: 500;
 
 	&:not(:last-child) {
 		margin-right: 2rem;
@@ -20,14 +20,26 @@
 	font-size: 1.8rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
 	}
 }
 .navigation__link--big {
-	font-size: 2.4rem;
+	font-size: 3rem;
+
+	&.current {
+		&:after {
+			content: '';
+			background-image: url(../../images/svg/arrow-left-red.svg);
+			background-size: 2.8rem;
+			width: 2.8rem;
+			height: 2.8rem;
+			display: inline-flex;
+			margin-left: 3rem;
+		}
+	}
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 3.2rem;
+		font-size: 4.8rem;
 	}
 }
 

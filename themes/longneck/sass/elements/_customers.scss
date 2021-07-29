@@ -6,14 +6,14 @@
 }
 .customers__list {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	// grid-template-columns: repeat(2, 1fr);
 
-	@include breakpoint('min-tablet-landscape') {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@include breakpoint('min-tablet-landscape') {
-		grid-template-columns: repeat(3, 1fr);
-	}
+	// @include breakpoint('min-tablet-landscape') {
+	// 	grid-template-columns: repeat(2, 1fr);
+	// }
+	// @include breakpoint('min-tablet-landscape') {
+	// 	grid-template-columns: repeat(3, 1fr);
+	// }
 }
 
 .customer {
