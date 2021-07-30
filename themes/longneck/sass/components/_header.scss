@@ -36,7 +36,7 @@
 		}
 	}
 	@include breakpoint('min-desktop') {
-		width: 22.5rem;
+		width: 27.5rem;
 	}
 }
 
@@ -62,7 +62,7 @@
 			@include flex($align: center);
 			height: 100%;
 
-			@include breakpoint('max-tablet-landscape') {
+			@include breakpoint('min-tablet-landscape') {
 				font-size: 2.2rem;
 			}
 		}
@@ -113,7 +113,7 @@
 	&:hover,
 	&:focus,
 	.active {
-		background: darken($color-primary, 14);
+		background: darken($color-secondary, 14);
 
 		.line-1 {
 			transform: translateY($menu-icon-line / 2 * -1);

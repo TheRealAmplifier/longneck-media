@@ -15,12 +15,21 @@
 		background-size: contain;
 		width: 8rem;
 		height: 4rem; 
+
+		@include breakpoint('min-tablet-landscape') {
+			width: 10rem;
+			height: 6rem; 
+		}
+	}
+
+	@include breakpoint('min-tablet-landscape') {
+		padding: 5rem;
 	}
 }
 
 .quote__text {
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 2rem;
+		font-size: 2.4rem;
 		font-style: italic;
 	}
 }

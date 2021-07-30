@@ -21,10 +21,12 @@
 
 	<title><% if $MetaTitle %>{$MetaTitle}<% else %>{$Title}<% end_if %> &hyphen; {$SiteConfig.Title}</title>
 
-	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-300.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" href="{$ThemeDir}/fonts/inter-v2-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="{$ThemeDir}/fonts/rubik/rubik-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="{$ThemeDir}/fonts/rubik/rubik-v14-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+	<link rel="preload" href="{$ThemeDir}/fonts/karla/karla-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="{$ThemeDir}/fonts/karla/karla-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="{$ThemeDir}/fonts/karla/karla-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<link rel="prefetch" href="{$ThemeDir}/css/main.css" as="style">
   <link rel="prefetch" href="{$ThemeDir}/dist/app.js" as="script">

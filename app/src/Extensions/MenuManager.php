@@ -8,8 +8,7 @@ use SilverStripe\ORM\DataExtension;
 
 class CustomMenuItem extends DataExtension {
 	private static $db = [
-		'ButtonStyle'			=> 'Boolean',
-		'ShowChildren'		=> 'Boolean'		
+		'ButtonStyle'			=> 'Boolean'		
 	];
 
 	private static $summary_fields = [
@@ -22,16 +21,12 @@ class CustomMenuItem extends DataExtension {
 
 	public function updateCMSFields(FieldList $fields) {
 		$fields->addFieldsToTab('Root.Instellingen', [
-			CheckboxField::create('ShowChildren', 'Subpagina\'s tonen'),
 			CheckboxField::create('ButtonStyle', 'Als button weergeven')
 		]);
 
 		return $fields;
 	}
 
-	public function ShowChildren() {
-		return $this->owner->ShowChildren ? 'Yes' : 'No';
-	}
 	public function ButtonStyle() {
 		return $this->owner->ButtonStyle ? 'Yes' : 'No';
 	}

@@ -1,5 +1,7 @@
 import $ from 'jquery';
 
+import './module/aos.js';
+
 $(window).on('load', function() {
 	$('body').removeClass('preload');
 });

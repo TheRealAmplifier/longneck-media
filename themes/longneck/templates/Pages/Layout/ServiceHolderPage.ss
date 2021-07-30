@@ -15,7 +15,7 @@
 						</div>
 						<div class="block__content">
 							<% if Summary %>
-								<p>{$Summary}</p>
+								{$Summary}
 							<% end_if %>
 							<span class="card__arrow">
 								<span class="card__arrow--inner">

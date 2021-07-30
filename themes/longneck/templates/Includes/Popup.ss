@@ -32,7 +32,7 @@
 				<% if $SiteConfig.SocialAccounts %>
 					<nav class="popup__socials">
 						<% loop SiteConfig.SocialAccounts %>
-							<a class="social__link social__link--small social__link--horizontal" href="{$AccountLink}" target="_blank" rel="noreferrer">
+							<a class="social__link social__link--horizontal" href="{$AccountLink}" target="_blank" rel="noreferrer">
 								{$SVG($Icon.Name).addSubfolder('Social')}
 							</a>
 						<% end_loop %>

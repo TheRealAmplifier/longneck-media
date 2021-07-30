@@ -1,6 +1,6 @@
-<% include Banner ShapesPosition='title--shapes-right' %>
+<% include Banner %>
 
-<%-- include BreadCrumbsSimple --%>
+<%-- include BreadCrumbsColored --%>
 
 <div class="details__list">
 	{$ElementalArea}

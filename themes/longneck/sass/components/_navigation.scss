@@ -1,6 +1,6 @@
 .navigation__link {
 	@extend %navigation__link--current;
-	line-height: 2;
+	line-height: 1.8;
 
 	&:not(:last-child) {
 		@include breakpoint('min-tablet-landscape') {
@@ -29,8 +29,9 @@
 	&.current {
 		&:after {
 			content: '';
-			background-image: url(../../images/svg/arrow-left-red.svg);
+			background-image: url(../images/svg/arrow-left.svg);
 			background-size: 2.8rem;
+			background-repeat: no-repeat;
 			width: 2.8rem;
 			height: 2.8rem;
 			display: inline-flex;

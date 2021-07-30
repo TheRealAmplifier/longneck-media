@@ -72,14 +72,10 @@
 }
 .footer__bottom {
 	margin-top: 10rem;
-	margin-bottom: 5rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		margin-bottom: 7.5rem;
-	}
+	margin-bottom: 3rem;
 }
 .footer__copyright {
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 
 	p {
 		font-size: inherit;
@@ -94,12 +90,12 @@
 		margin-top: 7.5rem;
 	}
 	@include breakpoint('min-desktop') {
-		flex: 0 0 60%;
+		flex: 0 0 50%;
 		margin-left: auto;
 	}
 }
 .footer__menu {
-	flex: 0 0 33.3%;
+	flex: 1;
 
 	@include breakpoint('max-tablet-landscape') {
 		margin-top: 7.5rem;
@@ -118,7 +114,7 @@
 }
 .contact__author {
 	@include flex($align: center, $justify: center);
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	letter-spacing: .1rem;
 	padding: 10rem 0;
 	width: 10rem;

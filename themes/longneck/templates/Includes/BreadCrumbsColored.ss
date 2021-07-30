@@ -1,5 +1,5 @@
 <div class="breadcrumb breadcrumb--colored">
-	<div class="content__wrapper--default">
+	<div class="breadcrumbs__wrapper">
 		<% if $Level(2) %>
 			{$Breadcrumbs}
 		<% end_if %>

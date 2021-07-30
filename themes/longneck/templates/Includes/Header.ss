@@ -10,20 +10,7 @@
 		<div class="header__navigation">
 			<nav class="navigation navigation--row">
 				<% loop $MenuSet('Primary').MenuItems %>
-					<% if ShowChildren %>
-						<span class="navigation__submenu">
-							<a class="navigation__link {$LinkingMode} <% if ButtonStyle %>navigation__link--button<% end_if %>" href="{$Link}">{$MenuTitle}</a>
-							<% if Children %>
-								<nav class="navigation__popover">
-									<% loop Children %>
-										<a class="navigation__link {$LinkingMode} <% if ButtonStyle %>navigation__link--button<% end_if %>" href="{$Link}">{$MenuTitle}</a>
-									<% end_loop %>
-								</nav>
-							<% end_if %>
-							</span>
-					<% else %>
-						<a class="navigation__link {$LinkingMode} <% if ButtonStyle %>navigation__link--button<% end_if %>" href="{$Link}">{$MenuTitle}</a>
-					<% end_if %>
+					<a class="navigation__link {$LinkingMode} <% if ButtonStyle %>navigation__link--button<% end_if %>" href="{$Link}">{$MenuTitle}</a>
 				<% end_loop %>
 			</nav>
 			<div class="header__toggle action--spacer">

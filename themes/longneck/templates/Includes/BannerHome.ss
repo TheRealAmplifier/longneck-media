@@ -1,17 +1,16 @@
-<div class="banner banner__home">
-	<div class="banner__left">
-		<div class="banner__content">
-			<div class="content__box">
-				<h1 class="heading-1 heading--background heading--margin-none">{$Title}</h1>
-				<div class="banner__text">
-					<% if BannerText %>
-						{$BannerText}
-					<% end_if %>
-				</div>
-			</div>
+<div class="title">
+	<div class="title__wrapper--wide">
+		<div class="title__inner">
+			<h1 class="heading-1 heading--margin-none">{$BannerTitle}</h1>
+
+			<% if BannerText %>
+				{$BannerText}
+			<% end_if %>
 		</div>
 	</div>
-	<div class="banner__right">
+</div>
+<div class="banner banner__home" >
+	<div class="banner__wrapper">
 		<div class="banner__image">
 			<picture>
 				<source media="(min-width:1024px)" srcset="{$BannerImage.ScaleHeight(1000).Link}">

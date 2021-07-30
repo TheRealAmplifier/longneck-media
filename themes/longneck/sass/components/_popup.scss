@@ -40,14 +40,13 @@
 .popup__image {
 	flex: 0 0 22.5%;
 	background-color: $color-gray-light-1;
-	border-top-left-radius: 2rem;
 
 	@include breakpoint('max-tablet-landscape') {
 		display: none;
 	}
 
 	@include breakpoint('min-tablet-landscape') {
-		flex: 0 0 40%;
+		flex: 0 0 32.5%;
 	}
 }
 .popup__content {

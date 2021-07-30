@@ -38,45 +38,9 @@
 }
 
 .breadcrumbs__wrapper {
-	@include flex;
-	@include sectionwrapper($unsetPadding: true);
+	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 }
 
-.breadcrumb--simple {
-	height: 10rem;
-
-	.breadcrumb__item {
-		@include flex($align: center);
-
-		&:not(:last-of-type) {
-			margin-right: 2rem;
-
-			&:after {
-				content: '';
-				background-image: url('../images/svg/chevron-right.svg');
-				background-size: contain;
-				background-repeat: no-repeat;
-				display: block;
-				width: 1rem;
-				height: 1rem;
-				margin-left: 2rem;	
-			}
-		}
-		.breadcrumb__current {
-			color: $color-primary;
-			font-weight: 800;
-		}
-		.breadcrumb__icon {
-			display: block;
-			width: 1.8rem;
-			height: 1.8rem;
-		}
-	}
-
-	@include breakpoint('min-tablet-landscape') {
-		background-color: $color-tertiary;
-	}
-}
 .breadcrumb--colored {
 	.breadcrumb__navigation {
 		@include flex;
