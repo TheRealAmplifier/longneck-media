@@ -1,4 +1,4 @@
-<div class="title">
+<div class="title title--centered">
 	<div class="title__wrapper--wide">
 		<div class="title__inner">
 			<h1 class="heading-1 heading--margin-none">{$BannerTitle}</h1>
@@ -6,6 +6,12 @@
 			<% if BannerText %>
 				{$BannerText}
 			<% end_if %>
+
+			<div class="title__indicator">
+				<div class="indicator__icon">
+					{$SVG('scroll-indicator').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

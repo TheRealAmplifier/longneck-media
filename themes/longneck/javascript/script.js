@@ -7,16 +7,6 @@ $(window).on('load', function() {
 });
 
 $(document).ready(function() {	
-	$('.header__toggle').on('click', function() {
-		$('.navigation__popup').toggleClass('navigation__popup--open');
-		$('body').toggleClass('navigation--open');
-	});
-
-	$('.popup__close').on('click', function() {
-		$('.navigation__popup').removeClass('navigation__popup--open');
-		$('body').removeClass('navigation--open');
-	});
-
 	$('.footer__scroll').on('click', function(event) {
 		event.preventDefault();
 

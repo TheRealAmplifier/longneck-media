@@ -1,12 +1,13 @@
 .banner {
-	padding: 12.5rem 0;
+	padding: 0 0 5rem;
 }
 .banner__wrapper {
 	@include flex($direction: column);
 	@include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
 }
-
 .banner__content {
+	margin-top: 2rem;
+	
 	p {
 		font-size: 2rem;
 
@@ -21,10 +22,9 @@
 	padding: 4rem 0;
 
 	@include breakpoint('min-tablet-landscape') {
-		padding: 12.5rem 0 7.5rem;
+		padding: 10rem 0 10rem;
 	}
 }
-
 .title__wrapper {
 	@include flex($direction: column, $align: flex-end);
 	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
@@ -34,7 +34,6 @@
 	@include sectionwrapper(117rem, $setDefaultPadding: 0 3rem, $unsetPadding: true);
 	gap: 5rem;
 }
-
 .title__inner {
 	max-width: 100%;
 }
@@ -45,6 +44,15 @@
 		max-width: 80%;
 	}
 }
+.title__indicator {
+	@include flex($align: center, $justify: center);
+	margin-top: 7.5rem;
+}
+.indicator__icon {
+	width: 1.4rem;
+	height: 100%;
+}
+
 .title--centered {
 	text-align: center;
 
@@ -53,28 +61,7 @@
 		margin: 0 auto;
 
 		@include breakpoint('min-tablet-landscape') {
-			max-width: 60%;
-		}
-	}
-}
-
-.title__indicator {
-	@include flex($align: center);
-}
-.indicator__icon {
-	width: 5.6rem;
-	height: 100%;
-}
-
-.banner__home {
-	.banner__image {
-		height: 40rem;
-		
-		@include breakpoint('min-tablet-landscape') {
-			height: 55rem;
-		}
-		@include breakpoint('min-desktop') {
-			height: 70rem;
+			max-width: 75%;
 		}
 	}
 }

@@ -1,8 +1,8 @@
 <% if BannerFunction == 'image' %>
-	<div class="title">
+	<div class="title title--centered">
 		<div class="title__wrapper">
 			<div class="title__inner">
-				<h1 class="heading-1 heading--margin-none">{$BannerTitle}</h1>
+				<h1 class="heading-1 heading--margin-small">{$BannerTitle}</h1>
 				<div class="banner__content">
 					<% if BannerText %>
 						{$BannerText}
@@ -23,10 +23,10 @@
 		</div>
 	</div>
 <% else_if BannerFunction == 'text' %>
-	<div class="title">
+	<div class="title title--centered">
 		<div class="title__wrapper">
 			<div class="title__inner">
-				<h1 class="heading-1 heading--margin-none">{$MenuTitle}</h1>
+				<h1 class="heading-1 heading--margin-small">{$MenuTitle}</h1>
 				<div class="banner__content">
 					<% if BannerText %>
 						{$BannerText}

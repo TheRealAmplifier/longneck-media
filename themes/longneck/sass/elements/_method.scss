@@ -1,7 +1,9 @@
 .method {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-desktop', $wrap: wrap);
 }
-
+.method__wrapper {
+	@include sectionwrapper(100rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true);
+}
 .method__left,
 .method__right {
 	padding: 3rem 5rem;

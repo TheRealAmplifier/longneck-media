@@ -13,15 +13,6 @@
     display: block;
 	}
 }
-%navigation__link--current {
-	@include font('karla');
-	font-size: 2rem;	
-
-	&.current,
-	&.section {
-		font-weight: 800;
-	}
-}
 %defaultTextLink {
 	position: relative;
 	font-weight: 500;
@@ -68,10 +59,6 @@ body {
 	font-weight: 500;
 	margin-top: 0;
 	line-height: 1.2;
-
-	&:not(:last-child) {
-		margin-bottom: 2rem;
-	}
 }
 
 .heading-1 {
@@ -137,7 +124,7 @@ p {
 	margin-bottom: 2rem;
 }
 .heading--margin-big {
-	margin-bottom: 2rem;
+	margin-bottom: 4rem;
 }
 .heading--margin-none {
 	margin: 0 0;
