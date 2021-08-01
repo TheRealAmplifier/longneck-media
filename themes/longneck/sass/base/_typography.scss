@@ -1,17 +1,7 @@
 %heading--uppercase-small {
 	@include font('karla', $weight: 600);
 	text-transform: uppercase;
-	font-size: 1.8rem;
-	letter-spacing: .1rem;
-
-	&:after {
-		content: "";
-		width: 3rem;
-    height: .3rem;
-    margin-top: .5rem;
-    background-color: $color-secondary;
-    display: block;
-	}
+	font-size: 2rem;
 }
 %defaultTextLink {
 	position: relative;

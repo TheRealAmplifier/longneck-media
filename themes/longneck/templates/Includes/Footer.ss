@@ -36,13 +36,13 @@
 					<span class="navigation__title">{$SiteConfig.FooterTitle3}</span>
 					<nav class="navigation--column">
 						<% loop $MenuSet('Footer3').MenuItems %>
-							<% if Link != '/' %>
-								<a class="navigation__link {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
-							<% else %>
-								<span class="navigation__link">{$MenuTitle}</span>
-							<% end_if %>
+							<a class="navigation__link {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
 						<% end_loop %>
 					</nav>
+					<div class="navigation__info">
+						<span class="navigation__link">KVK 82476977</span>
+						<span class="navigation__link">BTW NL003689603B44</span>
+					</div>
 				</div>
 			<% end_if %>
 			</div>
@@ -61,6 +61,5 @@
 				{$SVG('up-arrow').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
 			</div>	
 		</div>
-		<a class="contact__author" href="mailto:info@longneckmedia.nl">info@longneckmedia.nl</a>
 	</div>
 </footer> 

@@ -1,6 +1,7 @@
 .footer {
-	background-color: $color-secondary;
-	color: $color-white;
+	background-color: $color-footer;
+	border-bottom: 4rem solid $color-footer-border;
+	color: $color-black;
 	width: 100%;
 
 	@include breakpoint('min-tablet-landscape') {
@@ -18,17 +19,12 @@
 
 .footer__contact {
 	margin: -3rem 0 0;
-	color: darken($color-secondary, 25);
+	color: $color-black;
 
 	&:hover,
 	&:focus {
 		.contact__icon {				
 			transform: translateX(2rem);
-
-			g#image {
-				stroke: darken($color-secondary, 25);
-				fill: darken($color-secondary, 25);
-			}
 		}
 	}
 
@@ -60,10 +56,6 @@
 	height: 6rem;
 	margin-left: .5rem;
 	margin-top: 3rem;
-
-	g#image {
-		stroke: darken($color-secondary, 20);
-	}
 }
 
 .footer__top,
@@ -84,7 +76,7 @@
 
 .footer__navigation {
 	@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
-	color: $color-white;
+	color: $color-black;
 
 	@include breakpoint('max-desktop') {
 		margin-top: 7.5rem;
@@ -103,28 +95,11 @@
 }
 
 .footer__right {
-	@include flex($align: center);
+	@include flex($align: flex-end);
 	flex: 0 0 10rem;
-	writing-mode: vertical-rl;
-	text-orientation: mixed;
 
 	@include breakpoint('max-tablet-landscape') {
 		display: none;
-	}
-}
-.contact__author {
-	@include flex($align: center, $justify: center);
-	font-size: 1.8rem;
-	letter-spacing: .1rem;
-	padding: 10rem 0;
-	width: 10rem;
-	transition: all .125s linear;
-	flex: 1;
-	background: darken($color-secondary, 10);
-
-	&:hover,
-	&:focus {
-		background: darken($color-secondary, 14);
 	}
 }
 
@@ -132,7 +107,7 @@
 	@include flex($align: center, $justify: center);
 	width: 10rem;
 	height: 10rem;
-	background: darken($color-secondary, 10);
+	background-color: $color-footer-scroll;
 	cursor: pointer;
 
 	.scroll__icon {
@@ -144,10 +119,15 @@
 
 	&:hover,
 	&:focus {
-		background: darken($color-secondary, 14);
+		background-color: darken($color-primary, 10);
 
 		.scroll__icon {
 			transform: scale(1.2);
 		}
 	}
+}
+
+.navigation__info {
+	@include flex($direction: column);
+	margin-top: 3rem;
 }
