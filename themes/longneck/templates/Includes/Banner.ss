@@ -1,5 +1,5 @@
 <% if BannerFunction == 'image' %>
-	<div class="title title--centered">
+	<div class="title title--centered title--spacer-small">
 		<div class="title__wrapper">
 			<div class="title__inner">
 				<h1 class="heading-1 heading--margin-none">{$BannerTitle}</h1>
@@ -23,7 +23,7 @@
 		</div>
 	</div>
 <% else_if BannerFunction == 'text' %>
-	<div class="title title--centered">
+	<div class="title title--centered title--spacer-small">
 		<div class="title__wrapper">
 			<div class="title__inner">
 				<h1 class="heading-1 heading--margin-none">{$MenuTitle}</h1>
@@ -31,6 +31,12 @@
 					<% if BannerText %>
 						{$BannerText}
 					<% end_if %>
+
+					<div class="title__indicator">
+						<div class="indicator__icon">
+							{$SVG('scroll-indicator-small').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,9 @@
+%link--spacer {
+	&:not(:last-child) {
+		margin-right: 2rem;
+	}
+}
+
 .navigation__link {
 	@include font('karla');
 	font-size: 1.6rem;	
@@ -19,13 +25,12 @@
 		font-size: 2rem;
 	}
 }
-.navigation__link--small {
-	font-weight: 500;
 
-	&:not(:last-child) {
-		margin-right: 2rem;
-	}
+.navigation__link--small {
+	@extend %link--spacer;
+	font-weight: 500;
 }
+
 .navigation__link--medium  {
 	font-size: 1.8rem;
 
@@ -33,6 +38,7 @@
 		font-size: 2.2rem;
 	}
 }
+
 .navigation__link--big {
 	font-size: 3rem;
 
@@ -52,6 +58,13 @@
 	@include breakpoint('min-tablet-landscape') {
 		font-size: 4.8rem;
 	}
+}
+
+.navigation__link--uppercase {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.6rem;
+
 }
 
 .navigation__link--main	{
@@ -85,10 +98,6 @@
 	}
 }
 
-.link__text {
-	margin-right: 2rem;
-}
-
 .navigation__title {
 	@extend %heading--uppercase-small;
 	display: block;
@@ -106,6 +115,10 @@
 .navigation--row {
 	@include flex($align: center);
 }
+.navigation--row--centered {
+	@include flex($align: center, $justify: center);
+}
+
 
 .navigation__link--colored {
 	color: $color-primary;
