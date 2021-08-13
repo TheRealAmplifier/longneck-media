@@ -16,11 +16,11 @@ class SelectedCustomers extends BaseElement {
 	private static $controller_template = 'ElementHolder';
 
 	private static $db = [
-		'RemovePadding'		=> 'Boolean'
+		'RemovePadding' => 'Boolean'
 	];
 
 	private static $many_many = [
-		'Customers'				=> Customer::class
+		'Customers' => Customer::class
 	];
 
 	public function getCMSFields() {
@@ -39,7 +39,13 @@ class SelectedCustomers extends BaseElement {
 		return $fields;
 	}
 
-	public function getType() {
-		return 'Geselecteerde klanten';
-	}
+    /**
+     * get name of the element
+     *
+     * @return void
+     */
+    public function getType()
+    {
+        return self::$singular_name;
+    }
 }

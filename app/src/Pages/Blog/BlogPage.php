@@ -11,47 +11,49 @@ use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\ListboxField;
 
-class BlogPage extends Page {
-	private static $table_name = 'BlogPage';
-	private static $singular_name = 'Artikel';
-	private static $icon_class = 'font-icon-p-article';
+class BlogPage extends Page
+{
+    private static $table_name = 'BlogPage';
+    private static $singular_name = 'Artikel';
+    private static $icon_class = 'font-icon-p-article';
 
-	private static $db = [
-		'PublicationDate'				=> 'Date',
-		'Summary'								=> 'HTMLText',
-		'RemoveElementSpacing'	=> 'Boolean'
-	];
-	
-	private static $has_one = [
-		'ThumbnailImage'				=> Image::class
-	];
+    private static $db = [
+        'PublicationDate' => 'Date',
+        'Summary' => 'HTMLText',
+        'RemoveElementSpacing' => 'Boolean'
+    ];
 
-	private static $many_many = [
-		'BlogTags'							=> BlogTag::class
-	];
+    private static $has_one = [
+        'ThumbnailImage' => Image::class
+    ];
 
-	private static $allowed_parent = [
-		BlogHolderPage::class
-	];
+    private static $many_many = [
+        'BlogTags' => BlogTag::class
+    ];
 
-	private static $owns = [
-		'ThumbnailImage'
-	];
+    private static $allowed_parent = [
+        BlogHolderPage::class
+    ];
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+    private static $owns = [
+        'ThumbnailImage'
+    ];
 
-		$fields->addFieldsToTab('Root.Main', [
-			DateField::create('PublicationDate', 'Publicatiedatum'),
-			HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
-			UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Blog Thumbnails'),
-			ListboxField::create('BlogTags', 'Tag', BlogTag::get())
-		], 'Content');
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-		$fields->addFieldsToTab('Root.Elements', [
-			CheckboxField::create('RemoveElementSpacing', 'Ruimte onderaan elements verwijderen')->setDescription('Deze optie is heel handig wanneer er slechts één contentblok op de pagina staat.')
-		]);
+        $fields->addFieldsToTab('Root.Main', [
+            DateField::create('PublicationDate', 'Publicatiedatum'),
+            HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
+            UploadField::create('ThumbnailImage', 'Afbeelding op overzichten')->setFolderName('Blog Thumbnails'),
+            ListboxField::create('BlogTags', 'Tag', BlogTag::get())
+        ], 'Content');
 
-		return $fields;
-	}
+        $fields->addFieldsToTab('Root.Elements', [
+            CheckboxField::create('RemoveElementSpacing', 'Ruimte onderaan elements verwijderen')->setDescription('Deze optie is heel handig wanneer er slechts één contentblok op de pagina staat.')
+        ]);
+
+        return $fields;
+    }
 }

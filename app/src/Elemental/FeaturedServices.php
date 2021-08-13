@@ -3,72 +3,85 @@
 namespace Elements;
 
 use Pages\ServicePage;
-
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\ListboxField;
 
-class FeaturedServices extends BaseElement {
-	private static $table_name = 'FeaturedServices';
-	private static $singular_name = 'Featured Services';
-	private static $plural_name = 'Featured Services';
-	private static $description = 'Blok met links naar uitgelichte diensten';
-	private static $icon = 'font-icon-block-rocket';
-	private static $inline_editable = false;
-	private static $controller_template = 'ElementHolder';
+class FeaturedServices extends BaseElement
+{
+    private static $table_name = 'FeaturedServices';
+    private static $singular_name = 'Featured Services';
+    private static $plural_name = 'Featured Services';
+    private static $description = 'Blok met links naar uitgelichte diensten';
+    private static $icon = 'font-icon-block-rocket';
+    private static $inline_editable = false;
+    private static $controller_template = 'ElementHolder';
 
-	private static $db = [
-		'TextIntro'					=> 'HTMLText',
-		'RemovePadding'			=> 'Boolean',
-		'ShowAllServices'		=> 'Boolean'
-	];
+    private static $db = [
+        'TextIntro' => 'HTMLText',
+        'RemovePadding' => 'Boolean',
+        'ShowAllServices' => 'Boolean'
+    ];
 
-	private static $many_many = [
-		'LinkedServices'		=> ServicePage::class
-	];
+    private static $many_many = [
+        'LinkedServices' => ServicePage::class
+    ];
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
 
-		$fields->removeByName('LinkedServices');
+        $fields->removeByName('LinkedServices');
 
-		$fields->addFieldsToTab('Root.Main', [
-			HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
-			CheckboxField::create('ShowAllServices', 'Alle overige services tonen')->setDescription('Let op: Deze optie is bedoeld voor de Service Page!'),
-		]);
+        $fields->addFieldsToTab('Root.Main', [
+            HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
+            CheckboxField::create('ShowAllServices', 'Alle overige services tonen')->setDescription('Let op: Deze optie is bedoeld voor de Service Page!'),
+        ]);
 
-		if($this->ClassName == 'ServicePage') {
-			if( ! $this->ShowAllServices ) {
-				$fields->addFieldsToTab('Root.Main', [
-					ListboxField::create('LinkedServices', 'Gelinkte Services', ServicePage::get())
-				]);
-			}
-		}
+        if ($this->ClassName == 'ServicePage') {
+            if (!$this->ShowAllServices) {
+                $fields->addFieldsToTab('Root.Main', [
+                    ListboxField::create('LinkedServices', 'Gelinkte Services', ServicePage::get())
+                ]);
+            }
+        }
 
-		$fields->addFieldsToTab('Root.Settings', [
-			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
-		]);
+        $fields->addFieldsToTab('Root.Settings', [
+            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
+        ]);
 
-		return $fields;
-	}
+        return $fields;
+    }
 
-	public function getType() {
-		return 'Uitgelichte Diensten';
-	}
+    /**
+     * get name of the element
+     *
+     * @return void
+     */
+    public function getType()
+    {
+        return self::$singular_name;
+    }
 
-	public function getServices() {
-		$relationID = $this->getPage()->ID;
-		if($this->ShowAllServices) {
-			$services = ServicePage::get()->filter([
-				'IsLandingPage' 	=> 0
-			])->exclude([
-				'ID' 							=> $relationID
-			]);
-		} else {
-			$services = $this->LinkedServices();
-		}
+    /**
+     * get services, but filter the current one out
+     *
+     * @return object
+     */
+    public function getServices()
+    {
+        $relationID = $this->getPage()->ID;
+        if ($this->ShowAllServices) {
+            $services = ServicePage::get()->filter([
+                'IsLandingPage' => 0
+            ])->exclude([
+                'ID' => $relationID
+            ]);
+        } else {
+            $services = $this->LinkedServices();
+        }
 
-		return $services;
-	}
+        return $services;
+    }
 }

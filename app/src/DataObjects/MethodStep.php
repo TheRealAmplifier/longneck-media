@@ -3,13 +3,9 @@
 namespace DataObject;
 
 use Elements\Method;
-
 use SilverStripe\ORM\DataObject;
-
-use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\TreeDropdownField;
 
 class MethodStep extends DataObject {
 	private static $table_name = 'MethodStep';
@@ -17,18 +13,18 @@ class MethodStep extends DataObject {
 	private static $plural_name = 'Methode stappen';
 
 	private static $db = [
-		'SortID'            => 'Int',
-		'Title'             => 'Varchar',
-		'Text'							=> 'HTMLText'
+		'SortID' => 'Int',
+		'Title' => 'Varchar',
+		'Text' => 'HTMLText'
 	];
 
 	private static $has_one = [
-		'Method'						=> Method::class
+		'Method' => Method::class
 	];
 
 	private static $summary_fields = [
-		'Title'							=> 'Titel',
-		'Text'							=> 'Tekst',
+		'Title' => 'Naam',
+		'Text' => 'Tekst'
 	];
 
 	public function getCMSfields() {

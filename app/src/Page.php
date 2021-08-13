@@ -2,99 +2,103 @@
 
 namespace {
 
-	use Shortcode\ShortcodeButton;
-	use Shortcode\ShortcodeQuote;
-	use Silverstripe\Assets\Image;
-	use SilverStripe\AssetAdmin\Forms\UploadField;
-	use SilverStripe\CMS\Model\SiteTree;
+    use Shortcode\ShortcodeButton;
+    use Shortcode\ShortcodeQuote;
+    use Silverstripe\Assets\Image;
+    use SilverStripe\AssetAdmin\Forms\UploadField;
+    use SilverStripe\CMS\Model\SiteTree;
     use SilverStripe\Forms\CheckboxField;
     use SilverStripe\Forms\DropdownField;
-	use SilverStripe\Forms\GridField\GridField;
-	use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
-	use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+    use SilverStripe\Forms\GridField\GridField;
+    use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+    use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-	class Page extends SiteTree {
-		private static $singular_name = 'Standaard pagina';
-		private static $icon_class = 'font-icon-p-article';
+    class Page extends SiteTree
+    {
+        private static $singular_name = 'Standaard pagina';
+        private static $icon_class = 'font-icon-p-article';
 
-		private static $db = [
-			'BannerFunction'				=> 'Varchar',
-			'BannerText'						=> 'HTMLText'
-		];
+        private static $db = [
+            'BannerFunction' => 'Varchar',
+            'BannerText' => 'HTMLText'
+        ];
 
-		private static $has_one = [
-			'BannerImage'						=> image::class
-		];
+        private static $has_one = [
+            'BannerImage' => image::class
+        ];
 
-		private static $has_many = [
-			'ShortcodeButtons'			=> ShortcodeButton::class,
-			'ShortcodeQuotes'				=> ShortcodeQuote::class
-		];
+        private static $has_many = [
+            'ShortcodeButtons' => ShortcodeButton::class,
+            'ShortcodeQuotes' => ShortcodeQuote::class
+        ];
 
-		private static $owns = [
-			'BannerImage'
-		];
+        private static $owns = [
+            'BannerImage'
+        ];
 
-		public function getCMSFields() {
-			$fields = parent::getCMSFields();
+        public function getCMSFields()
+        {
+            $fields = parent::getCMSFields();
 
-			$fields->addFieldsToTab('Root.Banner', [
-				DropdownField::create('BannerFunction', 'Banner Type', [
-					'text'	=> 'Titel (standaard)',
-					'image'	=> 'Afbeelding',
-				]),
-				HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(5)
-			]);
+            $fields->addFieldsToTab('Root.Banner', [
+                DropdownField::create('BannerFunction', 'Banner Type', [
+                    'text' => 'Titel (standaard)',
+                    'image'    => 'Afbeelding',
+                ]),
+                HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(5)
+            ]);
 
-			if ($this->BannerFunction == 'image') {
-				$fields->addFieldsToTab('Root.Banner', [
-					DropdownField::create('BannerType', 'Banner Type', [
-						'left'	=> 'Links',
-						'right'	=> 'Rechts'
-					]),
-					UploadField::create('BannerImage', 'Banner Image')->setFolderName('Banners'),
-				]);
-			}
+            if ($this->BannerFunction == 'image') {
+                $fields->addFieldsToTab('Root.Banner', [
+                    DropdownField::create('BannerType', 'Banner Type', [
+                        'left' => 'Links',
+                        'right'    => 'Rechts'
+                    ]),
+                    UploadField::create('BannerImage', 'Banner Image')->setFolderName('Banners'),
+                ]);
+            }
 
-			$config = GridFieldConfig_RecordEditor::create();
-			$fields->addFieldToTab('Root.Buttons', GridField::create(
-				'ShortcodeButtons',
-				'Shortcode Buttons',
-				ShortcodeButton::get(),
-				$config
-			));
+            $config = GridFieldConfig_RecordEditor::create();
+            $fields->addFieldToTab('Root.Buttons', GridField::create(
+                'ShortcodeButtons',
+                'Shortcode Buttons',
+                ShortcodeButton::get(),
+                $config
+            ));
 
-			$config = GridFieldConfig_RecordEditor::create();
-			$fields->addFieldToTab('Root.Quotes', GridField::create(
-				'ShortcodeQuotes',
-				'Shortcode Quotes',
-				ShortcodeQuote::get(),
-				$config
-			));
+            $config = GridFieldConfig_RecordEditor::create();
+            $fields->addFieldToTab('Root.Quotes', GridField::create(
+                'ShortcodeQuotes',
+                'Shortcode Quotes',
+                ShortcodeQuote::get(),
+                $config
+            ));
 
-			return $fields;
-		}
+            return $fields;
+        }
 
-		public static function parseShortcodeButton($attributes, $content, $parser, $shortcode) {
-			$buttonID = strip_tags($attributes['id']);
-			$button = ShortcodeButton::get()->filter('ID', $buttonID)->first();
+        public static function parseShortcodeButton($attributes, $content, $parser, $shortcode)
+        {
+            $buttonID = strip_tags($attributes['id']);
+            $button = ShortcodeButton::get()->filter('ID', $buttonID)->first();
 
-			if (!empty($button->ID)) {
-				return $button->customise([
-					'ShortcodeButton' => $button
-				])->renderWith('Shortcode/Button');
-			}
-		}
+            if (!empty($button->ID)) {
+                return $button->customise([
+                    'ShortcodeButton' => $button
+                ])->renderWith('Shortcode/Button');
+            }
+        }
 
-		public static function parseShortcodeQuote($attributes, $content, $parser, $shortcode) {
-			$quoteID = strip_tags($attributes['id']);
-			$quote = ShortcodeQuote::get()->filter('ID', $quoteID)->first();
+        public static function parseShortcodeQuote($attributes, $content, $parser, $shortcode)
+        {
+            $quoteID = strip_tags($attributes['id']);
+            $quote = ShortcodeQuote::get()->filter('ID', $quoteID)->first();
 
-			if (!empty($quote->ID)) {
-				return $quote->customise([
-					'ShortcodeQuote' => $quote
-				])->renderWith('Shortcode/Quote');
-			}
-		}
-	}
+            if (!empty($quote->ID)) {
+                return $quote->customise([
+                    'ShortcodeQuote' => $quote
+                ])->renderWith('Shortcode/Quote');
+            }
+        }
+    }
 }

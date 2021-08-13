@@ -11,7 +11,7 @@
 
 	&.current,
 	&.section {
-		font-weight: 800;
+		font-weight: 500;
 	}
 
 	&:not(:last-child) {
@@ -64,7 +64,6 @@
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 1.6rem;
-
 }
 
 .navigation__link--main	{

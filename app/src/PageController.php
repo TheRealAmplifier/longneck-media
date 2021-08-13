@@ -2,13 +2,15 @@
 
 namespace {
 
-	use SilverStripe\CMS\Controllers\ContentController;
+    use SilverStripe\CMS\Controllers\ContentController;
 
-	class PageController extends ContentController {
-		private static $allowed_actions = [];
+    class PageController extends ContentController
+    {
+        private static $allowed_actions = [];
 
-		protected function init() {
-			parent::init();
-		}
-	}
+        protected function init()
+        {
+            parent::init();
+        }
+    }
 }

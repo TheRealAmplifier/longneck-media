@@ -3,26 +3,24 @@
 namespace DataObject;
 
 use SilverStripe\ORM\DataObject;
-
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
-
 use SilverStripe\Forms\TextField;
 
 class SocialAccount extends DataObject {
   private static $table_name = 'SocialAccount';
   private static $singular_name = 'Social Media account';
   private static $plural_name = 'Social Media accounts';
-  
+
   private static $db = [
-    'SortID'              => 'Int',
-    'Title'               => 'Varchar',
-    'AccountLink'          => 'Varchar(250)',
+    'SortID' => 'Int',
+    'Title' => 'Varchar',
+    'AccountLink' => 'Varchar(250)'
   ];
 
   private static $has_one = [
-    'CustomSiteConfig'    => 'SilverStripe\SiteConfig\SiteConfig',
-    'Icon'                => File::class
+    'CustomSiteConfig' => 'SilverStripe\SiteConfig\SiteConfig',
+    'Icon' => File::class
   ];
 
   private static $default_sort = [
@@ -34,8 +32,8 @@ class SocialAccount extends DataObject {
   ];
 
   private static $summary_fields = [
-    'Title',
-    'AccountLink'
+    'Title' => 'Naam',
+    'AccountLink' => 'Link'
   ];
 
   public function getCMSFields() {
