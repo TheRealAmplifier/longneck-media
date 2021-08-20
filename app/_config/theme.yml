@@ -7,10 +7,6 @@ SilverStripe\View\SSViewer:
     - 'longneck'
     - '$default'
 
-SilverStripe\SiteConfig\SiteConfig:
-  extensions:
-    - CustomSiteConfig    
-
 Heyday\MenuManager\MenuSet:
   default_sets:
     - Primary

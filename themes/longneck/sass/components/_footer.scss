@@ -1,6 +1,6 @@
 .footer {
 	background-color: $color-footer;
-	border-bottom: 4rem solid $color-footer-border;
+	border-bottom: 2rem solid $color-footer-border;
 	color: $color-black;
 	width: 100%;
 
@@ -27,7 +27,7 @@
 
 	&:hover,
 	&:focus {
-		.contact__icon {				
+		.contact__icon {
 			transform: translateX(2rem);
 		}
 	}
@@ -59,7 +59,8 @@
 	width: 6rem;
 	height: 6rem;
 	margin-left: .5rem;
-	margin-top: 3rem;
+    margin-top: 3rem;
+    transition: transform .2s ease;
 }
 
 .footer__top,
@@ -100,7 +101,7 @@
 
 .footer__right {
 	@include flex($align: flex-end);
-	flex: 0 0 10rem;
+	flex: 0 0 6rem;
 
 	@include breakpoint('max-tablet-landscape') {
 		display: none;
@@ -109,8 +110,8 @@
 
 .footer__scroll {
 	@include flex($align: center, $justify: center);
-	width: 10rem;
-	height: 10rem;
+	width: 7rem;
+	height: 7rem;
 	background-color: $color-footer-scroll;
 	cursor: pointer;
 

@@ -34,6 +34,10 @@ StevieMayhew\SilverStripeSVG\SVGTemplate:
   default_extra_classes:
     - 'image--cover'
 
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Extensions\CustomSiteConfig
+
 Heyday\MenuManager\MenuItem:
   extensions:
     - Extensions\CustomMenuItem
@@ -63,7 +67,7 @@ ModelAdmin\CustomerAdmin:
 
 ModelAdmin\ContactSubmissionAdmin:
   menu_priority: -16
-  
+
 ModelAdmin\QuotationSubmissionAdmin:
   menu_priority: -18
 

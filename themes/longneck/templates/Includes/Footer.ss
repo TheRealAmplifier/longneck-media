@@ -1,4 +1,3 @@
-
 <footer class="footer">
 	<div class="footer__left">
 		<div class="footer__top">
@@ -59,7 +58,7 @@
 		<div class="footer__scroll">
 			<div class="scroll__icon">
 				{$SVG('up-arrow').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
-			</div>	
+			</div>
 		</div>
 	</div>
-</footer> 
+</footer>

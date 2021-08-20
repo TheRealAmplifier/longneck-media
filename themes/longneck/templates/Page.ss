@@ -7,7 +7,7 @@
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date()); 
+		gtag('js', new Date());
 		gtag('config', 'UA-186907414-1');
 	</script>
 
@@ -36,7 +36,9 @@
 </head>
 <body class="{$ClassName.ShortName} preload">
 
-	<% include Header %>
+    <% include Header %>
+    <% include HeaderPopup %>
+
 	<main class="content--main">
 		{$Layout}
 	</main>
@@ -56,6 +58,6 @@
 		s0.parentNode.insertBefore(s1,s0);
 		})();
 		</script>
-		<!--End of Tawk.to Script-->
+	<!--End of Tawk.to Script-->
 </body>
 </html>

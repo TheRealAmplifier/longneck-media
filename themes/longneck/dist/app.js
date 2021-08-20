@@ -46,26 +46,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _module_aos_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/aos.js */ "./themes/longneck/javascript/module/aos.js");
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('preload');
-});
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.footer__scroll').on('click', function (event) {
-    event.preventDefault();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').animate({
-      scrollTop: 0
-    }, 400);
+document.addEventListener("DOMContentLoaded", function () {
+  var body = document.querySelector('body');
+  var headerPopup = document.querySelector('.navigation__popup');
+  var headerOpenButton = document.querySelector('.header__toggle');
+  var headerCloseButton = document.querySelector('.popup__close');
+  var footerScrollButton = document.querySelector('.footer__scroll');
+  body.classList.remove('preload');
+  headerOpenButton.addEventListener('click', function () {
+    headerPopup.classList.add('navigation__popup--open');
+    body.classList.add('navigation--open');
   });
-});
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
-  var scroll = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
-
-  if (scroll >= 70) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').addClass('header--scrolled');
-  } else {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header').removeClass('header--scrolled');
-  }
-});
+  headerCloseButton.addEventListener('click', function () {
+    headerPopup.classList.remove('navigation__popup--open');
+    body.classList.remove('navigation--open');
+  });
+  footerScrollButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}); // $(window).scroll(function() {
+// 	let scroll = $(window).scrollTop();
+// 	if (scroll >= 70) {
+// 		$('.header').addClass('header--scrolled');
+// 	} else {
+// 		$('.header').removeClass('header--scrolled');
+// 	}
+// });
 
 /***/ }),
 

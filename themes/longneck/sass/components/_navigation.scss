@@ -6,13 +6,15 @@
 
 .navigation__link {
 	@include font('karla');
-	font-size: 1.6rem;	
+	font-size: 1.6rem;
 	line-height: 1.8;
 
-	&.current,
-	&.section {
-		font-weight: 500;
-	}
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-primary;
+    }
 
 	&:not(:last-child) {
 		@include breakpoint('min-tablet-landscape') {
@@ -32,18 +34,21 @@
 }
 
 .navigation__link--medium  {
-	font-size: 1.8rem;
+    font-size: 1.8rem;
+    color: $color-gray-dark-1;
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
 	}
 }
 
 .navigation__link--big {
-	font-size: 3rem;
+    font-size: 3rem;
 
 	&.current {
-		&:after {
+        font-weight: 600;
+
+        &:after {
 			content: '';
 			background-image: url(../images/svg/arrow-left.svg);
 			background-size: 2.8rem;
@@ -51,7 +56,7 @@
 			width: 2.8rem;
 			height: 2.8rem;
 			display: inline-flex;
-			margin-left: 3rem;
+            margin-left: 3rem;
 		}
 	}
 

@@ -85,7 +85,7 @@ class ServicePage extends Page
             $newCTA = new CallToAction();
             $newCTA->Title = 'Heb je vragen?';
             $newCTA->ShowTitle = true;
-            $newCTA->TextMain    = 'Dit kan per chat of per e-mail. Doorgaans reageren wij op werkdagen binnen 2 uur.';
+            $newCTA->TextMain = 'Dit kan per chat of per e-mail. Doorgaans reageren wij op werkdagen binnen 2 uur.';
             $newCTA->CTAType = 'simple';
             $newCTA->ParentID = $elementalAreaID;
             $newCTA->write();

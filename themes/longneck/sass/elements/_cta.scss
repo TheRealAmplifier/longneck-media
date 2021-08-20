@@ -1,4 +1,4 @@
-.cta--image { 
+.cta--image {
 	.cta__wrapper {
 		@include flex($dynamicDirection: true, $breakpoint: 'min-desktop');
 	}
@@ -10,7 +10,7 @@
 
 	.cta__image {
 		height: 35rem;
-	
+
 		@include breakpoint('min-tablet-landscape') {
 			height: 50rem;
 		}
@@ -28,15 +28,16 @@
 		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-portrait');
 		@include sectionwrapper(100rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true);
 	}
-	.cta__content { 
+	.cta__content {
 		background-color: none;
 		padding: 10rem 0;
 	}
 }
 
 .cta--contact {
+    background-color: $color-gray-light-1;
 	padding: 5rem 0;
-	
+
 	.cta__wrapper {
 		@include flex($direction: column);
 		@include sectionwrapper(100rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
@@ -52,7 +53,7 @@
 	background: linear-gradient(135deg, lighten($color-primary, 7) 0%, $color-primary 100%);
 	color: $color-white;
 	padding: 6rem 2.5rem;
-	
+
 	.cta__wrapper {
 		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
 		@include sectionwrapper(133rem, $setDefaultPadding: 0 0, $unsetPadding: true);
