@@ -7,7 +7,7 @@
 }
 .banner__content {
 	margin-top: 2rem;
-	
+
 	p {
 		font-size: 2rem;
 
@@ -17,6 +17,7 @@
 	}
 }
 .banner__image {
+    background-color: $color-gray-light-1;
 	height: 35rem;
 
 	@include breakpoint('min-tablet-portrait') {

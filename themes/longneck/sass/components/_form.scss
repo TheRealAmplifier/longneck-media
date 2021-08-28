@@ -10,7 +10,7 @@
 		margin-bottom: 1.5rem;
 
 		@include breakpoint('min-tablet-landscape') {
-			margin-bottom: 3rem;	
+			margin-bottom: 3rem;
 		}
 	}
 
@@ -48,7 +48,7 @@
 
 	.action {
 		@extend .button;
-		@extend .button--solid-blue;
+		@extend .button__solid--red;
 
 		appearance: none;
 		border: 0;
@@ -91,7 +91,7 @@ select {
 	appearance: none;
 	background-image: url("../images/svg/chevron-down.svg");
 	background-size: 1.2rem;
-	background-position: 96% center; 
+	background-position: 96% center;
 	background-repeat: no-repeat;
 }
 input[type="text"],
@@ -111,8 +111,8 @@ textarea {
 	margin-top: 10rem;
 }
 
-.grecaptcha-badge { 
-	visibility: hidden; 
+.grecaptcha-badge {
+	visibility: hidden;
 }
 .form__protection {
 	@include flex($align: center);

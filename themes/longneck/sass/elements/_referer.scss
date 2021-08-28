@@ -1,0 +1,68 @@
+.referer {
+    @extend %bigSectionPadding;
+    background-color: $color-gray-light-1;
+}
+.referer__wrapper {
+    @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem);
+}
+.referer__content {
+    flex: 0 0 40%;
+
+    @include breakpoint('max-tablet-landscape') {
+        margin-bottom: 5rem;
+    }
+}
+.referer__list {
+    flex: 0 0 47.5%;
+}
+.referer__list {
+    display: grid;
+    grid-gap: 5rem 0;
+
+    @include breakpoint('min-tablet-portrait') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint('min-tablet-landscape') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem 7.5rem;
+    }
+}
+
+.target__link {
+    @include flex($direction: column);
+
+    &:hover,
+    &:focus,
+    &:active {
+        .target__title {
+            &:before {
+                width: 4rem;
+            }
+        }
+    }
+}
+.target__title {
+    font-weight: 600;
+    // text-transform: uppercase;
+    font-size: 1.8rem;
+
+    &:before {
+        content: '';
+        width: 3rem;
+        height: .3rem;
+        background-color: $color-primary;
+        display: block;
+        transition: all .2s linear;
+    }
+
+    @include breakpoint('min-tablet-landscape') {
+        font-size: 2.4rem;
+    }
+}
+.target__description {
+    * {
+        font-size: 1.8rem;
+    }
+}

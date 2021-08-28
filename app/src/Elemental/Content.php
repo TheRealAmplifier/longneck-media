@@ -21,9 +21,7 @@ class Content extends BaseElement
         'TextIntro' => 'HTMLText',
         'TextMain' => 'HTMLText',
         'HasBackgroundColor' => 'Boolean',
-        'SectionWidth' => 'Varchar',
-        'RemovePadding' => 'Boolean'
-
+        'SectionWidth' => 'Varchar'
     ];
 
     public function getCMSFields()
@@ -43,7 +41,6 @@ class Content extends BaseElement
                 'wide' => 'Breed'
             ]),
             CheckboxField::create('HasBackgroundColor', 'Achtergrondkleur toepassen')->setDescription('Deze optie voegt een achtergrond kleur toe aan het blok.'),
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
         ]);
 
         return $fields;

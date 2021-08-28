@@ -20,9 +20,7 @@ class ProjectResults extends BaseElement
     private static $controller_template = 'ElementHolder';
 
     private static $db = [
-        'TextMain' => 'HTMLText',
-        'RemovePadding' => 'Boolean'
-
+        'TextMain' => 'HTMLText'
     ];
 
     private static $has_many = [
@@ -37,10 +35,6 @@ class ProjectResults extends BaseElement
 
         $fields->addFieldsToTab('Root.Main', [
             HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
-        ]);
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
         ]);
 
         $config = GridFieldConfig_RecordEditor::create();

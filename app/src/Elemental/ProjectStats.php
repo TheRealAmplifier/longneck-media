@@ -20,8 +20,7 @@ class ProjectStats extends BaseElement
     private static $controller_template = 'ElementHolder';
 
     private static $db = [
-        'Year' => 'Varchar',
-        'RemovePadding' => 'Boolean'
+        'Year' => 'Varchar'
     ];
 
     private static $many_many = [
@@ -35,10 +34,6 @@ class ProjectStats extends BaseElement
         $fields->addFieldsToTab('Root.Main', [
             TextField::create('Year', 'Jaartal'),
             ListboxField::create('Services', 'Services', ServicePage::get())
-        ]);
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
         ]);
 
         return $fields;

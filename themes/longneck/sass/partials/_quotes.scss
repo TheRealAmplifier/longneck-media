@@ -8,17 +8,17 @@
 		content: '';
 		display: block;
 		position: absolute;
-		top: -1.5rem;
+		top: -2.5rem;
 		right: -1rem;
 		background-image: url('../images/svg/quote.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
 		width: 8rem;
-		height: 4rem; 
+		height: 4rem;
 
 		@include breakpoint('min-tablet-landscape') {
 			width: 10rem;
-			height: 6rem; 
+			height: 6rem;
 		}
 	}
 

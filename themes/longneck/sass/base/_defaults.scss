@@ -41,23 +41,26 @@ li {
 }
 
 %defaultSectionPadding {
-  padding: 3rem 0 5rem;
+    padding: 3rem 0 5rem;
 
-  @include breakpoint('min-tablet-portrait') {
-    padding: 5rem 0 7.5rem;
-  }
-  @include breakpoint('min-tablet-landscape') {
-    padding: 5rem 0 10rem 0;
-  }
-  @include breakpoint('min-desktop') {
-		padding: 5rem 0 12.5rem 0;
-	}
+    @include breakpoint('min-tablet-portrait') {
+        padding: 5rem 0 7.5rem;
+    }
+    @include breakpoint('min-tablet-landscape') {
+        padding: 5rem 0 10rem 0;
+    }
+    @include breakpoint('min-desktop') {
+        padding: 5rem 0 12.5rem 0;
+    }
 }
 %bigSectionPadding {
   padding: 5rem 3rem;
-	
+
 	@include breakpoint('min-tablet-landscape') {
 		padding: 7.5rem 12.5rem;
+    }
+    @include breakpoint('min-desktop') {
+		padding: 10rem 12.5rem;
 	}
 }
 
@@ -129,7 +132,7 @@ li {
         padding-left: 5rem;
       }
 
-      @include breakpoint('min-tablet-landscape') { 
+      @include breakpoint('min-tablet-landscape') {
         font-size: 2rem;
       }
     }

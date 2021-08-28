@@ -20,8 +20,7 @@ class ProjectIntro extends BaseElement
 
     private static $db = [
         'TextMain' => 'HTMLText',
-        'Year' => 'Varchar',
-        'RemovePadding' => 'Boolean'
+        'Year' => 'Varchar'
     ];
 
     private static $has_one = [
@@ -44,10 +43,6 @@ class ProjectIntro extends BaseElement
             UploadField::create('IntroImage', 'Afbeelding Introduction')->setFolderName('Project Intro'),
             HTMLEditorField::create('TextMain', 'Content')->setRows(6),
             TextField::create('Year', 'Jaartal')
-        ]);
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
         ]);
 
         return $fields;

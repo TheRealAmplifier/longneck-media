@@ -1,6 +1,6 @@
-Pages\InformationPage:
+Page:
   extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension 
+    - DNADesign\Elemental\Extensions\ElementalPageExtension
   allowed_elements:
     - Elements\Content
     - Elements\ContentImage
@@ -8,51 +8,26 @@ Pages\InformationPage:
     - Elements\Projects
 
 Pages\HomePage:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension  
   allowed_elements:
     - Elements\FeaturedServices
-    - Elements\CallToAction
-    - Elements\Projects
-    - Elements\Content
-    - Elements\ContentImage
     - Elements\SelectedCustomers
 
 Pages\ProjectPage:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension 
   allowed_elements:
     - Elements\ProjectIntro
     - Elements\ProjectStats
     - Elements\ProjectResults
-    - Elements\Content
+  disallowed_elements:
+    - Elements\Projects
 
 Pages\AboutPage:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension 
   allowed_elements:
-    - Elements\Content
-    - Elements\ContentImage
     - Elements\Team
-    - Elements\Projects
-    - Elements\CallToAction
     - Elements\FeaturedServices
     - Elements\Method
+    - Elements\Referer
 
 Pages\ServicePage:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension  
   allowed_elements:
-    - Elements\Content
-    - Elements\CallToAction    
-    - Elements\Projects
     - Elements\Method
     - Elements\FeaturedServices
-
-Pages\BlogPage:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension 
-  allowed_elements:
-    - Elements\Content
-    - Elements\ContentImage
-    - Elements\CallToAction

@@ -16,7 +16,7 @@
 					<% if $MenuSet('Primary').MenuItems %>
 						<nav class="navigation navigation--column">
 							<% loop $MenuSet('Primary').MenuItems %>
-								<a class="navigation__link navigation__link--big {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
+                                <a class="navigation__link navigation__link--big {$LinkingMode}" href="{$Link}">{$MenuTitle}</a>
 							<% end_loop %>
 						</nav>
 					<% end_if %>

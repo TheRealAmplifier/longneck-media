@@ -21,8 +21,7 @@ class Team extends BaseElement
     private static $db = [
         'TextIntro' => 'HTMLText',
         'TextMain' => 'HTMLText',
-        'ShowAllMembers' => 'Boolean',
-        'RemovePadding' => 'Boolean'
+        'ShowAllMembers' => 'Boolean'
     ];
 
     private static $many_many = [
@@ -39,14 +38,6 @@ class Team extends BaseElement
             HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
             HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
             CheckboxField::create('ShowAllMembers', 'Alle teamleden tonen')->setDescription('Let op: wijziging gaat pas van kracht na het opslaan van de pagina.')
-        ]);
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
-        ]);
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
         ]);
 
         if (!$this->ShowAllMembers == 1) {

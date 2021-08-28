@@ -15,9 +15,7 @@ class SelectedCustomers extends BaseElement {
 	private static $inline_editable = false;
 	private static $controller_template = 'ElementHolder';
 
-	private static $db = [
-		'RemovePadding' => 'Boolean'
-	];
+	private static $db = [];
 
 	private static $many_many = [
 		'Customers' => Customer::class
@@ -30,10 +28,6 @@ class SelectedCustomers extends BaseElement {
 
 		$fields->addFieldsToTab('Root.Main', [
 			ListboxField::create('Customers', 'Geselecteerde partners', Customer::get())
-		]);
-
-		$fields->addFieldsToTab('Root.Settings', [
-			CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
 		]);
 
 		return $fields;

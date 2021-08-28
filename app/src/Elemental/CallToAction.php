@@ -24,11 +24,8 @@ class CallToAction extends BaseElement
 
 
     private static $db = [
-        'TextIntro' => 'HTMLText',
-        'TextMain' => 'HTMLText',
         'ButtonText' => 'Varchar',
-        'CTAType' => 'Varchar',
-        'RemovePadding' => 'Boolean'
+        'CTAType' => 'Varchar'
     ];
 
     private static $has_one = [
@@ -45,24 +42,16 @@ class CallToAction extends BaseElement
         $fields = parent::getCMSFields();
 
         $fields->addFieldsToTab('Root.Main', [
-            HTMLEditorField::create('TextIntro', 'Introducerende tekst')->setRows(5),
-            HTMLEditorField::create('TextMain', 'Primaire text')->setRows(7),
             UploadField::create('Image', 'Afbeelding')->setFolderName('CTA'),
             DropdownField::create('CTAType', 'Type', [
                 'simple' => 'Eenvoudig',
-                'image' => 'Afbeelding',
-                'colored' => 'Gekleurde achtergrond',
-                'bar' => 'Gekleurde balk (verloop)',
+                'bar' => 'Gekleurde balk (verloop)'
             ])
         ]);
 
         $fields->addFieldsToTab('Root.Button', [
             TextField::create('ButtonText', 'Button tekst'),
             TreeDropdownField::create('LinkedPageID', 'Gelinkte Pagina', SiteTree::class)
-        ]);
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
         ]);
 
         return $fields;

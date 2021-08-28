@@ -19,10 +19,6 @@ class Method extends BaseElement
     private static $inline_editable = false;
     private static $controller_template = 'ElementHolder';
 
-    private static $db = [
-        'RemovePadding' => 'Boolean'
-    ];
-
     private static $has_many = [
         'MethodSteps' => MethodStep::class
     ];
@@ -32,10 +28,6 @@ class Method extends BaseElement
         $fields = parent::getCMSFields();
 
         $fields->removeByName(['LinkedPages', 'MethodSteps']);
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
-        ]);
 
         $config =  GridFieldConfig_RecordEditor::create();
         $config->addComponent(new GridFieldSortableRows('SortID'));

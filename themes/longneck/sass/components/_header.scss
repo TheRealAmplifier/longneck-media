@@ -18,16 +18,9 @@
 
 
 .header__wrapper {
-	@include flex($align: center, $justify: space-between);
+    @include flex($align: center, $justify: space-between);
+    @include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
 	height: 100%;
-	padding: 0 2.5rem;
-
-	@include breakpoint('min-tablet-landscape') {
-		padding: 0 5rem;
-	}
-	@include breakpoint('min-desktop') {
-		padding: 0 7.5rem;
-	}
 }
 
 .header__brand {

@@ -1,6 +1,6 @@
 .services__blocks {
 	position: relative;
-	display: grid;	
+	display: grid;
 	grid-template-columns: 1fr;
 	width: 100%;
 	margin-top: 5rem;
@@ -12,7 +12,7 @@
 
 		&:not(:last-of-type) {
 			margin-bottom: 3rem;
-	
+
 			@include breakpoint('min-tablet-landscape') {
 				margin-bottom: 5rem;
 			}
@@ -27,11 +27,11 @@
 
 .services__blocks--narrow {
 	position: relative;
-	display: grid;	
+	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 2rem;
 	width: 100%;
-	margin-top: 5rem;
+    margin-top: 5rem;
 
 	@include breakpoint('min-tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);

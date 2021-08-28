@@ -3,7 +3,9 @@
 namespace Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\ListboxField;
 
 class Referer extends BaseElement
@@ -17,11 +19,11 @@ class Referer extends BaseElement
     private static $controller_template = 'ElementHolder';
 
     private static $db = [
-        'RemovePadding' => 'Boolean',
+        'TextMain' => 'HTMLText',
         'CustomSubPages' => 'Boolean'
     ];
 
-    private static $has_many = [
+    private static $many_many = [
         'SubPages' => SiteTree::class
     ];
 
@@ -31,13 +33,10 @@ class Referer extends BaseElement
 
         $fields->removeByName(['LinkedPages', 'MethodSteps']);
 
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
-        ]);
-
-        $fields->addFieldsToTab('Root.SubPages', [
+        $fields->addFieldsToTab('Root.Main', [
+            HTMLEditorField::create('TextMain', 'Content')->setRows(6),
             CheckboxField::create('CustomSubPages', 'Specifieke selectie pagina\'s tonen')->setDescription('Let op: standaard worden de childpages opgehaald, met deze optie worden onderstaande pagina\'s getoond op het template.'),
-            ListboxField::create('SubPages', 'SubPages', SiteTree::class)
+            ListboxField::create('SubPages', 'SubPages', SiteTree::get()->map('ID', 'Title')->toArray())
         ]);
 
         return $fields;
@@ -51,5 +50,14 @@ class Referer extends BaseElement
     public function getType()
     {
         return self::$singular_name;
+    }
+
+    /**
+     * get the correct pages to link inside the block.
+     *
+     * @return void
+     */
+    public function getPages() {
+        return $this->CustomSubPages == true ? $this->SubPages() : $this->getPage()->Children();
     }
 }

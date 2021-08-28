@@ -21,7 +21,7 @@
 			<span class="card__price">Vanaf €{$Price}</span>
 		<% end_if %>
 		<div class="button__box button__box--spacer">
-			<a class="button button--icon button--solid-blue" href="{$Link}">
+			<a class="button button--icon button__solid--red" href="{$Link}">
 				<span class="link__text">Bekijk pakket</span>
 				<span class="link__icon">
 					{$SVG('forward').customBasePath('themes/longneck/images/svg/').extraClass('image--cover icon--arrow')}

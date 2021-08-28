@@ -1,4 +1,3 @@
-
 .card {
 	position: relative;
 	transition: all .2s ease-in;
@@ -74,7 +73,7 @@
 .card--row {
 	@include flex;
 	position: relative;
-	
+
 	&:not(:last-child){
 		margin-bottom: 5rem;
 
@@ -199,12 +198,12 @@
 	margin: 5rem 0;
 	list-style: none;
   padding-left: 0;
-	
+
 	.point__item {
 		position: relative;
 		font-size: 2rem;
 		padding: .5rem 0;
-		
+
 		&:not(:last-child) {
 			margin-bottom: .5rem;
 			border-bottom: 2px solid $color-tertiary;

@@ -20,7 +20,6 @@ class FeaturedServices extends BaseElement
 
     private static $db = [
         'TextIntro' => 'HTMLText',
-        'RemovePadding' => 'Boolean',
         'ShowAllServices' => 'Boolean'
     ];
 
@@ -46,10 +45,6 @@ class FeaturedServices extends BaseElement
                 ]);
             }
         }
-
-        $fields->addFieldsToTab('Root.Settings', [
-            CheckboxField::create('RemovePadding', 'Padding basiselement verwijderen')->setDescription('Let op: hiermee verwijder je de padding van het root element.')
-        ]);
 
         return $fields;
     }

@@ -1,23 +1,45 @@
 .footer {
+    position: relative;
 	background-color: $color-footer;
 	border-bottom: 2rem solid $color-footer-border;
-	color: $color-black;
-	width: 100%;
+    color: $color-black;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-image: url('../images/svg/particles-right.svg');
+        background-repeat: no-repeat;
+        right: 0rem;
+        width: 11rem;
+        height: 30rem;
+
+        @include breakpoint('max-tablet-portrait') {
+            bottom: 5rem;
+        }
+        @include breakpoint('min-tablet-portrait') {
+            top: -7.5rem;
+            width: 13rem;
+            height: 40rem;
+        }
+    }
+}
+.footer__wrapper {
+    @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+    @include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
 
 	@include breakpoint('min-tablet-landscape') {
-		@include flex($justify: space-between);
-	}
+		justify-content: space-between;
+    }
 }
 .footer__left {
 	flex: 1;
-	padding: 10rem 2.5rem 0;
+	padding-top: 10rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		padding: 12.5rem 5rem 0;
+		padding-top: 12.5rem;
 	}
-
 	@include breakpoint('min-desktop') {
-		padding: 15rem 7.5rem 0;
+		padding-top: 15rem;
 	}
 }
 
@@ -84,7 +106,7 @@
 	color: $color-black;
 
 	@include breakpoint('max-desktop') {
-		margin-top: 7.5rem;
+		margin-top: 5rem;
 	}
 	@include breakpoint('min-desktop') {
 		flex: 0 0 50%;

@@ -10,7 +10,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+    </div>
 	<div class="banner">
 		<div class="banner__wrapper">
 			<div class="banner__image">
@@ -40,5 +40,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+    </div>
 <% end_if %>

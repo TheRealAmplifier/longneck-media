@@ -44,10 +44,9 @@
 
 .navigation__link--big {
     font-size: 3rem;
+    font-weight: 600;
 
 	&.current {
-        font-weight: 600;
-
         &:after {
 			content: '';
 			background-image: url(../images/svg/arrow-left.svg);
@@ -133,20 +132,18 @@
 }
 
 .navigation__submenu {
-	position: relative;
-	height: 10rem;
+    @include flex;
+    margin-left: 5rem;
+    position: relative;
 
-	&:hover,
-	&:focus {
-		.navigation__popover {
-			max-height: 99rem;
-			visibility: visible;
-		}
-	}
+    .navigation__link {
+        font-size: 1.8rem;
 
-	.navigation__link {
-		margin-right: 0;
-	}
+        &:not(:last-of-type) {
+            margin-right: 2rem;
+        }
+    }
+
 }
 .navigation__popover {
 	@include flex($direction: column);
@@ -170,4 +167,23 @@
 			background-color: $color-tertiary;
 		}
 	}
+}
+
+//
+.submenu {
+    padding: 5rem 0;
+
+    @include breakpoint('min-tablet-landscape') {
+        padding: 10rem 0;
+    }
+}
+.submenu__wrapper {
+    @include flex($justify: center);
+    @include sectionwrapper(100rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+}
+.submenu__link {
+    background: $color-tertiary;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    box-shadow: 0 0 2rem rgb($color-tertiary, 2);
 }
