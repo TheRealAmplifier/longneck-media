@@ -44,10 +44,10 @@
 }
 .member__email {
 	margin-top: 1.5rem;
-	color: $color-secondary;
+	color: $color-primary;
 
 	&:hover,
 	&:focus {
-		color: darken($color-secondary, 15);
+		color: darken($color-primary, 15);
 	}
 }

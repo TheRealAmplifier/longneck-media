@@ -32,6 +32,10 @@ class Customer extends DataObject {
 		'Company' => 'Bedrijf'
 	];
 
+    private static $default_sort = [
+        'SortID'
+    ];
+
 	private static $owns = [
 		'Logo'
 	];

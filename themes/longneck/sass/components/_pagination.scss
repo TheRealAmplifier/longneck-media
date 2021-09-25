@@ -27,14 +27,14 @@
 	cursor: default;
 
 	g#right-chevron {
-		fill: $color-tertiary;
+		fill: $color-gray;
 	}
 }
 
 .pagination__previous,
 .pagination__next {
 	@include flex($align: center);
-}	
+}
 .pagination__previous {
 	margin-right: 3rem;
 }
@@ -44,10 +44,10 @@
 
 .pagination__current {
   position: relative;
-	width: 4rem; 
+	width: 4rem;
 	text-align: center;
   height: 23.09px;
-	background-color: $color-secondary;
+	background-color: $color-primary;
 	color: $color-white;
   margin: 11.55px 0;
 
@@ -62,11 +62,11 @@
 	}
 	&:before {
 		bottom: 100%;
-		border-bottom: 11.55px solid $color-secondary;
+		border-bottom: 11.55px solid $color-primary;
 	}
 	&:after {
 		top: 100%;
 		width: 0;
-		border-top: 11.55px solid $color-secondary;
+		border-top: 11.55px solid $color-primary;
 	}
 }

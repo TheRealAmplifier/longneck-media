@@ -55,11 +55,10 @@
                 </div>
             </div>
         </div>
-        <div class="footer__right">
-            <div class="footer__scroll">
-                <div class="scroll__icon">
-                    {$SVG('up-arrow').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
-                </div>
+
+        <div class="footer__scroll">
+            <div class="scroll__icon">
+                {$SVG('up-arrow').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 .pricing {
   padding: 5rem 0;
-	
+
 	@include breakpoint('min-tablet-landscape') {
 		padding: 7.5rem 12.5rem;
 	}
@@ -12,7 +12,7 @@
 
 .pricing__list {
 	position: relative;
-	display: grid;	
+	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 5rem;
 	width: 100%;
@@ -23,8 +23,10 @@
 	}
 }
 
-
 .block__pricing {
+	position: relative;
+	background-color: $color-white;
+	transition: all .2s ease-in;
 	padding: 4rem;
 
 	@include breakpoint('min-tablet-landscape') {

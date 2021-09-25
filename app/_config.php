@@ -1,6 +1,5 @@
 <?php
 
-use CyberDuck\SEO\Admin\SEOAdmin;
 use SilverStripe\Admin\CMSMenu;
 use SilverStripe\Admin\SecurityAdmin;
 use SilverStripe\CampaignAdmin\CampaignAdmin;
@@ -25,7 +24,6 @@ CMSMenu::remove_menu_class(CampaignAdmin::class);
 CMSMenu::remove_menu_class(ArchiveAdmin::class);
 CMSMenu::remove_menu_class(ReportAdmin::class);
 CMSMenu::remove_menu_class(SecurityAdmin::class);
-CMSMenu::remove_menu_class(SEOAdmin::class);
 
 HtmlEditorConfig::get('cms')->enablePlugins([
 	'template',

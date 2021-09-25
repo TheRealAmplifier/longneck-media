@@ -16,13 +16,13 @@
 }
 
 .content--background {
-	background-color: $color-gray-light-1;
+	background-color: $color-gray;
 }
 
 .box__content {
 	padding: 3rem 5rem;
 
-	@include breakpoint('min-tablet-landscape') { 
+	@include breakpoint('min-tablet-landscape') {
 		padding: 7.5rem 10rem;
 	}
 }
@@ -37,7 +37,7 @@
 
 	&.content__boxed--right {
 		.content__image {
-			order: 2; 
+			order: 2;
 		}
 		.content__body {
 			order: 1;
@@ -47,7 +47,7 @@
 	.content__image {
 		flex: 0 1 40%;
 
-		@include breakpoint('max-tablet-landscape') { 
+		@include breakpoint('max-tablet-landscape') {
 			height: 40rem;
 		}
 	}
@@ -55,10 +55,10 @@
 		flex: 1;
 		padding: 5rem 2.5rem;
 
-		@include breakpoint('min-tablet-landscape') { 
+		@include breakpoint('min-tablet-landscape') {
 			padding: 7.5rem 7.5rem;
 		}
-		@include breakpoint('min-desktop') { 
+		@include breakpoint('min-desktop') {
 			padding: 7.5rem 10rem;
 		}
 	}

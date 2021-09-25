@@ -7,7 +7,7 @@
 .method__left,
 .method__right {
 	padding: 3rem 5rem;
-	
+
 	@include breakpoint('min-tablet-landscape') {
 		padding: 10rem 15rem;
 	}
@@ -16,7 +16,7 @@
 	flex: 1;
 }
 .method__right {
-	background-color: $color-gray-blue-soft;
+	background-color: $color-gray;
 
 	@include breakpoint('max-tablet-landscape') {
 		margin-top: 5rem;
@@ -36,7 +36,7 @@
 .method__step {
 	@include flex($direction: column);
 	position: relative;
-	
+
 	&:not(:last-child) {
 		margin-bottom: 5rem;
 	}

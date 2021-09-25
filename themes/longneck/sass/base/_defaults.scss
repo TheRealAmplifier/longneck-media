@@ -23,6 +23,7 @@ body {
 
   &.navigation--open {
     overflow-y: hidden;
+    // background-color: rgba($color-black, .3);
   }
 
 	@include breakpoint('min-tablet-landscape') {

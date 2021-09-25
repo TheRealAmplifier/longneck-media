@@ -1,7 +1,7 @@
 <% include Banner %>
 
 <div class="details">
-	<div class="details__wrapper">	
+	<div class="details__wrapper">
 		<div class="details__box">
 			<div class="details__list">
 				{$ElementalArea}
@@ -18,7 +18,7 @@
 		<div class="projects__list--column">
 			<% if RelatedProjects %>
 				<% loop RelatedProjects %>
-					<% include Card Type="card--column", ExtraClasses="card--shadow-boxed card--border-blue", ShowButton="true" %>
+					<% include Card Type="card--column", ExtraClasses="card--rounded card--shadow-boxed card--border-blue", ShowButton="true" %>
 				<% end_loop %>
 			<% end_if %>
 		</div>

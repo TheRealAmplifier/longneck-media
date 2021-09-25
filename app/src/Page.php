@@ -40,6 +40,8 @@ namespace {
         {
             $fields = parent::getCMSFields();
 
+            $fields->removeByName(['Metadata']);
+
             $fields->addFieldsToTab('Root.Banner', [
                 DropdownField::create('BannerFunction', 'Banner Type', [
                     'text' => 'Titel (standaard)',
@@ -48,15 +50,6 @@ namespace {
                 HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(5)
             ]);
 
-            if ($this->BannerFunction == 'image') {
-                $fields->addFieldsToTab('Root.Banner', [
-                    DropdownField::create('BannerType', 'Banner Type', [
-                        'left' => 'Links',
-                        'right'    => 'Rechts'
-                    ]),
-                    UploadField::create('BannerImage', 'Banner Image')->setFolderName('Banners'),
-                ]);
-            }
 
             $config = GridFieldConfig_RecordEditor::create();
             $fields->addFieldToTab('Root.Buttons', GridField::create(
@@ -77,6 +70,15 @@ namespace {
             return $fields;
         }
 
+        /**
+         * Parse code for buttons
+         *
+         * @param [type] $attributes
+         * @param [type] $content
+         * @param [type] $parser
+         * @param [type] $shortcode
+         * @return void
+         */
         public static function parseShortcodeButton($attributes, $content, $parser, $shortcode)
         {
             $buttonID = strip_tags($attributes['id']);
@@ -89,6 +91,15 @@ namespace {
             }
         }
 
+        /**
+         * Parse code for quotes
+         *
+         * @param [type] $attributes
+         * @param [type] $content
+         * @param [type] $parser
+         * @param [type] $shortcode
+         * @return void
+         */
         public static function parseShortcodeQuote($attributes, $content, $parser, $shortcode)
         {
             $quoteID = strip_tags($attributes['id']);

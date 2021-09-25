@@ -14,3 +14,9 @@
 .image--animated {
 	transition: transform .2s ease-in;
 }
+.image--fitted {
+    width: 15rem;
+    height: 6rem;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}

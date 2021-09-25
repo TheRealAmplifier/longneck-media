@@ -22,7 +22,7 @@
 	padding: 2.5rem;
 	background-color: $color-white;
 	box-shadow: 0 0 5rem rgba($color-black, .16);
-	border-top: 1rem solid $color-secondary;
+	border-top: 1rem solid $color-primary;
 
 	@include breakpoint('min-tablet-landscape') {
 		padding: 10rem;
@@ -40,7 +40,7 @@
 	font-style: italic;
 }
 .form__message--success {
-	color: $color-secondary;
+	color: $color-primary;
 }
 .form__message--bad {
 	color: $color-error;

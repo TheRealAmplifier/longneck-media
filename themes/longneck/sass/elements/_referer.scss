@@ -1,32 +1,61 @@
 .referer {
     @extend %bigSectionPadding;
-    background-color: $color-gray-light-1;
+    background-color: $color-gray;
 }
 .referer__wrapper {
     @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 3rem);
+    @include sectionwrapper(143rem, $setDefaultPadding: 0 3rem);
+    gap: 3rem;
+
+    @include breakpoint('min-tablet-landscape') {
+        gap: 5rem;
+    }
+    @include breakpoint('min-tablet-landscape') {
+        gap: 7.5rem;
+    }
+}
+.referer__wrapper--wide {
+    @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);
+    @include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
+    gap: 3rem;
+
+    @include breakpoint('min-tablet-landscape') {
+        gap: 5rem;
+    }
+    @include breakpoint('min-tablet-landscape') {
+        gap: 7.5rem;
+    }
 }
 .referer__content {
-    flex: 0 0 40%;
+    flex: 1;
 
     @include breakpoint('max-tablet-landscape') {
         margin-bottom: 5rem;
     }
 }
 .referer__list {
-    flex: 0 0 47.5%;
-}
-.referer__list {
     display: grid;
     grid-gap: 5rem 0;
+    flex: 0 0 57.5%;
 
     @include breakpoint('min-tablet-portrait') {
         grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint('min-tablet-landscape') {
-        display: grid;
+        grid-gap: 5rem 5rem;
+    }
+}
+.referer__list--three {
+    display: grid;
+    grid-gap: 5rem 0;
+    flex: 0 0 70%;
+
+    @include breakpoint('min-tablet-portrait') {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5rem 7.5rem;
+    }
+    @include breakpoint('min-tablet-landscape') {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 7.5rem 7.5rem;
     }
 }
 
@@ -38,20 +67,19 @@
     &:active {
         .target__title {
             &:before {
-                width: 4rem;
+                width: 7rem;
             }
         }
     }
 }
 .target__title {
     font-weight: 600;
-    // text-transform: uppercase;
     font-size: 1.8rem;
 
     &:before {
         content: '';
-        width: 3rem;
-        height: .3rem;
+        width: 4rem;
+        height: .4rem;
         background-color: $color-primary;
         display: block;
         transition: all .2s linear;

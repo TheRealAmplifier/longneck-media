@@ -1,5 +1,9 @@
 .card {
 	position: relative;
+	overflow: hidden;
+}
+.card--rounded {
+    position: relative;
 	transition: all .2s ease-in;
 	background-color: $color-white;
 	border-top-left-radius: 2rem;
@@ -28,19 +32,19 @@
 }
 
 .card--border-blue {
-	border-color: $color-secondary;
+	border-color: $color-primary;
 
 	&:hover,
 	&:focus {
-		border-color: darken($color-secondary, 10);
+		border-color: darken($color-primary, 10);
 
 		.card__arrow {
-			background-color: darken($color-secondary, 10);
+			background-color: darken($color-primary, 10);
 		}
 	}
 
 	.card__arrow {
-		background-color: $color-secondary;
+		background-color: $color-primary;
 	}
 }
 
@@ -68,6 +72,10 @@
 	@include breakpoint('min-tablet-landscape') {
 		border-width: 0 0 1rem 0;
 	}
+}
+
+.card--transparent {
+    background-color: transparent;
 }
 
 .card--row {
@@ -173,7 +181,7 @@
 }
 .meta__tag {
 	@include flex($align: center);
-	background-color: $color-tertiary;
+	background-color: $color-gray;
 	padding: .5rem 1rem;
 	height: 3.4rem;
 	line-height: 3.4rem;
@@ -185,7 +193,7 @@
 	}
 }
 .meta__date {
-	color: $color-gray-dark-1;
+	color: $color-gray-dark;
 	font-size: 1.6rem;
 }
 
@@ -206,7 +214,7 @@
 
 		&:not(:last-child) {
 			margin-bottom: .5rem;
-			border-bottom: 2px solid $color-tertiary;
+			border-bottom: 2px solid $color-gray;
 		}
 	}
 }

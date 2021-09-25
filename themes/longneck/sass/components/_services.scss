@@ -1,3 +1,7 @@
+.services--background {
+    background-color: $color-gray;
+}
+
 .services__blocks {
 	position: relative;
 	display: grid;
@@ -7,7 +11,6 @@
 	column-gap: 3rem;
 
 	.block {
-		border-top-right-radius: 2rem;
 		overflow: hidden;
 
 		&:not(:last-of-type) {
@@ -19,8 +22,11 @@
 		}
 	}
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min-tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint('min-tablet-landscape') {
+		grid-template-columns: repeat(3, 1fr);
 		column-gap: 5rem;
 	}
 }
@@ -46,29 +52,6 @@
 		@include breakpoint('min-tablet-portrait') {
 			padding: 5rem 3rem;
 		}
-	}
-}
-
-.block__column {
-	&:nth-of-type(2) {
-		margin-top: 3rem;
-	}
-
-	@include breakpoint('min-tablet-landscape') {
-		&:nth-of-type(2) {
-			margin-top: 15rem;
-		}
-	}
-}
-
-.block {
-	position: relative;
-	background-color: $color-white;
-	padding: 5.5rem 3rem;
-	transition: all .2s ease-in;
-
-	@include breakpoint('min-tablet-landscape') {
-		padding: 7.5rem 5rem;
 	}
 }
 
@@ -106,11 +89,4 @@
 }
 .block__half {
 	flex: 0 0 50%;
-}
-
-.block__top {
-	@include flex($align: center);
-}
-.block__icon--spacer {
-	margin-right: 3rem;
 }

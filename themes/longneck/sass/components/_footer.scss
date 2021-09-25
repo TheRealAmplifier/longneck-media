@@ -3,25 +3,6 @@
 	background-color: $color-footer;
 	border-bottom: 2rem solid $color-footer-border;
     color: $color-black;
-
-    &:after {
-        content: '';
-        position: absolute;
-        background-image: url('../images/svg/particles-right.svg');
-        background-repeat: no-repeat;
-        right: 0rem;
-        width: 11rem;
-        height: 30rem;
-
-        @include breakpoint('max-tablet-portrait') {
-            bottom: 5rem;
-        }
-        @include breakpoint('min-tablet-portrait') {
-            top: -7.5rem;
-            width: 13rem;
-            height: 40rem;
-        }
-    }
 }
 .footer__wrapper {
     @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
@@ -121,17 +102,11 @@
 	}
 }
 
-.footer__right {
-	@include flex($align: flex-end);
-	flex: 0 0 6rem;
-
-	@include breakpoint('max-tablet-landscape') {
-		display: none;
-	}
-}
-
 .footer__scroll {
-	@include flex($align: center, $justify: center);
+    @include flex($align: center, $justify: center);
+    position: absolute;
+    right: 0;
+    bottom: 0;
 	width: 7rem;
 	height: 7rem;
 	background-color: $color-footer-scroll;

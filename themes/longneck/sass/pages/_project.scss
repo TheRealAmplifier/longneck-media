@@ -24,7 +24,7 @@
 }
 
 .detail__year {
-	color: $color-tertiary;
+	color: $color-gray;
 	font-size: 14rem;
 	position: absolute;
 	right: 0;
@@ -52,7 +52,7 @@
 }
 .details__results {
 	margin-top: 15rem;
-	
+
 	display: grid;
 	grid-template-columns: 1fr;
 	column-gap: 2rem;
@@ -103,7 +103,7 @@
 }
 .tag__item {
 	@include flex($align: center);
-	background: $color-tertiary;
+	background: $color-gray;
 	border-radius: .5rem;
 	height: 5rem;
 	padding: 0 3rem;

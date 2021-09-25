@@ -7,7 +7,7 @@
 }
 
 .about__box {
-	background-color: $color-tertiary;
+	background-color: $color-gray;
 }
 .about__image {
 	height: 30rem;
@@ -22,7 +22,7 @@
 .about__content {
 	padding: 3rem 5rem;
 
-	@include breakpoint('min-tablet-landscape') { 
+	@include breakpoint('min-tablet-landscape') {
 		padding: 7.5rem  10rem;
 	}
 }

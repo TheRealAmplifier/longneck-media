@@ -2,23 +2,7 @@
     position: relative;
     padding: 5rem 0;
     text-align: center;
-
-    &:before {
-        content: '';
-        position: absolute;
-        background-image: url('../images/svg/particles-left.svg');
-        background-repeat: no-repeat;
-        left: 2rem;
-        top: 3rem;
-        width: 7rem;
-        height: 18rem;
-
-        @include breakpoint('min-tablet-landscape') {
-            left: 5rem;
-            width: 11rem;
-            height: 14rem;
-        }
-    }
+    background-color: $color-gray;
 
 	.cta__wrapper {
 		@include flex($direction: column, $justify: center);

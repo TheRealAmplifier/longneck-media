@@ -1,22 +1,52 @@
 .customers {
-	@extend %bigSectionPadding;
+	@extend %defaultSectionPadding;
 }
 .customers__wrapper {
-	@include sectionwrapper(100rem, $setDefaultPadding: 0 3rem);
+    @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+	@include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+    @include breakpoint('min-tablet-landscape') {
+        justify-content: space-between;
+        gap: 5rem;
+    }
+    @include breakpoint('min-desktop') {
+        gap: 7.5rem;
+    }
+}
+.customers__content {
+    margin-bottom: 5rem;
+    padding: 0 5rem;
+
+    @include breakpoint('min-tablet-landscape') {
+        flex: 0 0 30%;
+        margin-bottom: 0;
+        padding: 0 0;
+        text-align: right;
+    }
+}
+.customers__body {
+    flex: 1;
 }
 .customers__list {
-	display: grid;
-	// grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-gap: 2rem;
 
-	// @include breakpoint('min-tablet-landscape') {
-	// 	grid-template-columns: repeat(2, 1fr);
-	// }
-	// @include breakpoint('min-tablet-landscape') {
-	// 	grid-template-columns: repeat(3, 1fr);
-	// }
+    @include breakpoint('min-mobile') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint('min-desktop') {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+    }
 }
 
 .customer {
-	height: auto;
-	max-height: 4rem;
+    @include flex($direction: column, $align: center, $justify: center);
+    background-color: $color-white;
+    box-shadow: 0 0 2rem 0 rgba($color-black, .2);
+    padding: 3rem 3rem;
+    flex: 1;
+
+    @include breakpoint('min-desktop') {
+        padding: 5rem 3rem;
+    }
 }

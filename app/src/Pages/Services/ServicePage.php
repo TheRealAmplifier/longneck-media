@@ -30,7 +30,6 @@ class ServicePage extends Page
 
     private static $has_one = [
         'ContactLinkTarget' => SiteTree::class,
-        'Icon' => File::class,
     ];
 
     private static $allowed_parent = [
@@ -46,7 +45,6 @@ class ServicePage extends Page
         $fields = parent::getCMSFields();
 
         $fields->addFieldsToTab('Root.Main', [
-            UploadField::create('Icon', 'Icoon')->setFolderName('Service Icons'),
             HTMLEditorField::create('Summary', 'Samenvatting')->setDescription('Deze tekst wordt gebruikt in de overzichten')->setRows(5),
             CheckboxField::create('IsLandingPage', 'Dit is een landingspagina')
         ], 'Content');

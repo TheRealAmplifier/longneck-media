@@ -17,7 +17,7 @@
 	}
 }
 .banner__image {
-    background-color: $color-gray-light-1;
+    background-color: $color-gray;
 	height: 35rem;
 
 	@include breakpoint('min-tablet-portrait') {
@@ -39,7 +39,7 @@
 		padding: 10rem 0 5rem;
 	}
 	@include breakpoint('min-desktop-large') {
-		padding: 15rem 0 10rem;
+		padding: 12.5rem 0 7.5rem;
 	}
 }
 
@@ -101,4 +101,13 @@
 
 .title__navigation {
 	margin-top: 5rem;
+}
+
+.title__pretitle {
+    display: block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid $color-black;
 }

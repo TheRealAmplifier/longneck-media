@@ -1,6 +1,6 @@
 
 .navigation__popup {
-	@include flex;	
+	@include flex;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -20,12 +20,12 @@
 	position: relative;
 	background-color: $color-white;
 	color: $color-black;
-	border: 1.5rem solid $color-tertiary;
+	border: 1.5rem solid $color-gray;
 	box-shadow: 0 0 2rem rgba($color-black, .2);
 	flex: 1;
-	
+
 	@include breakpoint('min-tablet-portrait') {
-		border: 3rem solid $color-tertiary;
+		border-width: 3rem;
 	}
 }
 .popup__inner {
@@ -39,7 +39,7 @@
 }
 .popup__image {
 	flex: 0 0 22.5%;
-	background-color: $color-gray-light-1;
+	background-color: $color-gray;
 
 	@include breakpoint('max-tablet-landscape') {
 		display: none;
@@ -68,11 +68,11 @@
 	padding: 1rem;
 	transition: all 0.2s ease;
 	cursor: pointer;
-	background: $color-secondary;
-	
+	background: $color-black;
+
 	&:hover,
 	&:focus {
-		background: darken($color-secondary, 10);
+		background: darken($color-black, 10);
 	}
 }
 .popup__socials {

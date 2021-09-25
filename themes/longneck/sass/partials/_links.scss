@@ -1,7 +1,6 @@
 .link--icon {
 	@include flex($align: center);
-	font-size: 2.6rem;
-	// font-weight: 500;
+	font-size: 2.4rem;
 
 	&:hover,
 	&:focus {
@@ -15,6 +14,22 @@
 	width: 4rem;
 	transition: all .2s ease;
 }
+.link--small {
+    font-size: 2.2rem;
+
+    .link__icon {
+        width: 2.5rem;
+    }
+}
+
 .link__text {
 	margin-right: 2rem;
+}
+
+
+.link--primary {
+    color: $color-primary;
+}
+.link--secondary {
+    color: $color-primary;
 }
