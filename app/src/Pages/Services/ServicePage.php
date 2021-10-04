@@ -36,10 +36,6 @@ class ServicePage extends Page
         ServiceHolderPage::class
     ];
 
-    private static $owns = [
-        'Icon'
-    ];
-
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -54,41 +50,5 @@ class ServicePage extends Page
         ]);
 
         return $fields;
-    }
-
-    /**
-     * Event handler called before writing to the database.
-     *
-     * @uses DataExtension->onAfterWrite()
-     */
-    public function onAfterWrite()
-    {
-        parent::onAfterWrite();
-
-        $elementalArea = $this->ElementalArea();
-        $elementalAreaID = $elementalArea->ID;
-
-        // check if page has elements
-        if (!$elementalArea->Elements()->exists()) {
-
-            // Automatically add Services on page creation
-            $newServices = new FeaturedServices();
-            $newServices->Title = 'Onze andere diensten';
-            $newServices->ShowTitle = true;
-            $newServices->ShowAllServices = true;
-            $newServices->ParentID = $elementalAreaID;
-            $newServices->write();
-
-            // Automatically add Call to Action on page creation
-            $newCTA = new CallToAction();
-            $newCTA->Title = 'Heb je vragen?';
-            $newCTA->ShowTitle = true;
-            $newCTA->TextMain = 'Dit kan per chat of per e-mail. Doorgaans reageren wij op werkdagen binnen 2 uur.';
-            $newCTA->CTAType = 'simple';
-            $newCTA->ParentID = $elementalAreaID;
-            $newCTA->write();
-        }
-
-        return false;
     }
 }

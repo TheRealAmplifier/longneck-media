@@ -7,15 +7,23 @@
 				</a>
 			</div>
         </div>
+        <% if $MenuSet('Primary').MenuItems %>
+            <div class="header__navigation">
+                <nav class="navigation navigation--row">
+                    <% loop $MenuSet('Primary').MenuItems %>
+                        <a class="navigation__link navigation__link--main {$LinkingMode} <% if ButtonStyle %>navigation__link--button<% end_if %>" href="{$Link}">{$MenuTitle}</a>
+                    <% end_loop %>
+                </nav>
+            </div>
+        <% end_if %>
         <div class="header__toggle <% if not $SiteConfig.Phone %>action--spacer<% end_if %>">
             <div class="toggle__icon">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </div>
-            <div class="toggle__text">
-                Menu
-            </div>
         </div>
-	</div>
+    </div>
+
+    <% include HeaderPopup %>
 </header>

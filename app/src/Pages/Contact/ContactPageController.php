@@ -48,7 +48,7 @@ class ContactPageController extends PageController
         ]);
 
         $form = new Form($this, 'ContactForm', $fields, $actions, $validator);
-        $form->enableSpamProtection()->Fields()->fieldByName('Captcha');
+        // $form->enableSpamProtection()->Fields()->fieldByName('Captcha');
         $form->setTemplate('Form//ContactForm');
 
         return $form;
@@ -56,9 +56,9 @@ class ContactPageController extends PageController
 
     public function sendMessage($data, $form)
     {
-        $captchaResponse = $form->Fields()->fieldByName('Captcha')->getVerifyResponse();
+        // $captchaResponse = $form->Fields()->fieldByName('Captcha')->getVerifyResponse();
 
-        if ($captchaResponse) {
+        // if ($captchaResponse) {
             $contactName = "{$data['FirstName']} {$data['LastName']} - {$data['Email']}";
 
             $newContact = new ContactSubmission();
@@ -79,7 +79,7 @@ class ContactPageController extends PageController
                     return $this->redirect($this->AbsoluteLink() . '#form');
                 }
             }
-        }
+        // }
 
         $form->sessionMessage('Er is iets mis gegaan, probeer opnieuw', 'bad');
         return $this->redirectBack();

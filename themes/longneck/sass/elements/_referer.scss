@@ -28,9 +28,16 @@
 }
 .referer__content {
     flex: 1;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 1.5rem;
 
     @include breakpoint('max-tablet-landscape') {
         margin-bottom: 5rem;
+    }
+    @include breakpoint('min-tablet-landscape') {
+        margin-bottom: auto;
+        padding: 3rem;
     }
 }
 .referer__list {
@@ -52,8 +59,9 @@
 
     @include breakpoint('min-tablet-portrait') {
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem 5rem;
     }
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min-desktop') {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 7.5rem 7.5rem;
     }
@@ -93,4 +101,9 @@
     * {
         font-size: 1.8rem;
     }
+}
+
+.referer__intro {
+    margin-top: 2rem;
+    font-size: 2rem;
 }

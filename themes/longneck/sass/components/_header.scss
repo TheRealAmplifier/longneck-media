@@ -35,13 +35,16 @@
 			display: none;
 		}
 	}
-	@include breakpoint('min-desktop') {
+	@include breakpoint('min-tablet-landscape') {
 		width: 17.5rem;
+    }
+    @include breakpoint('min-desktop') {
+		width: 20rem;
 	}
 }
 
 .header__navigation {
-	@include flex($justify: flex-end);
+    display: none;
 	flex: 1;
 
 	.navigation {
@@ -62,11 +65,11 @@
 			@include flex($align: center);
 			height: 100%;
 		}
-		@include breakpoint('min-desktop') {
-			display: flex;
-			top: 10rem;
-		}
-	}
+    }
+
+    @include breakpoint('min-tablet-landscape') {
+        @include flex($justify: flex-end);
+    }
 }
 
 .navigation--open {
@@ -87,7 +90,6 @@
 	position: relative;
 	cursor: pointer;
     z-index: 10;
-    margin-left: 3rem;
     padding: 1rem;
 
 	&:hover,
@@ -140,8 +142,71 @@
         }
     }
 
-    .toggle__text {
-        font-size: 2.2rem;
-        margin-left: 1rem;
+    @include breakpoint('min-tablet-landscape') {
+        margin-left: 5rem;
     }
+}
+
+.navigation__popup {
+    @include flex($justify: flex-end);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.popup__content {
+	@include flex($direction: column, $justify: flex-end);
+    padding: 5rem;
+    background-color: $color-white;
+    transform: translateX(100%);
+    transition: all .2s linear;
+    flex: 0 0 100%;
+    pointer-events: all;
+
+    @include breakpoint('min-tablet-portrait') {
+        padding: 7.5rem;
+        flex: 0 0 60%;
+    }
+	@include breakpoint('min-tablet-landscape') {
+        padding: 10rem;
+        flex: 0 0 50%;
+    }
+    @include breakpoint('min-desktop') {
+        flex: 0 0 40%;
+	}
+}
+.popup__socials {
+	@include flex($align: center);
+    margin-top: 5rem;
+
+    @include breakpoint('min-tablet-landscape') {
+        margin-top: 10rem;
+    }
+}
+
+.navigation__popup--open {
+    background-color: rgba($color-black, .2);
+    opacity: 1;
+    visibility: visible;
+
+    .popup__wrapper {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup__content {
+        transform: translateX(0);
+    }
+}
+
+
+.popup__brand {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 2rem;
 }

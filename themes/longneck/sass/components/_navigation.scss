@@ -7,13 +7,13 @@
 .navigation__link {
 	@include font('karla');
 	font-size: 1.6rem;
-	line-height: 1.8;
-
+    line-height: 1.8;
+    color: $color-black;
 
     &:hover,
     &:focus,
     &:active {
-        color: $color-primary;
+        color: $color-black;
     }
 
 	&:not(:last-child) {
@@ -44,23 +44,32 @@
 
 .navigation__link--big {
     font-size: 3rem;
-    font-weight: 600;
+    color: $color-black;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-black;
+    }
 
 	&.current {
+        color: $color-primary;
+        font-weight: 600;
+
         &:after {
 			content: '';
 			background-image: url(../images/svg/arrow-left-blue.svg);
-			background-size: 2.8rem;
+			background-size: contain;
 			background-repeat: no-repeat;
 			width: 2.8rem;
-			height: 2.8rem;
+			height: 2.4rem;
 			display: inline-flex;
-            margin-left: 3rem;
+            margin-left: 4rem;
 		}
 	}
 
 	@include breakpoint('min-tablet-landscape') {
-		font-size: 4.8rem;
+		font-size: 4.6rem;
 	}
 }
 
@@ -71,9 +80,12 @@
 }
 
 .navigation__link--main	{
-	&:not(.current) {
-		color: $color-gray-dark;
-		font-weight: 300;
+    font-weight: 400;
+    color: $color-gray-dark;
+
+	&.current {
+        font-weight: 600;
+        color: $color-black;
 	}
 
 	@include breakpoint('min-tablet-landscape') {
@@ -145,31 +157,7 @@
     }
 
 }
-.navigation__popover {
-	@include flex($direction: column);
-	border-left: .7rem solid $color-primary;
-	background-color: $color-white;
-	box-shadow: 0 .5rem .5rem rgba($color-black, .3);
-	border-bottom-right-radius: 1.5rem;
-	position: absolute;
-	top: 10rem;
-	min-width: 27.5rem;
-	max-height: 0;
-	visibility: hidden;
-	overflow: hidden;
 
-	.navigation__link {
-		padding: 1rem 3rem;
-
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: $color-gray;
-		}
-	}
-}
-
-//
 .submenu {
     padding: 5rem 0;
 

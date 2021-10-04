@@ -19,25 +19,27 @@
 	{$MetaTags(false)}
 	{$PageMetaTags}
 
-	<title><% if $MetaTitle %>{$MetaTitle}<% else %>{$Title}<% end_if %> &hyphen; {$SiteConfig.Title}</title>
+    <title><% if $MetaTitle %>{$MetaTitle}<% else %>{$Title}<% end_if %> &hyphen; {$SiteConfig.Title}</title>
+
+    <link rel="manifest" href="{$ThemeDir}/images/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{$ThemeDir}/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{$ThemeDir}/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{$ThemeDir}/images/favicon/favicon-16x16.png">
 
 	<link rel="preload" href="{$ThemeDir}/fonts/rubik/rubik-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="preload" href="{$ThemeDir}/fonts/rubik/rubik-v14-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
 	<link rel="preload" href="{$ThemeDir}/fonts/karla/karla-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="preload" href="{$ThemeDir}/fonts/karla/karla-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="preload" href="{$ThemeDir}/fonts/karla/karla-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<link rel="prefetch" href="{$ThemeDir}/css/main.css" as="style">
-  <link rel="prefetch" href="{$ThemeDir}/dist/app.js" as="script">
+    <link rel="prefetch" href="{$ThemeDir}/dist/app.js" as="script">
 
-	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.png" />
 	<link rel="stylesheet" href="{$ThemeDir}/css/main.css">
 </head>
 <body class="{$ClassName.ShortName} preload">
 
     <% include Header %>
-    <% include HeaderPopup %>
 
 	<main class="content--main">
 		{$Layout}

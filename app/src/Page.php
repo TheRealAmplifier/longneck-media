@@ -50,6 +50,11 @@ namespace {
                 HTMLEditorField::create('BannerText', 'Banner tekst')->setRows(5)
             ]);
 
+            if ($this->BannerFunction == 'image') {
+                $fields->addFieldsToTab('Root.Banner', [
+                    UploadField::create('BannerImage', 'Banner Image')->setFolderName('Banners'),
+                ]);
+            }
 
             $config = GridFieldConfig_RecordEditor::create();
             $fields->addFieldToTab('Root.Buttons', GridField::create(

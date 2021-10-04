@@ -4,9 +4,6 @@
 	margin-bottom: 4rem;
 
 	@include breakpoint('min-tablet-landscape') {
-		flex-direction: column;
-		align-items: flex-end;
-		margin-top: 4rem;
 		margin-bottom: 0;
 	}
 }
@@ -27,8 +24,8 @@
 
 .social__link {
 	display: block;
-	width: 4rem;
-	height: 4rem;
+	width: 3.4rem;
+	height: 3.4rem;
 	transition: all .15s linear;
 
 	&:not(:last-child) {
