@@ -51,7 +51,8 @@
 	line-height: 1;
 	width: min-content;
     white-space: break-space;
-	margin-left: auto;
+    margin-left: auto;
+    color: $color-primary;
 
 	@include breakpoint('min-desktop') {
 		font-size: 6.4rem;
@@ -79,6 +80,10 @@
 
 	p {
 		font-size: inherit;
+    }
+
+    @include breakpoint('min-tablet-landscape') {
+        font-size: 1.6rem;
 	}
 }
 

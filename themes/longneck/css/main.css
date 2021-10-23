@@ -62,7 +62,7 @@
   right: -0.2rem;
   height: 0.6rem;
   z-index: -1;
-  background-color: #f3f4f2;
+  background-color: #edeff0;
   transition: height 0.2s ease;
 }
 .content__box p a:hover:not(.button):after,
@@ -194,7 +194,7 @@ p:not(:last-child) {
 }
 
 .text--gray {
-  color: #f3f4f2;
+  color: #787873;
 }
 
 .heading--line:after {
@@ -611,7 +611,7 @@ li {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: #f3f4f2;
+  background-color: #edeff0;
   padding: 3rem;
 }
 .content__quote:before {
@@ -904,7 +904,7 @@ li {
 
 .navigation__link--medium {
   font-size: 1.8rem;
-  color: #6d6d69;
+  color: #787873;
 }
 @media (min-width: 64em) {
   .navigation__link--medium {
@@ -947,7 +947,7 @@ li {
 
 .navigation__link--main {
   font-weight: 400;
-  color: #6d6d69;
+  color: #787873;
 }
 .navigation__link--main.current {
   font-weight: 600;
@@ -1047,10 +1047,10 @@ li {
 }
 
 .submenu__link {
-  background: #f3f4f2;
+  background: #edeff0;
   padding: 2rem 4rem;
   font-size: 2rem;
-  box-shadow: 0 0 2rem #f3f4f2;
+  box-shadow: 0 0 2rem #edeff0;
 }
 
 .banner {
@@ -1084,7 +1084,7 @@ li {
 }
 
 .banner__image {
-  background-color: #f3f4f2;
+  background-color: #edeff0;
   height: 35rem;
 }
 @media (min-width: 48em) {
@@ -1315,7 +1315,7 @@ input[type=text],
 input[type=email],
 select {
   width: 100%;
-  border: 2px solid #f3f4f2;
+  border: 2px solid #edeff0;
   height: 4.8rem;
   padding: 0 2rem;
 }
@@ -1330,7 +1330,7 @@ select {
 textarea {
   width: 100%;
   resize: vertical;
-  border: 2px solid #f3f4f2;
+  border: 2px solid #edeff0;
   padding: 2rem;
   min-height: 30rem;
 }
@@ -1429,7 +1429,7 @@ textarea {
 }
 
 .services--background {
-  background-color: #f3f4f2;
+  background-color: #edeff0;
 }
 
 .services__blocks {
@@ -1577,7 +1577,7 @@ textarea {
   cursor: default;
 }
 .disabled g#right-chevron {
-  fill: #f3f4f2;
+  fill: #edeff0;
 }
 
 .pagination__previous,
@@ -1746,7 +1746,7 @@ textarea {
 .footer {
   position: relative;
   background-color: #FFFFFF;
-  border-bottom: 2rem solid #1c1c1c;
+  border-bottom: 2rem solid #0B3CB7;
   color: #1c1c1c;
 }
 
@@ -1820,6 +1820,7 @@ textarea {
   width: min-content;
   white-space: break-space;
   margin-left: auto;
+  color: #0B3CB7;
 }
 @media (min-width: 85em) {
   .contact__title {
@@ -1858,6 +1859,11 @@ textarea {
 }
 .footer__copyright p {
   font-size: inherit;
+}
+@media (min-width: 64em) {
+  .footer__copyright {
+    font-size: 1.6rem;
+  }
 }
 
 .footer__navigation {
@@ -1900,7 +1906,7 @@ textarea {
   bottom: 0;
   width: 7rem;
   height: 7rem;
-  background-color: #1c1c1c;
+  background-color: #0B3CB7;
   cursor: pointer;
 }
 .footer__scroll .scroll__icon {
@@ -1936,7 +1942,7 @@ textarea {
 }
 
 .card--shadow:hover, .card--shadow:focus {
-  box-shadow: 0.8rem 0.8rem #6d6d69;
+  box-shadow: 0.8rem 0.8rem #787873;
   transform: translate(-0.8rem, -0.8rem);
 }
 
@@ -2114,7 +2120,7 @@ textarea {
 .meta__tag {
   display: flex;
   align-items: center;
-  background-color: #f3f4f2;
+  background-color: #edeff0;
   padding: 0.5rem 1rem;
   height: 3.4rem;
   line-height: 3.4rem;
@@ -2126,7 +2132,7 @@ textarea {
 }
 
 .meta__date {
-  color: #6d6d69;
+  color: #787873;
   font-size: 1.6rem;
 }
 
@@ -2149,7 +2155,7 @@ textarea {
 }
 .card__points .point__item:not(:last-child) {
   margin-bottom: 0.5rem;
-  border-bottom: 2px solid #f3f4f2;
+  border-bottom: 2px solid #edeff0;
 }
 
 .elements--nospacing-bottom {
@@ -2180,7 +2186,7 @@ textarea {
 }
 
 .referer {
-  background-color: #f3f4f2;
+  background-color: #edeff0;
 }
 
 .referer__wrapper {
@@ -2359,7 +2365,7 @@ textarea {
 }
 
 .content--background {
-  background-color: #f3f4f2;
+  background-color: #edeff0;
 }
 
 .box__content {
@@ -2417,7 +2423,7 @@ textarea {
   position: relative;
   padding: 5rem 0;
   text-align: center;
-  background-color: #f3f4f2;
+  background-color: #edeff0;
 }
 .cta--contact .cta__wrapper {
   display: flex;
@@ -2754,7 +2760,7 @@ textarea {
 }
 
 .method__right {
-  background-color: #f3f4f2;
+  background-color: #edeff0;
 }
 @media (max-width: 63.9375em) {
   .method__right {
@@ -2839,7 +2845,7 @@ textarea {
 }
 
 .detail__year {
-  color: #f3f4f2;
+  color: #edeff0;
   font-size: 14rem;
   position: absolute;
   right: 0;
@@ -2933,7 +2939,7 @@ textarea {
 .tag__item {
   display: flex;
   align-items: center;
-  background: #f3f4f2;
+  background: #edeff0;
   border-radius: 0.5rem;
   height: 5rem;
   padding: 0 3rem;
@@ -2951,7 +2957,7 @@ textarea {
 }
 
 .about__box {
-  background-color: #f3f4f2;
+  background-color: #edeff0;
 }
 
 .about__image {

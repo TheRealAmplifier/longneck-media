@@ -6,7 +6,13 @@
 				<div class="banner__content">
 					<% if BannerText %>
 						{$BannerText}
-					<% end_if %>
+                    <% end_if %>
+
+                    <div class="title__indicator">
+						<div class="indicator__icon">
+							{$SVG('scroll-indicator-small').customBasePath('themes/longneck/images/svg/').extraClass('image--cover')}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

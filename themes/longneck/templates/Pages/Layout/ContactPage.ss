@@ -18,7 +18,7 @@
 				<nav class="navigation__socials--row">
 					<% loop SiteConfig.SocialAccounts %>
 						<a class="social__link" href="{$AccountLink}" target="_blank" rel="noreferrer">
-							{$SVG($Icon.Name).addSubfolder('Social')}
+							{$SVG($Icon.Name).addSubfolder('Social-Icon')}
 						</a>
 					<% end_loop %>
 				</nav>

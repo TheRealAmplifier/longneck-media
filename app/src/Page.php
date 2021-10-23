@@ -7,7 +7,6 @@ namespace {
     use Silverstripe\Assets\Image;
     use SilverStripe\AssetAdmin\Forms\UploadField;
     use SilverStripe\CMS\Model\SiteTree;
-    use SilverStripe\Forms\CheckboxField;
     use SilverStripe\Forms\DropdownField;
     use SilverStripe\Forms\GridField\GridField;
     use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
@@ -27,7 +26,7 @@ namespace {
             'BannerImage' => image::class
         ];
 
-        private static $has_many = [
+        private static $many_many = [
             'ShortcodeButtons' => ShortcodeButton::class,
             'ShortcodeQuotes' => ShortcodeQuote::class
         ];
