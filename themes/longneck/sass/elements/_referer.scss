@@ -1,6 +1,10 @@
 .referer {
     @extend %bigSectionPadding;
     background-color: $color-gray;
+
+    @include breakpoint('min-tablet-landscape') {
+        margin-top: 5rem;
+    }
 }
 .referer__wrapper {
     @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);
@@ -27,15 +31,17 @@
     }
 }
 .referer__content {
-    flex: 1;
+    position: relative;
     background-color: $color-primary;
     color: $color-white;
     padding: 1.5rem;
+    flex: 1;
 
     @include breakpoint('max-tablet-landscape') {
         margin-bottom: 5rem;
     }
     @include breakpoint('min-tablet-landscape') {
+        top: -14rem;
         margin-bottom: auto;
         padding: 3rem;
     }

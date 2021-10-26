@@ -4,6 +4,7 @@ namespace Pages;
 
 use Page;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class InformationPage extends Page
 {
@@ -12,15 +13,23 @@ class InformationPage extends Page
     private static $icon_class = 'font-icon-p-article';
 
     private static $db = [
-        'RemoveElementSpacing' => 'Boolean'
+        'RemoveElementSpacing' => 'Boolean',
+        'Summary' => 'HTMLText'
     ];
 
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
 
+        $fields->addFieldsToTab('Root.Main', [
+            HTMLEditorField::create('Summary', 'Korte samenvatting')
+                ->setRows(3)
+                ->setDescription('Deze samenvatting moet ca 3 regels lang zijn en is zichtbaar in het referer blok.')
+        ], 'ElementalArea');
+
         $fields->addFieldsToTab('Root.Elements', [
-            CheckboxField::create('RemoveElementSpacing', 'Ruimte onderaan elements verwijderen')->setDescription('Deze optie is heel handig wanneer er slechts één contentblok op de pagina staat.')
+            CheckboxField::create('RemoveElementSpacing', 'Ruimte onderaan elements verwijderen')
+                ->setDescription('Deze optie is heel handig wanneer er slechts één contentblok op de pagina staat.')
         ]);
 
         return $fields;

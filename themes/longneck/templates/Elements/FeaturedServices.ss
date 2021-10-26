@@ -1,7 +1,7 @@
 <div class="services__wrapper">
 	<% if ShowTitle %>
 		<div class="title--wide">
-			<h2 class="heading-2">{$Title}</h2>
+			<h2 class="heading-2 heading--margin-small">{$Title}</h2>
 		</div>
 	<% end_if %>
 

@@ -2188,6 +2188,11 @@ textarea {
 .referer {
   background-color: #edeff0;
 }
+@media (min-width: 64em) {
+  .referer {
+    margin-top: 5rem;
+  }
+}
 
 .referer__wrapper {
   display: flex;
@@ -2242,10 +2247,11 @@ textarea {
 }
 
 .referer__content {
-  flex: 1;
+  position: relative;
   background-color: #0B3CB7;
   color: #FFFFFF;
   padding: 1.5rem;
+  flex: 1;
 }
 @media (max-width: 63.9375em) {
   .referer__content {
@@ -2254,6 +2260,7 @@ textarea {
 }
 @media (min-width: 64em) {
   .referer__content {
+    top: -14rem;
     margin-bottom: auto;
     padding: 3rem;
   }
@@ -2396,12 +2403,14 @@ textarea {
 .content__boxed.content__boxed--right .content__body {
   order: 1;
 }
-.content__boxed .content__image {
-  flex: 0 1 40%;
-}
 @media (max-width: 63.9375em) {
   .content__boxed .content__image {
     height: 40rem;
+  }
+}
+@media (min-width: 64em) {
+  .content__boxed .content__image {
+    flex: 0 1 40%;
   }
 }
 .content__boxed .content__body {

@@ -3,7 +3,7 @@
         <div class="referer__content">
             <% if ShowTitle %>
                 <div class="title--wide">
-                    <h2 class="heading-2 heading--margin-none">{$Title}</h2>
+                    <h2 class="heading-2 heading--margin-small">{$Title}</h2>
                 </div>
             <% end_if %>
             <% if TextMain %>
@@ -20,7 +20,7 @@
                             <span class="target__title">{$Title}</span>
                             <% if Summary %>
                                 <span class="target__description">
-                                {$Summary}
+                                    {$Summary}
                                 </span>
                             <% end_if %>
                         </a>

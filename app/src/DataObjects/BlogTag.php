@@ -35,7 +35,7 @@ class BlogTag extends DataObject
     {
         $fields = parent::getCMSFields();
 
-        $fields->removeByName(['SortID', 'BlogTags', 'BlogHolderPageID']);
+        $fields->removeByName(['SortID', 'BlogTags', 'BlogPages', 'BlogHolderPageID']);
 
         $fields->addFieldsToTab('Root.Main', [
             TextField::create('Title', 'Title')

@@ -27,6 +27,11 @@ Pages\AboutPage:
     - Elements\Method
     - Elements\Referer
 
+Pages\InformationPage:
+  allowed_elements:
+    - Elements\Team
+    - Elements\Method
+
 Pages\ServicePage:
   allowed_elements:
     - Elements\Method
