@@ -20,7 +20,7 @@
 	box-shadow: 0 0 5rem rgba($color-black, .16);
 	border-top: 1rem solid $color-primary;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		padding: 10rem;
 	}
 }

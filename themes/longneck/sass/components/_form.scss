@@ -3,18 +3,18 @@
 }
 
 .form__row {
-	@include flex($dynamicDirection: column, $breakpoint: 'min-tablet-portrait');
+	@include flex($dynamicDirection: column, $breakpoint: 'tablet-portrait');
 	flex: 0 0 100%;
 
 	&:not(:last-child) {
 		margin-bottom: 1.5rem;
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			margin-bottom: 3rem;
 		}
 	}
 
-	@include breakpoint('max-tablet-portrait') {
+	@include breakpoint('max','tablet-portrait') {
 		.form__group--spacer {
 			margin-bottom: 1.5rem;
 		}
@@ -28,7 +28,7 @@
 	flex: 0 0 calc(50% - 1.5rem)
 }
 .form__group--spacer {
-	@include breakpoint('min-tablet-portrait') {
+	@include breakpoint('min','tablet-portrait') {
 		margin-right: 3rem;
 	}
 }
@@ -37,7 +37,7 @@
 	@include flex;
 	font-weight: 500;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		margin-bottom: 1rem;
 	}
 }
@@ -48,7 +48,7 @@
 
 	.action {
 		@extend .button;
-		@extend .button__solid--red;
+		@extend .button__solid--blue;
 
 		appearance: none;
 		border: 0;
@@ -76,7 +76,7 @@ select {
 	height: 4.8rem;
 	padding: 0 2rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		height: 6rem;
 	}
 }
@@ -102,7 +102,7 @@ textarea {
 	font-weight: 400;
 	font-size: 1.6rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		font-size: 1.8rem;
 	}
 }

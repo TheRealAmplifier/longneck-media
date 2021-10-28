@@ -24,8 +24,8 @@ body {
         overflow-y: hidden;
     }
 
-	@include breakpoint('min-tablet-landscape') {
-		padding-top: 10rem;
+	@include breakpoint('min','tablet-landscape') {
+		padding-top: 9rem;
 	}
 }
 
@@ -42,23 +42,23 @@ li {
 %defaultSectionPadding {
     padding: 3rem 0 5rem;
 
-    @include breakpoint('min-tablet-portrait') {
+    @include breakpoint('min','tablet-portrait') {
         padding: 5rem 0 7.5rem;
     }
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         padding: 5rem 0 10rem 0;
     }
-    @include breakpoint('min-desktop') {
+    @include breakpoint('min','desktop') {
         padding: 5rem 0 12.5rem 0;
     }
 }
 %bigSectionPadding {
   padding: 5rem 0;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		padding: 7.5rem 0;
     }
-    @include breakpoint('min-desktop') {
+    @include breakpoint('min','desktop') {
 		padding: 10rem 0;
 	}
 }
@@ -66,7 +66,7 @@ li {
 %contentPaddingBottom {
   padding-bottom: 10rem;
 
-  @include breakpoint('min-tablet-landscape') {
+  @include breakpoint('min','tablet-landscape') {
     padding-bottom: 20rem;
   }
 }
@@ -85,22 +85,22 @@ li {
 .section__title {
   margin-bottom: 7.5rem;
 
-  @include breakpoint('min-tablet-landscape') {
+  @include breakpoint('min','tablet-landscape') {
     max-width: 75%;
   }
 }
 
 %wrapper--default {
-	@include sectionwrapper(133rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+	@include sectionwrapper(133rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'desktop-xlarge');
 }
 %wrapper--small {
-	@include sectionwrapper(117rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+	@include sectionwrapper(117rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'desktop-xlarge');
 }
 %wrapper--medium {
-	@include sectionwrapper(163rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+	@include sectionwrapper(163rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'desktop-xlarge');
 }
 %wrapper--wide {
-	@include sectionwrapper(100%, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge', $setBreakpointMaxWidthSize: 183rem)
+	@include sectionwrapper(100%, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'desktop-xlarge', $setBreakpointMaxWidthSize: 183rem)
 }
 
 .text__main {
@@ -131,7 +131,7 @@ li {
         padding-left: 5rem;
       }
 
-      @include breakpoint('min-tablet-landscape') {
+      @include breakpoint('min','tablet-landscape') {
         font-size: 2rem;
       }
     }

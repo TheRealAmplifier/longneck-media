@@ -9,25 +9,22 @@
 		@include sectionwrapper(100rem, $setDefaultPadding: 0 6rem, $unsetPadding: true);
     }
 
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max','tablet-landscape') {
         overflow: hidden;
     }
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
         padding: 5rem 0;
 	}
 }
 
 .cta--bar {
-	background: $color-primary;
-	background: linear-gradient(135deg, lighten($color-primary, 7) 0%, $color-primary 100%);
-	color: $color-white;
 	padding: 5rem 2.5rem;
 
 	.cta__wrapper {
-		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+		@include flex($dynamicDirection: true, $breakpoint: 'tablet-landscape');
 		@include sectionwrapper(133rem, $setDefaultPadding: 0 0, $unsetPadding: true);
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			align-items: center;
 			justify-content: space-between;
 		}
@@ -38,14 +35,25 @@
 	.cta__right {
 		flex: 0 0 25%;
 
-		@include breakpoint('max-tablet-landscape') {
+		@include breakpoint('max','tablet-landscape') {
 			.button__box {
 				margin-top: 3rem;
 			}
 		}
 	}
-
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('max','tablet-landscape') {
+        text-align: center;
+    }
+	@include breakpoint('min','tablet-landscape') {
 		padding: 7.5rem 5rem;
 	}
+}
+
+.bar--blue {
+    background: $color-primary;
+	color: $color-white;
+}
+.bar--gray {
+    background: $color-gray-darken;
+	color: $color-black;
 }

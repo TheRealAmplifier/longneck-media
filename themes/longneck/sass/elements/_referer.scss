@@ -2,45 +2,49 @@
     @extend %bigSectionPadding;
     background-color: $color-gray;
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         margin-top: 5rem;
     }
 }
 .referer__wrapper {
-    @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);
+    @include flex($dynamicDirection: true, $breakpoint: 'tablet-landscape', $justify: space-between);
     @include sectionwrapper(143rem, $setDefaultPadding: 0 3rem);
     gap: 3rem;
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         gap: 5rem;
     }
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         gap: 7.5rem;
     }
 }
 .referer__wrapper--wide {
-    @include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape', $justify: space-between);
+    @include flex($dynamicDirection: true, $breakpoint: 'tablet-landscape', $justify: space-between);
     @include sectionwrapper(163rem, $setDefaultPadding: 0 3rem);
     gap: 3rem;
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         gap: 5rem;
     }
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         gap: 7.5rem;
     }
 }
 .referer__content {
+    @include gradient-background(
+        125deg,
+        $color-primary,
+        darken($color-primary, 10)
+    );
     position: relative;
-    background-color: $color-primary;
     color: $color-white;
     padding: 1.5rem;
     flex: 1;
 
-    @include breakpoint('max-tablet-landscape') {
+    @include breakpoint('max','tablet-landscape') {
         margin-bottom: 5rem;
     }
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         top: -14rem;
         margin-bottom: auto;
         padding: 3rem;
@@ -51,10 +55,10 @@
     grid-gap: 5rem 0;
     flex: 0 0 57.5%;
 
-    @include breakpoint('min-tablet-portrait') {
+    @include breakpoint('min','tablet-portrait') {
         grid-template-columns: repeat(2, 1fr);
     }
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         grid-gap: 5rem 5rem;
     }
 }
@@ -63,11 +67,11 @@
     grid-gap: 5rem 0;
     flex: 0 0 70%;
 
-    @include breakpoint('min-tablet-portrait') {
+    @include breakpoint('min','tablet-portrait') {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 5rem 5rem;
     }
-    @include breakpoint('min-desktop') {
+    @include breakpoint('min','desktop') {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 7.5rem 7.5rem;
     }
@@ -99,7 +103,7 @@
         transition: all .2s linear;
     }
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         font-size: 2.4rem;
     }
 }

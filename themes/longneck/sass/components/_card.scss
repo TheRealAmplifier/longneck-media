@@ -69,7 +69,7 @@
 	border-width: 0 0 .6rem 0;
 	border-style: solid;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		border-width: 0 0 1rem 0;
 	}
 }
@@ -85,18 +85,18 @@
 	&:not(:last-child){
 		margin-bottom: 5rem;
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			margin-bottom: 10rem;
 		}
 	}
 
 	.card__link {
-		@include flex($dynamicDirection: true, $breakpoint: 'min-tablet-landscape');
+		@include flex($dynamicDirection: true, $breakpoint: 'tablet-landscape');
 	}
 	.card__image {
 		height: 32.5rem;
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			height: 55rem;
 			flex: 0 0 45%;
 		}
@@ -105,7 +105,7 @@
 		@include flex($direction: column);
 		padding: 4rem 3rem;
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			padding: 7.5rem 6rem;
 		}
 	}
@@ -122,7 +122,7 @@
 		}
 	}
 
-	@include breakpoint('max-tablet-landscape') {
+	@include breakpoint('max','tablet-landscape') {
 		.card__image {
 			order: 2;
 		}
@@ -141,7 +141,7 @@
 		@include flex($direction: column);
 		padding: 4rem 3rem;
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			padding: 5rem 6rem;
 		}
 	}
@@ -156,7 +156,7 @@
 	height: 3.5rem;
 	transition: all .2s ease-in;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		width: 5.5rem;
 		height: 5rem;
 	}
@@ -166,7 +166,7 @@
 	width: 1.8rem;
 	height: 1.8rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		width: 2.2rem;
 		height: 2.2rem;
 	}

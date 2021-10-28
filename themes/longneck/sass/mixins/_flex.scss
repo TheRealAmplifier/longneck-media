@@ -1,10 +1,15 @@
-@mixin flex($dynamicDirection: false, $breakpoint: 'min-desktop', $type: null, $direction: null, $align: flex-start, $justify: baseline, $wrap: null, $important: false) {
+@mixin flex(
+    $dynamicDirection: false,
+    $breakpoint: 'desktop',
+    $type: null,
+    $direction: null,
+    $align: flex-start,
+    $justify: baseline,
+    $wrap: null
+) {
   @if ($type) {
     display: $type;
-  } 
-  @if $important { 
-    display: flex !important;
-  } @else { 
+  } @else {
     display: flex;
   }
 
@@ -13,19 +18,19 @@
   }
   @if ($direction != null) {
     flex-direction: $direction;
-  } 
+  }
   @if ($align != flex-start) {
     align-items: $align;
-  } 
+  }
 
   @if ($justify != baseline) {
     justify-content: $justify;
-  } 
+  }
 
   @if ($dynamicDirection and $breakpoint) {
     flex-direction: column;
 
-    @include breakpoint($breakpoint) {
+    @include breakpoint('min', $breakpoint) {
       flex-direction: row
     }
   }

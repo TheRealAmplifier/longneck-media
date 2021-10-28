@@ -1,7 +1,7 @@
 // .elements {
 // 	margin: 7.5rem 0 0;
 
-// 	@include breakpoint('min-desktop') {
+// 	@include breakpoint('min','desktop') {
 // 		margin: 0 0 12.5rem 0;
 // 	}
 // }
@@ -14,13 +14,13 @@
 	&:not(:last-child) {
 		padding: 0 0 7.5rem;
 
-		@include breakpoint('min-tablet-portrait') {
+		@include breakpoint('min','tablet-portrait') {
 			padding: 0 0 10rem;
 		}
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			padding: 0 0 15rem;
 		}
-		@include breakpoint('min-desktop') {
+		@include breakpoint('min','desktop') {
 			padding: 0 0 20rem;
 		}
 	}

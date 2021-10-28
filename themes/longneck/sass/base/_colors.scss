@@ -1,16 +1,17 @@
 $color-error: #CF000F;
 $color-white: #FFFFFF;
-$color-black: #1c1c1c;
+$color-black: #2e2d2d;
 
 // option blue
 $color-primary: #0B3CB7;
-$color-secondary: #F0CDB6;
+$color-secondary: #466AC3;
 
 // ---
 
 $color-gray: #edeff0;
 $color-gray-dark: #787873;
 
+$color-gray-darken: darken($color-gray, 5);
 $color-gray-boxshadow: $color-gray-dark;
 
 $color-footer: $color-white;

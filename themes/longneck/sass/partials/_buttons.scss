@@ -1,6 +1,6 @@
 .button {
+    @include flex;
 	font-weight: 500;
-	display: inline-block;
 	text-transform: uppercase;
 	font-size: 1.3rem;
 	height: 4.5rem;
@@ -10,7 +10,7 @@
 	cursor: pointer;
 	overflow: hidden;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		font-size: 1.6rem;
 		height: 6.5rem;
 		line-height: 6.5rem;
@@ -20,7 +20,7 @@
 .button--wide {
 	padding: 0 4rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		padding: 0 6rem;
 	}
 }
@@ -36,17 +36,6 @@
 	margin-right: auto;
 }
 
-.button__solid--red {
-	background: $color-primary;
-	color: $color-white;
-	transition: all .15s ease-in;
-
-	&:hover,
-	&:focus {
-		box-shadow: .4rem .4rem darken($color-primary, 25);
-		transform: translate(-.4rem, -.4rem);
-	}
-}
 .button__solid--blue {
 	background: $color-primary;
 	color: $color-white;
@@ -87,7 +76,7 @@
 .button__box--spacer {
 	margin-top: 2rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		margin-top: 5rem;
 	}
 }
@@ -96,7 +85,7 @@
     justify-content: center;
 }
 .button__box--right {
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         justify-content: right;
     }
 }

@@ -43,7 +43,7 @@
 
 	<main class="content--main">
 		{$Layout}
-	</main>
+    </main>
 	<% include Footer %>
 
 	<script src="{$ThemeDir}/dist/app.js"></script>

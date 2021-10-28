@@ -17,13 +17,13 @@
     }
 
 	&:not(:last-child) {
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			margin-right: 4rem;
 			margin-bottom: 0;
 		}
 	}
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		font-size: 2rem;
 	}
 }
@@ -37,7 +37,7 @@
     font-size: 1.8rem;
     color: $color-gray-dark;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		font-size: 2.4rem;
 	}
 }
@@ -68,7 +68,7 @@
 		}
 	}
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		font-size: 4.6rem;
 	}
 }
@@ -88,7 +88,7 @@
         color: $color-black;
 	}
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		font-size: 2rem;
 	}
 }
@@ -108,7 +108,7 @@
 		background-color: darken($color-primary, 7);
 	}
 
-	@include breakpoint('max-desktop') {
+	@include breakpoint('max','desktop') {
 		margin-top: 2rem;
 	}
 }
@@ -161,13 +161,13 @@
 .submenu {
     padding: 5rem 0;
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         padding: 10rem 0;
     }
 }
 .submenu__wrapper {
     @include flex($justify: center);
-    @include sectionwrapper(100rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+    @include sectionwrapper(100rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'desktop-xlarge');
 }
 .submenu__link {
     background: $color-gray;

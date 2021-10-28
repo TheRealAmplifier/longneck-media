@@ -3,7 +3,7 @@
 }
 .banner__wrapper {
 	@include flex($direction: column);
-	@include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+	@include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'desktop-xlarge');
 }
 .banner__content {
 	margin-top: 2rem;
@@ -11,7 +11,7 @@
 	p {
 		font-size: 2rem;
 
-		@include breakpoint('min-desktop') {
+		@include breakpoint('min','desktop') {
 			font-size: 2.6rem;
 		}
 	}
@@ -20,25 +20,29 @@
     background-color: $color-gray;
 	height: 35rem;
 
-	@include breakpoint('min-tablet-portrait') {
+	@include breakpoint('min','tablet-portrait') {
 		height: 45rem;
 	}
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		height: 55rem;
 	}
-	@include breakpoint('min-desktop') {
+	@include breakpoint('min','desktop') {
 		height: 65rem;
 	}
+}
+
+.banner__date {
+    @include font-size(1.6rem, 1.8rem);
 }
 
 .title--spacer-big {
 	position: relative;
 	padding: 3rem 0;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		padding: 7.5rem 0 5rem;
 	}
-	@include breakpoint('min-desktop-large') {
+	@include breakpoint('min','desktop-large') {
 		padding: 10rem 0 7.5rem;
 	}
 }
@@ -47,10 +51,10 @@
 	position: relative;
 	padding: 3rem 0;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		padding: 5rem 0 3rem;
 	}
-	@include breakpoint('min-desktop-large') {
+	@include breakpoint('min','desktop-large') {
 		padding: 7.5rem 0 5rem;
 	}
 }
@@ -74,7 +78,7 @@
 .title__inner--wide {
 	max-width: 100%;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		max-width: 80%;
 	}
 }
@@ -97,7 +101,7 @@
 		max-width: 85%;
 		margin: 0 auto;
 
-		@include breakpoint('min-tablet-landscape') {
+		@include breakpoint('min','tablet-landscape') {
 			max-width: 75%;
 		}
 	}
@@ -122,7 +126,7 @@
     height: 7.5rem;
     margin: 0 auto 3rem;
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         width: 10rem;
         height: 10rem;
         margin: 0 auto 5rem;

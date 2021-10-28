@@ -3,7 +3,7 @@
 	padding-right: 4rem;
 	margin-bottom: 4rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		margin-bottom: 0;
 	}
 }
@@ -39,7 +39,7 @@
 }
 
 .social__link--vertical {
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		&:not(:last-child) {
 			margin-right: 0;
 			margin-bottom: 2rem;

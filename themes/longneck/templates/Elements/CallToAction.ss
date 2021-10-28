@@ -9,7 +9,7 @@
 				<% if LinkedPage %>
 					<div class="button__box button__box--centered button__box--spacer">
 						<% with LinkedPage %>
-							<a class="button button__solid--red" href="{$Link}">
+							<a class="button button__solid--blue" href="{$Link}">
                                 <span class="button__text">{$Up.ButtonText}</span>
                             </a>
 						<% end_with %>
@@ -19,7 +19,7 @@
 		</div>
 	</div>
 <% else_if CTAType == 'bar' %>
-	<div class="cta cta--bar">
+	<div class="cta cta--bar bar--blue">
 		<div class="cta__wrapper cta__wrapper--no-padding">
 			<div class="cta__left">
 				<% if ShowTitle %>

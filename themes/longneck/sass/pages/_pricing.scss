@@ -1,7 +1,7 @@
 .pricing {
   padding: 5rem 0;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		padding: 7.5rem 12.5rem;
 	}
 }
@@ -18,7 +18,7 @@
 	width: 100%;
 	margin-top: 5rem;
 
-	@include breakpoint('min-tablet-portrait') {
+	@include breakpoint('min','tablet-portrait') {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
@@ -29,7 +29,7 @@
 	transition: all .2s ease-in;
 	padding: 4rem;
 
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		padding: 7.5rem;
 	}
 }

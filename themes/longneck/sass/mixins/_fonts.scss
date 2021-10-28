@@ -1,3 +1,6 @@
+$default-mobile-size: 1.6rem;
+$default-desktop-size: 1.8rem;
+$default-breakpoint: 'min','tablet-landscape';
 
 @font-face {
   font-family: 'Rubik';
@@ -15,7 +18,7 @@
   font-display: swap;
   src: local(''),
     url('../fonts/rubik/rubik-v14-latin-500.woff2') format('woff2'),
-    url('../fonts/rubik/rubik-v14-latin-500.woff') format('woff'); 
+    url('../fonts/rubik/rubik-v14-latin-500.woff') format('woff');
 }
 
 @font-face {
@@ -80,4 +83,22 @@ $fonts: (
   @if $size {
     font-size: $size;
   }
+}
+
+@mixin font-size(
+    $mobile: $default-mobile-size,
+    $desktop: $default-desktop-size,
+    $breakpoint: $default-breakpoint,
+    $line-height: 1.8,
+    $font-weight: 400
+  ){
+    font-size: $mobile;
+    line-height: $line-height;
+    font-weight: $font-weight;
+
+    @if $desktop != null and $breakpoint != null {
+        @include breakpoint('min','tablet-landscape') {
+            font-size: $desktop;
+        }
+    }
 }

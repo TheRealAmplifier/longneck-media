@@ -34,3 +34,7 @@
         </div>
     </div>
 </div>
+
+<% if $Parent.ShowContact %>
+    <% include CallToAction Parent=$Parent %>
+<% end_if %>

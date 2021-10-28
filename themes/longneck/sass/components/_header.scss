@@ -1,6 +1,6 @@
 .header {
 	position: fixed;
-	height: 6rem;
+	height: 7rem;
 	width: 100%;
 	top: 0;
 	background-color: $color-white;
@@ -11,15 +11,14 @@
 		box-shadow: 0 .2rem .5rem 0 rgba($color-black, .2);
 	}
 
-	@include breakpoint('min-tablet-landscape') {
-		height: 8rem;
+	@include breakpoint('min','tablet-landscape') {
+		height: 9rem;
 	}
 }
 
-
 .header__wrapper {
     @include flex($align: center, $justify: space-between);
-    @include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'min-desktop-xlarge');
+    @include sectionwrapper(168rem, $setDefaultPadding: 0 2.5rem, $unsetPadding: true, $setBreakpointMaxWidth: 'desktop-xlarge');
 	height: 100%;
 }
 
@@ -30,15 +29,15 @@
 	height: auto;
 	width: 15rem;
 
-	@include breakpoint('max-desktop') {
+	@include breakpoint('max','desktop') {
 		.text-secondary {
 			display: none;
 		}
 	}
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		width: 17.5rem;
     }
-    @include breakpoint('min-desktop') {
+    @include breakpoint('min','desktop') {
 		width: 20rem;
 	}
 }
@@ -48,7 +47,7 @@
 	flex: 1;
 
 	.navigation {
-		@include breakpoint('max-tablet-landscape') {
+		@include breakpoint('max','tablet-landscape') {
 			@include flex($direction: column, $align: center);
 			position: fixed;
 			top: 7rem;
@@ -67,7 +66,7 @@
 		}
     }
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         @include flex($justify: flex-end);
     }
 }
@@ -81,7 +80,7 @@
 }
 
 .action--spacer {
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
 		margin-left: 5rem;
 	}
 }
@@ -142,7 +141,7 @@
         }
     }
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         margin-left: 5rem;
     }
 }
@@ -167,15 +166,15 @@
     flex: 0 0 100%;
     pointer-events: all;
 
-    @include breakpoint('min-tablet-portrait') {
+    @include breakpoint('min','tablet-portrait') {
         padding: 7.5rem;
         flex: 0 0 60%;
     }
-	@include breakpoint('min-tablet-landscape') {
+	@include breakpoint('min','tablet-landscape') {
         padding: 10rem;
         flex: 0 0 50%;
     }
-    @include breakpoint('min-desktop') {
+    @include breakpoint('min','desktop') {
         flex: 0 0 40%;
 	}
 }
@@ -183,7 +182,7 @@
 	@include flex($align: center);
     margin-top: 5rem;
 
-    @include breakpoint('min-tablet-landscape') {
+    @include breakpoint('min','tablet-landscape') {
         margin-top: 10rem;
     }
 }

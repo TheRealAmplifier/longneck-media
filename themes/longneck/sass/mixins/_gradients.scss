@@ -1,0 +1,12 @@
+@mixin gradient-background(
+    $direction: 'to bottom',
+    $color-1: #555,
+    $color-2: #333,
+    $repeat: no repeat,
+    $position: 60%
+
+) {
+    background-color: mix($color-1, $color-2, $position);
+    background-image: linear-gradient($direction, $color-1, $color-2);
+    background-repeat: $repeat;
+}

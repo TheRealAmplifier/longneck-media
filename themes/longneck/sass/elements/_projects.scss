@@ -7,10 +7,10 @@
 	@extend %defaultSectionPadding;
 	width: 100%;
 
-	@include breakpoint('min-tablet-portrait') {
+	@include breakpoint('min','tablet-portrait') {
 		padding: 7.5rem 0;
 	}
-	@include breakpoint('min-desktop') {
+	@include breakpoint('min','desktop') {
 		padding: 10rem 0;
 	}
 }
@@ -35,11 +35,11 @@
 	width: 100%;
 	margin-top: 3rem;
 
-	@include breakpoint('min-tablet-portrait') {
-		grid-template-columns: repeat(2, 1fr);	
+	@include breakpoint('min','tablet-portrait') {
+		grid-template-columns: repeat(2, 1fr);
 		margin-top: 5rem;
 	}
-	@include breakpoint('min-desktop') {
+	@include breakpoint('min','desktop') {
 		grid-gap: 7.5rem;
 	}
 }
