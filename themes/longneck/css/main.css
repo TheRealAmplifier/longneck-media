@@ -150,18 +150,24 @@ body {
   }
 }
 
-p {
+p,
+ul,
+ol {
   font-size: 1.6rem;
   line-height: 1.8;
   font-weight: 400;
   margin: 0 0;
 }
 @media screen and (min-width: 64em) {
-  p {
+  p,
+ul,
+ol {
     font-size: 1.8rem;
   }
 }
-p:not(:last-child) {
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -939,13 +945,9 @@ li {
   font-size: 1.6rem;
 }
 
-.navigation__link--main {
-  font-weight: 400;
-  color: #787873;
-}
 .navigation__link--main.current {
   font-weight: 600;
-  color: #2e2d2d;
+  color: #466AC3;
 }
 @media screen and (min-width: 64em) {
   .navigation__link--main {
@@ -1097,17 +1099,6 @@ li {
   }
 }
 
-.banner__date {
-  font-size: 1.6rem;
-  line-height: 1.8;
-  font-weight: 400;
-}
-@media screen and (min-width: 64em) {
-  .banner__date {
-    font-size: 1.8rem;
-  }
-}
-
 .title--spacer-big {
   position: relative;
   padding: 3rem 0;
@@ -1234,6 +1225,11 @@ li {
     height: 10rem;
     margin: 0 auto 5rem;
   }
+}
+
+.title__meta {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__fields {
@@ -2138,30 +2134,6 @@ textarea {
   margin-bottom: 4rem;
 }
 
-.meta__tags {
-  display: flex;
-  align-items: center;
-}
-
-.meta__tag {
-  display: flex;
-  align-items: center;
-  background-color: #edeff0;
-  padding: 0.5rem 1rem;
-  height: 3.4rem;
-  line-height: 3.4rem;
-  font-size: 1.6rem;
-  color: #2e2d2d;
-}
-.meta__tag:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.meta__date {
-  color: #787873;
-  font-size: 1.6rem;
-}
-
 .card__price {
   font-weight: 500;
   font-size: 2.4rem;
@@ -2182,6 +2154,35 @@ textarea {
 .card__points .point__item:not(:last-child) {
   margin-bottom: 0.5rem;
   border-bottom: 2px solid #edeff0;
+}
+
+.meta__tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meta__tag {
+  display: flex;
+  align-items: center;
+  background-color: #edeff0;
+  padding: 0.5rem 1rem;
+  height: 3.4rem;
+  line-height: 3.4rem;
+  font-size: 1.6rem;
+  color: #2e2d2d;
+}
+.meta__tag:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.meta__date {
+  color: #787873;
+  font-size: 1.8rem;
+}
+
+.meta--spacer {
+  margin-bottom: 2rem;
 }
 
 .elements--nospacing-bottom {

@@ -20,11 +20,11 @@
 	<div class="banner">
 		<div class="banner__wrapper">
 			<div class="banner__image">
-				<picture>
-					<source media="(min-width:1024px)" srcset="{$BannerImage.ScaleHeight(1000).Link}">
-					<source media="(min-width:768px)" srcset="{$BannerImage.ScaleHeight(800).Link}">
-					<img class="image--cover" src="{$BannerImage.ScaleHeight(600).Link}" alt="Banner afbeelding" loading="lazy">
-				</picture>
+                <picture>
+                    <source media="(min-width:1024px)" srcset="{$BannerImage.ScaleHeight(1000).Link}">
+                    <source media="(min-width:768px)" srcset="{$BannerImage.ScaleHeight(800).Link}">
+                    <img class="image--cover" src="{$BannerImage.ScaleHeight(600).Link}" alt="Banner afbeelding" loading="lazy">
+                </picture>
 			</div>
 		</div>
 	</div>
@@ -37,10 +37,6 @@
 					<% if BannerText %>
 						{$BannerText}
 					<% end_if %>
-
-                    <% if Date %>
-                        <span class="banner__date">Gepubliceerd op {$Date}</span>
-                    <% end_if %>
 
 					<div class="title__indicator">
 						<div class="indicator__icon">

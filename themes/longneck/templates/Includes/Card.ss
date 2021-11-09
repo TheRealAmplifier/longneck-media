@@ -8,19 +8,19 @@
 		<div class="card__content">
 			<% if BlogTags || PublicationDate %>
 				<div class="card__meta">
-					<% if BlogTags %>
-					<div class="meta__tags">
-						<% loop BlogTags %>
-							<span class="meta__tag" style="background-color: {$Color}">{$Title}</span>
-						<% end_loop %>
-					</div>
+                    <% if BlogTags %>
+                        <div class="meta__tags">
+                            <% loop BlogTags %>
+                                <span class="meta__tag" style="background-color: {$Color}">{$Title}</span>
+                            <% end_loop %>
+                        </div>
 					<% end_if %>
 					<span class="meta__date">
 						{$PublicationDate.Long}
 					</span>
 				</div>
 			<% end_if %>
-	
+
 			<h3 class="heading-3">{$MenuTitle}</h3>
 			{$Summary}
 		</div>

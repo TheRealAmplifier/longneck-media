@@ -90,7 +90,9 @@ body {
     );
 }
 
-p {
+p,
+ul,
+ol {
     @include font-size(
         1.6rem,
         1.8rem,

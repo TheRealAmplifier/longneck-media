@@ -15,16 +15,7 @@
         <div class="referer__list">
             <% if Pages %>
                 <% loop Pages %>
-                    <div class="target">
-                        <a class="target__link" href="{$Link}">
-                            <span class="target__title">{$Title}</span>
-                            <% if Summary %>
-                                <span class="target__description">
-                                    {$Summary}
-                                </span>
-                            <% end_if %>
-                        </a>
-                    </div>
+                    <% include Target %>
                 <% end_loop %>
             <% else %>
                 <p>Er zijn geen pagina's beschikbaar.</p>

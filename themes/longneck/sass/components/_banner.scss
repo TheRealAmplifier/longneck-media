@@ -31,9 +31,6 @@
 	}
 }
 
-.banner__date {
-    @include font-size(1.6rem, 1.8rem);
-}
 
 .title--spacer-big {
 	position: relative;
@@ -131,4 +128,8 @@
         height: 10rem;
         margin: 0 auto 5rem;
     }
+}
+
+.title__meta {
+    @include flex($direction: column);
 }

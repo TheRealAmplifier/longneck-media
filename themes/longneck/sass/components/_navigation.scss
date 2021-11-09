@@ -80,12 +80,9 @@
 }
 
 .navigation__link--main	{
-    font-weight: 400;
-    color: $color-gray-dark;
-
 	&.current {
         font-weight: 600;
-        color: $color-black;
+        color: $color-secondary;
 	}
 
 	@include breakpoint('min','tablet-landscape') {

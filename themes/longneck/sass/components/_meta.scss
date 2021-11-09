@@ -1,0 +1,24 @@
+.meta__tags {
+	@include flex($align: center, $justify: center);
+}
+.meta__tag {
+	@include flex($align: center);
+	background-color: $color-gray;
+	padding: .5rem 1rem;
+	height: 3.4rem;
+	line-height: 3.4rem;
+	font-size: 1.6rem;
+	color: $color-black;
+
+	&:not(:last-child) {
+		margin-right: .5rem;
+	}
+}
+.meta__date {
+	color: $color-gray-dark;
+    font-size: 1.8rem;
+}
+
+.meta--spacer {
+    margin-bottom: 2rem;
+}
