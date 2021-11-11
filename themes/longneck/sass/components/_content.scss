@@ -5,7 +5,6 @@
     @include font-size(1.6rem, 1.8rem, $line-height: 2);
 	flex: 1;
 }
-
 .content--narrowed {
 	flex: 0 0 90%;
 
@@ -13,19 +12,10 @@
 		flex: 0 0 60%;
 	}
 }
-
 .content--wide {
 	flex: 0 0 100%;
 }
 
-.content__box,
-.text__main {
-	p {
-		a:not(.button) {
-			@extend %defaultTextLink;
-		}
-	}
-}
 .text__intro {
 	margin-bottom: 2rem;
 }

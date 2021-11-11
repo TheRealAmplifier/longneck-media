@@ -17,12 +17,12 @@
 		@include breakpoint('min','tablet-portrait') {
 			padding: 0 0 10rem;
 		}
-		@include breakpoint('min','tablet-landscape') {
-			padding: 0 0 15rem;
-		}
-		@include breakpoint('min','desktop') {
-			padding: 0 0 20rem;
-		}
+		// @include breakpoint('min','tablet-landscape') {
+		// 	padding: 0 0 15rem;
+		// }
+		// @include breakpoint('min','desktop') {
+		// 	padding: 0 0 20rem;
+		// }
 	}
 }
 .element--nopadding {

@@ -51,13 +51,13 @@
   font-size: 2rem;
 }
 
-.content__box p a:not(.button),
-.text__main p a:not(.button) {
+p a:not(.button),
+p a:not(.navigation__link) {
   position: relative;
   font-weight: 500;
 }
-.content__box p a:not(.button):after,
-.text__main p a:not(.button):after {
+p a:not(.button):after,
+p a:not(.navigation__link):after {
   content: "";
   position: absolute;
   bottom: 0.2rem;
@@ -65,12 +65,12 @@
   right: -0.2rem;
   height: 0.6rem;
   z-index: -1;
-  background-color: #edeff0;
+  background-color: #EFC6BE;
   transition: height 0.2s ease;
 }
-.content__box p a:hover:not(.button):after,
-.text__main p a:hover:not(.button):after, .content__box p a:focus:not(.button):after,
-.text__main p a:focus:not(.button):after {
+p a:hover:not(.button):after,
+p a:hover:not(.navigation__link):after, p a:focus:not(.button):after,
+p a:focus:not(.navigation__link):after {
   height: 0.9rem;
 }
 
@@ -205,7 +205,7 @@ ol:not(:last-child) {
   display: block;
   width: 6rem;
   height: 0.75rem;
-  background-color: #0B3CB7;
+  background-color: #EFC6BE;
 }
 
 .text--small p {
@@ -2195,16 +2195,6 @@ textarea {
 @media screen and (min-width: 48em) {
   .element:not(:last-child) {
     padding: 0 0 10rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .element:not(:last-child) {
-    padding: 0 0 15rem;
-  }
-}
-@media screen and (min-width: 85em) {
-  .element:not(:last-child) {
-    padding: 0 0 20rem;
   }
 }
 

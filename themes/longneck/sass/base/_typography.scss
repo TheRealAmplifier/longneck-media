@@ -8,14 +8,14 @@
 	font-weight: 500;
 
   &:after {
-		content: "";
+	content: "";
     position: absolute;
     bottom: .2rem;
     left: -.2rem;
     right: -.2rem;
     height: .6rem;
     z-index: -1;
-		background-color: $color-gray;
+		background-color: $color-tertiary;
 		transition: height .2s ease;
   }
 
@@ -137,7 +137,7 @@ ol {
 		display: block;
 		width: 6rem;
 		height: .75rem;
-		background-color: $color-primary;
+		background-color: $color-tertiary;
 	}
 }
 
@@ -147,3 +147,12 @@ ol {
         @include font-size(1.6rem, 1.8rem);
     }
 }
+
+
+p {
+    a:not(.button),
+    a:not(.navigation__link) {
+        @extend %defaultTextLink;
+    }
+}
+
