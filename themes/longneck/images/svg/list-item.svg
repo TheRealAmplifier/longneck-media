@@ -4,15 +4,10 @@
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
 	 style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
+	.st0{fill:#E5A295;}
 </style>
 <g>
 	<g>
-		
-			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="56.7821" y1="256" x2="455.2179" y2="256" gradientTransform="matrix(-1 0 0 -1 512 512)">
-			<stop  offset="0" style="stop-color:#EFC6BE"/>
-			<stop  offset="0.9988" style="stop-color:#E5A295"/>
-		</linearGradient>
 		<polygon class="st0" points="110.2,401.8 309.4,455.2 455.2,309.4 401.8,110.2 202.6,56.8 56.8,202.6 		"/>
 	</g>
 </g>

@@ -31,22 +31,23 @@
     }
 }
 .referer__content {
-    @include gradient-background(
-        125deg,
-        $color-primary,
-        darken($color-primary, 10)
-    );
-    position: relative;
-    color: $color-white;
-    padding: 1.5rem;
     flex: 1;
+    padding: 2rem;
 
     @include breakpoint('max','tablet-landscape') {
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
     }
     @include breakpoint('min','tablet-landscape') {
-        top: -14rem;
+        position: relative;
+        @include gradient-background(
+            125deg,
+            $color-primary,
+            darken($color-primary, 10)
+        );
+        top: -17rem;
         margin-bottom: auto;
+        padding: 3rem;
+        color: $color-white;
         padding: 3rem;
     }
 }

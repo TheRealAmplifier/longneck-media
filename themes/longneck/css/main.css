@@ -1082,6 +1082,7 @@ li {
 .banner__image {
   background-color: #edeff0;
   height: 35rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 48em) {
   .banner__image {
@@ -1097,6 +1098,31 @@ li {
   .banner__image {
     height: 65rem;
   }
+}
+
+.breadcrumbs__wrapper {
+  display: flex;
+}
+
+.banner__breadcrumbs {
+  display: flex;
+  align-items: center;
+  background-color: #edeff0;
+  padding: 0 3rem;
+  height: 7rem;
+}
+
+.breadcrumb__link {
+  display: flex;
+}
+
+.breadcrumb__separator {
+  display: block;
+  margin: 0 1rem;
+}
+
+.breadcrumb__current {
+  color: #0B3CB7;
 }
 
 .title--spacer-big {
@@ -2264,23 +2290,24 @@ textarea {
 }
 
 .referer__content {
-  background-color: #0a36a4;
-  background-image: linear-gradient(125deg, #0B3CB7, #082c87);
-  background-repeat: no repeat;
-  position: relative;
-  color: #FFFFFF;
-  padding: 1.5rem;
   flex: 1;
+  padding: 2rem;
 }
 @media screen and (max-width: 63.9375em) {
   .referer__content {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 64em) {
   .referer__content {
-    top: -14rem;
+    position: relative;
+    background-color: #0a36a4;
+    background-image: linear-gradient(125deg, #0B3CB7, #082c87);
+    background-repeat: no repeat;
+    top: -17rem;
     margin-bottom: auto;
+    padding: 3rem;
+    color: #FFFFFF;
     padding: 3rem;
   }
 }

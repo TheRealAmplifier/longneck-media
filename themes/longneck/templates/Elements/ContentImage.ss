@@ -13,7 +13,7 @@
 
 					<% if TextIntro %>
 						<div class="text__intro text--accentuated">
-							<p>{$TextIntro}</p>
+							{$TextIntro}
 						</div>
 					<% end_if %>
 
